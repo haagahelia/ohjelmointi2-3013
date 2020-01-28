@@ -128,7 +128,7 @@ tammik. 28, 2020 10:14:57 AP. org.apache.catalina.core.StandardContext reload
 INFO: Reloading Context with name [] is completed
 ```
 
-Joidenkin isompien muutosten, kuten uusien tiedostojen luomisen yhteydessä, Tomcat ei pysty lataamaan muutoksia "lennossa". Tällöin joudut pysäyttämään palvelimen ensin Eclipsen Console-näkymän oikeassa yläkulmassa olevasta punaisesta "Terminate"-painikkeesta ja käynnistämään `Main.java`-tiedoston uudelleen.
+Joidenkin isompien muutosten, kuten uusien tiedostojen luomisen yhteydessä, Tomcat ei pysty lataamaan muutoksia "lennossa". Tällöin joudut pysäyttämään palvelimen ensin Eclipsen Console-näkymän [oikeassa yläkulmassa olevasta punaisesta "terminate"-painikkeesta](https://stackoverflow.com/a/1515229) ja käynnistämään `Main.java`-tiedoston uudelleen.
 
 
 ## Servlet-pohjaisen sovelluksen anatomia
