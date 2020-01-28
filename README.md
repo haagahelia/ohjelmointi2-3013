@@ -202,7 +202,7 @@ HTML-muotoisten vastausten muodostaminen edellyttäisi, että sekoitamme Java-ko
 protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
         throws ServletException, IOException {
 
-	// FIXME: vaikeasti ylläpidettävää koodia!
+    // FIXME: vaikeasti ylläpidettävää koodia!
     resp.getWriter().println("""
             <html>
                 <head>
