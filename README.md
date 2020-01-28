@@ -193,7 +193,30 @@ protected void doGet(HttpServletRequest req, HttpServletResponse resp)
 }
 ```
 
-Tyypillisesti emme kuitenkaan halua tulostaa vastauksia tällä tavalla tietovirtaan, vaan käytämme HTML-sivupohjia seuraavaksi käsiteltävällä tavalla.
+HTML-muotoisten vastausten muodostaminen edellyttäisi, että sekoitamme Java-koodia ja HTML:ää, mistä tulisi nopeasti vaikeaselkoista ja huonosti ylläpidettävää:
+
+```java
+/* Tässä esimerkissä on hyödynnetty Java 13:n TextBlock-ominaisuutta 
+ * monirivisen merkkijonon muodostamiseksi: https://wiki.eclipse.org/Java13/Examples */
+@Override
+protected void doGet(HttpServletRequest req, HttpServletResponse resp) 
+        throws ServletException, IOException {
+
+	// FIXME: vaikeasti ylläpidettävää koodia!
+    resp.getWriter().println("""
+            <html>
+                <head>
+                    <title>Hello</title>
+                </head>
+                <body>
+                    <h1>Hello world!</h1>
+                </body>
+            </html>
+        """);
+}
+```
+
+Vaikka siis periaatteessa voisimme generoida HTML-muotoiluja tulostamalla, ei se olisi tehokasta eikä kovin helposti ylläpidettävää. HTML-rakenteet kannattaakin muodostaa Java-luokkien ulkopuolisten sivupohjien avulla, joihin tutustumme seuraavaksi.
 
 ### Pyyntöön vastaaminen HTML-sivulla
 
@@ -279,6 +302,15 @@ JSP-sivua renderöitäessä lausekkeen tilalle ilmestyy siis kellonaika, esim:
 
 ### Staattiset tiedostot
 
+Edellä esitellyssä sivupohjassa hyödynnetään ulkoista CSS-tiedostoa:
+
+```html
+<link rel="stylesheet" href="/styles/demo.css">
+```
+
+Tämä tiedosto sijaitsee projektin hakemistossa `src/main/webapp`, jonka alla olevat tiedostot tarjotaan selaimelle staattisina tiedostoina (poikkeuksena `WEB-INF`).
+
+Selaimen pyytäessä osoitetta http://localhost:8080/styles/demo.css Tomcat tarjoaa vastauksesi CSS-tiedostomme. Vastaavalla tavalla voisimme asettaa saataville myös kuvat ja JavaScript-tiedostot.
 
 ```css
 /* this stylesheet is only used for verifying that serving static files works */
@@ -296,3 +328,15 @@ body {
 	font-size: 2em;
 }
 ```
+
+## Seuraavat askeleet
+
+Seuraavaksi sinun kannattaa luoda projektiin uusia servlettejä ja JSP-sivuja ja tutustua niiden toimintaan. 
+
+Tutustu myös JSP-sivujen sisällä käytettävään [JSTL-kirjastoon tutoriaalien avulla](https://www.google.com/search?q=jstl+tutorial). JSTL (JSP Standard Tag Library) mahdollistaa mm. tekstin turvallisen tulostamisen `c:out`-tagin avulla ja kokoelmien läpikäynnin `c:forEach`-tagin avulla.
+
+[Lomakkeiden käsittelemiseksi](https://www.google.com/search?q=servlet+form+handling) sinun kannattaa tutustua `doPost`-metodiin ja pyynnön mukana tulleiden arvojen käyttämiseksi tarkoitettuun `getParameter`-metodiin. 
+
+---
+
+Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA 3.0](https://creativecommons.org/licenses/by-nc-sa/3.0/) -lisenssillä. 
