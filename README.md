@@ -1,6 +1,6 @@
 # Embedded Tomcat -projektipohja
 
-Tämä malliprojekti on tarkoitettu pohjaksi verkkosovellusten koodaamiseen Haaga-Helian Ohjelmointi 2 -opintojaksolla. Projektissa hyödynnetään Javan Servlet- sekä JSP-teknologioita yhdessä [Apachen Tomcat](http://tomcat.apache.org/) -sovelluspalvelimen sekä [Apaceh Maven](https://maven.apache.org/)-automaatiotyökalun kanssa. Projekti sisältää valmiit asetustiedostot sen tuomiseksi Eclipse-sovelluskehittimeen, mutta voit käyttää sitä myös muiden kehitysympäristöjen kanssa.
+Tämä malliprojekti on tarkoitettu pohjaksi verkkosovellusten koodaamiseen Haaga-Helian Ohjelmointi 2 -opintojaksolla. Projektissa hyödynnetään Javan Servlet- sekä JSP-teknologioita yhdessä [Apachen Tomcat](http://tomcat.apache.org/) -sovelluspalvelimen sekä [Apache Maven](https://maven.apache.org/)-automaatiotyökalun kanssa. Projekti sisältää valmiit asetustiedostot sen tuomiseksi Eclipse-sovelluskehittimeen, mutta voit käyttää sitä myös muiden kehitysympäristöjen kanssa.
 
 ## Suositeltua taustamateriaalia
 
