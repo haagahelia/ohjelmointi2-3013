@@ -2,6 +2,16 @@
 
 Tämä malliprojekti on tarkoitettu pohjaksi verkkosovellusten koodaamiseen Haaga-Helian Ohjelmointi 2 -opintojaksolla. Projektissa hyödynnetään Javan Servlet- sekä JSP-teknologioita yhdessä [Apachen Tomcat](http://tomcat.apache.org/) -sovelluspalvelimen sekä [Apaceh Maven](https://maven.apache.org/)-automaatiotyökalun kanssa. Projekti sisältää valmiit asetustiedostot sen tuomiseksi Eclipse-sovelluskehittimeen, mutta voit käyttää sitä myös muiden kehitysympäristöjen kanssa.
 
+## Suositeltua taustamateriaalia
+
+**[Introduction to Servlets](https://youtu.be/7TOmdDJc14s)**
+
+Tämä video esittelee perusteet HTTP-palvelimen toiminnassa dynaamisten sivujen (servlet) käsittelyssä. Servlettien rakenne sekä yhteys servlettien ja Tomcatin välillä esitetään tällä videolla varsin selkeällä tavalla.
+
+**[Maven in 5 Minutes](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)**
+
+Mavenin peruskäsitteiden hahmottamiseksi kannattaa lukea tämä tutoriaali Mavenin omilta sivuilta. 
+
 ## Projektin kopioiminen
 
 Voit tallentaa projektin lähdekoodit itsellesi GitHub-palvelusta monilla eri tavoilla. Yksinkertaisimmillaan voit tallentaa sen [zip-pakettina](https://github.com/haagahelia/embedded-tomcat-template/archive/master.zip), jonka tuot itsellesi Eclipseen import-ominaisuudella. 
@@ -58,7 +68,7 @@ Sijainti                                | Tarkoitus
 
 ## Riippuvuuksien asentaminen (Maven)
 
-Servlet-pohjaiset sovellukset tarvitsevat aina jonkin suoritusympäristön, joka tällä esimerkkiprojektilla on nimeltään Tomcat. Tomcat ja muut sovelluksen riippuvuudet on helpointa asentaa Maven-työkalua käyttäen. Mavenin peruskäsitteiden hahmottamiseksi kannattaa lukea dokumentti [Maven in 5 Minutes](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html).
+Servlet-pohjaiset sovellukset tarvitsevat aina jonkin suoritusympäristön, joka tällä esimerkkiprojektilla on nimeltään Tomcat. Tomcat ja muut sovelluksen riippuvuudet on suoraviivaista asentaa Maven-työkalua käyttäen.
 
 Meidän onneksemme Eclipsessä on vakiona mukana Maven-plugin, joka tunnistaa projektimme `pom.xml`-konfiguraatiotiedoston ja huolehtii riippuvuuksien asentamisesta automaattisesti. Mikäli tunnistus ei tapahdu automaattisesti, voit klikata projektia hiiren kakkospainikkeella ja valita "Configure"-kohdasta "Convert to Maven project".
 
@@ -288,7 +298,7 @@ Edellisen kappaleen esimerkissä pyyntö välitetään [`/WEB-INF/index.jsp`](sr
 
 Sivu on suurilta osin tavallinen HTML-tiedosto. Suurimmat erot ovat ensimmäisellä rivillä oleva JSP-syntaksin mukainen page-direktiivi sekä sivun alaosassa esiintyvä `<p>`-kappale:
 
-```jsp
+```html
 <p class="time-now">${ timeNow }</p>
 ```
 
@@ -297,7 +307,7 @@ Direktiivien avulla voidaan vaikuttaa siihen, miten Tomcat-palvelin muodostaa va
 JSP-sivua renderöitäessä lausekkeen tilalle ilmestyy siis kellonaika, esim:
 
 ```html
-	<p class="time-now">10:55:10.299545500</p>
+<p class="time-now">10:55:10.299545500</p>
 ```
 
 ### Staattiset tiedostot
@@ -336,6 +346,12 @@ Seuraavaksi sinun kannattaa luoda projektiin uusia servlettejä ja JSP-sivuja ja
 Tutustu myös JSP-sivujen sisällä käytettävään [JSTL-kirjastoon tutoriaalien avulla](https://www.google.com/search?q=jstl+tutorial). JSTL (JSP Standard Tag Library) mahdollistaa mm. tekstin turvallisen tulostamisen `c:out`-tagin avulla ja kokoelmien läpikäynnin `c:forEach`-tagin avulla.
 
 [Lomakkeiden käsittelemiseksi](https://www.google.com/search?q=servlet+form+handling) sinun kannattaa tutustua `doPost`-metodiin ja pyynnön mukana tulleiden arvojen käyttämiseksi tarkoitettuun `getParameter`-metodiin. 
+
+Java varoittaa servlet-luokkien yhteydessä tyypillisesti seuraavaa: 
+
+>"The serializable class XYZ does not declare a static final serialVersionUID field of type long"
+
+Voit jättää tämän varoituksen huomioimatta. `serialVersionUID` nimistä muuttujaa käytetään luokasta luotujen olioiden versiointiin, lue tarvittaessa lisää [täältä](https://stackoverflow.com/a/285809).
 
 ---
 
