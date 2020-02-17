@@ -73,7 +73,7 @@ Kun riippuvuudet on asennettu, on Tomcat-palvelinohjelmisto käytettävissä pro
 
 ## Palvelinohjelmiston käynnistäminen
 
-Tomcat-palvelin voidaan käynnistää lukuisilla eri tavoilla, esimerkiksi erillisenä ohjelmana tai Eclipsen hallinnoimana palvelimena. Pohjimmiltaan Tomcat on kuitenkin Java-ohjelma, joten voimme käyttää sitä myös ohjelmallisesti, eli kirjoittamalla Java-koodia.
+Tomcat-palvelin voidaan käynnistää lukuisilla eri tavoilla, esimerkiksi erillisenä ohjelmana tai Eclipsen hallinnoimana palvelimena. Voimme käyttää sitä myös ohjelmallisesti, eli kirjoittamalla tavallista Java-koodia.
 
 Tämä yksinkertaistettu esimerkki näyttää, miten uusi Tomcat-olio luodaan, miten sen käyttämä portti määritellään ja miten palvelin käynnistetään odottamaan HTTP-pyyntöjä:
 
