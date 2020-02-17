@@ -1,16 +1,12 @@
 # Embedded Tomcat -projektipohja
 
-Tämä malliprojekti on tarkoitettu pohjaksi verkkosovellusten koodaamiseen Haaga-Helian Ohjelmointi 2 -opintojaksolla. Projektissa hyödynnetään Javan Servlet- sekä JSP-teknologioita yhdessä [Apachen Tomcat](http://tomcat.apache.org/) -sovelluspalvelimen sekä [Apache Maven](https://maven.apache.org/)-automaatiotyökalun kanssa. Projekti sisältää valmiit asetustiedostot sen tuomiseksi Eclipse-sovelluskehittimeen, mutta voit käyttää sitä myös muiden kehitysympäristöjen kanssa.
+Tämä malliprojekti on tarkoitettu pohjaksi verkkosovellusten koodaamiseen Haaga-Helian Ohjelmointi 2 -opintojaksolla. Projektissa hyödynnetään Javan Servlet- sekä JSP-teknologioita yhdessä [Apachen Tomcat](http://tomcat.apache.org/) -sovelluspalvelimen kanssa. Projekti sisältää valmiit asetustiedostot sen tuomiseksi Eclipse-sovelluskehittimeen, mutta voit käyttää sitä soveltaen myös muilla kehitystyökaluilla, kuten [VS Code](https://code.visualstudio.com/) tai [IntelliJ IDEA](https://www.jetbrains.com/idea/).
 
 ## Suositeltua taustamateriaalia
 
 **[Introduction to Servlets](https://youtu.be/7TOmdDJc14s)**
 
 Tämä video esittelee perusteet HTTP-palvelimen toiminnassa dynaamisten sivujen (servlet) käsittelyssä. Servlettien rakenne sekä yhteys servlettien ja Tomcatin välillä esitetään tällä videolla varsin selkeällä tavalla.
-
-**[Maven in 5 Minutes](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)**
-
-Mavenin peruskäsitteiden hahmottamiseksi kannattaa lukea tämä tutoriaali Mavenin omilta sivuilta. 
 
 ## Projektin kopioiminen
 
@@ -20,7 +16,7 @@ Mikäli haluat käyttää omassa työssäsi versionhallintaa, voit kloonata proj
 
 ## Projektin tiedostot
 
-Esimerkkiprojekti noudattaa [Mavenin standardia hakemistorakennetta](https://maven.apache.org/guides/introduction/introduction-to-the-standard-directory-layout.html):
+Esimerkkiprojekti noudattaa seuraavaa hakemistorakennetta:
 
 ```tree
 embedded-tomcat
@@ -52,7 +48,7 @@ embedded-tomcat
 Sijainti                                | Tarkoitus
 ----------------------------------------|---------------------
 [README.md](README.md)                                                  | Tämä tiedosto
-[pom.xml](pom.xml)                                                      | Mavenin "Project Object Model"-tiedosto
+[pom.xml](pom.xml)                                                      | "[Project Object Model](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html)"-tiedosto mm. riippuvuuksien määrittelemiseksi
 [src/main/java](src/main/java)                                          | Java-pakettien juurihakemisto
 [src/main/resources](src/main/resources)                                | Hakemisto esimerkiksi .properties-tiedostoille
 [src/main/java/launch/Main.java](src/main/java/launch/Main.java)        | Luokka Tomcat-palvelimen käynnistämiseksi
@@ -66,24 +62,46 @@ Sijainti                                | Tarkoitus
 ¹ "No file contained in the WEB-INF directory may be served directly to a client by the container. However, the contents of the WEB-INF directory are visible to servlet code..." [Java Servlet Specification Version 2.4](http://download.oracle.com/otn-pub/jcp/servlet-2.4-fr-spec-oth-JSpec/servlet-2_4-fr-spec.pdf)
 
 
-## Riippuvuuksien asentaminen (Maven)
+## Riippuvuuksien asentaminen
 
-Servlet-pohjaiset sovellukset tarvitsevat aina jonkin suoritusympäristön, joka tällä esimerkkiprojektilla on nimeltään Tomcat. Tomcat ja muut sovelluksen riippuvuudet on suoraviivaista asentaa Maven-työkalua käyttäen.
+Servlet-pohjaiset sovellukset tarvitsevat aina jonkin suoritusympäristön, joka tällä esimerkkiprojektilla on nimeltään [Tomcat](http://tomcat.apache.org/). Tomcat ja muut sovelluksen riippuvuudet on suoraviivaista määrittää projektin pom.xml-tiedostoon, jolloin Eclipsen Maven-plugin asentaa riippuvuudet automaattisesti.
 
-Meidän onneksemme Eclipsessä on vakiona mukana Maven-plugin, joka tunnistaa projektimme `pom.xml`-konfiguraatiotiedoston ja huolehtii riippuvuuksien asentamisesta automaattisesti. Mikäli tunnistus ei tapahdu automaattisesti, voit klikata projektia hiiren kakkospainikkeella ja valita "Configure"-kohdasta "Convert to Maven project".
-
-Komentoriviltä Mavenin riippuvuudet voidaan asentaa projektin juurihakemistossa komennolla:
-
-    mvn install
-
-Kun Maven on asentanut riippuvuudet, löytyy Tomcat-palvelinohjelmisto ikään kuin upotettuna (embedded) projektiisi ja voit ryhtyä kehittämään verkkosovelluksia Javalla.
+Kun riippuvuudet on asennettu, on Tomcat-palvelinohjelmisto käytettävissä projektissasi ja voit ryhtyä kehittämään verkkosovelluksia Javalla.
 
 *Tämän projektin `pom.xml` on rakennettu noudattaen Heroku-pilvialustan esimerkkiä ["Create a Java Web Application Using Embedded Tomcat"](https://devcenter.heroku.com/articles/create-a-java-web-application-using-embedded-tomcat).*
 
 
 ## Palvelinohjelmiston käynnistäminen
 
-Kun projekti on tuotu Eclipseen ja Maven-työkalu on asentanut sen riippuvuudet, voit käynnistää palvelimen suorittamalla tiedoston [`src/main/java/launch/Main.java`](src/main/java/launch/Main.java). Main-luokan tarkoitus on käynnistää Tomcat-palvelin [tämän tutoriaalin](https://devcenter.heroku.com/articles/create-a-java-web-application-using-embedded-tomcat) mukaisesti ja tämän luokan sisältöä ei tarvitse ymmärtää tämän esimerkin seuraamiseksi.
+Tomcat-palvelin voidaan käynnistää lukuisilla eri tavoilla, esimerkiksi erillisenä ohjelmana tai Eclipsen hallinnoimana palvelimena. Pohjimmiltaan Tomcat on kuitenkin Java-ohjelma, joten voimme käyttää sitä myös ohjelmallisesti, eli kirjoittamalla Java-koodia.
+
+Tämä yksinkertaistettu esimerkki näyttää, miten uusi Tomcat-olio luodaan, miten sen käyttämä portti määritellään ja miten palvelin käynnistetään odottamaan HTTP-pyyntöjä:
+
+```java
+import org.apache.catalina.startup.Tomcat;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+
+        // Luodaan uusi palvelinolio:
+        Tomcat tomcat = new Tomcat();
+
+        // Asetetaan kuunneltava portti (http://localhost:8080)
+        tomcat.setPort(8080);
+
+        // ...muiden asetusten määrittely...
+
+        // Palvelimen käynnistäminen:
+        tomcat.start();
+        tomcat.getServer().await();
+    }
+}
+```
+
+## Main.java-tiedosto
+
+Tässä projektissa Tomcatin käynnistämiseksi ja sen asetusten asettamiseksi tarvittavat komennot on kirjoitettu valmiiksi tiedostoon [`src/main/java/launch/Main.java`](src/main/java/launch/Main.java). Voit käynnistää Tomcat-palvelimen suorittamalla tämän tiedoston aivan kuten olet tähänkin asti suorittanut Java-ohjelmiasi Eclipsessä.
 
 Ohjelman suoritus tulostaa lokitietoja Eclipsen konsoliin, ja onnistunut käynnistys näyttää pääpiirteittäin tältä:
 
