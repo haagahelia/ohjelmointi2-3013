@@ -18,35 +18,35 @@ public class Main {
 
     public static void main(String[] args) throws Exception {
 
-        String webappDirLocation = "src/main/webapp/";
+        // Web-sovelluksen julkisten tiedostojen sijainti:
+        String webappDirPath = new File("src/main/webapp/").getAbsolutePath();
+
+        // Tomcat-palvelin, joka huolehtii HTTP-liikenteestä:
         Tomcat tomcat = new Tomcat();
 
-        // The port that we should run on can be set into an environment variable
-        // Look for that variable and default to 8080 if it isn't there.
-        String webPort = System.getenv("PORT");
-        if (webPort == null || webPort.isEmpty()) {
-            webPort = "8080";
-        }
-
+        // Asetetaan Tomcatin HTTP-portti. Jos "PORT" löytyy ympäristömuuttujista,
+        // käytetään sitä. Muussa tapauksessa portti 8080:
+        String webPort = System.getenv().getOrDefault("PORT", "8080");
         tomcat.setPort(Integer.valueOf(webPort));
 
-        StandardContext ctx = (StandardContext) tomcat.addWebapp("", new File(webappDirLocation).getAbsolutePath());
-        ctx.setReloadable(true);
-        System.out.println("configuring app with basedir: " + new File("./" + webappDirLocation).getAbsolutePath());
+        // Luodaan Connector-olio, joka kuuntelee asettamaamme porttia:
+        tomcat.getConnector();
 
-        // Declare an alternative location for your "WEB-INF/classes" dir
-        // Servlet 3.0 annotation will work
+        // Tomcatin asetukset:
+        StandardContext ctx = (StandardContext) tomcat.addWebapp("/", webappDirPath);
+
+        // Käännettyjen Java-koodien sijainnit "WEB-INF/classes"-hakemiston lisäksi:
         File additionWebInfClasses = new File("target/classes");
-
         WebResourceRoot resources = new StandardRoot(ctx);
         resources.addPreResources(
                 new DirResourceSet(resources, "/WEB-INF/classes", additionWebInfClasses.getAbsolutePath(), "/"));
         ctx.setResources(resources);
 
-        // Use UTF-8 throughout the project
+        // Asetetaan UTF-8 -merkistö HTTP-pyyntöihin ja -vastauksiin:
         ctx.setRequestCharacterEncoding("utf-8");
         ctx.setResponseCharacterEncoding("utf-8");
 
+        // Käynnistetään palvelin ja odotetaan yhteyksiä:
         tomcat.start();
         tomcat.getServer().await();
     }

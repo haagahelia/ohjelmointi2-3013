@@ -48,11 +48,6 @@
 		that the content was properly served and interpreted with UTF-8
 		encoding.</p>
 	<hr />
-	<footer>
-		<small>Embedded Tomcat template by Teemu Havulinna, licensed under Creative Commons
-			BY-NC-SA 3.0.</small>
-	</footer>
 
 </body>
-
 </html>
