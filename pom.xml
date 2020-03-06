@@ -6,22 +6,30 @@
 	<artifactId>embedded-tomcat</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>Minimal servlet webapp</name>
-	<description>Skeleton project with Maven, Eclipse, embedded Tomcat, JSP and JSTL</description>
+	<description>Skeleton project for developing servlet-based web apps with embedded Tomcat</description>
 
 	<properties>
+		<!-- Tomcatin versionumero -->
 		<tomcat.version>9.0.31</tomcat.version>
+
+		<!-- Javan versionumero -->
 		<maven.compiler.target>1.9</maven.compiler.target>
 		<maven.compiler.source>1.9</maven.compiler.source>
+
+		<!-- Projektin merkistökoodaus -->
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
 
 	<dependencies>
+		<!-- Web-palvelin (Tomcat): -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-core</artifactId>
 			<version>${tomcat.version}</version>
 		</dependency>
+
+		<!-- Tuki JSP-sivujen käsittelylle Tomcatilla: -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
@@ -34,12 +42,14 @@
 		</dependency>
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
-			<artifactId>tomcat-jasper-el</artifactId>
+			<artifactId>tomcat-jsp-api</artifactId>
 			<version>${tomcat.version}</version>
 		</dependency>
+
+		<!-- Tuki JSP-sivujen Expressien Language -kielelle: -->
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
-			<artifactId>tomcat-jsp-api</artifactId>
+			<artifactId>tomcat-jasper-el</artifactId>
 			<version>${tomcat.version}</version>
 		</dependency>
 	</dependencies>
