@@ -10,7 +10,7 @@
 
 	<properties>
 		<!-- Tomcatin versionumero -->
-		<tomcat.version>10.0.0-M3</tomcat.version>
+		<tomcat.version>9.0.31</tomcat.version>
 
 		<!-- Javan versionumero -->
 		<maven.compiler.target>1.9</maven.compiler.target>
@@ -44,6 +44,11 @@
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-jsp-api</artifactId>
 			<version>${tomcat.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
 		</dependency>
 
 		<!-- Tuki JSP-sivujen Expressien Language -kielelle: -->
