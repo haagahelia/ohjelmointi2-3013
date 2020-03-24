@@ -165,8 +165,8 @@ Java EE -spesifikaatiossa on määriteltynä tapa, jolla Java-luokat voivat komm
 
 ### Yläluokka ja annotaatiot
 Teknisesti servletit toteutetaan aivan tavallisina Java-luokkina, jotka:
-1. perivät `jakarta.servlet.http.HttpServlet`-luokan: `extends HttpServlet`
-2. annotoidaan `jakarta.servlet.annotation.WebServlet`-annotaatiolla: `@WebServlet("/hello")`
+1. perivät `javax.servlet.http.HttpServlet`-luokan: `extends HttpServlet`
+2. annotoidaan `javax.servlet.annotation.WebServlet`-annotaatiolla: `@WebServlet("/hello")`
 
 Kun perimme (extend) `HttpServlet`-luokan, Tomcat tunnistaa luokan servletiksi. `@WebServlet`-annotaatio puolestaan kertoo Tomcatille, mikä servletin polku on palvelimella.
 
@@ -184,11 +184,11 @@ Alla oleva esimerkkiluokka on annotoitu `@WebServlet("/hello")`-annotaatiolla, e
 import java.io.IOException;
 import java.time.LocalTime;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/hello")
 public class HelloServlet extends HttpServlet {
@@ -204,13 +204,13 @@ public class HelloServlet extends HttpServlet {
 
 `HttpServlet`-luokan HTTP-pyyntöjä käsittelevät metodit saavat aina parametreinaan kaksi oliota:
 
-`jakarta.servlet.http.HttpServletRequest` sisältää tiedot saadusta http-pyynnöstä:
+`javax.servlet.http.HttpServletRequest` sisältää tiedot saadusta http-pyynnöstä:
   * Evästeet
   * Otsikot (HTTP headers)
   * HTTP-parametrit
   * ...
 
-`jakarta.servlet.http.HttpServletResponse` on olio, jonka kautta voidaan lähettää vastaus saatuun pyyntöön. Vastaus voidaan esim. kirjoittaa `println()`-metodilla pyytämällä `HttpServletResponse`-oliolta writer-olio. Writer saadaan `getWriter()`-metodilla, jonka `println`-metodia voidaan kutsua seuraavasti:
+`javax.servlet.http.HttpServletResponse` on olio, jonka kautta voidaan lähettää vastaus saatuun pyyntöön. Vastaus voidaan esim. kirjoittaa `println()`-metodilla pyytämällä `HttpServletResponse`-oliolta writer-olio. Writer saadaan `getWriter()`-metodilla, jonka `println`-metodia voidaan kutsua seuraavasti:
 
 ```java
 @Override
@@ -261,11 +261,11 @@ package servlet;
 import java.io.IOException;
 import java.time.LocalTime;
 
-import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
-import jakarta.servlet.http.HttpServlet;
-import jakarta.servlet.http.HttpServletRequest;
-import jakarta.servlet.http.HttpServletResponse;
+import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("")
 public class IndexServlet extends HttpServlet {
