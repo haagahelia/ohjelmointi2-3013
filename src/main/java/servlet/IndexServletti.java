@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("")
-public class IndexServlet extends HttpServlet {
+public class IndexServletti extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String timeString = LocalTime.now().toString();
+        String aikaString = LocalTime.now().toString();
 
-        // pass the time string to the JSP page as an attribute
-        req.setAttribute("timeNow", timeString);
+        // lähetetään aika merkkijono JSP-sivulle attribuuttina
+        req.setAttribute("aikaNyt", aikaString);
 
-        // forward the request to the index.jsp page
+        // lähetä request edelleen index.jsp sivulle
         req.getRequestDispatcher("/WEB-INF/index.jsp").forward(req, resp);
     }
 }
