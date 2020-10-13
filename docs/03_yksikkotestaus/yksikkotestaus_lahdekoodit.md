@@ -48,6 +48,52 @@ public class SanakirjaTest {
 }
 ```
 
+
+## src/main/java/map/Tekstikayttoliittyma.java
+
+```java
+package map;
+
+import java.util.Scanner;
+
+public class Tekstikayttoliittyma {
+
+    public static void main(String[] args) {
+        Scanner lukija = new Scanner(System.in);
+        Sanakirja sanakirja = new Sanakirja();
+
+        System.out.println("Komennot:\r\n" + "  lisaa - lisää sanaparin sanakirjaan\r\n"
+                + "  kaanna - kysyy sanan ja tulostaa sen käännöksen\r\n" + "  lopeta - poistuu käyttöliittymästä\r\n"
+                + "");
+
+        while (true) {
+            System.out.print("Komento: ");
+            String komento = lukija.nextLine();
+
+            if (komento.equals("lopeta")) {
+                System.out.println("Hei hei!");
+                break;
+            } else if (komento.equals("kaanna")) {
+                System.out.print("Anna sana: ");
+                String kaannettava = lukija.nextLine();
+                String kaannetty = sanakirja.kaanna(kaannettava);
+                System.out.println("Käännös: " + kaannetty);
+            } else if (komento.equals("lisaa")) {
+                System.out.print("Suomeksi: ");
+                String suomeksi = lukija.nextLine();
+                System.out.print("Käännös: ");
+                String kaannos = lukija.nextLine();
+
+                sanakirja.lisaa(suomeksi, kaannos);
+            }
+            System.out.println();
+        }
+    }
+
+}
+```
+
+
 ## src/test/java/map/EtunimiTilastoTest.java
 
 ```java
@@ -197,46 +243,3 @@ public class EtunimiTilasto {
 }
 ```
 
-## src/main/java/map/Tekstikayttoliittyma.java
-
-```java
-package map;
-
-import java.util.Scanner;
-
-public class Tekstikayttoliittyma {
-
-    public static void main(String[] args) {
-        Scanner lukija = new Scanner(System.in);
-        Sanakirja sanakirja = new Sanakirja();
-
-        System.out.println("Komennot:\r\n" + "  lisaa - lisää sanaparin sanakirjaan\r\n"
-                + "  kaanna - kysyy sanan ja tulostaa sen käännöksen\r\n" + "  lopeta - poistuu käyttöliittymästä\r\n"
-                + "");
-
-        while (true) {
-            System.out.print("Komento: ");
-            String komento = lukija.nextLine();
-
-            if (komento.equals("lopeta")) {
-                System.out.println("Hei hei!");
-                break;
-            } else if (komento.equals("kaanna")) {
-                System.out.print("Anna sana: ");
-                String kaannettava = lukija.nextLine();
-                String kaannetty = sanakirja.kaanna(kaannettava);
-                System.out.println("Käännös: " + kaannetty);
-            } else if (komento.equals("lisaa")) {
-                System.out.print("Suomeksi: ");
-                String suomeksi = lukija.nextLine();
-                System.out.print("Käännös: ");
-                String kaannos = lukija.nextLine();
-
-                sanakirja.lisaa(suomeksi, kaannos);
-            }
-            System.out.println();
-        }
-    }
-
-}
-```

@@ -96,8 +96,8 @@ Rekisteröidy Viopeen osoitteessa: https://vw4.viope.com/login?org=hh. Huomaa et
 
 Linkit:
 
-* rekisteröityminen: https://vw4.viope.com/login?org=hh
-* sisäänkirjautuminen: https://vw4.viope.com/
+* rekisteröityminen: [https://vw4.viope.com/login?org=hh](https://vw4.viope.com/login?org=hh)
+* sisäänkirjautuminen: [https://vw4.viope.com/](https://vw4.viope.com/)
 
 
 ### Teams
