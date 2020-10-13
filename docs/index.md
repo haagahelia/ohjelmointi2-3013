@@ -69,6 +69,7 @@ Rekisteröidy Viopeen osoitteessa: https://vw4.viope.com/login?org=hh. Huomaa et
 **Teknisistä syistä johtuen Viopeen palautettavista lähdekoodeista täytyy aina poistaa mahdolliset package -lauseet luokan yläpuolelta.** Viope on myös muilla tavoin erittäin tarkka ohjelmien oikeellisuudesta, mikä saattaa aiheuttaa ensimmäisillä viikoilla hämmennystä. Voit kysyä kurssin Teams-kanavalla neuvoa Viope-ongelmiin milloin tahansa.
 
 Linkit:
+
 * rekisteröityminen: https://vw4.viope.com/login?org=hh
 * sisäänkirjautuminen: https://vw4.viope.com/
 
@@ -106,13 +107,15 @@ Tehtävien pisteytys:
 
 Tehtävä                 |  Maksimipisteet       | DL        |   Järjestelmä | Malliratkaisu
 ------------------------|-----------------------|-----------|---------------|---------------
-Periytyminen ja rajapinnat  | 5                 | 1.11.     | Viope         | 
-Map                     | 5 (+2 bonusta)        | 8.11.     | Viope         | 
-Yksikkötestaus (dayOfYear) | 5                  | 15.11.    | Teams         | 
-Tietokannat ja DAO      | 5                     | 22.11.    | Teams         | 
-Servletit               | 5                     | 29.11.    | Teams         | 
-Servlet + jsp + dao     | 5                     | 6.12.     | Teams         | 
+Perintä ja rajapinnat   | 5                     | <sup>1</sup> | Viope         | 
+Map                     | 5 (+2 bonusta)        | <sup>1</sup> | Viope         | 
+Yksikkötestaus          | 5                     | 15.11.    | Teams         | 
+Tietokannat ja DAO      | 5                     | 29.11.    | Teams         | 
+Servletit               | 5                     | 6.12.     | Teams         | 
+Servlet + jsp + dao     | 5                     | 13.12.    | Teams         | 
 Ajax ja JavaScript      | 5                     | 18.12.    | Teams         | 
+
+<sup>1</sup> Viope-tehtävillä ei ole erillistä määräaikaa, vaan tehtävät tulee ratkaista kurssin loppuun mennessä.
 
 Tehtävien maksimipistemäärä on 35 (+ 2 bonuspistettä). Tehtävät arvioidaan siten, että 40 % suorituksella saa arvosanan 1 ja 100 % suorituksella arvosanan 5:
 
