@@ -120,6 +120,7 @@ private static double calculateExerciseGrade(int myPoints) {
 }
 ```
 
+
 ## Tekniset työkalut
 
 Kurssin ohjeet ja esimerkit on tehty Eclipse-sovelluskehittimellä ja Windows-käyttöjärjestelmällä, joten Linux- tai Mac-käyttäjien tulee soveltaa ohjeita ja esimerkkejä omien käyttöjärjestelmiensä mukaisesti.
@@ -128,11 +129,13 @@ Tässä vaiheessa on hyvä varmistaa, että käytössäsi on _"Eclipse IDE for E
 
 Kurssin työkalut ovat erittäin yleisesti käytössä, joten hyviä ohjeita ja esimerkkejä löytyy melko varmasti netistä. Kannattaa myös kysyä ongelmatilanteissa apua Teamsissa.
 
+
 ## Git-versionhallinta
 
-Kurssin tehtäväpohjien ja malliratkaisujen jakelussa hyödynnetään ohjelmistokehityksen alalla erittäin vakiintunutta Git-versionhallintaa ja GitHub-palvelua. Voit kloonata itsellesi kurssin projektin osoitteesta [https://github.com/haagahelia/swd4tn033-3005](https://github.com/haagahelia/swd4tn033-3005). Kurssin edetessä projektiin lisätään uusia tiedostoja, jotka voit päivittää itsellesi Git:in avulla.
+Kurssin tehtäväpohjien ja malliratkaisujen jakelussa hyödynnetään ohjelmistokehityksen alalla erittäin vakiintunutta Git-versionhallintaa ja GitHub-palvelua. Voit kloonata itsellesi kurssin projektin osoitteesta [https://github.com/haagahelia/ohjelmointi2-3013](https://github.com/haagahelia/ohjelmointi2-3013). Kurssin edetessä projektiin lisätään uusia tiedostoja, jotka voit päivittää itsellesi Git:in avulla.
 
 Gitin käytön opetteluun voit käyttää esimerkiksi Helsingin yliopiston erinomaista "Tietokone Työvälineenä" -kurssin Git-materiaalia: [https://tkt-lapio.github.io/git/](https://tkt-lapio.github.io/git/). Vaikka Git tuntuisi aluksi vaikealta tai ahdistavalta, sinun ei tarvitse opetella kaikkea kerralla, vaan tee vain sen verran mistä on sinulle välitöntä hyötyä.
+
 
 ## Lähteiden käyttäminen
 
@@ -141,6 +144,7 @@ Tämän kurssin materiaali perustuu suurelta osin valmiisiin netistä löytyviin
 Ohjelmointiongelmiin löytyy usein valmiita tai osittaisia ratkaisuja ympäri Internetiä niin keskustelupalstoilta kuin tutoriaaleista. Huonossa tapauksessa löydät toimivan ratkaisun ongelmaasi, mutta et osaa aivan tulkita mitä löytämäsi koodi tekee ja miksi se ratkaisee ongelmasi. Ammattimaisessa ohjelmistokehityksessä tästä seuraa mahdollisesti suuriakin vahinkoja.
 
 Nettilähteiden hyödyntäminen ja niistä mallin ottaminen on sallittua ja kannustettavaa, mutta et saa vain kopioida ratkaisuja, vaan sinun tulee ymmärtää, miten koodisi toimii. Lisäksi, erityisesti koska kyseessä on korkeakoulun opintojakso, sinun tulee merkitä lähteet lainatessasi esimerkiksi StackOverflow:sta löytämääsi koodia. Lähdeviitteeksi riittää esimerkiksi verkkosivun osoite Java-kommenttina lainatun koodin yhteydessä, tai käyttämäsi lähteen käyttöehtojen mukainen muu lähdeviite.
+
 
 ## Esitietovaatimukset
 
@@ -152,19 +156,23 @@ Mikäli et osaa Javan perusteita, nousee tämän kurssin suorittamisessa nopeast
 
 Mikäli SQL-osaamisessasi on puutteita, suosittelen perehtymään netistä vapaasti löytyviin lähteisiin sekä tutoriaaleihin, kuten [sqlzoo.net](https://sqlzoo.net/).
 
+
 # Lisenssit ja tekijänoikeudet
 
 ## Nimiaineiston lisenssi (etunimet.csv)
 
 <a href="https://www.avoindata.fi/data/fi/organization/digi_ja_vaestotietovirasto">Digi- ja väestötietovirasto</a> on julkaissut tietoaineiston <a href="https://www.avoindata.fi/data/fi/dataset/none">Väestötietojärjestelmän suomalaisten nimiaineistot</a> lisenssillä <a  href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
+
 ## Yrityspostinumerot (postinumerot.txt)
 
 Yrityspostinumeroiden tekstimuotoinen listaus perustuu Posti Group Oyj:n verkkosivuiston tietoihin osoitteesta https://www.posti.fi/fi/yrityksille/monikanavainen-viestinta/viestit-monikanavaisesti/postin-vastaanottaminen/yrityspostinumero.
 
+
 ## SQLite-tietokanta-ajuri
 
 Tietokanta-ajuri `sqlite-jdbc-3.30.1.jar` noudattaa lisenssiä *Apache License version 2.0 (http://www.apache.org/licenses/)*. Lisätiedot: https://xerial.org/software/
+
 
 ## Oppimateriaali
 
