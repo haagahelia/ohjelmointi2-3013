@@ -17,7 +17,6 @@ Kurssi alkaa 26.10. ja päättyy 18.12.2020.
 
 ### Aihe 3: Yksikkötestauksen perusteet, 9.11. - 15.11.2020
 
-
 Tällä viikolla tutustumme yksikkötestaukseen ja testaamme valmista virheellisesti toimivaa ja tyylillisesti heikosti toteutettua metodia. Tutustumme lisäksi koodin laatuun vaikuttaviin tekijöihin ja sovellamme niitä annetun valmiin koodin parantamiseksi.
 
 [Siirry oppimateriaaliin](03_yksikkotestaus/junit)
@@ -85,6 +84,11 @@ Useat kurssin tehtävät rakentuvat saman aihealueen ympärille ja edellisten te
 Apua tehtävien tekoon on saatavissa kurssin Teams-kanavalla niin opettajalta kuin muiltakin opiskelijoilta.
 
 
+## Kurssin videot
+
+Osa kurssin omista videoista sijaitsee Haaga-Helian videopalvelussa ja loput Microsoft Stream -palvelussa. Stream-palvelun videoilla saatat mahdollisesti törmätä virheeseen "A setting in your browser is blocking cookies. Please disable this setting or open in a new window." Tämä johtuu selaimesi evästeasetuksista ja voit joko muuttaa asetukset tai siirtyä katsomaan videon Stream-palveluun. Saat lisäohjeita klikkaamalla virheilmoituksessa olevaa linkkiä.
+
+
 ## Kurssin harjoitustyö
 
 Kurssin viimeisillä viikoilla vahvistatte aikaisempina viikkoina opittuja taitoja toteuttaessanne yksilötyönä oman tietokantapohjaisen web-sovelluksen. Vaikka harjoitustyö tehdään itsenäisesti, saatte keskustella siitä esimerkiksi Teamsissa kuten aikaisemmilla tehtäväkierroksilla. Kriteerinä on, että jokainen kirjoittaa itse oman koodinsa.
@@ -102,13 +106,13 @@ Tehtävien pisteytys:
 
 Tehtävä                 |  Maksimipisteet       | DL        |   Järjestelmä | Malliratkaisu
 ------------------------|-----------------------|-----------|---------------|---------------
-Periytyminen ja rajapinnat  | 5                 | 20.5.     | Viope         | 
-Map                     | 5 (+2 bonusta)        | 20.5.     | Viope         | 
-Yksikkötestaus (dayOfYear) | 5                  | 19.4.     | Teams         | 
-Tietokannat ja DAO      | 5                     | 26.4.     | Teams         | 
-Servletit               | 5                     | 3.5.      | Teams         | 
-Servlet + jsp + dao     | 5                     | 10.5.     | Teams         | 
-Ajax ja JavaScript      | 5                     | 17.5.     | Teams         | 
+Periytyminen ja rajapinnat  | 5                 | 1.11.     | Viope         | 
+Map                     | 5 (+2 bonusta)        | 8.11.     | Viope         | 
+Yksikkötestaus (dayOfYear) | 5                  | 15.11.    | Teams         | 
+Tietokannat ja DAO      | 5                     | 22.11.    | Teams         | 
+Servletit               | 5                     | 29.11.    | Teams         | 
+Servlet + jsp + dao     | 5                     | 6.12.     | Teams         | 
+Ajax ja JavaScript      | 5                     | 18.12.    | Teams         | 
 
 Tehtävien maksimipistemäärä on 35 (+ 2 bonuspistettä). Tehtävät arvioidaan siten, että 40 % suorituksella saa arvosanan 1 ja 100 % suorituksella arvosanan 5:
 
