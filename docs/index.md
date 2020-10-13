@@ -13,7 +13,15 @@ Kurssi alkaa 26.10. ja päättyy 18.12.2020.
 
 ### Aihe 1: perintä ja rajapinnat, 26.10. - 1.11.2020
 
+Tehtävät Viopessa (DL 8.11.)
+
+&nbsp;
+
 ### Aihe 2: Map-tietorakenne, 2.11. - 8.11.2020
+
+Tehtävät Viopessa (DL 8.11.)
+
+&nbsp;
 
 ### Aihe 3: Yksikkötestauksen perusteet, 9.11. - 15.11.2020
 
@@ -21,21 +29,35 @@ Tällä viikolla tutustumme yksikkötestaukseen ja testaamme valmista virheellis
 
 [Siirry oppimateriaaliin](03_yksikkotestaus/junit)
 
+&nbsp;
+
 ### Aihe 4: tietokantaohjelmointi (JDBC), 16.11. - 22.11.2020
 
 Tällä viikolla opettelemme ensin muodostamaan yhteyden tietokantaan Java-ohjelmasta ja tekemään yksinkertaisia CRUD-toimenpiteitä (Create, Read, Update & Delete). 
 
 [Siirry oppimateriaaliin](04_tietokantaohjelmointi/jdbc)
 
+&nbsp;
+
 ### Aihe 5: Tietokannan eriyttäminen (DAO) + yksikkötestaus (JUnit), 23.11. - 29.11.2020
+
+&nbsp;
 
 ### Aihe 6: Verkkosovellus (Tomcat ja Servletit), 30.11. - 6.12.2020
 
+&nbsp;
+
 ### Aihe 7: Verkkosovellus kolmikerrosarkkitehtuurilla (Servletit, DAO, JSP), 7.12. - 13.12.2020
+
+&nbsp;
 
 ### Aihe 8: Ajax ja dynaamiset toiminnallisuudet JavaScriptillä, 14.12. - 18.12.2020
 
+&nbsp;
+
 ### Harjoitustyö, DL su 20.12.2020 klo 23:55
+
+&nbsp;
 
 <!-- ### Kertaus
 
@@ -111,15 +133,14 @@ Tehtävien pisteytys:
 
 Tehtävä                 |  Maksimipisteet       | DL        |   Järjestelmä | Malliratkaisu
 ------------------------|-----------------------|-----------|---------------|---------------
-Perintä ja rajapinnat   | 5                     | <sup>1</sup> | Viope         | 
-Map                     | 5 (+2 bonusta)        | <sup>1</sup> | Viope         | 
+Perintä ja rajapinnat   | 5                     | 8.11.     | Viope         | 
+Map                     | 5 (+2 bonusta)        | 8.11.     | Viope         | 
 Yksikkötestaus          | 5                     | 15.11.    | Teams         | 
 Tietokannat ja DAO      | 5                     | 29.11.    | Teams         | 
 Servletit               | 5                     | 6.12.     | Teams         | 
 Servlet + jsp + dao     | 5                     | 13.12.    | Teams         | 
 Ajax ja JavaScript      | 5                     | 18.12.    | Teams         | 
 
-<sup>1</sup> Viope-tehtävillä ei ole erillistä määräaikaa, vaan tehtävät tulee ratkaista kurssin loppuun mennessä.
 
 Tehtävien maksimipistemäärä on 35 (+ 2 bonuspistettä). Tehtävät arvioidaan siten, että 40 % suorituksella saa arvosanan 1 ja 100 % suorituksella arvosanan 5:
 
