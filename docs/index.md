@@ -1,4 +1,4 @@
-# Ohjelmointi 2, syksy 2020 ❄️
+# Tervetuloa kurssille!
 
 Tervetuloa kurssille Ohjelmointi 2, SWD4TN033-3013! Opettajana tällä kurssilla toimii Teemu Havulinna (etunimi.sukunimi@haaga-helia.fi).
 
@@ -16,6 +16,11 @@ Kurssi alkaa 26.10. ja päättyy 18.12.2020.
 ### Aihe 2: Map-tietorakenne, 2.11. - 8.11.2020
 
 ### Aihe 3: Yksikkötestauksen perusteet, 9.11. - 15.11.2020
+
+
+Tällä viikolla tutustumme yksikkötestaukseen ja testaamme valmista virheellisesti toimivaa ja tyylillisesti heikosti toteutettua metodia. Tutustumme lisäksi koodin laatuun vaikuttaviin tekijöihin ja sovellamme niitä annetun valmiin koodin parantamiseksi.
+
+[Siirry oppimateriaaliin](03_yksikkotestaus/junit)
 
 ### Aihe 4: tietokantaohjelmointi (JDBC), 16.11. - 22.11.2020
 
