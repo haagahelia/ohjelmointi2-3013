@@ -49,7 +49,7 @@ Tietokannan käyttäminen Java-ohjelmasi ulkopuolella ei ole tällä kurssilla v
 
 [Erilaisten graafisten käyttöliittymien](https://www.google.com/search?q=sqlite+gui) (gui, Graphical User Interface) lisäksi SQLite:lle on saatavissa SQLite:n oma komentorivityökalu.
 
-Voit ladata itsellesi kyseisen `sqlite3.exe`-komentorivityökalun osoitteesta: https://sqlite.org/download.html. Työkalut löytyvät esimerkiksi Windowsille otsikon "Precompiled Binaries for Windows" alta (sqlite-tools-win32-x86-VERSIO.zip). Pura `sqlite3.exe`-tiedosto zip-paketista esimerkiksi samaan kansioon tietokantasi kanssa. Jos käytät eri käyttöjärjestelmää, sovella ohjeita oman käyttöjärjestelmäsi työkaluversion mukaisesti.
+Voit ladata itsellesi kyseisen `sqlite3.exe`-komentorivityökalun osoitteesta: [https://sqlite.org/download.html](https://sqlite.org/download.html). Työkalut löytyvät esimerkiksi Windowsille otsikon "Precompiled Binaries for Windows" alta (sqlite-tools-win32-x86-VERSIO.zip). Pura `sqlite3.exe`-tiedosto zip-paketista esimerkiksi samaan kansioon tietokantasi kanssa. Jos käytät eri käyttöjärjestelmää, sovella ohjeita oman käyttöjärjestelmäsi työkaluversion mukaisesti.
 
 [Tällä sivulla](./komentorivityokalu) on esimerkki SQLite-komentorivityökalun käyttämisestä. Lisää ohjeita löydät osoitteesta https://sqlite.org/cli.html ja alla olevista videoista.
 
@@ -63,11 +63,15 @@ Voit ladata itsellesi kyseisen `sqlite3.exe`-komentorivityökalun osoitteesta: h
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/4906ef8a-22f3-4322-9673-df55481b3624?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+[https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc](https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc)
+
 &nbsp;
 
 **[SQLite tools ja uuden tietokannan luominen](https://web.microsoftstream.com/video/9735fb55-5e0c-4d7d-bc03-bb72bd1097a1)** 8:38
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/9735fb55-5e0c-4d7d-bc03-bb72bd1097a1?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+[https://sqlite.org/download.html](https://sqlite.org/download.html)
 
 &nbsp;
 
