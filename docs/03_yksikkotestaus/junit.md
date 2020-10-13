@@ -160,9 +160,10 @@ Edellä mainittu lista on käyty tämän esimerkkikoodin yhteydessä läpi osoit
 **Huom!** Javan `java.time`-paketista löytyvät `Month`-, `YearMonth` ja `Year`-luokat voivat olla refaktoroinnissa  erittäin hyödyllisiä. `Year`-luokan `isLeap`-metodin avulla voit selvittää onko tietty vuosi karkausvuosi, ja `length()` sekä `lengthOfMonth()`-metodit auttavat kuukauden pituuden selvittämisessä ilman kovakoodattuja numeroita.
 
 Linkit:
-* https://docs.oracle.com/javase/8/docs/api/java/time/Year.html
-* https://docs.oracle.com/javase/8/docs/api/java/time/Month.html
-* https://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html
+
+* [https://docs.oracle.com/javase/8/docs/api/java/time/Year.html](https://docs.oracle.com/javase/8/docs/api/java/time/Year.html)
+* [https://docs.oracle.com/javase/8/docs/api/java/time/Month.html](https://docs.oracle.com/javase/8/docs/api/java/time/Month.html)
+* [https://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html](https://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html)
 
 ## Tehtävän palauttaminen
 

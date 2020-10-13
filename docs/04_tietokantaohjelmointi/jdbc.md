@@ -2,7 +2,7 @@
 
 ## Tietokantaohjelmointi (JDBC)
 
-Tällä viikolla opettelemme ensin muodostamaan yhteyden tietokantaan Java-ohjelmasta ja tekemään yksinkertaisia CRUD-toimenpiteitä (Create, Read, Update & Delete). Tämän jälkeen jaamme ohjelmaa erillisiin osiin ja tutustumme DAO-kehitysmalliin (Data Access Object).
+Tällä viikolla opettelemme ensin muodostamaan yhteyden tietokantaan Java-ohjelmasta ja tekemään yksinkertaisia CRUD-toimenpiteitä (Create, Read, Update & Delete). 
 
 
 ## JDBC – Java Database Connectivity

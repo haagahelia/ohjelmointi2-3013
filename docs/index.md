@@ -4,7 +4,7 @@ Tervetuloa kurssille Ohjelmointi 2, SWD4TN033-3013! Opettajana tällä kurssilla
 
 Tällä opintojaksolla syvennämme olio-ohjelmointiosaamistamme ja sovellamme aiemmin oppimianne ohjelmointitaitoja tietokantojen ja verkkopalveluiden parissa. Syvennymme kielen syntaksin ja tarvittavien kirjastojen lisäksi myös yksikkötestaukseen sekä versionhallinnan alkeisiin. 
 
-Kurssin opintojaksokuvaus löytyy osoitteesta https://opinto-opas.haaga-helia.fi/course_unit/SWD4TN033.
+Kurssin opintojaksokuvaus löytyy osoitteesta [https://opinto-opas.haaga-helia.fi/course_unit/SWD4TN033](https://opinto-opas.haaga-helia.fi/course_unit/SWD4TN033).
 
 ## Kurssin aikataulu
 
@@ -22,6 +22,10 @@ Tällä viikolla tutustumme yksikkötestaukseen ja testaamme valmista virheellis
 [Siirry oppimateriaaliin](03_yksikkotestaus/junit)
 
 ### Aihe 4: tietokantaohjelmointi (JDBC), 16.11. - 22.11.2020
+
+Tällä viikolla opettelemme ensin muodostamaan yhteyden tietokantaan Java-ohjelmasta ja tekemään yksinkertaisia CRUD-toimenpiteitä (Create, Read, Update & Delete). 
+
+[Siirry oppimateriaaliin](04_tietokantaohjelmointi/jdbc)
 
 ### Aihe 5: Tietokannan eriyttäminen (DAO) + yksikkötestaus (JUnit), 23.11. - 29.11.2020
 
