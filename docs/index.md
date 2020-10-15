@@ -90,7 +90,7 @@ Kurssilla on kahdenlaisia pakollisia tehtäviä, jotka tulee palauttaa annettuih
 
 Kurssin ensimmäisten harjoitustehtävien tehtävänannot löytyvät Viope-järjestelmästä, jonne tehtävät myös palautetaan. Viope tarkistaa tehtävät automaattisesti ja voit lähettää ratkaisusi tarkistettavaksi niin monta kertaa kuin haluat. Viope-tehtävien DL on sama kuin kurssin harjoitustyöllä.
 
-Rekisteröidy Viopeen osoitteessa: https://vw4.viope.com/login?org=hh. Huomaa että rekisteröitymisosoitteessa on oltava parametri `?org=hh`, jotta pääset käsiksi Haaga-Helian kurssitarjontaan. Rekisteröityessäsi valitse tämä toteutus `Ohjelmointi 2, 3013 ❄️`.
+Rekisteröidy Viopeen osoitteessa: [https://vw4.viope.com/login?org=hh](https://vw4.viope.com/login?org=hh). Huomaa että rekisteröitymisosoitteessa on oltava parametri `?org=hh`, jotta pääset käsiksi Haaga-Helian kurssitarjontaan. Rekisteröityessäsi valitse tämä toteutus **Ohjelmointi 2, 3013 ❄️**.
 
 **Teknisistä syistä johtuen Viopeen palautettavista lähdekoodeista täytyy aina poistaa mahdolliset package -lauseet luokan yläpuolelta.** Viope on myös muilla tavoin erittäin tarkka ohjelmien oikeellisuudesta, mikä saattaa aiheuttaa ensimmäisillä viikoilla hämmennystä. Voit kysyä kurssin Teams-kanavalla neuvoa Viope-ongelmiin milloin tahansa.
 
@@ -203,12 +203,12 @@ Mikäli SQL-osaamisessasi on puutteita, suosittelen perehtymään netistä vapaa
 
 ## Yrityspostinumerot (postinumerot.txt)
 
-Yrityspostinumeroiden tekstimuotoinen listaus perustuu Posti Group Oyj:n verkkosivuiston tietoihin osoitteesta https://www.posti.fi/fi/yrityksille/monikanavainen-viestinta/viestit-monikanavaisesti/postin-vastaanottaminen/yrityspostinumero.
+Yrityspostinumeroiden tekstimuotoinen listaus perustuu Posti Group Oyj:n verkkosivuiston tietoihin osoitteesta [https://www.posti.fi/fi/yrityksille/monikanavainen-viestinta/viestit-monikanavaisesti/postin-vastaanottaminen/yrityspostinumero](https://www.posti.fi/fi/yrityksille/monikanavainen-viestinta/viestit-monikanavaisesti/postin-vastaanottaminen/yrityspostinumero).
 
 
 ## SQLite-tietokanta-ajuri
 
-Tietokanta-ajuri `sqlite-jdbc-3.30.1.jar` noudattaa lisenssiä *Apache License version 2.0 (http://www.apache.org/licenses/)*. Lisätiedot: https://xerial.org/software/
+Tietokanta-ajuri `sqlite-jdbc-3.30.1.jar` noudattaa lisenssiä [Apache License version 2.0](http://www.apache.org/licenses/). Lisätiedot: [https://xerial.org/software/](https://xerial.org/software/)
 
 
 ## Oppimateriaali

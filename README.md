@@ -19,7 +19,7 @@ Mikäli haluat käyttää omassa työssäsi versionhallintaa, voit kloonata proj
 Esimerkkiprojekti noudattaa seuraavaa hakemistorakennetta:
 
 ```tree
-embedded-tomcat
+/
 │   pom.xml
 │   README.md
 │
@@ -43,6 +43,8 @@ embedded-tomcat
 │   └───test
 │       ├───java
 │       └───resources
+│
+└───docs
 ```
 
 Sijainti                                | Tarkoitus
