@@ -39,23 +39,37 @@ Tällä viikolla opettelemme ensin muodostamaan yhteyden tietokantaan Java-ohjel
 
 &nbsp;
 
-### Aihe 5: Tietokannan eriyttäminen (DAO) + yksikkötestaus (JUnit), 23.11. - 29.11.2020
+### Aihe 5: Tietokantalogiikan eriyttäminen ja yksikkötestaaminen (DAO & JUnit), 23.11. - 29.11.2020
+
+Tällä viikolla jatkokehitämme ostoslistasovelluksen arkkitehtuuria siten, että tietokantalogiikkamme eriytetään tekstikäyttöliittymästä. Eriyttäminen mahdollistaa tietokantalogiikan testaamisen yksikkötesteillä sekä myöhemmin saman koodin uudelleenkäytön web-pohjaisella käyttöliittymällä.
+
+[Siirry oppimateriaaliin](05_dao/dao)
 
 &nbsp;
 
 ### Aihe 6: Verkkosovellus (Tomcat ja Servletit), 30.11. - 6.12.2020
 
+Verkkosovellusten osuuden ensimmäisellä viikolla toteutamme yksinkertaisia servlettejä päivämäärien laskemiseksi. Voimme halutessamme hyödyntää ensimmäisellä viikolla esiteltyä `dayOfYear`-metodia tai Javan valmiita päivämääräluokkia.
+
+
 &nbsp;
 
 ### Aihe 7: Verkkosovellus kolmikerrosarkkitehtuurilla (Servletit, DAO, JSP), 7.12. - 13.12.2020
+
+Verkkosovellusten toisella viikolla liitämme oman ostoslistasovelluksemme tietokannan verkkopalveluun ja luomme HTML-käyttöliittymät ostoslistan näyttämiseksi ja tuotteiden lisäämiseksi.
 
 &nbsp;
 
 ### Aihe 8: Ajax ja dynaamiset toiminnallisuudet JavaScriptillä, 14.12. - 18.12.2020
 
+Viimeinen harjoitusviikko käsittelee JavaScript-koodin avulla tehtäviä palvelinkutsuja, eli Ajax-kutsuja. Niiden avulla voimme päivittää ostoslistamme sisältöä tekemättä sivulatauksia. Toteutamme lisäksi uuden ominaisuuden ostoslistan rivien poistamiseksi.
+
 &nbsp;
 
 ### Harjoitustyö, DL su 20.12.2020 klo 23:55
+
+Kurssin jälkimmäisellä puoliskolla vahvistatte kurssilla opittuja taitoja ja toteutatte harjoitustyönä oman tietokantapohjaisen web-sovelluksen. Harjoitustyö arvioidaan asteikolla 0-5.
+
 
 &nbsp;
 

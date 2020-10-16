@@ -87,9 +87,7 @@ Voit ladata itsellesi kyseisen `sqlite3.exe`-komentorivityökalun osoitteesta: [
 
 &nbsp;
 
-**[JDBC-tunnin yhteenveto](https://web.microsoftstream.com/video/aea9daea-9811-4ba2-bd14-943658e381a1)** 13:03
 
-<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/aea9daea-9811-4ba2-bd14-943658e381a1?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
 
 ## Videoilla esiintyvä esimerkkikoodi
