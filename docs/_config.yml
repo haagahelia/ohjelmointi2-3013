@@ -1,6 +1,5 @@
 theme: jekyll-theme-cayman
 title: Ohjelmointi 2
 description: Haaga-Helia, syksy 2020 ❄️
-site:
-  github:
-    is_project_page: false
+github:
+  is_project_page: false
