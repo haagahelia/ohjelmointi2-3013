@@ -1,4 +1,4 @@
-[⬅️ takaisin kurssin etusivulle](../)
+[⇦ takaisin kurssin etusivulle](../)
 
 # Yksikkötestauksen perusteet ja koodin laatu 
 

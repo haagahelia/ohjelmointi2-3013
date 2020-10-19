@@ -8,16 +8,26 @@ Kurssin opintojaksokuvaus löytyy osoitteesta [https://opinto-opas.haaga-helia.f
 
 ## Kurssin aikataulu
 
-Kurssi alkaa 26.10. ja päättyy 18.12.2020.
+Tämä opintojakso alkaa 26.10. ja päättyy 18.12.2020. Opintojakso toteutetaan täysin virtuaalisesti, eli se ei sisällä lähiopetusta kampuksella eikä videoyhteydellä. Lähiopetuksen sijaan saatavillasi on lukuisia videoita ja tekstimuotoista oppimateriaalia.
+
+Kurssin keskustelukanavana toimii Teams-ryhmä, jonka kautta tavoitat sekä opettajan että muut opiskelijat. Ohjausta ja apua on saatavilla Teamsin kautta lyhyellä vasteajalla.
 
 
 ### Aihe 1: perintä ja rajapinnat, 26.10. - 1.11.2020
+
+[Siirry oppimateriaaliin ⇨](01_perinta_ja_rajapinnat/perinta-ja-rajapinnat)
 
 Tehtävät Viopessa (DL 8.11.)
 
 &nbsp;
 
 ### Aihe 2: Map-tietorakenne, 2.11. - 8.11.2020
+
+> *Hajautustaulu eli HashMap on ArrayListin lisäksi eniten käytettyjä Javan valmiiksi tarjoamia tietorakenteita. Hajautustaulua käytetään kun tietoa käsitellään avain-arvo -pareina, missä avaimen perusteella voidaan lisätä, hakea ja poistaa arvo.*
+>
+> [Agile Education Research –tutkimusryhmä, mooc.fi](https://ohjelmointi-20.mooc.fi/osa-8/2-hajautustaulu)
+
+[Siirry oppimateriaaliin ⇨](02_map/map)
 
 Tehtävät Viopessa (DL 8.11.)
 
@@ -27,7 +37,7 @@ Tehtävät Viopessa (DL 8.11.)
 
 Tällä viikolla tutustumme yksikkötestaukseen ja testaamme valmista virheellisesti toimivaa ja tyylillisesti heikosti toteutettua metodia. Tutustumme lisäksi koodin laatuun vaikuttaviin tekijöihin ja sovellamme niitä annetun valmiin koodin parantamiseksi.
 
-[Siirry oppimateriaaliin](03_yksikkotestaus/junit)
+[Siirry oppimateriaaliin ⇨](03_yksikkotestaus/junit)
 
 &nbsp;
 
@@ -35,7 +45,7 @@ Tällä viikolla tutustumme yksikkötestaukseen ja testaamme valmista virheellis
 
 Tällä viikolla opettelemme ensin muodostamaan yhteyden tietokantaan Java-ohjelmasta ja tekemään yksinkertaisia CRUD-toimenpiteitä (Create, Read, Update & Delete). 
 
-[Siirry oppimateriaaliin](04_tietokantaohjelmointi/jdbc)
+[Siirry oppimateriaaliin ⇨](04_tietokantaohjelmointi/jdbc)
 
 &nbsp;
 
@@ -43,7 +53,7 @@ Tällä viikolla opettelemme ensin muodostamaan yhteyden tietokantaan Java-ohjel
 
 Tällä viikolla jatkokehitämme ostoslistasovelluksen arkkitehtuuria siten, että tietokantalogiikkamme eriytetään tekstikäyttöliittymästä. Eriyttäminen mahdollistaa tietokantalogiikan testaamisen yksikkötesteillä sekä myöhemmin saman koodin uudelleenkäytön web-pohjaisella käyttöliittymällä.
 
-[Siirry oppimateriaaliin](05_dao/dao)
+[Siirry oppimateriaaliin ⇨](05_dao/dao)
 
 &nbsp;
 
@@ -51,24 +61,34 @@ Tällä viikolla jatkokehitämme ostoslistasovelluksen arkkitehtuuria siten, ett
 
 Verkkosovellusten osuuden ensimmäisellä viikolla toteutamme yksinkertaisia servlettejä päivämäärien laskemiseksi. Voimme halutessamme hyödyntää ensimmäisellä viikolla esiteltyä `dayOfYear`-metodia tai Javan valmiita päivämääräluokkia.
 
+[Siirry oppimateriaaliin ⇨](06_servletit/servletit)
 
 &nbsp;
+
 
 ### Aihe 7: Verkkosovellus kolmikerrosarkkitehtuurilla (Servletit, DAO, JSP), 7.12. - 13.12.2020
 
 Verkkosovellusten toisella viikolla liitämme oman ostoslistasovelluksemme tietokannan verkkopalveluun ja luomme HTML-käyttöliittymät ostoslistan näyttämiseksi ja tuotteiden lisäämiseksi.
 
+[Siirry oppimateriaaliin ⇨](07_mvc/servlet_dao_jstl)
+
 &nbsp;
+
 
 ### Aihe 8: Ajax ja dynaamiset toiminnallisuudet JavaScriptillä, 14.12. - 18.12.2020
 
 Viimeinen harjoitusviikko käsittelee JavaScript-koodin avulla tehtäviä palvelinkutsuja, eli Ajax-kutsuja. Niiden avulla voimme päivittää ostoslistamme sisältöä tekemättä sivulatauksia. Toteutamme lisäksi uuden ominaisuuden ostoslistan rivien poistamiseksi.
+
+[Siirry oppimateriaaliin ⇨](08_ajax/ajax)
+
 
 &nbsp;
 
 ### Harjoitustyö, DL su 20.12.2020 klo 23:55
 
 Kurssin jälkimmäisellä puoliskolla vahvistatte kurssilla opittuja taitoja ja toteutatte harjoitustyönä oman tietokantapohjaisen web-sovelluksen. Harjoitustyö arvioidaan asteikolla 0-5.
+
+[Siirry harjoitustyön tehtävänantoon ⇨](09_harjoitustyo/harjoitustyo)
 
 
 &nbsp;
@@ -102,9 +122,11 @@ Kurssilla on kahdenlaisia pakollisia tehtäviä, jotka tulee palauttaa annettuih
 
 ### Viope
 
-Kurssin ensimmäisten harjoitustehtävien tehtävänannot löytyvät Viope-järjestelmästä, jonne tehtävät myös palautetaan. Viope tarkistaa tehtävät automaattisesti ja voit lähettää ratkaisusi tarkistettavaksi niin monta kertaa kuin haluat. Viope-tehtävien DL on sama kuin kurssin harjoitustyöllä.
+Kurssin ensimmäisten harjoitustehtävien tehtävänannot löytyvät Viope-järjestelmästä, jonne tehtävät myös palautetaan. Viope tarkistaa tehtävät automaattisesti ja voit lähettää ratkaisusi tarkistettavaksi niin monta kertaa kuin haluat.
 
-Rekisteröidy Viopeen osoitteessa: [https://vw4.viope.com/login?org=hh](https://vw4.viope.com/login?org=hh). Huomaa että rekisteröitymisosoitteessa on oltava parametri `?org=hh`, jotta pääset käsiksi Haaga-Helian kurssitarjontaan. Rekisteröityessäsi valitse tämä toteutus **Ohjelmointi 2, 3013 ❄️**.
+Mikäli sinulla ei ole vielä tunnuksia Viopeen, rekisteröidy osoitteessa: [https://vw4.viope.com/login?org=hh](https://vw4.viope.com/login?org=hh). Huomaa että rekisteröitymisosoitteessa on oltava parametri `?org=hh`, jotta pääset käsiksi Haaga-Helian kurssitarjontaan. Rekisteröityessäsi valitse tämä toteutus **Ohjelmointi 2, 3013 ❄️**.
+
+Mikäli sinulla on jo Viope-tunnukset, voit liittyä tämän kurssin työtilaan etusivulta **Ohjelmointi 2, 3013 ❄️** -linkin kautta.
 
 **Teknisistä syistä johtuen Viopeen palautettavista lähdekoodeista täytyy aina poistaa mahdolliset package -lauseet luokan yläpuolelta.** Viope on myös muilla tavoin erittäin tarkka ohjelmien oikeellisuudesta, mikä saattaa aiheuttaa ensimmäisillä viikoilla hämmennystä. Voit kysyä kurssin Teams-kanavalla neuvoa Viope-ongelmiin milloin tahansa.
 

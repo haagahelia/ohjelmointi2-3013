@@ -1,4 +1,6 @@
-# Harjoitustyö (DL ~~ke 20.5.~~ su 24.5. klo 22)
+[⇦ takaisin kurssin etusivulle](../)
+
+# Harjoitustyö
 
 Kurssin viimeisillä viikoilla vahvistatte aikaisempina viikkoina opittuja taitoja toteuttaessanne yksilötyönä oman tietokantapohjaisen web-sovelluksen. Harjoitustyö arvioidaan asteikolla 0-5 sen painoarvo on 50 % kurssin loppuarvosanasta. 
 

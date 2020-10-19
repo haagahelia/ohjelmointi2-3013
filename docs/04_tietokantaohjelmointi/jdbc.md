@@ -1,4 +1,4 @@
-[⬅️ takaisin kurssin etusivulle](../)
+[⇦ takaisin kurssin etusivulle](../)
 
 ## Tietokantaohjelmointi (JDBC)
 
@@ -20,7 +20,7 @@ Tällä kurssilla käytettävä SQLite-tietokanta on paikallinen muisti- tai tie
 > 
 > *"SQLite is a popular choice as embedded database software for local/client storage in application software such as web browsers. It is arguably the most widely deployed database engine, as it is used today by several widespread browsers, operating systems, and embedded systems (such as mobile phones), among others. SQLite has bindings to many programming languages.*"
 >
-> https://en.wikipedia.org/wiki/SQLite
+> [https://en.wikipedia.org/wiki/SQLite](https://en.wikipedia.org/wiki/SQLite)
 
 SQLite toimii monin tavoin täysin samalla tavalla kuin erilliset tietokantapalvelimet. Myös SQL-kyselyt ovat pääosin samat, esim. `SELECT id, name FROM Person`.
 

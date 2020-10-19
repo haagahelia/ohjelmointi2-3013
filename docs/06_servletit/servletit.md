@@ -1,16 +1,18 @@
+[⇦ takaisin kurssin etusivulle](../)
+
 # Web-ohjelmointi servleteillä
 
 Huom! Tässä vaiheessa on hyvä varmistaa, että käytössäsi on *"Eclipse IDE for Enterprise Java Developers"*, *"Eclipse Java EE IDE for Web Developers"* tai vastaavalla nimellä kutsuttu jakelupaketti, joka sisältää verkkosovellusten tekoon tarvitut liitännäiset. Tämä selviää "Help"-valikosta kohdasta "About Eclipse IDE". Mikäli Eclipse-versiosi ei ole soveltuva, asenna uusi versio https://www.eclipse.org/downloads/ -osoitteesta löytyvällä asennusohjelmalla.
 
 Tästä viikosta alkaen käytämme koodissa merkittävästi enemmän valmiita kirjastoja, joiden myötä ohjelman virheiden tulkitseminen tulee usein hankalammaksi. Kun virheilmoitus liittyy jossain muussa kirjastossa ilmenneeseen virheeseen, voi olla vaikeaa hahmottaa, missä kohdassa omaa koodiasi on syy tuolle virheelle. Suosittelen lukemaan artikkelin https://www.twilio.com/blog/how-to-read-and-understand-a-java-stacktrace, joka opettaa lukemaan Javan pitkiä mutta hyviä virheilmoituksia. Jakakaa myös Teamsissa kopioita virheilmoituksista tai screenshotteja, jos ette saa virheilmoituksia tulkittua.
 
-## Malliratkaisu
+<!--## Malliratkaisu
 
 Tämän tehtävän palautusaika on umpeutunut. Voit katsoa malliratkaisun lähdekoodit GitHubista:
 
 * [Servletit](https://github.com/haagahelia/embedded-tomcat-template/tree/kevat2020/src/main/java/servlet)
 * [JSP-sivut](https://github.com/haagahelia/embedded-tomcat-template/tree/kevat2020/src/main/webapp/WEB-INF)
-
+-->
 
 
 ## Teknologiat
