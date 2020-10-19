@@ -150,7 +150,24 @@ Rajapinta määrittelee siis metodien nimet, parametriarvot ja paluuarvot, mutta
 
 ## Viope-tehtävä
 
-Täydennä ohessa esitettyä `Country`-luokkaa siten, että luokka täyttää `Comparable<Country>`-rajapinnan. Maat tulee järjestää siten, että väkiluvultaan pienempi maa on järjestyksessä ennen väkiluvulta suurempaa maata.Palauta ratkaisusi Viopeen.
+Täydennä ohessa esitettyä `Country`-luokkaa siten, että luokka täyttää `Comparable<Country>`-rajapinnan:
+
+```java
+public interface Comparable<T> {
+    /**
+     * https://docs.oracle.com/javase/8/docs/api/java/lang/Comparable.html
+     *
+     * @return a negative integer, zero, or a positive integer as 
+     *         this object is less than, equal to, or greater than 
+     *         the specified object.
+     */
+    public int compareTo(T other);
+}
+```
+
+Maat tulee järjestää siten, että väkiluvultaan pienempi maa on järjestyksessä ennen väkiluvulta suurempaa maata. Hyvä lähde Comparator-rajapinnan logiikan hahmottamiseksi on esimerkiksi [https://www.baeldung.com/java-comparator-comparable](https://www.baeldung.com/java-comparator-comparable).
+
+Voit käyttää tehtävässä pohjana seuraavaa Country-luokkaa:
 
 ```java
 public class Country implements Comparable<Country> {
@@ -198,6 +215,9 @@ public static void main(String[] args) {
     }
 }
 ```
+
+Palauta lopuksi Country-luokkasi Viopeen.
+
 
 ### Ohjelmalogiikan testaamisesta
 

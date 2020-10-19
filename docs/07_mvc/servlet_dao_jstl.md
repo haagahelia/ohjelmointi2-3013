@@ -63,7 +63,9 @@ Tutustu itsenäisesti seuraavaan videoon, jossa esitellään tagikirjaston käyt
 
 **[JSTL Tutorial part 2 Core Tags](https://youtu.be/R0EnI9_ZMA0)**
 
-*Video esittelee, miten JSTL tagikirjasto lisätään JSP-sivulle `taglib`-direktiivin avulla. Opit myös käyttämään harjoituksessa tarvitsemiasi `c:out` ja `c:forEach` tageja. Video näyttää myös konkreettisesti, miten lista olioita voidaan välittää servletiltä JSP-sivulle ja miten sillä olevat Java-oliot saadaan esitettyä sivulla HTML-muodossa. Video on jatkoa viime viikon videolle "[JSTL tutorial part 1](https://youtu.be/KmREMEhj5eE)".*
+[![JSTL Tutorial part 2 Core Tags](https://img.youtube.com/vi/R0EnI9_ZMA0/mq1.jpg)](https://youtu.be/R0EnI9_ZMA0)
+
+> *Tämä video esittelee, miten JSTL tagikirjasto lisätään JSP-sivulle `taglib`-direktiivin avulla. Opit myös käyttämään harjoituksessa tarvitsemiasi `c:out` ja `c:forEach` tageja. Video näyttää myös konkreettisesti, miten lista olioita voidaan välittää servletiltä JSP-sivulle ja miten sillä olevat Java-oliot saadaan esitettyä sivulla HTML-muodossa. Video on jatkoa viime viikon videolle [JSTL tutorial part 1](https://youtu.be/KmREMEhj5eE).*
 
 
 ## DAO- ja Model-luokkien lisääminen projektiin
@@ -105,11 +107,13 @@ Ohjelmasi hakemistorakenne voi olla luokkien lisäämisen jälkeen esimerkiksi s
 
 **HUOM!** Mikäli käytit `JDBCShoppingListItemDao`-luokkasi kanssa ympäristömuuttujaa tietokannan osoitteen säilyttämisessä, joudut määrittelemään ympäristömuuttujan myös `Main`-luokan ympäristömuuttujiin.
 
+
 ## Riippuvuuksien asentaminen
 
 Verkkoprojektissamme on käytössä Maven-automaatiotyökalu riippuvuuksien hallitsemiseksi. Sen avulla voimme lisätä tutut riippuvuudet, eli SQLite-ajurin ja JUnit-testikirjaston. Myös JSTL-tagikirjaston (JSP Standard Tag Library) asennus sujuu helpoiten lisäämällä se riippuvuutena `pom.xml`-tiedostoon. 
 
 Toinen vaihtoehto olisi tallentaa riippuvuudet .jar-paketteina (Java Archive), kuten aikaisemmin tällä kurssilla teimme SQLite-kirjaston kanssa.
+
 
 ### pom.xml:n muokkaaminen
 
@@ -164,6 +168,7 @@ Itse riippuvuudet määritellään `<dependencies>`-tagin sisään, kukin riippu
 
 Tallennettuasi muutetun `pom.xml`-tiedoston Eclipse käynnistää Maven-pluginin asentaakseen uudet riippuvuudet. Varmuuden vuoksi aina tämän tiedoston muokkaamisen jälkeen kannattaa vielä klikata projektia Eclipsen hakemistopuussa hiiren kakkospainikkeella ja valita [Maven-valikosta kohta "Update Project"](https://stackoverflow.com/a/20547404).
 
+
 ## Tehtävät
 
 Näissä tehtävissä tarvitset aikaisempina viikkoina toteutettuja tietokantaluokkia. Mikäli tehtävät jäivät sinulta kesken tai et ole tyytyväinen koodisi toimintaan, voit käyttää tehtävän pohjana [malliratkaisun lähdekoodeja](/src/main/java/shoppinglist).
@@ -188,29 +193,32 @@ Toteuta uusi JSP-sivu ostoslistan tuotteiden listaamista varten. Yllä esimerkki
 
 [Tehtävän videomateriaali (YouTube)](https://youtu.be/R0EnI9_ZMA0) näyttää, miten ostoslista voidaan käydä läpi `c:forEach`-tagin avulla ja miten tuoterivit tulostetaan turvallisesti `c:out`-tagin avulla.
 
-Sivun HTML-rakenteella ei periaatteessa ole tämän tehtävän kannalta merkitystä, eli voit näyttää ostoslistan sisällön esim. listaelementeillä tai taulukolla:
+Sivun HTML-rakenteella ei periaatteessa ole tämän tehtävän kannalta merkitystä, eli voit näyttää ostoslistan sisällön valintasi mukaan esimerkiksi listaelementeillä tai taulukolla:
 
 ```html
 <!-- lista -->
 <ul>
+    <!-- TODO: Nämä rivit tulee generoida c:forEach-tagin avulla -->
     <li>Milk</li>
     <li>Eggs</li>
 </ul>
+```
 
+```html
 <!-- taulukko -->
 <table>
     <thead>
         <tr><th>Product</th></tr>
     </thead>
     <tbody>
-        <!-- Huom! Nämä rivit tulee generoida c:forEach-tagin avulla: -->
+        <!-- TODO: Nämä rivit tulee generoida c:forEach-tagin avulla -->
         <tr><td>Milk</td></tr>
         <tr><td>Eggs</td></tr>
     </tbody>
 </table>
 ```
 
-#### Injektioilta suojautuminen (Cross Site Scripting, XSS)
+### Injektioilta suojautuminen (Cross Site Scripting, XSS)
 
 SQL-aiheen yhteydessä käytimme `PreparedStatement`-luokkaa välttääksemme tekstidatan tulkitsemisen SQL-lausekkeina (SQL-injektio). Koska **ostoslistan tuotteet ovat käyttäjien syöttämää dataa, myös ne saattavat sisältää mitä tahansa merkkijonoja**. On siis mahdollista, että käyttäjä kirjoittaa tuotteen nimeen **esimerkiksi HTML- tai JavaScript-koodia**, joka muuttaa sivun sisältöä haitallisesti toisen käyttäjän avatessa sivua (Cross Site Scripting, XSS). Voit lukea aiheesta lisää [täällä](https://owasp.org/www-community/attacks/xss/) (Open Web Application Security Project, OWASP).
 
@@ -239,16 +247,17 @@ Voit lisätä lomakkeen samalle JSP-sivulle, jolla näytät myös tuotelistan. L
 
 ```html
 <form method="post">
-    <input name="title" required type="text" placeholder=" type item here..." autofocus /> 
+    <input name="title" required type="text" placeholder="type item here..." autofocus /> 
     <input type="submit" value="Add to list" />
 </form>
 ```
 
-Tällä `form`-tagilla ei ole `action`-attribuuttia, joten sen lähettäminen tekee `post`-tyyppisen HTTP-pyynnön samaan osoitteeseen josta sivu on ladattu. Voit tarvittaessa määritellä eri osoitteen lisäämällä `action`-attribuutin.
+Tällä `form`-tagilla ei ole `action`-attribuuttia, joten sen lähettäminen tekee `post`-tyyppisen HTTP-pyynnön samaan osoitteeseen, josta sivu on ladattu. Voit tarvittaessa määritellä eri osoitteen lisäämällä `action`-attribuutin.
 
 Pyynnön mukana välitetään käyttäjän kirjoittama tuotenimi, joka on palvelimella käsiteltävissä `title`-parametrin avulla. HTTP-parametrin nimi määräytyy `<input>`-elementin `name`-attribuutin mukaan.
 
-#### Lomaketietojen käsitteleminen palvelimella
+
+### Lomaketietojen käsitteleminen palvelimella
 
 Lomakkeen lähetyksen jälkeen se käsitellään palvelimella `doPost`-käsittelijämetodilla. Jos et määritellyt lomakkeelle `action`-attribuuttia, tulee pyyntö samalle servletille, jonka `doGet`-metodi palautti selaimelle lomakkeen HTML:n. 
 
