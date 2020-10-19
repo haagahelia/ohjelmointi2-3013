@@ -7,13 +7,15 @@
 
 > *"Perintä on väline käsitehierarkioiden rakentamiseen ja erikoistamiseen; aliluokka on aina yliluokan erikoistapaus. Jos luotava luokka on olemassaolevan luokan erikoistapaus, voidaan uusi luokka luoda perimällä olemassaoleva luokka. Esimerkiksi auton osiin liittyvässä esimerkissä moottori on osa, mutta moottoriin liittyy lisätoiminnallisuutta mitä jokaisella osalla ei ole."*
 >
-> https://ohjelmointi-20.mooc.fi/osa-9/1-perinta
+> [https://ohjelmointi-20.mooc.fi/osa-9/1-perinta](https://ohjelmointi-20.mooc.fi/osa-9/1-perinta)
 
 ### Video: [perintä](https://video.haaga-helia.fi/media/Olio-ohjelmointiA+toisen+luokan+periminen/0_7kvfzdro) <small>10:41</small>
 
 <iframe src="https://d38ynedpfya4s8.cloudfront.net/p/288/sp/28800/embedIframeJs/uiconf_id/23448708/partner_id/288?iframeembed=true&playerId=kaltura_player&entry_id=0_7kvfzdro&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_urm3ihed" width="608" height="402" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
 
 &nbsp;
+
+Yllä esiintyvässä videossa käsitellään seuraavaa Auto-luokkaa:
 
 ```java
 public class Auto {
@@ -36,6 +38,8 @@ public class Auto {
 }
 ```
 
+Kun ohjelmassa ilmenee tarve käsitellä myös takseja, jotka poikkeavat muista autoista erityisen taksinumeron osalta, voidaan uusi Taksi-luokka toteuttaa perinnän  avulla:
+
 ```java
 public class Taksi extends Auto {
 
@@ -51,6 +55,8 @@ public class Taksi extends Auto {
     }
 }
 ```
+
+Nyt Taksi-olioilla on perittynä Auto-luokan ominaisuudet, minkä lisäksi niillä on oma `getTaksinumero`-metodi:
 
 ```java
 Auto auto = new Auto("Opel", "ABC-123");
@@ -69,14 +75,14 @@ String taksinumero = taksi.getTaksinumero();
 
 > *"Rajapinnan (engl. interface) avulla määritellään luokalta vaadittu käyttäytyminen, eli sen metodit. Rajapinnat määritellään kuten normaalit Javan luokat, mutta luokan alussa olevan määrittelyn "public class ..." sijaan käytetään määrittelyä "public interface ...". Rajapinnat määrittelevät käyttäytymisen metodien niminä ja palautusarvoina, mutta ne eivät aina sisällä metodien konkreettista toteutusta. Näkyvyysmäärettä rajapintoihin ei erikseen merkitä, sillä se on aina public."*
 >
-> https://ohjelmointi-20.mooc.fi/osa-9/2-rajapinta
+> [https://ohjelmointi-20.mooc.fi/osa-9/2-rajapinta](https://ohjelmointi-20.mooc.fi/osa-9/2-rajapinta)
 
 
 ### [Rajapinnat](https://video.haaga-helia.fi/media/Rajapinnat/0_aojswqwn), 7:43
 
 <iframe src="https://d38ynedpfya4s8.cloudfront.net/p/288/sp/28800/embedIframeJs/uiconf_id/23448708/partner_id/288?iframeembed=true&playerId=kaltura_player&entry_id=0_aojswqwn&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_jafkkkos" width="608" height="402" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
 
-Tällä videolla verrataan rajapintoja abstrakteihin luokkiin, jotka eivät kuulu tämän kurssitoteutuksen sisältöön.
+(Tällä videolla verrataan rajapintoja abstrakteihin luokkiin, jotka eivät kuulu tämän kurssitoteutuksen sisältöön.)
 
 &nbsp;
 
@@ -118,7 +124,7 @@ String emailOsoite = email.getRecipient();
 String puhelinnumero = sms.getRecipient();
 ```
 
-Myöhemmin tällä kurssilla tulemme käsittelemään ostoslistoja.
+Myöhemmin tällä kurssilla tulemme käsittelemään ostoslistoja. Ostoslistojen tuotteiden lisäämistä, hakemista, muokkaamista ja poistamista varten käytämme myöhemmillä viikoilla seuraavaa rajapintaa:
 
 ```java
 package database;
@@ -139,10 +145,11 @@ public interface ShoppingListItemDao {
 }
 ```
 
-Tämä rajapinta määrittelee metodit, jotka sen toteuttavien luokkien on toteutettava samoilla parametriarvoilla  ja paluuarvoilla.
+Rajapinta määrittelee siis metodien nimet, parametriarvot ja paluuarvot, mutta voit itse kirjoittaa metodien sisäisen toteutuksen parhaaksi katsomallasi tavalla.
 
 
-# Viope-tehtävä
+## Viope-tehtävä
+
 Täydennä ohessa esitettyä `Country`-luokkaa siten, että luokka täyttää `Comparable<Country>`-rajapinnan. Maat tulee järjestää siten, että väkiluvultaan pienempi maa on järjestyksessä ennen väkiluvulta suurempaa maata.Palauta ratkaisusi Viopeen.
 
 ```java

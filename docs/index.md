@@ -13,7 +13,7 @@ Tämä opintojakso alkaa 26.10. ja päättyy 18.12.2020. Opintojakso toteutetaan
 Kurssin keskustelukanavana toimii Teams-ryhmä, jonka kautta tavoitat sekä opettajan että muut opiskelijat. Ohjausta ja apua on saatavilla Teamsin kautta lyhyellä vasteajalla.
 
 
-### Aihe 1: perintä ja rajapinnat, 26.10. - 1.11.2020
+### Aihe 1: perintä ja rajapinnat <small>26.10. - 1.11.2020</small>
 
 [Siirry oppimateriaaliin ⇨](01_perinta_ja_rajapinnat/perinta-ja-rajapinnat)
 
@@ -21,7 +21,7 @@ Tehtävät Viopessa (DL 8.11.)
 
 &nbsp;
 
-### Aihe 2: Map-tietorakenne, 2.11. - 8.11.2020
+### Aihe 2: Map-tietorakenne <small>2.11. - 8.11.2020</small>
 
 > *Hajautustaulu eli HashMap on ArrayListin lisäksi eniten käytettyjä Javan valmiiksi tarjoamia tietorakenteita. Hajautustaulua käytetään kun tietoa käsitellään avain-arvo -pareina, missä avaimen perusteella voidaan lisätä, hakea ja poistaa arvo.*
 >
@@ -33,7 +33,7 @@ Tehtävät Viopessa (DL 8.11.)
 
 &nbsp;
 
-### Aihe 3: Yksikkötestauksen perusteet, 9.11. - 15.11.2020
+### Aihe 3: Yksikkötestauksen perusteet <small>9.11. - 15.11.2020</small>
 
 Tällä viikolla tutustumme yksikkötestaukseen ja testaamme valmista virheellisesti toimivaa ja tyylillisesti heikosti toteutettua metodia. Tutustumme lisäksi koodin laatuun vaikuttaviin tekijöihin ja sovellamme niitä annetun valmiin koodin parantamiseksi.
 
@@ -41,7 +41,7 @@ Tällä viikolla tutustumme yksikkötestaukseen ja testaamme valmista virheellis
 
 &nbsp;
 
-### Aihe 4: tietokantaohjelmointi (JDBC), 16.11. - 22.11.2020
+### Aihe 4: tietokantaohjelmointi (JDBC) <small>16.11. - 22.11.2020</small>
 
 Tällä viikolla opettelemme ensin muodostamaan yhteyden tietokantaan Java-ohjelmasta ja tekemään yksinkertaisia CRUD-toimenpiteitä (Create, Read, Update & Delete). 
 
@@ -49,7 +49,7 @@ Tällä viikolla opettelemme ensin muodostamaan yhteyden tietokantaan Java-ohjel
 
 &nbsp;
 
-### Aihe 5: Tietokantalogiikan eriyttäminen ja yksikkötestaaminen (DAO & JUnit), 23.11. - 29.11.2020
+### Aihe 5: Tietokantalogiikan eriyttäminen ja yksikkötestaaminen (DAO & JUnit) <small>23.11. - 29.11.2020</small>
 
 Tällä viikolla jatkokehitämme ostoslistasovelluksen arkkitehtuuria siten, että tietokantalogiikkamme eriytetään tekstikäyttöliittymästä. Eriyttäminen mahdollistaa tietokantalogiikan testaamisen yksikkötesteillä sekä myöhemmin saman koodin uudelleenkäytön web-pohjaisella käyttöliittymällä.
 
@@ -57,7 +57,7 @@ Tällä viikolla jatkokehitämme ostoslistasovelluksen arkkitehtuuria siten, ett
 
 &nbsp;
 
-### Aihe 6: Verkkosovellus (Tomcat ja Servletit), 30.11. - 6.12.2020
+### Aihe 6: Verkkosovellus (Tomcat ja Servletit) <small>30.11. - 6.12.2020</small>
 
 Verkkosovellusten osuuden ensimmäisellä viikolla toteutamme yksinkertaisia servlettejä päivämäärien laskemiseksi. Voimme halutessamme hyödyntää ensimmäisellä viikolla esiteltyä `dayOfYear`-metodia tai Javan valmiita päivämääräluokkia.
 
@@ -66,7 +66,7 @@ Verkkosovellusten osuuden ensimmäisellä viikolla toteutamme yksinkertaisia ser
 &nbsp;
 
 
-### Aihe 7: Verkkosovellus kolmikerrosarkkitehtuurilla (Servletit, DAO, JSP), 7.12. - 13.12.2020
+### Aihe 7: Verkkosovellus kolmikerrosarkkitehtuurilla (Servletit, DAO, JSP) <small>7.12. - 13.12.2020</small>
 
 Verkkosovellusten toisella viikolla liitämme oman ostoslistasovelluksemme tietokannan verkkopalveluun ja luomme HTML-käyttöliittymät ostoslistan näyttämiseksi ja tuotteiden lisäämiseksi.
 
@@ -75,7 +75,7 @@ Verkkosovellusten toisella viikolla liitämme oman ostoslistasovelluksemme tieto
 &nbsp;
 
 
-### Aihe 8: Ajax ja dynaamiset toiminnallisuudet JavaScriptillä, 14.12. - 18.12.2020
+### Aihe 8: Ajax ja dynaamiset toiminnallisuudet JavaScriptillä <small>14.12. - 18.12.2020</small>
 
 Viimeinen harjoitusviikko käsittelee JavaScript-koodin avulla tehtäviä palvelinkutsuja, eli Ajax-kutsuja. Niiden avulla voimme päivittää ostoslistamme sisältöä tekemättä sivulatauksia. Toteutamme lisäksi uuden ominaisuuden ostoslistan rivien poistamiseksi.
 
