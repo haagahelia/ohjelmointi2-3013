@@ -6,13 +6,14 @@ Tällä viikolla tavoitteinamme on rakentaa kolmikerroksinen web-sovellus, joka 
 
 Jatka tällä viikolla edellisellä viikolla aloittamaasi web-projektia.
 
-## Malliratkaisu
+<!-- ## Malliratkaisu
 
 Tämän tehtävän palautusaika on umpeutunut. Voit katsoa malliratkaisun täältä:
 
 * [Video](https://web.microsoftstream.com/video/eae36e47-8f40-4d46-b010-ddea09587de7)
 * [Servletit](https://github.com/haagahelia/embedded-tomcat-template/tree/kevat2020/src/main/java/servlet)
 * [JSP-sivut](https://github.com/haagahelia/embedded-tomcat-template/tree/kevat2020/src/main/webapp/WEB-INF)
+-->
 
 ## Oppitunnin videot
 
@@ -115,7 +116,7 @@ Toinen vaihtoehto olisi tallentaa riippuvuudet .jar-paketteina (Java Archive), k
 `pom.xml`-projektitiedosto on normaali XML-tiedosto, jota voit muokata esimerkiksi Eclipsen tekstieditorilla. Riippuvuuksien versionumerot on tapana määritellä `<properties>`-tagin sisään ja itse riippuvuudet `<dependencies>`-tagin sisään. Lisää plus-merkillä merkityt rivit pom.xml-tiedostoosi properties-tagin sisään (jätä `+`-merkit pois rivien alusta.):
 
 ```diff
-<properties>
+ <properties>
      <!-- Tomcatin versionumero -->
      <tomcat.version>9.0.31</tomcat.version>
 

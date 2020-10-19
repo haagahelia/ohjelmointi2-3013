@@ -2,9 +2,10 @@
 
 # Web-ohjelmointi servleteillä
 
-Huom! Tässä vaiheessa on hyvä varmistaa, että käytössäsi on *"Eclipse IDE for Enterprise Java Developers"*, *"Eclipse Java EE IDE for Web Developers"* tai vastaavalla nimellä kutsuttu jakelupaketti, joka sisältää verkkosovellusten tekoon tarvitut liitännäiset. Tämä selviää "Help"-valikosta kohdasta "About Eclipse IDE". Mikäli Eclipse-versiosi ei ole soveltuva, asenna uusi versio https://www.eclipse.org/downloads/ -osoitteesta löytyvällä asennusohjelmalla.
+Huom! Tässä vaiheessa on hyvä varmistaa, että käytössäsi on *"Eclipse IDE for Enterprise Java Developers"*, *"Eclipse Java EE IDE for Web Developers"* tai vastaavalla nimellä kutsuttu jakelupaketti, joka sisältää verkkosovellusten tekoon tarvitut liitännäiset. Tämä selviää "Help"-valikosta kohdasta "About Eclipse IDE" ([lisäohjeita](https://stackoverflow.com/questions/12106980/how-to-see-my-eclipse-version/12107098)).
 
-Tästä viikosta alkaen käytämme koodissa merkittävästi enemmän valmiita kirjastoja, joiden myötä ohjelman virheiden tulkitseminen tulee usein hankalammaksi. Kun virheilmoitus liittyy jossain muussa kirjastossa ilmenneeseen virheeseen, voi olla vaikeaa hahmottaa, missä kohdassa omaa koodiasi on syy tuolle virheelle. Suosittelen lukemaan artikkelin https://www.twilio.com/blog/how-to-read-and-understand-a-java-stacktrace, joka opettaa lukemaan Javan pitkiä mutta hyviä virheilmoituksia. Jakakaa myös Teamsissa kopioita virheilmoituksista tai screenshotteja, jos ette saa virheilmoituksia tulkittua.
+Mikäli Eclipse-versiosi ei ole soveltuva, asenna uusi versio osoitteesta [https://www.eclipse.org/downloads/packages/](https://www.eclipse.org/downloads/packages/).
+
 
 <!--## Malliratkaisu
 
@@ -26,9 +27,9 @@ Tällä viikolla päätavoitteena on tutustua Javan web-kehityksessä käytettä
 
 ### Git
 
-> Git on hajautettu versionhallintajärjestelmä, joka on suunniteltu toimimaan tehokkaasti ja luotettavasti
+> *Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.*
 >
-> **[Wikipedia](https://fi.wikipedia.org/wiki/Git)**
+> [git-scm.com](https://git-scm.com)
 
 Gitin avulla ohjelmistokehittäjät hallinnoivat ohjelmistojensa versioita ja jakavat koodin useiden kehittäjien välillä. Git mahdollistaa myös samalle ohjelmistolle useat kehityshaarat (branch), joiden avulla ohjelmiston eri ominaisuuksia voidaan kehittää samanaikaisesti toisistaan riippumatta. Gitin avulla eri kehityshaaroja voidaan yhdistellä (merge) kätevästi eri ominaisuuksien valmistuttua.
 
@@ -41,6 +42,11 @@ Saadaksesi kurssin web-projektipohjan koodit itsellesi, sinun tulee kloonata (cl
 [Kurssin esimerkkiprojekti](https://github.com/haagahelia/embedded-tomcat-template) käyttää Tomcat-sovelluspalvelinta "upotettuna" Java-projektiisi (embedded Tomcat). Projekti on rakennettu siten, että sen riippuvuuksia hallitaan automaattisesti Maven-työkalun avulla. Maven-plugin löytyy onneksi Eclipsestä valmiiksi asennettuna, ja sen avulla Eclipse osaa asentaa mm. Tomcatin ja muut projektin mahdolliset riippuvuudet automaattisesti. Tomcatia voitaisiin käyttää myös lukuisilla muilla tavoilla, joten löydät mahdollisesti netistä ohjeita, jotka eivät täysin vastaa omia asetuksiasi ja asennustapojasi. 
 
 Projektipohjan asennustapa on todettu kohtuullisen helpoksi ja samat tavat ovat hyödynnettävissä myös muilla kehitystyökaluilla (esim. [VS Code](https://code.visualstudio.com/), [IntelliJ IDEA](https://www.jetbrains.com/idea/)) ja erilaisissa suoritysympäristöissä (esim. [Heroku-pilvialusta](https://devcenter.heroku.com/articles/create-a-java-web-application-using-embedded-tomcat), [Spring boot -sovelluskehys](https://www.springboottutorial.com/spring-boot-with-embedded-servers-tomcat-jetty)).
+
+## Virheiden paikantaminen
+
+Tästä viikosta alkaen käytämme koodissa merkittävästi enemmän valmiita kirjastoja, joiden myötä ohjelman virheiden tulkitseminen tulee usein hankalammaksi. Kun virheilmoitus liittyy jossain muussa kirjastossa ilmenneeseen virheeseen, voi olla vaikeaa hahmottaa, missä kohdassa omaa koodiasi on syy tuolle virheelle. Suosittelen lukemaan artikkelin [https://www.twilio.com/blog/how-to-read-and-understand-a-java-stacktrace](https://www.twilio.com/blog/how-to-read-and-understand-a-java-stacktrace), joka opettaa lukemaan Javan pitkiä mutta hyviä virheilmoituksia. Jakakaa myös Teamsissa kopioita virheilmoituksista tai kuvankaappauksia, mikäli ette saa virheilmoituksia tulkittua.
+
 
 ## Videot
 
@@ -110,19 +116,39 @@ Projektipohjan asennustapa on todettu kohtuullisen helpoksi ja samat tavat ovat 
 
 **[YouTube: Introduction to Servlets](https://youtu.be/7TOmdDJc14s)**
 
+[![YouTube: Introduction to Servlets](https://img.youtube.com/vi/7TOmdDJc14s/mq3.jpg)](https://youtu.be/7TOmdDJc14s)
+
 Tämä video esittelee perusteet HTTP-palvelimen toiminnassa dynaamisten sivujen (servlet) käsittelyssä. Servlettien rakenne sekä yhteys servlettien ja Tomcatin välillä esitetään tällä videolla varsin selkeällä tavalla.
+
+&nbsp;
+
 
 **[YouTube: JSTL tutorial part 1](https://youtu.be/KmREMEhj5eE)**
 
+[![YouTube: JSTL tutorial part 1](https://img.youtube.com/vi/KmREMEhj5eE/mq3.jpg)](https://youtu.be/KmREMEhj5eE)
+
 Tämä video esittelee Java-muuttujien välittämisen JSP-sivuille ja niiden arvojen näyttämisen sivulla.  
+
+&nbsp;
+
 
 **[JSTL Tutorial part 2 Core Tags](https://youtu.be/R0EnI9_ZMA0)**
 
+[![JSTL Tutorial part 2 Core Tags](https://img.youtube.com/vi/R0EnI9_ZMA0/mq3.jpg)](https://youtu.be/R0EnI9_ZMA0)
+
 Video esittelee, miten JSTL tagikirjasto lisätään JSP-sivulle `taglib`-direktiivin avulla. Opit myös käyttämään `c:out` ja `c:forEach` tageja. Video näyttää myös konkreettisesti, miten lista olioita voidaan välittää servletiltä JSP-sivulle ja miten sillä olevat Java-oliot saadaan esitettyä sivulla HTML-muodossa.
 
-**[YouTube: Servlet and JSP Tutorial | Get and Post](https://youtu.be/_6ISkXSC1js)**
+&nbsp;
+
+
+**[YouTube: Servlet and JSP Tutorial. Get and Post](https://youtu.be/_6ISkXSC1js)**
+
+[![YouTube: Servlet and JSP Tutorial. Get and Post](https://img.youtube.com/vi/_6ISkXSC1js/mq1.jpg)](https://youtu.be/_6ISkXSC1js)
 
 Tämä video esittelee HTML-lomakkeen lähettämisen palvelimelle POST- ja GET-metodeilla sekä servlettien `doPost`- ja `doGet`-metodit. **Huom!** Videossa käytetään `web.xml`-tiedostoa, jota et tarvitse, mikäli käytät `@WebServlet`-annotaatiota esimerkkiprojektin ohjeistuksen mukaisesti.
+
+&nbsp;
+
 
 **[Jenkov.com: Java Servlets](http://tutorials.jenkov.com/java-servlets/index.html)**
 
@@ -135,13 +161,13 @@ Tämä Mozillan kehittäjäsivu esittelee lyhyesti webin taustalla olevan HTTP-p
 
 ## MVC-malli (Model, View, Controller)
 
-> Web-sovellusten suunnittelussa noudatetaan useita arkkitehtuurimalleja. Tyypillisimpiä näistä ovat MVC-arkkitehtuuri sekä kerrosarkkitehtuuri. Kummassakin perusperiaatteena on vastuiden jako selkeisiin osakokonaisuuksiin.
+> *"Web-sovellusten suunnittelussa noudatetaan useita arkkitehtuurimalleja. Tyypillisimpiä näistä ovat MVC-arkkitehtuuri sekä kerrosarkkitehtuuri. Kummassakin perusperiaatteena on vastuiden jako selkeisiin osakokonaisuuksiin.*
 >
-> MVC-arkkitehtuurin tavoitteena on käyttöliittymän erottaminen sovelluksen toiminnasta siten, että käyttöliittymät eivät sisällä sovelluksen toiminnan kannalta tärkeää sovelluslogiikkaa. MVC-arkkitehtuurissa ohjelmisto jaetaan kolmeen osaan: malliin (model, tiedon tallennus- ja hakutoiminnallisuus), näkymään (view, käyttöliittymän ulkoasu ja tiedon esitystapa) ja käsittelijään (controller, käyttäjältä saatujen käskyjen käsittely sekä sovelluslogiikka).
+> *MVC-arkkitehtuurin tavoitteena on käyttöliittymän erottaminen sovelluksen toiminnasta siten, että käyttöliittymät eivät sisällä sovelluksen toiminnan kannalta tärkeää sovelluslogiikkaa. MVC-arkkitehtuurissa ohjelmisto jaetaan kolmeen osaan: malliin (model, tiedon tallennus- ja hakutoiminnallisuus), näkymään (view, käyttöliittymän ulkoasu ja tiedon esitystapa) ja käsittelijään (controller, käyttäjältä saatujen käskyjen käsittely sekä sovelluslogiikka).*
 > 
-> Web-sovelluksissa käyttäjän pyyntö ohjautuu kontrollerille, joka sisältää sovelluslogiikkaa. Kontrolleri kutsuu pyynnöstä riippuen mallin toiminnallisuuksia ja hakee sieltä esimerkiksi tietoa. Tämän jälkeen pyyntö ohjataan näkymän luomisesta vastuulle olevalle komponentilla ja näkymä luodaan. Lopulta näkymä palautetaan vastauksena käyttäjän tekemälle pyynnölle.
+> *Web-sovelluksissa käyttäjän pyyntö ohjautuu kontrollerille, joka sisältää sovelluslogiikkaa. Kontrolleri kutsuu pyynnöstä riippuen mallin toiminnallisuuksia ja hakee sieltä esimerkiksi tietoa. Tämän jälkeen pyyntö ohjataan näkymän luomisesta vastuulle olevalle komponentilla ja näkymä luodaan. Lopulta näkymä palautetaan vastauksena käyttäjän tekemälle pyynnölle."*
 >
-> *Sovelluksen rakenne, https://web-palvelinohjelmointi-19.mooc.fi/osa-4/3-sovelluksen-rakenne*
+> Lähde: Helsingin yliopiston Agile Education Research -tutkimusryhmä. [Sovelluksen rakenne, Web-palvelinohjelmointi Java 2019](https://web-palvelinohjelmointi-19.mooc.fi/osa-4/3-sovelluksen-rakenne). [Creative Commons BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi)
 
 Tällä kurssilla sovellamme MVC-mallia siten, että **käsittelijät toteutetaan Servlet-luokilla** ja **näkymät toteutetaan JSP-sivuina** (JavaServer Pages). Malleina tulemme seuraavasta viikosta alkaen käyttämään aikaisemmilla viikoilla toteuttamiamme DAO- sekä ShoppingListItem-luokkia.
 
@@ -170,7 +196,12 @@ Arvojen ja pyynnön välittäminen servletiltä JSP-sivulle on esitelty esimerkk
 
 **Huom!** Joudut käynnistämään palvelimesi uudelleen tehdessäsi merkittäviä muutoksia koodiin. Esimerkkiprojektin dokumentaatiossa on kuvattu toimet palvelimen käynnistämiseksi ja uudelleenkäynnistämiseksi.
 
-**Huom!** Mikäli haluat nopeuttaa kehityssykliäsi, voit konfiguroida Tomcatin lataamaan muuttuneet luokat automaattisesti uudelleen tehdessäsi niihin muutoksia. Monissa tapauksissa luokkien uudelleenlataaminen riittää, mutta esimerkiksi uusia servlettejä lisätessäsi joudut yhä käynnistämään palvelimen itse uudelleen. Poista kommentit `webApp.setReloadable(true);`-rivin edestä tiedostossa [Main.java](https://github.com/haagahelia/embedded-tomcat-template/blob/master/src/main/java/launch/Main.java#L40) ottaaksesi tämän ominaisuuden käyttöön.
+**Huom!** Mikäli haluat nopeuttaa kehityssykliäsi, voit konfiguroida Tomcatin lataamaan muuttuneet luokat automaattisesti uudelleen tehtyäsi niihin muutoksia. Monissa tapauksissa luokkien uudelleenlataaminen riittää, mutta esimerkiksi uusia servlettejä lisätessäsi joudut yhä käynnistämään palvelimen itse uudelleen. Poista kommentit seuraavalta riviltä `Main.java`-tiedostossa ottaaksesi tämän ominaisuuden käyttöön:
+
+```diff
+- // webApp.setReloadable(true);
++ webApp.setReloadable(true);
+```
 
 **Huom!** Mikäli Java varoittaa luokkasi kanssa seuraavaa: *"The serializable class XYZ does not declare a static final serialVersionUID field of type long"*, voit jättää varoituksen huomioimatta. `serialVersionUID` nimistä muuttujaa käytetään luokasta luotujen olioiden versiointiin, lue tarvittaessa lisää [täältä](https://stackoverflow.com/a/285809).
 
@@ -183,7 +214,7 @@ Edellä esitelty osoite koostuu seuraavista osista:
 
 Protokolla  | Host      | Portti | Polku    | Parametrit
 ------------|-----------|--------|----------|-----------
-http        | localhost | 8080   | /hello   | <table><tr><td><code>firstName</code></td><td><code>John</code></td></tr><tr><td><code>lastName</code></td><td><code>Doe</code></td></tr></table>
+http        | localhost | 8080   | /hello   | firstName: "John", lastName: "Doe"
 
 POST-tyyppisissä pyynnöissä parametrit välitetään pyynnön "body"-osassa, jolloin ne eivät ole näkyvissä osoiterivillä, mutta tieto on silti palvelimella käsiteltävissä.
 
@@ -191,7 +222,7 @@ Pyyntöä käsittelevän servletin `doPost`- ja `doGet`-metodeissa parametrit vo
 
 ```java
 @Override
-protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
     String first = req.getParameter("firstName");
     String last = req.getParameter("lastName");
 }
@@ -205,7 +236,7 @@ Tarvittaessa numeeriset parametrit voidaan muuttaa kokonaisluvuiksi kuten muussa
 
 ```java
 @Override
-protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+protected void doGet(HttpServletRequest req, HttpServletResponse resp) {
     int a = Integer.parseInt(req.getParameter("a"));
     int b = Integer.parseInt(req.getParameter("b"));
 
