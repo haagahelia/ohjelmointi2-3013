@@ -1,6 +1,6 @@
 [⇦ takaisin kurssin etusivulle](../)
 
-# Servletit, DAO, JSP ja JSTL (DL su 10.5. klo 22)
+# Servletit, DAO, JSP ja JSTL
 
 Tällä viikolla tavoitteinamme on rakentaa kolmikerroksinen web-sovellus, joka yhdistää tähänasti opettelemamme erilliset teknologiat loogiseksi kokonaisuudeksi.
 
@@ -17,21 +17,21 @@ Tämän tehtävän palautusaika on umpeutunut. Voit katsoa malliratkaisun tääl
 
 ## Oppitunnin videot
 
-**[Tietokantaluokkien tuominen web-sovellukseen](https://web.microsoftstream.com/video/3998be63-0576-44e2-8e05-fb3da6008789)** 10:46
+**[Tietokantaluokkien tuominen web-sovellukseen](https://web.microsoftstream.com/video/3998be63-0576-44e2-8e05-fb3da6008789)** <small>10:46</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/3998be63-0576-44e2-8e05-fb3da6008789?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
 &nbsp;
 
 
-**[Tietokantapohjainen servlet (+ Maven-riippuvuuksien lisääminen)](https://web.microsoftstream.com/video/515b523d-bc9b-4892-a2cf-78e75206e9a9)** 59:07
+**[Tietokantapohjainen servlet (+ Maven-riippuvuuksien lisääminen)](https://web.microsoftstream.com/video/515b523d-bc9b-4892-a2cf-78e75206e9a9)** <small>59:07</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/515b523d-bc9b-4892-a2cf-78e75206e9a9?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
 &nbsp;
 
 
-**[JSP sivujen "fail silently"-ominaisuus ja c:if](https://web.microsoftstream.com/video/d4adda6c-9b93-4a0a-a92a-57067f3493fb)** 35:38
+**[JSP sivujen "fail silently"-ominaisuus ja c:if](https://web.microsoftstream.com/video/d4adda6c-9b93-4a0a-a92a-57067f3493fb)** <small>35:38</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/d4adda6c-9b93-4a0a-a92a-57067f3493fb?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
