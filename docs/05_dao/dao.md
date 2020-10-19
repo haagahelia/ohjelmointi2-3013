@@ -112,14 +112,14 @@ public class JDBCShoppingListItemDao implements ShoppingListItemDao {
 }
 ```
 
-### `ShoppingListItem`-luokka
+### ShoppingListItem-luokka
 
 Kaikki tietokannasta luetut tiedot mallinnetaan DAO-mallissa olio-ohjelmointiparadigman mukaisesti olioina, joten tarvitset myös uutta `ShoppingListItem`-luokkaa. Tämän luokan oliot mallintavat yksittäisiä tietokannan tuoterivejä, eli ohjelman dataa. Vastaavista luokista käytetään usein termejä [bean, business object tai entity](https://en.wikipedia.org/wiki/Business_object).
 
 Jokaisella ostoslistan rivillä on sekä `id` että tuotteen nimi `title`, joten lisää nämä tietueet myös omaan `ShoppingListItem`-luokkaasi. 
 
 
-### `ShoppingListItemDao`-rajapinta
+### ShoppingListItemDao-rajapinta
 
 Edellä esitetyn `JDBCShoppingListItemDao`-luokan otsikossa esiintyy termi `implements ShoppingListItemDao`:
 

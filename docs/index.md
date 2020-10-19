@@ -6,6 +6,12 @@ Tällä opintojaksolla syvennämme olio-ohjelmointiosaamistamme ja sovellamme ai
 
 Kurssin opintojaksokuvaus löytyy osoitteesta [https://opinto-opas.haaga-helia.fi/course_unit/SWD4TN033](https://opinto-opas.haaga-helia.fi/course_unit/SWD4TN033).
 
+
+## Osallistumisen vahvistaminen
+
+Vahvista osallistumisesi kurssille liittymällä kurssin Teams-ryhmään. Liittymisohjeet ja -koodin olet saanut sähköpostitse kurssin alkua edeltävällä viikolla. Liityttyäsi ryhmään saat myös katseluoikeudet kurssin Microsoft Stream -palvelussa sijaitseviin videoihin.
+
+
 ## Kurssin aikataulu
 
 Tämä opintojakso alkaa 26.10. ja päättyy 18.12.2020. Opintojakso toteutetaan täysin virtuaalisesti, eli se ei sisällä lähiopetusta kampuksella eikä videoyhteydellä. Lähiopetuksen sijaan saatavillasi on lukuisia videoita ja tekstimuotoista oppimateriaalia.
@@ -17,7 +23,7 @@ Kurssin keskustelukanavana toimii Teams-ryhmä, jonka kautta tavoitat sekä opet
 
 [Siirry oppimateriaaliin ⇨](01_perinta_ja_rajapinnat/perinta-ja-rajapinnat)
 
-Tehtävät Viopessa (DL 8.11.)
+Tehtävät Viopessa (DL 8.11. klo 23:59)
 
 &nbsp;
 
@@ -29,7 +35,7 @@ Tehtävät Viopessa (DL 8.11.)
 
 [Siirry oppimateriaaliin ⇨](02_map/map)
 
-Tehtävät Viopessa (DL 8.11.)
+Tehtävät Viopessa (DL 8.11. klo 23:59)
 
 &nbsp;
 
@@ -39,6 +45,8 @@ Tällä viikolla tutustumme yksikkötestaukseen ja testaamme valmista virheellis
 
 [Siirry oppimateriaaliin ⇨](03_yksikkotestaus/junit)
 
+Tehtävät Teamsissa (DL 15.11. klo 23:59)
+
 &nbsp;
 
 ### Aihe 4: tietokantaohjelmointi (JDBC) <small>16.11. - 22.11.2020</small>
@@ -46,6 +54,8 @@ Tällä viikolla tutustumme yksikkötestaukseen ja testaamme valmista virheellis
 Tällä viikolla opettelemme ensin muodostamaan yhteyden tietokantaan Java-ohjelmasta ja tekemään yksinkertaisia CRUD-toimenpiteitä (Create, Read, Update & Delete). 
 
 [Siirry oppimateriaaliin ⇨](04_tietokantaohjelmointi/jdbc)
+
+Tehtävät Teamsissa (DL 22.11. klo 23:59)
 
 &nbsp;
 
@@ -55,6 +65,8 @@ Tällä viikolla jatkokehitämme ostoslistasovelluksen arkkitehtuuria siten, ett
 
 [Siirry oppimateriaaliin ⇨](05_dao/dao)
 
+Tehtävät Teamsissa (DL 29.11. klo 23:59)
+
 &nbsp;
 
 ### Aihe 6: Verkkosovellus (Tomcat ja Servletit) <small>30.11. - 6.12.2020</small>
@@ -62,6 +74,8 @@ Tällä viikolla jatkokehitämme ostoslistasovelluksen arkkitehtuuria siten, ett
 Verkkosovellusten osuuden ensimmäisellä viikolla toteutamme yksinkertaisia servlettejä päivämäärien laskemiseksi. Voimme halutessamme hyödyntää ensimmäisellä viikolla esiteltyä `dayOfYear`-metodia tai Javan valmiita päivämääräluokkia.
 
 [Siirry oppimateriaaliin ⇨](06_servletit/servletit)
+
+Tehtävät Teamsissa (DL 6.12. klo 23:59)
 
 &nbsp;
 
@@ -72,6 +86,8 @@ Verkkosovellusten toisella viikolla liitämme oman ostoslistasovelluksemme tieto
 
 [Siirry oppimateriaaliin ⇨](07_mvc/servlet_dao_jstl)
 
+Tehtävät Teamsissa (DL 13.12. klo 23:59)
+
 &nbsp;
 
 
@@ -81,15 +97,18 @@ Viimeinen harjoitusviikko käsittelee JavaScript-koodin avulla tehtäviä palvel
 
 [Siirry oppimateriaaliin ⇨](08_ajax/ajax)
 
+Tehtävät Teamsissa (DL 18.12. klo 23:59)
 
 &nbsp;
 
-### Harjoitustyö, DL su 20.12.2020 klo 23:55
+
+### Harjoitustyö
 
 Kurssin jälkimmäisellä puoliskolla vahvistatte kurssilla opittuja taitoja ja toteutatte harjoitustyönä oman tietokantapohjaisen web-sovelluksen. Harjoitustyö arvioidaan asteikolla 0-5.
 
 [Siirry harjoitustyön tehtävänantoon ⇨](09_harjoitustyo/harjoitustyo)
 
+Palautus Teamsiin (DL 20.12. klo 23:59)
 
 &nbsp;
 
@@ -232,6 +251,11 @@ Mikäli SQL-osaamisessasi on puutteita, suosittelen perehtymään netistä vapaa
 
 # Lisenssit ja tekijänoikeudet
 
+## Helsingin yliopiston oppimateriaalit
+
+Tällä kurssilla hyödynnetään laajasti [Helsingin yliopiston Agile Education Research –tutkimusryhmän oppimateriaalia](https://ohjelmointi-20.mooc.fi/), joka on lisensoitu [Creative Commons BY-NC-SA 4.0 -lisenssillä](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi). 
+
+
 ## Nimiaineiston lisenssi (etunimet.csv)
 
 <a href="https://www.avoindata.fi/data/fi/organization/digi_ja_vaestotietovirasto">Digi- ja väestötietovirasto</a> on julkaissut tietoaineiston <a href="https://www.avoindata.fi/data/fi/dataset/none">Väestötietojärjestelmän suomalaisten nimiaineistot</a> lisenssillä <a  href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
@@ -245,6 +269,11 @@ Yrityspostinumeroiden tekstimuotoinen listaus perustuu Posti Group Oyj:n verkkos
 ## SQLite-tietokanta-ajuri
 
 Tietokanta-ajuri `sqlite-jdbc-3.30.1.jar` noudattaa lisenssiä [Apache License version 2.0](http://www.apache.org/licenses/). Lisätiedot: [https://xerial.org/software/](https://xerial.org/software/)
+
+
+## Chinook-tietokanta
+
+Chinook-tietokannan on luonut [Luis Rocha](https://github.com/lerocha) ja se on lisensoitu avoimena lähdekoodina [MIT-lisenssillä](https://github.com/lerocha/chinook-database/blob/master/LICENSE.md).
 
 
 ## Oppimateriaali

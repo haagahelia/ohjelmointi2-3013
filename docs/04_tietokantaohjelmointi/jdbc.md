@@ -1,6 +1,6 @@
 [⇦ takaisin kurssin etusivulle](../)
 
-## Tietokantaohjelmointi (JDBC)
+## Tietokantaohjelmointi
 
 Tällä viikolla opettelemme ensin muodostamaan yhteyden tietokantaan Java-ohjelmasta ja tekemään yksinkertaisia CRUD-toimenpiteitä (Create, Read, Update & Delete). 
 
@@ -32,7 +32,7 @@ SQLiten kanssa emme tarvitse erillistä tietokantapalvelinta, eikä meidän tarv
 
 Tietokannan käyttämiseksi Javasta käsin tarvitsemme erillisen JDBC-ajurin. Erilliset Java-kirjastot jaellaan tyypillisesti `.jar`-tiedostoina (Java Archive), jotka asennetaan pääsääntöisesti automaatiotyökalujen avulla. Suosittuja automaatiotyökaluja Javalle ovat mm. Maven ja Gradle. Automaatiotyökalujen avulla monimutkaistenkin riippuvuuksien hallinta on kohtuullisen yksinkertaista.
 
-Vielä tässä vaiheessa kurssia emme perehdy Maveniin, vaan haemme tarvittavan ajurin manuaalisesti Mavenin tietovarastosta: https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc. Siirry sieltä uusimpaan versioon (kirjoitushetkellä 3.32.3.2) ja tallenna ajuri itsellesi linkistä "Jar (6.9 MB)". 
+Vielä tässä vaiheessa kurssia emme perehdy Maveniin, vaan haemme tarvittavan ajurin manuaalisesti Mavenin tietovarastosta: [https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc](https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc). Siirry sieltä uusimpaan versioon (kirjoitushetkellä 3.32.3.2) ja tallenna ajuri itsellesi linkistä "Jar (x.y MB)". 
 
 Kirjoitushetkellä viimeisimmän .jar-paketin lataus tapahtuu suoraan [tästä](https://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.32.3.2/sqlite-jdbc-3.32.3.2.jar).
 
@@ -51,7 +51,7 @@ Tietokannan käyttäminen Java-ohjelmasi ulkopuolella ei ole tällä kurssilla v
 
 Voit ladata itsellesi kyseisen `sqlite3.exe`-komentorivityökalun osoitteesta: [https://sqlite.org/download.html](https://sqlite.org/download.html). Työkalut löytyvät esimerkiksi Windowsille otsikon "Precompiled Binaries for Windows" alta (sqlite-tools-win32-x86-VERSIO.zip). Pura `sqlite3.exe`-tiedosto zip-paketista esimerkiksi samaan kansioon tietokantasi kanssa. Jos käytät eri käyttöjärjestelmää, sovella ohjeita oman käyttöjärjestelmäsi työkaluversion mukaisesti.
 
-[Tällä sivulla](./komentorivityokalu) on esimerkki SQLite-komentorivityökalun käyttämisestä. Lisää ohjeita löydät osoitteesta https://sqlite.org/cli.html ja alla olevista videoista.
+[Tällä sivulla](./komentorivityokalu) on esimerkki SQLite-komentorivityökalun käyttämisestä. Lisää ohjeita löydät osoitteesta [https://sqlite.org/cli.html](https://sqlite.org/cli.html) ja alla olevista videoista.
 
 <!--[![SQLite tools](https://api.kaltura.nordu.net/p/288/sp/28800/thumbnail/entry_id/0_pez4r54j/version/100012/width/435/height/260)](https://video.haaga-helia.fi/media/SQLite+tools/0_pez4r54j)
 
@@ -59,11 +59,13 @@ Voit ladata itsellesi kyseisen `sqlite3.exe`-komentorivityökalun osoitteesta: [
 
 ## Videot
 
+Näillä videoilla esiintyvän lähdekooditiedoston `TietokantaanYhdistaminen.java` löydät [täältä](./videoiden_lahdekoodit).
+
 **[JDBC ja SQLite](https://web.microsoftstream.com/video/4906ef8a-22f3-4322-9673-df55481b3624)** 8:12
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/4906ef8a-22f3-4322-9673-df55481b3624?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-[https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc](https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc)
+Latauslinkki: [https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc](https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc)
 
 &nbsp;
 
@@ -71,7 +73,7 @@ Voit ladata itsellesi kyseisen `sqlite3.exe`-komentorivityökalun osoitteesta: [
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/9735fb55-5e0c-4d7d-bc03-bb72bd1097a1?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-[https://sqlite.org/download.html](https://sqlite.org/download.html)
+Latauslinkki: [https://sqlite.org/download.html](https://sqlite.org/download.html)
 
 &nbsp;
 
@@ -89,62 +91,6 @@ Voit ladata itsellesi kyseisen `sqlite3.exe`-komentorivityökalun osoitteesta: [
 
 
 
-
-## Videoilla esiintyvä esimerkkikoodi
-
-`src/main/java/tietokanta/TietokantaanYhdistaminen.java`
-
-```java
-package tietokanta;
-
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.util.Scanner;
-
-public class TietokantaanYhdistaminen {
-    private static final String URL = "jdbc:sqlite:C:\\sqlite\\shoppingList.sqlite";
-
-    public static void main(String[] args) throws SQLException, ClassNotFoundException {
-        Class.forName("org.sqlite.JDBC");
-
-        Connection yhteys = DriverManager.getConnection(URL);
-
-        PreparedStatement kysely = yhteys.prepareStatement("SELECT * FROM ShoppingListItem");
-
-        ResultSet tulokset = kysely.executeQuery();
-
-        while (tulokset.next()) {
-            long id = tulokset.getLong("id");
-            String tuotenimi = tulokset.getString("title");
-
-            System.out.println(id + " " + tuotenimi);
-        }
-
-        Scanner lukija = new Scanner(System.in);
-
-        System.out.print("Anna lisättävän tuotteen nimi: ");
-        String syote = lukija.nextLine();
-
-        PreparedStatement insertKysely = yhteys.prepareStatement("INSERT INTO ShoppingListItem (title) VALUES (?)");
-        insertKysely.setString(1, syote);
-
-        int rivit = insertKysely.executeUpdate();
-        System.out.println("Lisättiin " + rivit + " riviä");
-
-        // suljetaan kaikki resurssit
-        tulokset.close();
-        kysely.close();
-        insertKysely.close();
-        yhteys.close();
-        lukija.close();
-    }
-}
-```
-
-
 ## SQLite-tietokannan yhteysosoite
 
 Muodostaessasi yhteyden tietokantaan `DriverManager.getConnection(url)`-metodin avulla, tulee sinun antaa parametrina merkkijono, joka on tietokanta-ajurikohtainen "connection url". Yhteysosoitteet alkavat aina tekstillä `jdbc:` ja ajurin nimellä. Ajurin nimen jälkeen kirjoitetaan kaksoispiste, ja sen jälkeen esimerkiksi tietokannan sijainti levyllä (SQLite) tai verkossa (MySQL).
@@ -159,7 +105,12 @@ String url = "jdbc:sqlite:C:\\databases\\my_cool_database.sqlite";
 
 MySQL-tietokantaan yhdistettäisiin vastaavasti esim. osoitteella `"jdbc:mysql://127.0.0.1:3306/my_cool_database"`. Tällöin sinun tulee myös lisätä projektiisi MySQL-ajuri, kuten lisäsimme aikaisemmin SQLite-ajurin.
 
+Seuraavalla viikolla opettelemme siirtämään ns. kovakoodatun tietokannan osoitteen lähdekoodista ympäristömuuttujaan:
 
+```java
+// tästä lisää seuraavassa aiheessa:
+String JDBC_URL = System.getenv("JDBC_DATABASE_URL");
+```
 
 ## Lisämateriaali
 
@@ -214,7 +165,7 @@ Muista siis käyttää oppimateriaaleissa esiteltyä `PreparedStatement`-luokkaa
 
 Tämän tehtävän kannalta ei ole oleellista, minkälaisen käyttöliittymän rakennat, kunhan sen kautta pystyy käyttämään tietokantaa ja näkemään tehtyjen muutosten vaikutukset.
 
-Ohjelman esimerkkikäyttöliittymästä on [lyhyt erillinen dokumentti](./ostoslista-kayttoliittyma). Voit toteuttaa ohjelmasi omien mieltymystesi mukaan tai noudattaa seuraavan esimerkkisovelluksen toiminnallisuuksia:
+Ohjelman esimerkkikäyttöliittymästä on [erillinen ohjedokumentti](./ostoslista-kayttoliittyma). Voit toteuttaa ohjelmasi omien mieltymystesi mukaan tai noudattaa seuraavan esimerkkisovelluksen toiminnallisuuksia:
 
 ```
 Welcome to the shopping list app!
@@ -266,6 +217,8 @@ Unknown command "foobar".
 Bye!
 
 ```
+
+[Tutustu käyttöliittymän dokumentaatioon](./ostoslista-kayttoliittyma)
 
 ### Tehtävän palauttaminen
 

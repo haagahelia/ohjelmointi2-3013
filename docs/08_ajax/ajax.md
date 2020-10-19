@@ -26,9 +26,11 @@ On olemassa myös muita tapoja rakentaa ja jakaa web-sovelluksia osiin. Toinen t
 
 Katso seuraava video tutustuaksesi tarkemmin eri arkkitehtuureihin, niiden eroihin ja erilaisiin välimuotoihin:
 
+**[SPAs vs MPAs/MVC - Are Single Page Apps always better?](https://youtu.be/F_BYg2QGsC0)**
+
 [![SPAs vs MPAs/MVC - Are Single Page Apps always better?](https://img.youtube.com/vi/F_BYg2QGsC0/mq3.jpg)](https://youtu.be/F_BYg2QGsC0)
 
-**[SPAs vs MPAs/MVC - Are Single Page Apps always better?](https://youtu.be/F_BYg2QGsC0)**
+&nbsp;
 
 
 ## Koneluettavat rajapinnat, REST ja JSON
@@ -37,14 +39,17 @@ Sovelluslogiikan sijaitessa käyttäjän selaimessa, kohdistuu selaimen ja palve
 
 Katso seuraavat videot, joka käsittelevät tiedonsiirron peruskäsitteitä sekä REST-suunnitteluperiaatteet, joiden mukaisesti sovellukset vaihtavat usein tietoa koneluettavassa muodossa:
 
-[![WebConcepts: REST API concepts and examples](https://img.youtube.com/vi/7YcW25PHnAA/mq1.jpg)](https://youtu.be/7YcW25PHnAA)
-
 **[WebConcepts: REST API concepts and examples](https://youtu.be/7YcW25PHnAA)**
 
+[![WebConcepts: REST API concepts and examples](https://img.youtube.com/vi/7YcW25PHnAA/mq1.jpg)](https://youtu.be/7YcW25PHnAA)
+
+&nbsp;
+
+**[Traversy Media: What Is A RESTful API? Explanation of REST & HTTP](https://youtu.be/Q-BpqyOT3a8)**
 
 [![Traversy Media: What Is A RESTful API? Explanation of REST & HTTP](https://img.youtube.com/vi/Q-BpqyOT3a8/mq3.jpg)](https://youtu.be/Q-BpqyOT3a8)
 
-**[Traversy Media: What Is A RESTful API? Explanation of REST & HTTP](https://youtu.be/Q-BpqyOT3a8)**
+&nbsp;
 
 
 ## JSON ja REST verkkosivujen ulkopuolella
@@ -64,14 +69,14 @@ Voit toteuttaa näissä tehtävissä koodisi joko esimerkkien mukaisesti JavaScr
 ## Oppituntitallenteet
 
 
-**[Johdanto single page app -sovelluksiin](https://web.microsoftstream.com/video/29e3d53f-0f16-4cea-8015-d3a1399ccf44)** 26 min
+**[Johdanto single page app -sovelluksiin](https://web.microsoftstream.com/video/29e3d53f-0f16-4cea-8015-d3a1399ccf44)** <small>26 min</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/29e3d53f-0f16-4cea-8015-d3a1399ccf44?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
 &nbsp;
 
 
-**[Asynkronisuus ja ShoppingListExample: callback, promiset ja async/await](https://web.microsoftstream.com/video/16aed7e1-55bc-4348-a0d9-876076fcb970)** 1 h 7 min
+**[Asynkronisuus ja ShoppingListExample: callback, promiset ja async/await](https://web.microsoftstream.com/video/16aed7e1-55bc-4348-a0d9-876076fcb970)** <small>1 h 7 min</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/16aed7e1-55bc-4348-a0d9-876076fcb970?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
@@ -91,7 +96,7 @@ Kun olet tutustunut esimerkkiprojektiin ja sen dokumentaatioon, etene seuraaviin
 
 **Huom!** Kuten johdannossa jo todettiin, tämän viikon tehtävissä käytetään eri ohjelmointikieltä kuin aikaisemmilla viikoilla. Samalla törmäämme kokonaan uusiin käsitteisiin, kuten asynkroniseen ohjelmointiin, tapahtumankuuntelijoihin ja promise-olioihin. Älä lannistu, mikäli aiheet ja tehtävät osoittautuvat ylitsepääsemättömiksi. Perehdy asiaan parhaasi mukaan ja palauta ratkaisut niihin tehtäviin, jotka pystyt ratkaisemaan tälle kurssille varaamallasi työpanoksella.
 
-**Video: [Ajax-tehtävän ohjeistus](https://web.microsoftstream.com/video/d25ce171-5ab8-4171-a1a9-179d8041ea45)** 14 min
+**Video: [Ajax-tehtävän ohjeistus](https://web.microsoftstream.com/video/d25ce171-5ab8-4171-a1a9-179d8041ea45)** <small>14 min</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/d25ce171-5ab8-4171-a1a9-179d8041ea45?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
@@ -103,9 +108,9 @@ Ensimmäisessä osassa tutustumme esimerkkiprojektin tiedonsiirtoon sekä nettis
 
 Katso video Chromen kehitystyökalujen käytöstä verkkoliikenteen tutkimiseksi:
 
-[![Google Chrome Developer: Inspect Network Activity - Chrome DevTools 101](https://img.youtube.com/vi/e1gAyQuIFQo/mq1.jpg)](https://youtu.be/e1gAyQuIFQo)
-
 **[Google Chrome Developer: Inspect Network Activity - Chrome DevTools 101](https://youtu.be/e1gAyQuIFQo)**
+
+[![Google Chrome Developer: Inspect Network Activity - Chrome DevTools 101](https://img.youtube.com/vi/e1gAyQuIFQo/mq1.jpg)](https://youtu.be/e1gAyQuIFQo)
 
 Hyödynnä videolla esitettyä työkalua ja tutki, mitä verkkoliikenteessä tapahtuu, kun lisäät [Ajax-esimerkkisovelluksessa](https://shoppinglist-example.herokuapp.com/) ostoslistalle uuden tuotteen. Selvitä, onko palvelimelle lähetettävässä POST-pyynnössä uudella tuoterivillä `id`-attribuuttia, ja jos on, mikä sen arvo on. [Ota kuvankaappaus](https://kb.iu.edu/d/afws) selaimesi kehittäjätyökalun näkymästä, jossa näkyy palvelimelta tullut vastaus JSON-muodossa. **Liitä kuvankaappaus tehtävän vastaukseesi.**
 
@@ -128,7 +133,7 @@ Jotta saat jokaiseen painikkeeseen juuri kyseistä tuotetta vastaavan poistettav
 <button onclick="removeProduct(${ product.getId() })">Remove</button>
 ```
 
-Videosuositus: [ JavaScript Tutorial For Beginners #40 - The onClick Event](https://youtu.be/XQEfWd1lh4Q)
+Videosuositus: [JavaScript Tutorial For Beginners #40 - The onClick Event](https://youtu.be/XQEfWd1lh4Q)
 
 
 ### Osa 3: tapahtumankäsittelijä
@@ -181,11 +186,11 @@ Käytä tuotteen poistopyynnön tekemisessä JavaScriptin `fetch`-funktiota, jol
 
 &nbsp;
 
-**[Yhteenveto: Fetch-kutsut, Promiset ja Async/Await](https://web.microsoftstream.com/video/374c83a6-86b1-41a1-bd44-1d7a22d7ce05)** 15:09
+**[Yhteenveto: Fetch-kutsut, Promiset ja Async/Await](https://web.microsoftstream.com/video/374c83a6-86b1-41a1-bd44-1d7a22d7ce05)** <small>15:09</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/374c83a6-86b1-41a1-bd44-1d7a22d7ce05?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-> *"Tällä videolla esitellään fetch-kutsuja sekä niiden käsittelyä promise-olioiden ja await-avainsanan avulla konkreettisesti Shopping List App -esimerkkisovellusta käyttäen."*
+Tällä videolla esitellään fetch-kutsuja sekä niiden käsittelyä promise-olioiden ja await-avainsanan avulla konkreettisesti Shopping List App -esimerkkisovellusta käyttäen.
 
 &nbsp;
 

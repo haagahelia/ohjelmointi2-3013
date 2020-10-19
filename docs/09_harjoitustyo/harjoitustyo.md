@@ -31,15 +31,20 @@ Vaikka harjoitustyö tehdään itsenäisesti, saatte keskustella siitä esimerki
 
 Harjoitustyön tarkoituksena on oppia ja syventää osaamista seuraavissa aiheissa:
 
-1. HTTP-pyyntöjen käsittely Javalla (Servletit)
-    * *käyttäjältä saadun datan käsittely (HTTP parametrit, lomakkeet)*
-    * *datan välittäminen servletiltä käyttöliittymälle*
-1. Tietokantojen käyttö Javassa (JDBC)
-    * *tietokantakerroksen eriyttäminen muusta logiikasta (DAO, data access object)*
-    * *kyselyiden kokoaminen turvallisesti (prepared statements)*
-1. Dynaamisten HTML-sivujen toteutus JSP:llä (JavaServer Pages)
-    * *sivujen muodostaminen dynaamisesti JSP-teknologialla*
-    * *datan käsittely JSP-sivuilla JSTL-kirjaston avulla (JavaServer Pages Standard Tag Library)*
+1. **HTTP-pyyntöjen käsittely Javalla (Servletit)**
+
+    * käyttäjältä saadun datan käsittely (HTTP parametrit, lomakkeet)
+    * datan välittäminen servletiltä käyttöliittymälle
+
+1. **Tietokantojen käyttö Javassa (JDBC)**
+
+    * tietokantakerroksen eriyttäminen muusta logiikasta (DAO, data access object)
+    * kyselyiden kokoaminen turvallisesti (prepared statements)
+
+1. **Dynaamisten HTML-sivujen toteutus JSP:llä (JavaServer Pages)**
+
+    * sivujen muodostaminen dynaamisesti JSP-teknologialla
+    * datan käsittely JSP-sivuilla JSTL-kirjaston avulla (JavaServer Pages Standard Tag Library)
 
 Lisäksi voit hyödyntää seuraavia kurssilla esiintyneitä menetelmiä ja teknologioita:
 
@@ -72,57 +77,36 @@ Voit halutessasi tehdä hienot sivut ja tyylitellä ne, mutta **kurssin oppimist
 
 Käytämme harjoitustyössä valmista musiikkitietokantaa nimeltä [Chinook](https://github.com/lerocha/chinook-database):
 
-> "Chinook is a sample database available for SQL Server, Oracle, MySQL, etc."
+> *"Chinook is a sample database available for SQL Server, Oracle, MySQL, etc."*
 > 
-> "The Chinook data model represents a digital media store, including tables for artists, albums, media tracks, invoices and customers."
+> *"The Chinook data model represents a digital media store, including tables for artists, albums, media tracks, invoices and customers."*
 > 
-> https://github.com/lerocha/chinook-database 
+> [Luis Rocha, Chinook Database](https://github.com/lerocha/chinook-database)
 
 Lataa itsellesi valmis tietokanta [SQLite-muodossa tästä](https://github.com/lerocha/chinook-database/raw/master/ChinookDatabase/DataSources/Chinook_Sqlite.sqlite). 
 
-Chinook-tietokanta sisältää lukuisia tauluja ja paljon valmista dataa, mutta **tässä harjoitustyössä tauluista ainoastaan `Artist`-taulu on luonteeltaan pakollinen**. Taulut `Album` ja `Track` tulevat tarpeellisiksi tähdätessäsi korkeampiin arvosanoihin. Kaikki muut taulut voit jättää harjoitustyössäsi huomioimatta.
+Chinook-tietokanta sisältää lukuisia tietokantatauluja ja paljon valmista dataa, mutta **tässä harjoitustyössä ainoastaan `Artist`-taulu on luonteeltaan pakollinen**. 
+
+Taulut `Album` ja `Track` tulevat tarpeellisiksi tähdätessäsi korkeampiin arvosanoihin. Kaikki muut taulut voit jättää harjoitustyössäsi huomioimatta.
+
 
 ### Tietokannan muut aineistot
 
-* UML-kaavio [(Chinook-tietokannan Wiki)](https://github.com/lerocha/chinook-database/wiki/Chinook-Schema)
+* UML-kaavio: [Chinook-tietokannan Wiki](https://github.com/lerocha/chinook-database/wiki/Chinook-Schema)
 * Valmis tietokanta: [Chinook_Sqlite.sqlite](https://github.com/lerocha/chinook-database/raw/master/ChinookDatabase/DataSources/Chinook_Sqlite.sqlite)
 * Dokumentaatio: https://github.com/lerocha/chinook-database
 * SQL-luontikäskyt: [Chinook_Sqlite.sql](https://raw.githubusercontent.com/lerocha/chinook-database/master/ChinookDatabase/DataSources/Chinook_Sqlite.sql)
-* [Tietokannan lisenssi (MIT)](https://github.com/lerocha/chinook-database/blob/master/LICENSE.md)
-* SQLite tools -Video
+* Tietokannan lisenssi: [MIT](https://github.com/lerocha/chinook-database/blob/master/LICENSE.md)
+
+<!--* SQLite tools -video
 
     Chinook-tietokantaa käytettiin tällä kurssilla aikaisemmin linkitetyssä [SQLite tools -videossa](https://video.haaga-helia.fi/media/SQLite+tools/0_pez4r54j). Tästä videosta voi olla sinulle hyötyä myös tämän tehtävän tekemisessä. 
+
 * [SQLite tools -komentorivityökalut](https://sqlite.org/download.html)
 
     Tietokannan käyttäminen komentoriviltä ei ole välttämättä tarpeellista harjoitustyön tekemiseksi, mutta voit halutessasi ladata SQLite tools -ohjelman Windows-, Linux- tai macOS -version yllä olevasta linkistä.
+-->
 
-### Esimerkkikyselyjä
-
-Harjoitustyössäsi saatat tarvita esimerkiksi seuraavia kyselyjä:
-
-```sql
--- kaikkien artistien hakeminen aakkosjärjestyksessä:
-SELECT ArtistId, Name FROM Artist ORDER BY Name ASC;
-
--- yksittäisen artistin kaikkien albumien hakeminen:
-SELECT AlbumId, Title FROM Album WHERE ArtistId = ?;
-
--- yksittäisen albumin kaikkien kappaleiden hakeminen (bonus):
-SELECT TrackId, Name FROM Track WHERE AlbumId = ?;
-
--- artistin lisääminen:
-INSERT INTO Artist (Name) VALUES (?);
-
--- albumin lisääminen tietylle artistille (bonus):
-INSERT INTO Album (Title, ArtistId) VALUES (?, ?);
-
--- kaikkien artistien hakeminen yhdistettynä tietoon albumien määrästä (bonus):
-SELECT Artist.ArtistId, Name, COUNT(AlbumId) AS AlbumCount 
-    FROM Artist 
-    LEFT JOIN Album ON Album.ArtistId = Artist.ArtistId 
-    GROUP BY Artist.ArtistId 
-    ORDER BY Name ASC;
-```
 
 
 ## Harjoitustyön toiminnalliset vaatimukset
@@ -212,7 +196,9 @@ Suorituskyvyllä tai tietokantakyselyiden optimoinnilla ei ole painoarvoa. Käyt
 
 ## Tietoturva
 
-**Palveluun ei toteuteta kirjautumista tai käyttäjienhallintaa**. Mahdolliset datan lisäykset, muuttamiset ja poistot eivät edellytä käyttäjän tunnistamista. Palvelun tulee kuitenkin olla teknisesti turvallinen, eli ei altis esim. SQL- tai XSS-injektioille (muista `PreparedStatement` ja `c:out`).
+**Palveluun ei toteuteta kirjautumista tai käyttäjienhallintaa**. Mahdolliset datan lisäykset, muuttamiset ja poistot eivät edellytä käyttäjän tunnistamista. Palvelun tulee kuitenkin olla teknisesti turvallinen, eli ei altis esim. SQL- tai XSS-injektioille.
+
+Muista siis hyödyntää aikaisemmilta viikoilta tuttuja `PreparedStatement`-luokkaa ja `c:out`-tagia!
 
 
 ## Harjoitustyön referenssitoteutus
@@ -221,12 +207,39 @@ Harjoitustyöstä on tehty referenssitoteutus nimeltä "Music catalog". Referens
 
 Voit katsoa harjoitustyön referenssitoteutuksen esittelyn tästä videosta: 
 
+**[Harjoitustyön esittely (ohjelmointi 2)](https://video.haaga-helia.fi/media/t/0_x0ojb3pq)**
+
 [![https://video.haaga-helia.fi/media/t/0_x0ojb3pq](https://api.kaltura.nordu.net/p/288/sp/28800/thumbnail/entry_id/0_x0ojb3pq/version/100022/width/435/height/260)](https://video.haaga-helia.fi/media/t/0_x0ojb3pq)
 
-https://video.haaga-helia.fi/media/t/0_x0ojb3pq
+## Esimerkkikyselyjä
 
+Harjoitustyössäsi saatat tarvita esimerkiksi seuraavia kyselyjä:
 
-## Harjoitustyön palauttaminen (viim. su 24.5. klo 22)
+```sql
+-- kaikkien artistien hakeminen aakkosjärjestyksessä:
+SELECT ArtistId, Name FROM Artist ORDER BY Name ASC;
+
+-- yksittäisen artistin kaikkien albumien hakeminen:
+SELECT AlbumId, Title FROM Album WHERE ArtistId = ?;
+
+-- yksittäisen albumin kaikkien kappaleiden hakeminen (bonus):
+SELECT TrackId, Name FROM Track WHERE AlbumId = ?;
+
+-- artistin lisääminen:
+INSERT INTO Artist (Name) VALUES (?);
+
+-- albumin lisääminen tietylle artistille (bonus):
+INSERT INTO Album (Title, ArtistId) VALUES (?, ?);
+
+-- kaikkien artistien hakeminen yhdistettynä tietoon albumien määrästä (bonus):
+SELECT Artist.ArtistId, Name, COUNT(AlbumId) AS AlbumCount 
+    FROM Artist 
+    LEFT JOIN Album ON Album.ArtistId = Artist.ArtistId 
+    GROUP BY Artist.ArtistId 
+    ORDER BY Name ASC;
+```
+
+## Harjoitustyön palauttaminen
 
 Harjoitustyön lähdekoodit palautetaan kokonaisuudessaan Teamsiin zip-pakettina. 
 
@@ -241,11 +254,11 @@ Edellä mainittu komento luo projektiisi tiedoston `git-log.txt`, joka sisältä
 Gitin käyttö huomioidaan positiivisesti harjoitustyön arvostelussa, mutta se ei ole vaatimuksena erinomaiseen arvosanaan. **Varmista myös seuraavassa vaiheessa, että myös luotu tiedosto git-log.txt tulee mukaan tekemääsi zip-pakettiin.**
 
 
-**Projektin lähettäminen Teamsiin**
+### Projektin lähettäminen Teamsiin
 
-[Tee projektistasi zip-tiedosto](https://stackoverflow.com/a/5386448) valitsemalla Eclipsessä harjoitustyöprojektin nimen päällä *Export – Export.. – General – Archive file*. Tallenna tiedosto .zip-muotossa säilyttäen hakemistorakenne. Varmista, että zip-paketti sisältää kaikki ratkaisusi *.java*- ja *.jsp*-tiedosto ja palauta zip-paketti Teamsin palautuskansioon.
+[Tee projektistasi zip-tiedosto](https://stackoverflow.com/a/5386448) valitsemalla Eclipsessä harjoitustyöprojektin nimen päällä *Export – Export.. – General – Archive file*. Tallenna tiedosto .zip-muotossa säilyttäen hakemistorakenne. Varmista, että zip-paketti sisältää kaikki ratkaisusi *.java*- ja *.jsp*-tiedostot. Palauta zip-paketti Teamsin palautuskansioon.
 
 
----
+## Tietokannan lisenssi
 
 Chinook-tietokannan on luonut [Luis Rocha](https://github.com/lerocha) ja se on lisensoitu avoimena lähdekoodina [MIT-lisenssillä](https://github.com/lerocha/chinook-database/blob/master/LICENSE.md).

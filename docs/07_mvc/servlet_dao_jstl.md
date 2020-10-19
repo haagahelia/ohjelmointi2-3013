@@ -1,10 +1,10 @@
 [⇦ takaisin kurssin etusivulle](../)
 
-# Servletit, DAO, JSP ja JSTL
+# Verkkosovellus kolmikerrosarkkitehtuurilla
 
 Tällä viikolla tavoitteinamme on rakentaa kolmikerroksinen web-sovellus, joka yhdistää tähänasti opettelemamme erilliset teknologiat loogiseksi kokonaisuudeksi.
 
-Jatka tällä viikolla edellisellä viikolla aloittamaasi web-projektia.
+Jatkat tällä viikolla edellisellä viikolla aloittamasi web-projektin kehittämistä.
 
 <!-- ## Malliratkaisu
 
@@ -43,7 +43,7 @@ Tämän tehtävän palautusaika on umpeutunut. Voit katsoa malliratkaisun tääl
 
 Sovellusten kehitettävyyden ja ylläpidettävyyden kannalta on tärkeää, että ne noudattavat jotain tiettyä arkkitehtuuria ja että niissä erilliset loogiset kokonaisuudet on toteutettu toisistaan irrallaan. Meidän ostoslistasovelluksessamme mukailemme kolmikerrosarkkitehtuuria ja MVC-mallia:
 
-> Three-tier architecture is a client-server software architecture pattern in which the user interface (presentation), functional process logic ("business rules"), computer data storage and data access are developed and maintained as independent modules, most often on separate platforms.
+> *"Three-tier architecture is a client-server software architecture pattern in which the user interface (presentation), functional process logic ("business rules"), computer data storage and data access are developed and maintained as independent modules, most often on separate platforms."*
 >
 > [Multitier architecture, Wikipedia](https://en.wikipedia.org/wiki/Multitier_architecture#Three-tier_architecture)
 
@@ -65,7 +65,7 @@ Tutustu itsenäisesti seuraavaan videoon, jossa esitellään tagikirjaston käyt
 
 [![JSTL Tutorial part 2 Core Tags](https://img.youtube.com/vi/R0EnI9_ZMA0/mq1.jpg)](https://youtu.be/R0EnI9_ZMA0)
 
-> *Tämä video esittelee, miten JSTL tagikirjasto lisätään JSP-sivulle `taglib`-direktiivin avulla. Opit myös käyttämään harjoituksessa tarvitsemiasi `c:out` ja `c:forEach` tageja. Video näyttää myös konkreettisesti, miten lista olioita voidaan välittää servletiltä JSP-sivulle ja miten sillä olevat Java-oliot saadaan esitettyä sivulla HTML-muodossa. Video on jatkoa viime viikon videolle [JSTL tutorial part 1](https://youtu.be/KmREMEhj5eE).*
+Tämä video esittelee, miten JSTL tagikirjasto lisätään JSP-sivulle `taglib`-direktiivin avulla. Opit myös käyttämään harjoituksessa tarvitsemiasi `c:out` ja `c:forEach` tageja. Video näyttää myös konkreettisesti, miten lista olioita voidaan välittää servletiltä JSP-sivulle ja miten sillä olevat Java-oliot saadaan esitettyä sivulla HTML-muodossa. Video on jatkoa viime viikon videolle [JSTL tutorial part 1](https://youtu.be/KmREMEhj5eE).
 
 
 ## DAO- ja Model-luokkien lisääminen projektiin
