@@ -145,11 +145,11 @@ Kurssin ensimmäisten harjoitustehtävien tehtävänannot löytyvät Viope-järj
 
 Mikäli sinulla ei ole vielä tunnuksia Viopeen, rekisteröidy osoitteessa: [https://vw4.viope.com/login?org=hh](https://vw4.viope.com/login?org=hh). Huomaa että rekisteröitymisosoitteessa on oltava parametri `?org=hh`, jotta pääset käsiksi Haaga-Helian kurssitarjontaan. Rekisteröityessäsi valitse tämä toteutus **Ohjelmointi 2, 3013 ❄️**.
 
-Mikäli sinulla on jo Viope-tunnukset, voit liittyä tämän kurssin työtilaan etusivulta **Ohjelmointi 2, 3013 ❄️** -linkin kautta.
+Mikäli sinulla on jo Viope-tunnukset, voit liittyä tämän kurssin työtilaan [etusivulta](https://vw4.viope.com/) **Ohjelmointi 2, 3013 ❄️** -linkin kautta.
 
 **Teknisistä syistä johtuen Viopeen palautettavista lähdekoodeista täytyy aina poistaa mahdolliset package -lauseet luokan yläpuolelta.** Viope on myös muilla tavoin erittäin tarkka ohjelmien oikeellisuudesta, mikä saattaa aiheuttaa ensimmäisillä viikoilla hämmennystä. Voit kysyä kurssin Teams-kanavalla neuvoa Viope-ongelmiin milloin tahansa.
 
-Linkit:
+Viope-linkit:
 
 * rekisteröityminen: [https://vw4.viope.com/login?org=hh](https://vw4.viope.com/login?org=hh)
 * sisäänkirjautuminen: [https://vw4.viope.com/](https://vw4.viope.com/)
