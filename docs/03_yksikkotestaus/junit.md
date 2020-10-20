@@ -14,9 +14,9 @@ Tulet itse jatkokehittämään jonkun toisen vuosia sitten kirjoittamaa koodia, 
 
 ## Oppimateriaalit
 
+[PowerPoint-kalvot (PDF)](./yksikkotestaus.pdf)
 
-
-### JUnit-teoriavideot:
+### JUnit-teoriavideot
 
 [**JUnit-testin luonti ja assertiot**](https://video.haaga-helia.fi/media/JUnit-testin+luonti+ja+assertiot/0_pl76xbuy) <small>9:21</small>
 
@@ -41,9 +41,10 @@ Luokan metodien testaaminen erillisen testiluokan ja JUnit-kirjaston avulla.
 Useille testimetodeille yhteisten alustustoimenpiteiden tekeminen erillisessä alustusmetodissa.
 
 &nbsp;
+https://video.haaga-helia.fi/media/t/0_m8y5zv8k 
 
 
-### Testaaminen käytännössä:
+## Testaaminen käytännössä:
 
 Seuraavilla videoesimerkeillä esitellään Map-aiheen yhteydessä luodun EtunimiTilasto-sovelluksen testausta yksikkötestien avulla. 
 

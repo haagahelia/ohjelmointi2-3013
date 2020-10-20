@@ -57,7 +57,6 @@ Tietokantalogiikan eriyttämiseksi muusta koodista käytetään usein ns. **DAO*
 
 [ShoppingListItemDao.java](https://github.com/haagahelia/ShoppingListExample/blob/master/src/main/java/database/ShoppingListItemDao.java)
 
-[ShoppingListItemDao.java](https://github.com/haagahelia/ShoppingListExample/blob/master/src/main/java/database/ShoppingListItemDao.java)
 
 &nbsp;
 
@@ -71,11 +70,12 @@ Lue DAO-suunnittelumallin esittely esimerkkikoodeineen osoittessa [https://www.t
 
 ### `JDBCShoppingListItemDao`-luokka
 
-Toteuta oppitunnilla esitellyn `ShoppingListItem`-tietokantataulun CRUD-operaatiot uuteen DAO-luokkaan nimeltä `JDBCShoppingListItemDao`:
+Toteuta oppitunnilla esitellyn `ShoppingListItem`-tietokantataulun CRUD-operaatiot uuteen DAO-luokkaan nimeltä `JDBCShoppingListItemDao`. 
 
-Voit käyttää DAO-luokan pohjana tätä tyhjää luokkaa. Muuta tarvittaessa yksityiskohdat, kuten package, vastaamaan omaa projektiasi:
+Voit käyttää DAO-luokkasi pohjana alla esitettyä keskeneräistä luokkaa. Muuta tarvittaessa yksityiskohdat, kuten package, vastaamaan omaa projektiasi:
 
 ```java
+// tiedosto JDBCShoppingListItemDao.java
 package database;
 
 import java.util.List;
@@ -112,16 +112,7 @@ public class JDBCShoppingListItemDao implements ShoppingListItemDao {
 }
 ```
 
-### ShoppingListItem-luokka
-
-Kaikki tietokannasta luetut tiedot mallinnetaan DAO-mallissa olio-ohjelmointiparadigman mukaisesti olioina, joten tarvitset myös uutta `ShoppingListItem`-luokkaa. Tämän luokan oliot mallintavat yksittäisiä tietokannan tuoterivejä, eli ohjelman dataa. Vastaavista luokista käytetään usein termejä [bean, business object tai entity](https://en.wikipedia.org/wiki/Business_object).
-
-Jokaisella ostoslistan rivillä on sekä `id` että tuotteen nimi `title`, joten lisää nämä tietueet myös omaan `ShoppingListItem`-luokkaasi. 
-
-
-### ShoppingListItemDao-rajapinta
-
-Edellä esitetyn `JDBCShoppingListItemDao`-luokan otsikossa esiintyy termi `implements ShoppingListItemDao`:
+Huomaa, että `JDBCShoppingListItemDao` on JDBC-teknologiaa hyödyntävä luokka, joka toteuttaa `ShoppingListItemDao`-rajapinnan:
 
 ```java
 public class JDBCShoppingListItemDao implements ShoppingListItemDao {
@@ -129,9 +120,12 @@ public class JDBCShoppingListItemDao implements ShoppingListItemDao {
 }
 ```
 
-Luokka siis **toteuttaa `ShoppingListItem`-rajapinnan**. Jokaisen metodin edessä oleva `@Override`-annotaatio puolestaan tarkoittaa, että kyseinen metodi on mukana kyseisessä rajapinnassa. Rajapinta voidaan määritellä seuraavasti: 
+Itse rajapinnan määrittelyssä tai nimeämisessä ei ole otettu kantaa siihen, ladataanko tieto tietokannasta, tiedostosta tai vaikka verkosta. Kaikkien metodien edessä esiintyy `@Override`-annotaatio, joka tarkoittaa, että kyseinen metodi on määritetty kyseisessä rajapinnassa. 
+
+Tallenna itsellesi myös luokan tarvitsema rajapinta:
 
 ```java
+// tiedosto ShoppingListItemDao.java
 package database;
 
 import java.util.List;
@@ -150,27 +144,37 @@ public interface ShoppingListItemDao {
 }
 ```
 
-Muuta tarvittaessa yksityiskohdat, kuten `package`, vastaamaan omaa projektiasi. Mikäli rajapinnat eivät ole sinulle aikasemmin tuttuja, riittää että tiedät, että rajapinta määrittelee metodit, jotka sen toteuttavien luokkien on toteutettava samoilla parametriarvoilla  ja paluuarvoilla.
+Muuta tarvittaessa yksityiskohdat, kuten `package`, vastaamaan omaa projektiasi. Mikäli rajapinnat eivät ole sinulle täysin tuttuja, riittää että tiedät, että rajapinta määrittelee metodit, jotka sen toteuttavien luokkien on toteutettava samoilla parametriarvoilla  ja paluuarvoilla.
+
+
+### ShoppingListItem-luokka
+
+Kaikki tietokannasta luetut tiedot mallinnetaan DAO-mallissa olio-ohjelmointiparadigman mukaisesti olioina, joten tarvitset myös uutta `ShoppingListItem`-luokkaa. Tämän luokan oliot mallintavat yksittäisiä tietokannan tuoterivejä, eli ohjelman dataa. Vastaavista luokista käytetään usein termejä [bean, business object tai entity](https://en.wikipedia.org/wiki/Business_object).
+
+Jokaisella ostoslistan rivillä on sekä `id` että tuotteen nimi `title`, joten lisää nämä tietueet myös omaan `ShoppingListItem`-luokkaasi. 
+
 
 ### DAO-metodien toteuttaminen
 
 Toteuta DAO-luokkaasi `ShoppingListItem`-olioita käsittelevät metodit seuraavien kuvausten mukaisesti.
 
-#### `getAllItems`
+
+#### getAllItems()
 
 Toteuta tämä metodi siten, että metodin sisällä luetaan tietokantataulun kaikki rivit, ja niistä luodaan rivejä vastaavat `ShoppingListItem`-oliot. Laita oliot metodin sisällä listalle, ja palauta lista lopuksi metodista. Jos tietokannassa ei ole lainkaan rivejä, palauta tyhjä lista.
 
-#### `getItem`
+#### getItem(long id)
 
 Toteuta tämä metodi siten, että metodin sisällä etsit riviä, jonka `id`-sarakkeen arvona on annettu arvo. Jos vastaava rivi löytyy, luo uusi `ShoppingListItem`-olio ja palauta se. Muussa tapauksessa palauta `null`.
 
-#### `addItem`
+#### addItem(ShoppingListItem lisattava)
 
 Toteuta tämä metodi siten, että metodin sisällä lisäät tietokantaan uuden rivin. Lisättävän rivin `title`-sarakkeen arvoksi laitetaan metodille annetun olion `title`.
 
-#### `removeItem`
+#### removeItem(ShoppingListItem poistettava)
 
-Toteuta tämä metodi siten, että metodin sisällä poistat tietokannasta metodille annettua `ShoppingListItem`-oliota vastaavan rivin. Poistettavan rivin id:n saat selville olion `id`-attribuutista. Mikäli poistaminen onnistuu, palauta tästä metodista `true`. Muussa tapauksessa palauta `false`.
+Toteuta tämä metodi siten, että metodin sisällä poistat tietokannasta metodille annettua `ShoppingListItem`-oliota vastaavan rivin. Poistettavan tietokantarivin id:n saat selville olion `id`-attribuutista. Mikäli poistaminen onnistuu, palauta tästä metodista `true`. Muussa tapauksessa palauta `false`.
+
 
 #### Extra: lisätyn rivin automaattisen id:n selvittäminen
 
