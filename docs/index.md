@@ -21,6 +21,8 @@ Kurssin keskustelukanavana toimii Teams-ryhmä, jonka kautta tavoitat sekä opet
 
 ### Aihe 1: perintä ja rajapinnat <small>26.10. - 1.11.2020</small>
 
+Ensimmäisellä viikolla syvennämme olio-ohjelmointiosaamistamme tutustumalla perintään ja rajapintoihin. Perintä ja rajapinnat ovat olio-ohjelmoinnin ratkaisuja koodin uudelleenkäytettävyyden ja yhteensopivuuden edistämiseksi.
+
 [Siirry oppimateriaaliin ⇨](01_perinta_ja_rajapinnat/perinta-ja-rajapinnat)
 
 Tehtävät Viopessa (DL 8.11. klo 23:59)
@@ -39,7 +41,7 @@ Tehtävät Viopessa (DL 8.11. klo 23:59)
 
 &nbsp;
 
-### Aihe 3: Yksikkötestauksen perusteet <small>9.11. - 15.11.2020</small>
+### Aihe 3: Yksikkötestaus <small>9.11. - 15.11.2020</small>
 
 Tällä viikolla tutustumme yksikkötestaukseen ja testaamme valmista virheellisesti toimivaa ja tyylillisesti heikosti toteutettua metodia. Tutustumme lisäksi koodin laatuun vaikuttaviin tekijöihin ja sovellamme niitä annetun valmiin koodin parantamiseksi.
 
@@ -59,7 +61,7 @@ Tehtävät Teamsissa (DL 22.11. klo 23:59)
 
 &nbsp;
 
-### Aihe 5: Tietokantalogiikan eriyttäminen ja yksikkötestaaminen (DAO & JUnit) <small>23.11. - 29.11.2020</small>
+### Aihe 5: tietokantalogiikan eriyttäminen ja testaaminen (DAO & JUnit) <small>23.11. - 29.11.2020</small>
 
 Tällä viikolla jatkokehitämme ostoslistasovelluksen arkkitehtuuria siten, että tietokantalogiikkamme eriytetään tekstikäyttöliittymästä. Eriyttäminen mahdollistaa tietokantalogiikan testaamisen yksikkötesteillä sekä myöhemmin saman koodin uudelleenkäytön web-pohjaisella käyttöliittymällä.
 
@@ -91,9 +93,9 @@ Tehtävät Teamsissa (DL 13.12. klo 23:59)
 &nbsp;
 
 
-### Aihe 8: Ajax ja dynaamiset toiminnallisuudet JavaScriptillä <small>14.12. - 18.12.2020</small>
+### Aihe 8: Ajax ja JavaScript <small>14.12. - 18.12.2020</small>
 
-Viimeinen harjoitusviikko käsittelee JavaScript-koodin avulla tehtäviä palvelinkutsuja, eli Ajax-kutsuja. Niiden avulla voimme päivittää ostoslistamme sisältöä tekemättä sivulatauksia. Toteutamme lisäksi uuden ominaisuuden ostoslistan rivien poistamiseksi.
+Viimeinen harjoitusviikko käsittelee JavaScript-koodin avulla tehtäviä palvelinkutsuja, eli Ajax-kutsuja. Niiden avulla voimme päivittää ostoslistamme sisältöä tekemättä sivulatauksia. Toteutamme lisäksi verkkopalveluumme uuden ominaisuuden ostoslistan rivien poistamiseksi.
 
 [Siirry oppimateriaaliin ⇨](08_ajax/ajax)
 
