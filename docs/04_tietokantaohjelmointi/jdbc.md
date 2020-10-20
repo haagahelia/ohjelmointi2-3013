@@ -42,6 +42,8 @@ Ajurin käyttöönotto projektissasi edellyttää sen lisäämistä projektin "b
 2. siirrä edellä tallentamasi `.jar`-tiedosto lib-hakemistoon
 3. lisää lib-hakemisto projektisi "build path":iin [tämän Stack Overflow -viestin mukaisesti](https://stackoverflow.com/a/23420543).
 
+Huom! Jar-tiedostot sisältävät suoritettavaa ohjelmakoodia, joten niiden kanssa tulee huomioida tietoturva aivan kuten muidenkin suoritettavien ohjelmien kanssa.
+
 
 ### SQLite-tietokannan käyttäminen Javan ulkopuolelta (valinnainen)
 
@@ -56,6 +58,7 @@ Voit ladata itsellesi kyseisen `sqlite3.exe`-komentorivityökalun osoitteesta: [
 <!--[![SQLite tools](https://api.kaltura.nordu.net/p/288/sp/28800/thumbnail/entry_id/0_pez4r54j/version/100012/width/435/height/260)](https://video.haaga-helia.fi/media/SQLite+tools/0_pez4r54j)
 
 [SQLite tools -komentorivityökalun käyttöohje](https://video.haaga-helia.fi/media/SQLite+tools/0_pez4r54j)-->
+
 
 ## Videot
 

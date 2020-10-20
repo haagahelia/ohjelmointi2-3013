@@ -253,19 +253,22 @@ Mikäli SQL-osaamisessasi on puutteita, suosittelen perehtymään netistä vapaa
 
 # Lisenssit ja tekijänoikeudet
 
+Tällä kurssilla hyödynnetään avoimilla lisensseillä julkaistuja oppimateriaaleja, dataa ja ohjelmakoodia.
+
+
 ## Helsingin yliopiston oppimateriaalit
 
-Tällä kurssilla hyödynnetään laajasti [Helsingin yliopiston Agile Education Research –tutkimusryhmän oppimateriaalia](https://ohjelmointi-20.mooc.fi/), joka on lisensoitu [Creative Commons BY-NC-SA 4.0 -lisenssillä](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi). 
+Kurssin oppimateriaalissa ja tehtävissä hyödynnetään laajasti [Helsingin yliopiston Agile Education Research –tutkimusryhmän oppimateriaalia](https://ohjelmointi-20.mooc.fi/), joka on lisensoitu [Creative Commons BY-NC-SA 4.0 -lisenssillä](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi). 
 
 
 ## Nimiaineiston lisenssi (etunimet.csv)
 
-<a href="https://www.avoindata.fi/data/fi/organization/digi_ja_vaestotietovirasto">Digi- ja väestötietovirasto</a> on julkaissut tietoaineiston <a href="https://www.avoindata.fi/data/fi/dataset/none">Väestötietojärjestelmän suomalaisten nimiaineistot</a> lisenssillä <a  href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
+Kurssin Viope-tehtävässä ja esimerkeissä hyödynnetään [Digi- ja väestötietoviraston](https://www.avoindata.fi/data/fi/organization/digi_ja_vaestotietovirasto) julkaisemaa tietoaineistoa [Väestötietojärjestelmän suomalaisten nimiaineistot](https://www.avoindata.fi/data/fi/dataset/none), joka on julkaistu lisenssillä [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
 
-## Yrityspostinumerot (postinumerot.txt)
+## Yrityspostinumerot
 
-Yrityspostinumeroiden tekstimuotoinen listaus perustuu Posti Group Oyj:n verkkosivuiston tietoihin osoitteesta [https://www.posti.fi/fi/yrityksille/monikanavainen-viestinta/viestit-monikanavaisesti/postin-vastaanottaminen/yrityspostinumero](https://www.posti.fi/fi/yrityksille/monikanavainen-viestinta/viestit-monikanavaisesti/postin-vastaanottaminen/yrityspostinumero).
+Yrityspostinumeroita käsittelevässä esimerkissä hyödynnetty tekstimuotoinen listaus perustuu Posti Group Oyj:n verkkosivuiston tietoihin osoitteesta [https://www.posti.fi/fi/yrityksille/monikanavainen-viestinta/viestit-monikanavaisesti/postin-vastaanottaminen/yrityspostinumero](https://www.posti.fi/fi/yrityksille/monikanavainen-viestinta/viestit-monikanavaisesti/postin-vastaanottaminen/yrityspostinumero).
 
 
 ## SQLite-tietokanta-ajuri
@@ -278,6 +281,6 @@ Tietokanta-ajuri `sqlite-jdbc-3.30.1.jar` noudattaa lisenssiä [Apache License v
 Chinook-tietokannan on luonut [Luis Rocha](https://github.com/lerocha) ja se on lisensoitu avoimena lähdekoodina [MIT-lisenssillä](https://github.com/lerocha/chinook-database/blob/master/LICENSE.md).
 
 
-## Oppimateriaali
+## Tämän oppimateriaalin lisenssi
 
 Tämän oppimateriaalin on kehittänyt Teemu Havulinna ja se on lisensoitu [Creative Commons BY-NC-SA](https://creativecommons.org/licenses/by-nc-sa/4.0/) -lisenssillä.
