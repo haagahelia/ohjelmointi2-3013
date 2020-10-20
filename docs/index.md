@@ -186,15 +186,15 @@ Kurssin loppuarvosana lasketaan tehtävien ja harjoitustyön keskiarvosta ja py�
 
 Tehtävien pisteytys:
 
-Tehtävä                 |  Maksimipisteet       | DL        |   Järjestelmä | Malliratkaisu
-------------------------|-----------------------|-----------|---------------|---------------
-Perintä ja rajapinnat   | 5                     | 8.11.     | Viope         | 
-Map                     | 5 (+2 bonusta)        | 8.11.     | Viope         | 
-Yksikkötestaus          | 5                     | 15.11.    | Teams         | 
-Tietokannat ja DAO      | 5                     | 29.11.    | Teams         | 
-Servletit               | 5                     | 6.12.     | Teams         | 
-Servlet + jsp + dao     | 5                     | 13.12.    | Teams         | 
-Ajax ja JavaScript      | 5                     | 18.12.    | Teams         | 
+Tehtävä                 |  Maksimipisteet       | DL        |   Järjestelmä
+------------------------|-----------------------|-----------|---------------
+Perintä ja rajapinnat   | 5                     | 8.11.     | Viope 
+Map                     | 5 (+2 bonusta)        | 8.11.     | Viope 
+Yksikkötestaus          | 5                     | 15.11.    | Teams 
+Tietokannat ja DAO      | 5                     | 29.11.    | Teams 
+Servletit               | 5                     | 6.12.     | Teams 
+Servlet + jsp + dao     | 5                     | 13.12.    | Teams 
+Ajax ja JavaScript      | 5                     | 18.12.    | Teams 
 
 
 Tehtävien maksimipistemäärä on 35 (+ 2 bonuspistettä). Tehtävät arvioidaan siten, että 40 % suorituksella saa arvosanan 1 ja 100 % suorituksella arvosanan 5:
