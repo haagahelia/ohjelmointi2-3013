@@ -79,19 +79,3 @@ Tämän esimerkki on lainattu [Helsingin yliopiston Agile Education Research –
 
 &nbsp;
 
-#### Arvojen poistaminen tai tarkastaminen (`remove` ja `containsKey`)
-
-```java
-HashMap<String, String> maat = new HashMap<>();
-
-maat.put("Suomi", "Finland");
-maat.put("Ruotsi", "Sweden");
-maat.put("Norja", "Norway");
-
-boolean onRuotsi = maat.containsKey("Ruotsi"); // true
-
-onRuotsi.remove("Ruotsi");
-
-onRuotsi = maat.containsKey("Ruotsi"); // false
-
-```

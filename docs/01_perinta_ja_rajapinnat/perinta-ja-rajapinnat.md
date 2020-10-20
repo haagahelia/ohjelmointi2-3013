@@ -21,63 +21,7 @@ Perintää käytetään usein tilanteissa, joissa on olemassa jo jokin toteutus,
 [PowerPoint-kalvot](./perinta-ja-rajapinnat.pdf)
 
 &nbsp;
-<!--
-Yllä esiintyvässä videossa käsitellään seuraavaa Auto-luokkaa:
 
-```java
-public class Auto {
-
-    private String valmistaja;
-    private String rekisterinumero;
-
-    public Auto(String valm, String rekkari) {
-        this.valmistaja = valm;
-        this.rekisterinumero = rekkari;
-    }
-
-    public String getValmistaja() {
-        return valmistaja;
-    }
-
-    public String getRekisterinumero() {
-        return rekisterinumero;
-    }
-}
-```
-
-Kun ohjelmassa ilmenee tarve käsitellä myös takseja, jotka poikkeavat muista autoista erityisen taksinumeron osalta, voidaan uusi Taksi-luokka toteuttaa perinnän  avulla:
-
-```java
-public class Taksi extends Auto {
-
-    private String taksinumero;
-
-    public Taksi(String valm, String rekkari, String numero) {
-        super(valm, rekkari); // `super` kutsuu yliluokan konstruktoria!
-        this.taksinumero = numero;
-    }
-
-    public String getTaksinumero() {
-        return taksinumero;
-    }
-}
-```
-
-Nyt Taksi-olioilla on perittynä Auto-luokan ominaisuudet, minkä lisäksi niillä on oma `getTaksinumero`-metodi:
-
-```java
-Auto auto = new Auto("Opel", "ABC-123");
-Taksi taksi = new Taksi("Skoda", "DEF-456", "H123");
-
-String rek1 = auto.getRekisterinumero();
-
-// Taksi-luokalla on myös getRekisterinumero-metodi!
-String rek2 = taksi.getRekisterinumero();
-
-// Tavallisen auton metodien lisäksi taksilla on oma getTaksinumero-metodi.
-String taksinumero = taksi.getTaksinumero();
-```
--->
 
 # Rajapinnat
 
@@ -93,72 +37,6 @@ String taksinumero = taksi.getTaksinumero();
 [PowerPoint-kalvot](./perinta-ja-rajapinnat.pdf)
 
 Yllä olevalla videolla mainitaan rajapintojen lisäksi abstraktit luokat, jotka eivät kuulu tämän kurssitoteutuksen sisältöön.
-
-<!--
-&nbsp;
-
-```java
-public interface Message {
-
-    public String getRecipient();
-    public String getContent();
-}
-```
-
-```java
-public class EMail implements Message {
-
-    private String recipient, content;
-
-    public EMail(String recipient, String content) {
-        this.recipient = recipient;
-        this.content = content;
-    }
-
-    @Override
-    public String getRecipient() {
-        return this.recipient;
-    }
-
-    @Override
-    public String getContent() {
-        return this.content;
-    }
-}
-```
-
-```java
-Message email = new EMail("user@example.com", "This is an email!");
-Message sms = new SMS("+35850555555", "This is an SMS!");
-
-String emailOsoite = email.getRecipient();
-String puhelinnumero = sms.getRecipient();
-```
--->
-
-
-Myöhemmin tällä kurssilla tulemme käsittelemään ostoslistoja. Ostoslistojen tuotteiden lisäämistä, hakemista, muokkaamista ja poistamista varten käytämme myöhemmillä viikoilla seuraavaa rajapintaa:
-
-```java
-package database;
-
-import java.util.List;
-
-import model.ShoppingListItem;
-
-public interface ShoppingListItemDao {
-
-    public List<ShoppingListItem> getAllItems();
-
-    public ShoppingListItem getItem(long id);
-
-    public boolean addItem(ShoppingListItem newItem);
-
-    public boolean removeItem(ShoppingListItem item);
-}
-```
-
-Rajapinta määrittelee siis metodien nimet, parametriarvot ja paluuarvot, mutta voit itse kirjoittaa metodien sisäisen toteutuksen parhaaksi katsomallasi tavalla.
 
 
 ## Viope-tehtävä
