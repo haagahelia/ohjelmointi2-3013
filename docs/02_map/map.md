@@ -42,7 +42,7 @@ System.out.println(postinumerot.get("00710")); // tulostaa "Helsinki"
 
 ```
 
-Yllä esitetty koodi muodostaa kutakuinkin seuraavanlaisen tietorakenteen, jossa jokainen avain viittaa sille asetettuun arvoon:
+Yllä esitetty koodi muodostaa kutakuinkin seuraavan laisen tietorakenteen, jossa jokainen avain viittaa sille asetettuun arvoon:
 
 Avain   | Arvo
 --------|-----------
@@ -51,8 +51,20 @@ Avain   | Arvo
 "33720" | "Tampere"
 "33014" | "Tampere"
 
+Toinen samankaltainen käyttötapaus avain-arvo-pareille on myöhemmin tällä kurssilla käsiteltävä JSON-tietorakenne, jossa data näyttäisi tältä:
+
+```json
+{
+    "00710": "Helsinki",
+    "90014": "Oulu",
+    "33720": "Tampere",
+    "33014": "Tampere"
+}
+```
+
 Tämän esimerkki on lainattu [Helsingin yliopiston Agile Education Research –tutkimusryhmän oppimateriaalista](https://ohjelmointi-20.mooc.fi/osa-8/2-hajautustaulu), joka on lisensoitu Creative Commons BY-NC-SA-lisenssillä. 
 
+## Videot
 
 ### [Map, osa 1](https://video.haaga-helia.fi/media/Map%2C+osa+1/0_airjor6f) <small>9:01</small>
 
@@ -79,3 +91,24 @@ Tämän esimerkki on lainattu [Helsingin yliopiston Agile Education Research –
 
 &nbsp;
 
+### Viope-tehtävät
+
+1. **Lempinimet**
+
+    Tässä tehtävässä harjoittelemme Map-tietorakenteen luomista ja arvojen lisäämistä. Opit myös eron `HashMap`-luokan ja `TreeMap`-luokan välillä.
+
+1. **Etunimitilasto**
+
+    Tässä tehtävässä harjoittelemme aineiston lukemista CSV-tiedostosta ja Map-tietorakenteeseen. Opit myös päivittämään Map:issa olevaa valmista arvoa arvon korvaamisen sijaan.
+
+1. **Sanakirja**
+
+    Tässä tehtävässä harjoittelemme Map:in käyttämistä Sanakirja-olioiden sisäisenä tietovarastona. Tämä tehtävä on lainattu [Helsingin yliopiston Agile Education Research –tutkimusryhmän oppimateriaalista](https://2017-ohjelmointi.github.io/part8/#exercise-3-sanakirja) ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä.
+
+1. **⭐ Bonus ⭐ Usean käännöksen sanakirja**
+
+    Tämä on edistynyt bonustehtävä, jonka pisteet lasketaan mukaan tehtävien yhteispisteisiin, mutta jonka tekemättä jättäminen ei vaikuta arvosanaasi. Tehtävässä samalle avaimelle tallennetaan useita arvoja hyödyntämällä samalla sekä Map-tietorakennetta että listoja.
+    
+    Tämä tehtävä on lainattu [Helsingin yliopiston Agile Education Research –tutkimusryhmän oppimateriaalista](https://2017-ohjelmointi.github.io/part8/#exercise-3-sanakirja) ja se on lisensoitu Creative Commons BY-NC-SA-lisenssillä.
+
+Tarkemmat tehtävänannot ja tehtäviä koskevat videotallenteet löydät [Viopesta](https://vw4.viope.com/).

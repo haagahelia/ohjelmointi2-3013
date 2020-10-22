@@ -9,12 +9,12 @@ Kurssin opintojaksokuvaus löytyy osoitteesta [https://opinto-opas.haaga-helia.f
 
 ## Osallistumisen vahvistaminen
 
-Vahvista osallistumisesi kurssille liittymällä kurssin Teams-ryhmään. Liittymisohjeet ja -koodin olet saanut sähköpostitse kurssin alkua edeltävällä viikolla. Liityttyäsi ryhmään saat myös katseluoikeudet kurssin Microsoft Stream -palvelussa sijaitseviin videoihin.
+Vahvista osallistumisesi kurssille liittymällä kurssin Teams-ryhmään sekä Viope-oppimisalustalle. Liittymisohjeet ja -koodin Teamsiin olet saanut sähköpostitse kurssin alkua edeltävällä viikolla. Liityttyäsi Teams-ryhmään saat myös katseluoikeudet kurssin Microsoft Stream -palvelussa sijaitseviin videoihin.
 
 
 ## Kurssin aikataulu
 
-Tämä opintojakso alkaa 26.10. ja päättyy 18.12.2020. Opintojakso toteutetaan täysin virtuaalisesti, eli se ei sisällä lähiopetusta kampuksella eikä videoyhteydellä. Lähiopetuksen sijaan saatavillasi on lukuisia videoita ja tekstimuotoista oppimateriaalia.
+Tämä opintojakso alkaa 26.10. ja päättyy perjantaina 18.12.2020. Opintojakso toteutetaan täysin virtuaalisesti, eli se ei sisällä lähiopetusta kampuksella eikä videoyhteydellä. Lähiopetuksen sijaan saatavillasi on lukuisia videoita ja tekstimuotoista oppimateriaalia.
 
 Kurssin keskustelukanavana toimii Teams-ryhmä, jonka kautta tavoitat sekä opettajan että muut opiskelijat. Ohjausta ja apua on saatavilla Teamsin kautta lyhyellä vasteajalla.
 
@@ -45,9 +45,11 @@ Tehtävät Viopessa (DL 8.11. klo 23:59)
 
 Tällä viikolla tutustumme yksikkötestaukseen ja testaamme valmista virheellisesti toimivaa ja tyylillisesti heikosti toteutettua metodia. Tutustumme lisäksi koodin laatuun vaikuttaviin tekijöihin ja sovellamme niitä annetun valmiin koodin parantamiseksi.
 
-[Siirry oppimateriaaliin ⇨](03_yksikkotestaus/junit)
+Tämä aihe julkaistaan viikolla 45.
 
-Tehtävät Teamsissa (DL 15.11. klo 23:59)
+<!--[Siirry oppimateriaaliin ⇨](03_yksikkotestaus/junit)
+
+Tehtävät Teamsissa (DL 15.11. klo 23:59)-->
 
 &nbsp;
 
@@ -55,9 +57,12 @@ Tehtävät Teamsissa (DL 15.11. klo 23:59)
 
 Tällä viikolla opettelemme ensin muodostamaan yhteyden tietokantaan Java-ohjelmasta ja tekemään yksinkertaisia CRUD-toimenpiteitä (Create, Read, Update & Delete). 
 
+Tämä aihe julkaistaan viikolla 46.
+
+<!--
 [Siirry oppimateriaaliin ⇨](04_tietokantaohjelmointi/jdbc)
 
-Tehtävät Teamsissa (DL 22.11. klo 23:59)
+Tehtävät Teamsissa (DL 22.11. klo 23:59)-->
 
 &nbsp;
 
@@ -65,9 +70,11 @@ Tehtävät Teamsissa (DL 22.11. klo 23:59)
 
 Tällä viikolla jatkokehitämme ostoslistasovelluksen arkkitehtuuria siten, että tietokantalogiikkamme eriytetään tekstikäyttöliittymästä. Eriyttäminen mahdollistaa tietokantalogiikan testaamisen yksikkötesteillä sekä myöhemmin saman koodin uudelleenkäytön web-pohjaisella käyttöliittymällä.
 
-[Siirry oppimateriaaliin ⇨](05_dao/dao)
+Tämä aihe julkaistaan viikolla 47.
 
-Tehtävät Teamsissa (DL 29.11. klo 23:59)
+<!--[Siirry oppimateriaaliin ⇨](05_dao/dao)
+
+Tehtävät Teamsissa (DL 29.11. klo 23:59)-->
 
 &nbsp;
 
@@ -75,9 +82,11 @@ Tehtävät Teamsissa (DL 29.11. klo 23:59)
 
 Verkkosovellusten osuuden ensimmäisellä viikolla toteutamme yksinkertaisia servlettejä päivämäärien laskemiseksi. Voimme halutessamme hyödyntää ensimmäisellä viikolla esiteltyä `dayOfYear`-metodia tai Javan valmiita päivämääräluokkia.
 
-[Siirry oppimateriaaliin ⇨](06_servletit/servletit)
+Tämä aihe julkaistaan viikolla 48.
 
-Tehtävät Teamsissa (DL 6.12. klo 23:59)
+<!--[Siirry oppimateriaaliin ⇨](06_servletit/servletit)
+
+Tehtävät Teamsissa (DL 6.12. klo 23:59)-->
 
 &nbsp;
 
@@ -86,9 +95,11 @@ Tehtävät Teamsissa (DL 6.12. klo 23:59)
 
 Verkkosovellusten toisella viikolla liitämme oman ostoslistasovelluksemme tietokannan verkkopalveluun ja luomme HTML-käyttöliittymät ostoslistan näyttämiseksi ja tuotteiden lisäämiseksi.
 
-[Siirry oppimateriaaliin ⇨](07_mvc/servlet_dao_jstl)
+Tämä aihe julkaistaan viikolla 49.
 
-Tehtävät Teamsissa (DL 13.12. klo 23:59)
+<!--[Siirry oppimateriaaliin ⇨](07_mvc/servlet_dao_jstl)
+
+Tehtävät Teamsissa (DL 13.12. klo 23:59)-->
 
 &nbsp;
 
@@ -97,9 +108,11 @@ Tehtävät Teamsissa (DL 13.12. klo 23:59)
 
 Viimeinen harjoitusviikko käsittelee JavaScript-koodin avulla tehtäviä palvelinkutsuja, eli Ajax-kutsuja. Niiden avulla voimme päivittää ostoslistamme sisältöä tekemättä sivulatauksia. Toteutamme lisäksi verkkopalveluumme uuden ominaisuuden ostoslistan rivien poistamiseksi.
 
-[Siirry oppimateriaaliin ⇨](08_ajax/ajax)
+Tämä aihe julkaistaan viikolla 50.
 
-Tehtävät Teamsissa (DL 18.12. klo 23:59)
+<!--[Siirry oppimateriaaliin ⇨](08_ajax/ajax)
+
+Tehtävät Teamsissa (DL 18.12. klo 23:59)-->
 
 &nbsp;
 
@@ -108,7 +121,11 @@ Tehtävät Teamsissa (DL 18.12. klo 23:59)
 
 Kurssin jälkimmäisellä puoliskolla vahvistatte kurssilla opittuja taitoja ja toteutatte harjoitustyönä oman tietokantapohjaisen web-sovelluksen. Harjoitustyö arvioidaan asteikolla 0-5.
 
+<!-- 
 [Siirry harjoitustyön tehtävänantoon ⇨](09_harjoitustyo/harjoitustyo)
+-->
+
+Harjoitustyön tehtävänanto julkaistaan kurssin puolivälissä.
 
 Palautus Teamsiin (DL 20.12. klo 23:59)
 
@@ -219,7 +236,10 @@ private static double calculateExerciseGrade(int myPoints) {
 
 Kurssin ohjeet ja esimerkit on tehty Eclipse-sovelluskehittimellä ja Windows-käyttöjärjestelmällä, joten Linux- tai Mac-käyttäjien tulee soveltaa ohjeita ja esimerkkejä omien käyttöjärjestelmiensä mukaisesti.
 
-Tässä vaiheessa on hyvä varmistaa, että käytössäsi on _"Eclipse IDE for Enterprise Java Developers"_, _"Eclipse Java EE IDE for Web Developers"_ tai vastaavalla nimellä kutsuttu jakelupaketti, joka sisältää verkkosovellusten tekoon tarvitut liitännäiset. Tämä selviää "Help"-valikosta kohdasta "About Eclipse IDE". Mikäli Eclipse-versiosi ei ole soveltuva, asenna uusi versio [https://www.eclipse.org/downloads/](https://www.eclipse.org/downloads/) -osoitteesta löytyvällä asennusohjelmalla.
+
+Huom! Tässä vaiheessa on hyvä varmistaa, että käytössäsi on *"Eclipse IDE for Enterprise Java Developers"*, *"Eclipse Java EE IDE for Web Developers"* tai vastaavalla nimellä kutsuttu jakelupaketti, joka sisältää verkkosovellusten tekoon tarvitut laajennukset. Tämä selviää "Help"-valikosta kohdasta "About Eclipse IDE" ([lisäohjeita](https://stackoverflow.com/questions/12106980/how-to-see-my-eclipse-version/12107098)).
+
+Mikäli Eclipse-versiosi ei ole soveltuva, asenna uusi versio osoitteesta [https://www.eclipse.org/downloads/packages/](https://www.eclipse.org/downloads/packages/).
 
 Kurssin työkalut ovat erittäin yleisesti käytössä, joten hyviä ohjeita ja esimerkkejä löytyy melko varmasti netistä. Kannattaa myös kysyä ongelmatilanteissa apua Teamsissa.
 
@@ -233,7 +253,7 @@ Gitin käytön opetteluun voit käyttää esimerkiksi Helsingin yliopiston erino
 
 ## Lähteiden käyttäminen
 
-Tämän kurssin materiaali perustuu suurelta osin valmiisiin netistä löytyviin dokumentaatioihin ja tutoriaaleihein. Tällä sivulla eri aihealueiden yhteydessä tarjotaan linkkejä aihetta koskeviin materiaaleihin, mutta **joudut sen lisäksi merkittävissä määrin etsimään itse tietoa aiheista**.
+Tämän kurssin materiaali perustuu suurelta osin valmiisiin netistä löytyviin dokumentaatioihin ja tutoriaaleihin. Tällä sivulla eri aihealueiden yhteydessä tarjotaan linkkejä aihetta koskeviin materiaaleihin, mutta **joudut sen lisäksi merkittävissä määrin etsimään itse tietoa aiheista**.
 
 Ohjelmointiongelmiin löytyy usein valmiita tai osittaisia ratkaisuja ympäri Internetiä niin keskustelupalstoilta kuin tutoriaaleista. Huonossa tapauksessa löydät toimivan ratkaisun ongelmaasi, mutta et osaa aivan tulkita mitä löytämäsi koodi tekee ja miksi se ratkaisee ongelmasi. Ammattimaisessa ohjelmistokehityksessä tästä seuraa mahdollisesti suuriakin vahinkoja.
 
@@ -261,6 +281,14 @@ Tällä kurssilla hyödynnetään avoimilla lisensseillä julkaistuja oppimateri
 Kurssin oppimateriaalissa ja tehtävissä hyödynnetään laajasti [Helsingin yliopiston Agile Education Research –tutkimusryhmän oppimateriaalia](https://ohjelmointi-20.mooc.fi/), joka on lisensoitu [Creative Commons BY-NC-SA 4.0 -lisenssillä](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi). 
 
 
+## DayOfYear-esimerkkiluokka (Smelly Example #1)
+
+Yksikkötestauksessa käytettävä DayOfYear-esimerkkiluokka on lainattu [MIT:n Software Construction -kurssin oppimateriaaleista](https://web.mit.edu/6.005/www/fa16/classes/04-code-review/). Sen tekijät ja lisenssi ovat:
+
+Collaboratively authored with contributions from: Saman Amarasinghe, Adam Chlipala, Srini Devadas, Michael Ernst, Max Goldman, John Guttag, Daniel Jackson, Rob Miller, Martin Rinard, and Armando Solar-Lezama.
+
+Licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.fi).
+
 ## Nimiaineiston lisenssi (etunimet.csv)
 
 Kurssin Viope-tehtävässä ja esimerkeissä hyödynnetään [Digi- ja väestötietoviraston](https://www.avoindata.fi/data/fi/organization/digi_ja_vaestotietovirasto) julkaisemaa tietoaineistoa [Väestötietojärjestelmän suomalaisten nimiaineistot](https://www.avoindata.fi/data/fi/dataset/none), joka on julkaistu lisenssillä [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
@@ -268,7 +296,7 @@ Kurssin Viope-tehtävässä ja esimerkeissä hyödynnetään [Digi- ja väestöt
 
 ## Yrityspostinumerot
 
-Yrityspostinumeroita käsittelevässä esimerkissä hyödynnetty tekstimuotoinen listaus perustuu Posti Group Oyj:n verkkosivuiston tietoihin osoitteesta [https://www.posti.fi/fi/yrityksille/monikanavainen-viestinta/viestit-monikanavaisesti/postin-vastaanottaminen/yrityspostinumero](https://www.posti.fi/fi/yrityksille/monikanavainen-viestinta/viestit-monikanavaisesti/postin-vastaanottaminen/yrityspostinumero).
+Yrityspostinumeroita käsittelevässä esimerkissä hyödynnetty tekstimuotoinen listaus perustuu Posti Group Oyj:n verkkosivuston tietoihin osoitteesta [https://www.posti.fi/fi/yrityksille/monikanavainen-viestinta/viestit-monikanavaisesti/postin-vastaanottaminen/yrityspostinumero](https://www.posti.fi/fi/yrityksille/monikanavainen-viestinta/viestit-monikanavaisesti/postin-vastaanottaminen/yrityspostinumero).
 
 
 ## SQLite-tietokanta-ajuri
