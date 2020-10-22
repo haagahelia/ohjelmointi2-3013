@@ -25,7 +25,7 @@ Ensimmäisellä viikolla syvennämme olio-ohjelmointiosaamistamme tutustumalla p
 
 [Siirry oppimateriaaliin ⇨](01_perinta_ja_rajapinnat/perinta-ja-rajapinnat)
 
-Tehtävät Viopessa (DL 8.11. klo 23:59)
+Tehtävät [Viopessa](https://vw4.viope.com/) (DL 8.11. klo 23:59)
 
 &nbsp;
 
@@ -37,7 +37,7 @@ Tehtävät Viopessa (DL 8.11. klo 23:59)
 
 [Siirry oppimateriaaliin ⇨](02_map/map)
 
-Tehtävät Viopessa (DL 8.11. klo 23:59)
+Tehtävät [Viopessa](https://vw4.viope.com/) (DL 8.11. klo 23:59)
 
 &nbsp;
 
