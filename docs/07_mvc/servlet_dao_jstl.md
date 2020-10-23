@@ -2,7 +2,7 @@
 
 # Verkkosovellus kolmikerrosarkkitehtuurilla
 
-Tällä viikolla tavoitteinamme on rakentaa kolmikerroksinen web-sovellus, joka yhdistää tähänasti opettelemamme erilliset teknologiat loogiseksi kokonaisuudeksi.
+Tällä viikolla tavoitteinamme on rakentaa kolmikerroksinen web-sovellus, joka yhdistää tähän mennessä opettelemamme erilliset teknologiat loogiseksi kokonaisuudeksi.
 
 Jatkat tällä viikolla edellisellä viikolla aloittamasi web-projektin kehittämistä.
 
@@ -37,7 +37,7 @@ Toteutamme lisäksi uuden servletin, joka näyttää JSP-sivun ja JSTL-tagien av
 &nbsp;
 
 
-**[JSP-sivujen ehtorakenteet ja "fail silently"-ominaisuus](https://web.microsoftstream.com/video/d4adda6c-9b93-4a0a-a92a-57067f3493fb)** <small>35:38</small>
+**[JSP-sivujen ehtorakenteet ja "fail silently"-ominaisuus](https://web.microsoftstream.com/video/d4adda6c-9b93-4a0a-a92a-57067f3493fb)** <small>31:21</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/d4adda6c-9b93-4a0a-a92a-57067f3493fb?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
@@ -232,7 +232,7 @@ SQL-aiheen yhteydessä käytimme `PreparedStatement`-luokkaa välttääksemme te
 
 HTML-koodin yhteydessä onkin erittäin tärkeää huolehtia siitä, että kaikki dynaaminen teksti enkoodataan siten, että esimerkiksi kulmasulkeita `<` ja `>` ei tulkita osaksi HTML-tageja, vaan pelkiksi kirjainmerkeiksi. `c:out`-tagi huolehtii juuri tästä ja muuttaa esimerkiksi `<`-merkin ns. HTML-entiteetiksi `&lt;`, jonka selain tulkitsee aina kirjainmerkiksi.
 
-Esimerkiksi käyttähän syöttämä tuotenimi `"Milk <script>alert('attack!');</script>"` ei siis saa tuottaa HTML-sivulle sisältöä:
+Esimerkiksi käyttäjän syöttämä tuotenimi `"Milk <script>alert('attack!');</script>"` ei siis saa tuottaa HTML-sivulle sisältöä:
 
 ```html
 <li>Milk <script>alert('attack!');</script></li>

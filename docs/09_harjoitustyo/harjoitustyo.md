@@ -119,7 +119,7 @@ Harjoitustyön arviointi perustuu sekä toteutettuihin toiminnallisuuksiin että
 
 ### Tavoitearvosana 1
 
-Toteutat verkkosovelluksen, jossa on etusivu, jolla näytetään lista tietokannassa olevien artistien nimistä. Tietokantalogiikka on eritetynä DAO-luokkaan ja HTML-koodi on toteutettuna JSP-sivun avulla. Koodin laatu noudattaa kurssilla käsiteltyjä hyviä käytäntöjä välttävästi.
+Toteutat verkkosovelluksen, jossa on etusivu, jolla näytetään lista tietokannassa olevien artistien nimistä. Tietokantalogiikka on toteutettu DAO-luokkaan ja HTML-koodi on toteutettuna JSP-sivun avulla. Koodin laatu noudattaa kurssilla käsiteltyjä hyviä käytäntöjä välttävästi.
 
 **Huom!** Hyväksyttyyn arvosanaan riittää siis, että ymmärrät ja saat toistettua harjoitustyötunnilla esitetyt esimerkit.
 
@@ -191,7 +191,7 @@ Versionhallinnan, yksikkötestauksen ja Ajax-kutsujen soveltaminen katsotaan edu
 
 ## Harjoitustyön laatuvaatimukset
 
-Vaikka edellä esitetyt tavoitearvosanat liittyvät palvelun toiminnallisuuteen, harjoitystyön arvioinnissa huomioidaan myös toteutuksen laatu. Laadukas ja toimiva toteutus katsotaan arvosanaa nostavaksi, kun taas laatuongelmat heikentävät arvosanaa.
+Vaikka edellä esitetyt tavoitearvosanat liittyvät palvelun toiminnallisuuteen, harjoitustyön arvioinnissa huomioidaan myös toteutuksen laatu. Laadukas ja toimiva toteutus katsotaan arvosanaa nostavaksi, kun taas laatuongelmat heikentävät arvosanaa.
 
 Palvelun tulee selvitä normaaleista käyttötapauksista ilman poikkeuksia. Normaalit käyttötapaukset tarkoittavat mm. linkkien klikkaamista ja lomakkeiden lähettämistä **millä tahansa syötteillä**. Normaaliin käyttöön ei lasketa sitä, jos käyttäjä syöttää esimerkiksi suoraan selaimen osoiteriville virheellisen id:n.
 

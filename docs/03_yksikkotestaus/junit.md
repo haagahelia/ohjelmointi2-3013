@@ -41,7 +41,8 @@ Luokan metodien testaaminen erillisen testiluokan ja JUnit-kirjaston avulla.
 Useille testimetodeille yhteisten alustustoimenpiteiden tekeminen erillisessä alustusmetodissa.
 
 &nbsp;
-https://video.haaga-helia.fi/media/t/0_m8y5zv8k 
+
+<!-- palindromi-video: https://video.haaga-helia.fi/media/t/0_m8y5zv8k -->
 
 
 ## Testaaminen käytännössä:

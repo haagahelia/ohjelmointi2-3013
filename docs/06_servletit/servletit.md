@@ -41,7 +41,7 @@ Saadaksesi kurssin web-projektipohjan koodit itsellesi, sinun tulee kloonata (cl
 
 [Kurssin esimerkkiprojekti](https://github.com/haagahelia/embedded-tomcat-template) käyttää Tomcat-sovelluspalvelinta "upotettuna" Java-projektiisi (embedded Tomcat). Projekti on rakennettu siten, että sen riippuvuuksia hallitaan automaattisesti Maven-työkalun avulla. Maven-plugin löytyy onneksi Eclipsestä valmiiksi asennettuna, ja sen avulla Eclipse osaa asentaa mm. Tomcatin ja muut projektin mahdolliset riippuvuudet automaattisesti. Tomcatia voitaisiin käyttää myös lukuisilla muilla tavoilla, joten löydät mahdollisesti netistä ohjeita, jotka eivät täysin vastaa omia asetuksiasi ja asennustapojasi. 
 
-Projektipohjan asennustapa on todettu kohtuullisen helpoksi ja samat tavat ovat hyödynnettävissä myös muilla kehitystyökaluilla (esim. [VS Code](https://code.visualstudio.com/), [IntelliJ IDEA](https://www.jetbrains.com/idea/)) ja erilaisissa suoritysympäristöissä (esim. [Heroku-pilvialusta](https://devcenter.heroku.com/articles/create-a-java-web-application-using-embedded-tomcat), [Spring boot -sovelluskehys](https://www.springboottutorial.com/spring-boot-with-embedded-servers-tomcat-jetty)).
+Projektipohjan asennustapa on todettu kohtuullisen helpoksi ja samat tavat ovat hyödynnettävissä myös muilla kehitystyökaluilla (esim. [VS Code](https://code.visualstudio.com/), [IntelliJ IDEA](https://www.jetbrains.com/idea/)) ja erilaisissa suoritusympäristöissä (esim. [Heroku-pilvialusta](https://devcenter.heroku.com/articles/create-a-java-web-application-using-embedded-tomcat), [Spring boot -sovelluskehys](https://www.springboottutorial.com/spring-boot-with-embedded-servers-tomcat-jetty)).
 
 ## Virheiden paikantaminen
 
@@ -64,7 +64,7 @@ Tällä videolla tutustumme HTTP-protokollaan ja siihen liittyviin pyyntöihin j
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tällä videolla tutustumme web-projektimme hakemisto- ja luokkarakenteeseen. Selvitämme miten web-sovelluksemme käynnistetään sekä mitkä hakemistot ovat julkisia ja mitkä palvelimen sisäistä käyttöä varten. Tutustumme tapaan, jolla Tomcat-sovelluspalvelin välittää pyynnöt sovelluksellemme.
+Tällä videolla tutustumme web-projektimme hakemisto- ja luokkarakenteeseen. Selvitämme, miten web-sovelluksemme käynnistetään sekä mitkä hakemistot ovat julkisia ja mitkä vain palvelimen sisäistä käyttöä varten. Tutustumme myös tapaan, jolla Tomcat-sovelluspalvelin välittää pyynnöt omille Java-luokillemme.
 
 &nbsp;
 
