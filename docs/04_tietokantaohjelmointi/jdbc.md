@@ -62,13 +62,16 @@ Voit ladata itsellesi kyseisen `sqlite3.exe`-komentorivityökalun osoitteesta: [
 
 ## Videot
 
-Näillä videoilla esiintyvän lähdekooditiedoston `TietokantaanYhdistaminen.java` löydät [täältä](./videoiden_lahdekoodit).
+Videoilla esiintyvä [PowerPoint-esitys on ladattavissa tästä](./jdbc.pdf).
 
 **[JDBC ja SQLite](https://web.microsoftstream.com/video/4906ef8a-22f3-4322-9673-df55481b3624)** 8:12
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/4906ef8a-22f3-4322-9673-df55481b3624?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Latauslinkki: [https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc](https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc)
+Tällä videolla esitellään JDBC-teknologian perusidea ja käsitteistöä ja valmistellaan Eclipse-projekti tietokantaohjelmointia varten.
+
+Videolla esiintyvän ajurin latauslinkki: [https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc](https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc)
+
 
 &nbsp;
 
@@ -76,7 +79,9 @@ Latauslinkki: [https://mvnrepository.com/artifact/org.xerial/sqlite-jdbc](https:
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/9735fb55-5e0c-4d7d-bc03-bb72bd1097a1?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Latauslinkki: [https://sqlite.org/download.html](https://sqlite.org/download.html)
+Tällä videolla valmistellaan tietokanta, jota käytetään seuraavaksi Java-ohjelmasta käsin.
+
+Videolla käytettävän työkalun latauslinkki: [https://sqlite.org/download.html](https://sqlite.org/download.html)
 
 &nbsp;
 
@@ -84,11 +89,19 @@ Latauslinkki: [https://sqlite.org/download.html](https://sqlite.org/download.htm
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/581f69fe-9594-4488-b841-e44954f303f2?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla esitellään Javan luokat, joita tarvitset tietokantayhteyksien ja -kyselyiden muodostamiseksi.
+
+Videolla esiintyvän lähdekooditiedoston `TietokantaanYhdistaminen.java` löydät [täältä](./videoiden_lahdekoodit).
+
 &nbsp;
 
 **[Turvalliset parametrisoidut tietokantakyselyt: prepared statement](https://web.microsoftstream.com/video/ddf1432d-fc3e-4d34-9feb-9ec68701d57d)** 15:37
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/ddf1432d-fc3e-4d34-9feb-9ec68701d57d?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tällä videolla käsittelemme SQL injektioita, jotka aiheuttavat merkittäviä tietoturvauhkia tietokantapohjaisille järjestelmille. Opimme valmistelemaan kyselyt siten, että haitallista syötettä ei käsitellä SQL-komentoina vaan normaalina tekstinä.
+
+Videolla esiintyvän lähdekooditiedoston `TietokantaanYhdistaminen.java` löydät [täältä](./videoiden_lahdekoodit).
 
 &nbsp;
 
@@ -160,6 +173,8 @@ CREATE TABLE ShoppingListItem (
 Huomaa, että SQL-kyselyjen muodostaminen merkkijonoja yhdistelemällä aiheuttaa mm. tietoturvaongelmia, kuten alla oleva esimerkki havainnollistaa:
 
 [![Exploits of a Mom](https://imgs.xkcd.com/comics/exploits_of_a_mom.png)](https://xkcd.com/327/)
+
+Kuva: Randall Munroe. Exploits of a Mom. [https://xkcd.com/327/](https://xkcd.com/327/)
 
 Muista siis käyttää oppimateriaaleissa esiteltyä `PreparedStatement`-luokkaa aina muodostaessasi kyselyitä, joihin syötetään dynaamisesti parametreja!
 

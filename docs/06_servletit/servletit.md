@@ -54,11 +54,17 @@ Tästä viikosta alkaen käytämme koodissa merkittävästi enemmän valmiita ki
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla tutustumme HTTP-protokollaan ja siihen liittyviin pyyntöihin ja vastauksiin. Tutustumme siihen, miten sovelluspalvelin välittää HTTP-pyynnöt Java-ohjelmallemme ja miten ohjelmamme vastaa pyyntöön siten, että vastaus päätyy käyttäjän selaimelle. Kloonaamme myös GitHubista esimerkkiprojektin, jota käytämme jatkossa web-sovelluksemme pohjana.
+
+[Esimerkkiprojektin GitHub-sivu](https://github.com/haagahelia/embedded-tomcat-template)
+
 &nbsp;
 
 **[Maven ja Tomcat malliprojektissa](https://web.microsoftstream.com/video/527282e4-961e-453e-a350-af766e50559f)** <small>15:31</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tällä videolla tutustumme web-projektimme hakemisto- ja luokkarakenteeseen. Selvitämme miten web-sovelluksemme käynnistetään sekä mitkä hakemistot ovat julkisia ja mitkä palvelimen sisäistä käyttöä varten. Tutustumme tapaan, jolla Tomcat-sovelluspalvelin välittää pyynnöt sovelluksellemme.
 
 &nbsp;
 
@@ -67,12 +73,18 @@ Tästä viikosta alkaen käytämme koodissa merkittävästi enemmän valmiita ki
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/e404ae09-df29-49d5-abc9-10d0f5d43010?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla luomme projektiin uuden kehityshaaran ja viemme sen GitHub:iin. 
+
 &nbsp;
 
 
 **[Servletin anatomia: HttpServlet, @WebServlet, doGet...](https://web.microsoftstream.com/video/c040b244-2592-46a4-b271-22af48a7b574)** <small>19:40
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/c040b244-2592-46a4-b271-22af48a7b574?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tällä videolla tutustumme servlettien rakenteeseen, perintään, annotaatioihin ja pyyntöjä käsitteleviin metodeihin. Käsittelemme tyypillisimmät virhetilanteet (virheet 404 ja 405) ja ratkaisut niiden korjaamiseksi.
+
+Videolla hyödynnetään tutoriaalia [http://tutorials.jenkov.com/java-servlets/index.html](http://tutorials.jenkov.com/java-servlets/index.html).
 
 &nbsp;
 
@@ -81,12 +93,16 @@ Tästä viikosta alkaen käytämme koodissa merkittävästi enemmän valmiita ki
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/c26141c3-2681-45f6-8aef-8e40b72bff88?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla nopeutamme servlettien kehityssykliä Tomcatin reload-ominaisuuden sekä Eclipsen debug-tilan avulla.
+
 &nbsp;
 
 
 **[HTTP-pyynnön parametrien käsittely servleteissä](https://web.microsoftstream.com/video/8fed5e77-69ae-415f-8a48-418ea39330a4)** <small>14:46</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/8fed5e77-69ae-415f-8a48-418ea39330a4?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tällä videolla opettelemme käsittelemään HTTP-pyynnön mukana tulevia parametreja servletissämme.
 
 &nbsp;
 
@@ -95,6 +111,8 @@ Tästä viikosta alkaen käytämme koodissa merkittävästi enemmän valmiita ki
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/44037d9b-8237-4f63-9d45-75d35ccb447d?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla luomme HTML-lomakkeen, jolla lähetämme dataa servletillemme. Opettelemme myös välittämään servleteille tulleet pyynnöt palvelimen sisäisesti JSP-sivulle.
+
 &nbsp;
 
 
@@ -102,17 +120,25 @@ Tästä viikosta alkaen käytämme koodissa merkittävästi enemmän valmiita ki
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/72ecee3d-98b1-4d97-8a55-214fc4ca90a1?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla opettelemme välittämään dataa servletiltä JSP-sivulle muodostaaksemme HTML-sivuja dynaamisella sisällöllä.
+
 &nbsp;
 
 
-**[Servlet-tehtävänannot ja staattisen HTML-sivun lisääminen](https://web.microsoftstream.com/video/8a8c1674-e137-4fbd-af51-d0774fc0c5c5)** <small>15:10</small>
+**[Servlet-tehtävänannot ja staattisen HTML-sivun lisääminen](https://web.microsoftstream.com/video/8a8c1674-e137-4fbd-af51-d0774fc0c5c5)** <small>13:13</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/8a8c1674-e137-4fbd-af51-d0774fc0c5c5?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla käsittelemme harjoitustehtävän tehtävänantoa. Videolla tehtävä import-komento on seuraava:
+
+```java
+import static java.time.temporal.ChronoUnit.DAYS;
+```
+
 &nbsp;
 
 
-### Suositeltu itseopiskelumateriaali
+### Suositeltu lisämateriaali
 
 **[YouTube: Introduction to Servlets](https://youtu.be/7TOmdDJc14s)**
 

@@ -17,23 +17,31 @@ Tämän tehtävän palautusaika on umpeutunut. Voit katsoa malliratkaisun tääl
 
 ## Oppitunnin videot
 
-**[Tietokantaluokkien tuominen web-sovellukseen](https://web.microsoftstream.com/video/3998be63-0576-44e2-8e05-fb3da6008789)** <small>10:46</small>
+**[Tietokantaluokkien tuominen web-sovellukseen](https://web.microsoftstream.com/video/3998be63-0576-44e2-8e05-fb3da6008789)** <small>10:33</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/3998be63-0576-44e2-8e05-fb3da6008789?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tässä videossa lisäämme verkkopalveluumme aikaisemmalla viikolla toteuttamamme tietokantaluokat. Määrittelemme `Main`-luokallemme `JDBC_DATABASE_URL`-ympäristömuuttujan, jonka avulla verkkosovellus hyödyntää samaa tietokantaa kuin aikaisempi tekstikäyttöliittymämme.
+
 &nbsp;
 
 
-**[Tietokantapohjainen servlet (+ Maven-riippuvuuksien lisääminen)](https://web.microsoftstream.com/video/515b523d-bc9b-4892-a2cf-78e75206e9a9)** <small>59:07</small>
+**[Tietokantapohjaisen servletin toteuttaminen ja tulosten näyttäminen JSP-sivulla](https://web.microsoftstream.com/video/515b523d-bc9b-4892-a2cf-78e75206e9a9)** <small>58:31</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/515b523d-bc9b-4892-a2cf-78e75206e9a9?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla lisäämme verkkopalvelumme tarvitsemat riippuvuudet Maven-työkalun avulla. Tietokantaluokat kopioidaan aikaisemmista harjoituksistamme, ja kopioinnin onnistuminen varmistetaan yksikkötesteillä.
+
+Toteutamme lisäksi uuden servletin, joka näyttää JSP-sivun ja JSTL-tagien avulla tietokannassa olevat ostoslistan rivit. Käymme läpi tyypilliset ongelmatilanteet ja ratkaisut Tomcatin käynnistysongelmiin ja servletteihin liittyen. 
+
 &nbsp;
 
 
-**[JSP sivujen "fail silently"-ominaisuus ja c:if](https://web.microsoftstream.com/video/d4adda6c-9b93-4a0a-a92a-57067f3493fb)** <small>35:38</small>
+**[JSP-sivujen ehtorakenteet ja "fail silently"-ominaisuus](https://web.microsoftstream.com/video/d4adda6c-9b93-4a0a-a92a-57067f3493fb)** <small>35:38</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/d4adda6c-9b93-4a0a-a92a-57067f3493fb?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tällä videolla toteutamme servletin, joka välittää JSP-sivulle useita attribuutteja. Tutustumme myös `c:if`-ehtorakenteisiin ja JSP-sivujen virheenkäsittelyyn.
 
 &nbsp;
 
@@ -224,16 +232,16 @@ SQL-aiheen yhteydessä käytimme `PreparedStatement`-luokkaa välttääksemme te
 
 HTML-koodin yhteydessä onkin erittäin tärkeää huolehtia siitä, että kaikki dynaaminen teksti enkoodataan siten, että esimerkiksi kulmasulkeita `<` ja `>` ei tulkita osaksi HTML-tageja, vaan pelkiksi kirjainmerkeiksi. `c:out`-tagi huolehtii juuri tästä ja muuttaa esimerkiksi `<`-merkin ns. HTML-entiteetiksi `&lt;`, jonka selain tulkitsee aina kirjainmerkiksi.
 
-Esimerkiksi käyttähän syöttämä tuotenimi `"Milk <script>alert('atttack!');</script>"` ei siis saa tuottaa HTML-sivulle sisältöä:
+Esimerkiksi käyttähän syöttämä tuotenimi `"Milk <script>alert('attack!');</script>"` ei siis saa tuottaa HTML-sivulle sisältöä:
 
 ```html
-<li>Milk <script>alert('atttack!');</script></li>
+<li>Milk <script>alert('attack!');</script></li>
 ```
 
 `c:out`-tagin avulla käyttäjän syöte voidaan muuttaa turvalliseksi:
 
 ```html
-<li>Milk &lt;script&gt;alert('atttack!');&lt;/script&gt;</li>
+<li>Milk &lt;script&gt;alert('attack!');&lt;/script&gt;</li>
 ```
 
 Lue myös tarvittaessa keskustelu aiheesta ["what exactly does the &lt;c:out&gt; do?"](https://stackoverflow.com/q/291031) (StackOverflow)

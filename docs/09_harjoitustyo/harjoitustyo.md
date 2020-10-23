@@ -10,17 +10,21 @@ Vaikka harjoitustyö tehdään itsenäisesti, saatte keskustella siitä esimerki
 ## Videot
 
 
-**[Harjoitustyön tehtävänanto ja referenssitoteutus](https://web.microsoftstream.com/video/d2c07537-4300-493a-957b-61b5153b4a16)** 31:12
+**[Harjoitustyön tehtävänanto](https://web.microsoftstream.com/video/d2c07537-4300-493a-957b-61b5153b4a16)** <small>22:44</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/d2c07537-4300-493a-957b-61b5153b4a16?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tällä videolla käymme läpi harjoitustyön tehtävänannon ja arviontikriteeristön.
 
 &nbsp;
 
 
 
-**[Harjoitustyön pohja ja Chinook-tietokanta](https://web.microsoftstream.com/video/d24cfa32-754d-44da-b74f-52d768f8a4d7)** 52:18
+**[Harjoitustyön pohja ja Chinook-tietokanta](https://web.microsoftstream.com/video/d24cfa32-754d-44da-b74f-52d768f8a4d7)** <small>38:18</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/d24cfa32-754d-44da-b74f-52d768f8a4d7?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tällä videolla teemme pohjatyön harjoitustyöprojektin luomiseksi. Samalla kertaamme kurssin aikana opeteltuja asioita.
 
 &nbsp;
 
@@ -98,9 +102,9 @@ Taulut `Album` ja `Track` tulevat tarpeellisiksi tähdätessäsi korkeampiin arv
 * SQL-luontikäskyt: [Chinook_Sqlite.sql](https://raw.githubusercontent.com/lerocha/chinook-database/master/ChinookDatabase/DataSources/Chinook_Sqlite.sql)
 * Tietokannan lisenssi: [MIT](https://github.com/lerocha/chinook-database/blob/master/LICENSE.md)
 
-<!--* SQLite tools -video
+* [SQLite tools -video](https://video.haaga-helia.fi/media/SQLite+tools/0_pez4r54j)
 
-    Chinook-tietokantaa käytettiin tällä kurssilla aikaisemmin linkitetyssä [SQLite tools -videossa](https://video.haaga-helia.fi/media/SQLite+tools/0_pez4r54j). Tästä videosta voi olla sinulle hyötyä myös tämän tehtävän tekemisessä. 
+    Samaa Chinook-tietokantaa käytetään tässä [SQLite tools -videossa](https://video.haaga-helia.fi/media/SQLite+tools/0_pez4r54j). Tästä videosta voi olla sinulle hyötyä myös tämän tehtävän tekemisessä. 
 
 * [SQLite tools -komentorivityökalut](https://sqlite.org/download.html)
 
@@ -200,7 +204,7 @@ Suorituskyvyllä tai tietokantakyselyiden optimoinnilla ei ole painoarvoa. Käyt
 
 Muista siis hyödyntää aikaisemmilta viikoilta tuttuja `PreparedStatement`-luokkaa ja `c:out`-tagia!
 
-
+<!--
 ## Harjoitustyön referenssitoteutus
 
 Harjoitustyöstä on tehty referenssitoteutus nimeltä "Music catalog". Referenssitoteutus on **laajuudeltaan suurempi, kuin mitä edellytetään tällä kurssilla**. Emme ole käsitelleet mm. istuntoja, joita tarvittaisiin käyttäjäkohtaisen hakuhistorian tai suosikkilistan toteuttamiseksi.
@@ -210,6 +214,7 @@ Voit katsoa harjoitustyön referenssitoteutuksen esittelyn tästä videosta:
 **[Harjoitustyön esittely (ohjelmointi 2)](https://video.haaga-helia.fi/media/t/0_x0ojb3pq)**
 
 [![https://video.haaga-helia.fi/media/t/0_x0ojb3pq](https://api.kaltura.nordu.net/p/288/sp/28800/thumbnail/entry_id/0_x0ojb3pq/version/100022/width/435/height/260)](https://video.haaga-helia.fi/media/t/0_x0ojb3pq)
+-->
 
 ## Esimerkkikyselyjä
 

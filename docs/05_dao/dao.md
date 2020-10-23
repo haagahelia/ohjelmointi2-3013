@@ -29,6 +29,7 @@ Tietokantalogiikan eriyttämiseksi muusta koodista käytetään usein ns. **DAO*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/aea9daea-9811-4ba2-bd14-943658e381a1?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla kerrataan edellisessä aiheessa käsitellyt JDBC-aiheeseen liittyvät käsitteet ja työkalut kuten ajuri, tietokantatiedosto, build path, SQLite tools, yhteysosoite ja prepared statement. 
 
 &nbsp;
 
@@ -37,6 +38,7 @@ Tietokantalogiikan eriyttämiseksi muusta koodista käytetään usein ns. **DAO*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/ec6e052c-ba95-4c59-975f-6322c81097e6?st=33&amp;autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla esitellään motivaatio tietokantapohjaisen Java-ohjelman rakenteen parantamiseksi DAO-kehitysmallin avulla. 
 
 &nbsp;
 
@@ -45,6 +47,9 @@ Tietokantalogiikan eriyttämiseksi muusta koodista käytetään usein ns. **DAO*
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/8efb239a-4700-444a-a4a8-f6ef9bac10e9?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla toteutamme ShoppingListApp-sovelluksen käyttöliittymän ensimmäisiä komentoja switch-case-rakenteella.
+
+Videoilla esiintyvä [PowerPoint-esitys on ladattavissa tästä](../04_tietokantaohjelmointi/jdbc.pdf).
 
 &nbsp;
 
@@ -52,6 +57,8 @@ Tietokantalogiikan eriyttämiseksi muusta koodista käytetään usein ns. **DAO*
 **[DAO-käsitteen esittely ja ostoslistan DAO-luokat](https://web.microsoftstream.com/video/0c7e026d-5064-4ceb-8afc-58940bfeced7)** 27:48
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/0c7e026d-5064-4ceb-8afc-58940bfeced7?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tällä videolla parannamme ShoppingListApp-sovelluksemme rakennetta hyödyntämällä DAO-luokkaa. Videolla hyödynnämme seuraavaa model-luokkaa ja rajapintaa:
 
 [ShoppingListItem.java](https://github.com/haagahelia/ShoppingListExample/blob/master/src/main/java/model/ShoppingListItem.java)
 
@@ -61,14 +68,14 @@ Tietokantalogiikan eriyttämiseksi muusta koodista käytetään usein ns. **DAO*
 &nbsp;
 
 
-### Itseopiskelumateriaali
+### Lisämateriaali
 
-Lue DAO-suunnittelumallin esittely esimerkkikoodeineen osoittessa [https://www.tutorialspoint.com/design_pattern/data_access_object_pattern.htm](https://www.tutorialspoint.com/design_pattern/data_access_object_pattern.htm). Kyseisen tutoriaalin koodiesimerkit eivät hyödynnä oikeaa tietokantaa, vaan tavallista `ArrayList`-listaa. Vastaavalla tavalla toteutettu listapohjainen DAO-luokka ostoslistasta on nähtävissä esimerkkisovelluksen lähdekoodeissa: [`FakeShoppingListItemDao.java`](https://github.com/haagahelia/ShoppingListExample/blob/master/src/main/java/database/FakeShoppingListItemDao.java).
+Lue DAO-suunnittelumallin esittely esimerkkikoodeineen osoittessa [https://www.tutorialspoint.com/design_pattern/data_access_object_pattern.htm](https://www.tutorialspoint.com/design_pattern/data_access_object_pattern.htm). Kyseisen tutoriaalin koodiesimerkit eivät hyödynnä oikeaa tietokantaa, vaan tavallista `ArrayList`-listaa. Vastaavalla tavalla toteutettu listapohjainen DAO-luokka ostoslistasta on nähtävissä esimerkkisovelluksen lähdekoodeissa: [FakeShoppingListItemDao.java](https://github.com/haagahelia/ShoppingListExample/blob/master/src/main/java/database/FakeShoppingListItemDao.java).
 
 
 ## Palautettava tehtävä
 
-### `JDBCShoppingListItemDao`-luokka
+### JDBCShoppingListItemDao-luokka
 
 Toteuta oppitunnilla esitellyn `ShoppingListItem`-tietokantataulun CRUD-operaatiot uuteen DAO-luokkaan nimeltä `JDBCShoppingListItemDao`. 
 

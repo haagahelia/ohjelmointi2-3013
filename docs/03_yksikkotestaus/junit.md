@@ -46,7 +46,7 @@ https://video.haaga-helia.fi/media/t/0_m8y5zv8k
 
 ## Testaaminen käytännössä:
 
-Seuraavilla videoesimerkeillä esitellään Map-aiheen yhteydessä luodun EtunimiTilasto-sovelluksen testausta yksikkötestien avulla. 
+"Oikean ohjelman" testaamisessa haastetta tuo usein ohjelman rakenne, joka voi tehdä siitä vaikeasti testattavan. Seuraavilla videoesimerkeillä esitellään Map-aiheen yhteydessä luodun EtunimiTilasto-sovelluksen testausta yksikkötestien avulla ja muodostetaan ohjelman rakenne siten, että sen osat ovat testattavissa, laajennettavissa ja uudelleenkäytettävissä. 
 
 Videoilla käsitellyt lähdekoodit löytyvät [täältä](./yksikkotestaus_lahdekoodit):
 
@@ -61,11 +61,15 @@ Videoilla käsitellyt lähdekoodit löytyvät [täältä](./yksikkotestaus_lahde
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/80c680e7-a853-4962-a9fb-19e7ef1f8d0b?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla sovelletaan yksikkötestausta käytännössä Map-tehtävistä tutun EtunimiTilasto-tehtävän kanssa. Videolla huomataan, että yksikkötestaus voi olla haastavaa, mikäli ohjelman rakenne ei mahdollista sen osien käsittelyä toisistaan irrallisina. Videolla pilkotaan ohjelma testattaviin paloihin, joille kirjoitetaan testejä.
+
 &nbsp;
 
 **[EtunimiTilasto-tehtävän yksikkötestaus, osa 2/3](https://web.microsoftstream.com/video/144d7504-7f0f-465d-a473-130e9fd3a2b8)** <small>17:56</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/144d7504-7f0f-465d-a473-130e9fd3a2b8?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tällä videolla toteutetaan logiikka CSV-rivien muuttamiseksi `HashMap`-tietorakenteeksi siten, että logiikka on yksikkötesttavissa.
 
 &nbsp;
 
@@ -73,6 +77,9 @@ Videoilla käsitellyt lähdekoodit löytyvät [täältä](./yksikkotestaus_lahde
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/2180450b-4663-430d-9cb4-a5aa89db17f3?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
+Tällä videolla toteutetaan ja yksikkötestataan EtunimiTilasto-tehtävän tiedostojenkäsittelyä koskeva osuus.
+
+&nbsp;
 
 ### Lisämateriaali:
 
