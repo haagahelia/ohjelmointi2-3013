@@ -52,7 +52,7 @@ Tästä viikosta alkaen käytämme koodissa merkittävästi enemmän valmiita ki
 
 **[Johdatus HTTP-protokollaan ja Tomcatiin + Git clone](https://web.microsoftstream.com/video/710ad286-f65f-442b-ba25-2fc5da82d522)** <small>21:41</small>
 
-<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/710ad286-f65f-442b-ba25-2fc5da82d522?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
 Tällä videolla tutustumme HTTP-protokollaan ja siihen liittyviin pyyntöihin ja vastauksiin. Tutustumme siihen, miten sovelluspalvelin välittää HTTP-pyynnöt Java-ohjelmallemme ja miten ohjelmamme vastaa pyyntöön siten, että vastaus päätyy käyttäjän selaimelle. Kloonaamme myös GitHubista esimerkkiprojektin, jota käytämme jatkossa web-sovelluksemme pohjana.
 
@@ -62,7 +62,7 @@ Tällä videolla tutustumme HTTP-protokollaan ja siihen liittyviin pyyntöihin j
 
 **[Maven ja Tomcat malliprojektissa](https://web.microsoftstream.com/video/527282e4-961e-453e-a350-af766e50559f)** <small>15:31</small>
 
-<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/527282e4-961e-453e-a350-af766e50559f?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
 Tällä videolla tutustumme web-projektimme hakemisto- ja luokkarakenteeseen. Selvitämme, miten web-sovelluksemme käynnistetään sekä mitkä hakemistot ovat julkisia ja mitkä vain palvelimen sisäistä käyttöä varten. Tutustumme myös tapaan, jolla Tomcat-sovelluspalvelin välittää pyynnöt omille Java-luokillemme.
 
@@ -134,6 +134,8 @@ Tällä videolla käsittelemme harjoitustehtävän tehtävänantoa. Videolla teh
 ```java
 import static java.time.temporal.ChronoUnit.DAYS;
 ```
+
+Voit lukea staattisista `import`-komennoista lisää [tästä keskustelusta](https://stackoverflow.com/a/162195).
 
 &nbsp;
 
