@@ -78,11 +78,13 @@ Tällä videolla toteutetaan logiikka CSV-rivien muuttamiseksi `HashMap`-tietora
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/2180450b-4663-430d-9cb4-a5aa89db17f3?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tällä videolla toteutetaan ja yksikkötestataan EtunimiTilasto-tehtävän tiedostojenkäsittelyä koskeva osuus.
+Tällä videolla toteutetaan ja yksikkötestataan EtunimiTilasto-tehtävän tiedostojenkäsittelyä koskeva osuus. Videolla käsitellään aineistona [etunimet.csv-tiedostoa](https://gist.githubusercontent.com/swd1tn002/f6b4c367cba9eecce0c2a1ba9de6854a/raw/fecefc85b1915bfcaf9aaf2ede7bf7503c2bffb0/etunimet.csv). Valmis TiedostonLukija.java -apuluokka löytyy [täältä](https://gist.github.com/swd1tn002/5842d9bb5d4152799e11d0f7742ecc91).
+
+*Aineiston lisenssi: [Digi- ja väestötietovirasto](https://www.avoindata.fi/data/fi/organization/digi_ja_vaestotietovirasto) on julkaissut tietoaineiston [Väestötietojärjestelmän suomalaisten nimiaineistot](https://www.avoindata.fi/data/fi/dataset/none) lisenssillä [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).*
 
 &nbsp;
 
-### Lisämateriaali:
+### Lisämateriaali
 
 Lisäksi sinun kannattaa tutustua tämän viikon tehtävän alkuperäiseen lähteeseen, josta löydät tekstimateriaaleja sekä videoita tehtävään liittyen: [https://web.mit.edu/6.005/www/fa16/classes/04-code-review/](https://web.mit.edu/6.005/www/fa16/classes/04-code-review/)
 
@@ -135,7 +137,7 @@ public class DayOfYear {
 }
 ```
 
-Yksinkertaisuudessaan `dayOfYear`-metodi saa parametreinaan päivämäärän kolmena kokonaislukuna, ja palauttaa annetun päivämäärän järjestysnumeron kyseisenä vuonna (1-366).
+Yksinkertaisuudessaan `dayOfYear`-metodi saa parametreinaan päivämäärän kolmena kokonaislukuna, ja palauttaa annetun päivämäärän järjestysnumeron kyseisenä vuonna (1-366). Saatat huomata luokan koodaustyylissä merkittäviä heikkouksia, joihin paneudutaan tehtävässä 3.
 
 
 ## Vaihe 1: kirjoita dayOfYear-metodille JUnit-yksikkötestit
