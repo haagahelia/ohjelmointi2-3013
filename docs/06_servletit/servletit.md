@@ -142,7 +142,7 @@ import static java.time.temporal.ChronoUnit.DAYS;
 
 **[YouTube: Introduction to Servlets](https://youtu.be/7TOmdDJc14s)**
 
-[![YouTube: Introduction to Servlets](https://img.youtube.com/vi/7TOmdDJc14s/mq3.jpg)](https://youtu.be/7TOmdDJc14s)
+[![YouTube: Introduction to Servlets](https://img.youtube.com/vi/7TOmdDJc14s/hq3.jpg)](https://youtu.be/7TOmdDJc14s)
 
 Tämä video esittelee perusteet HTTP-palvelimen toiminnassa dynaamisten sivujen (servlet) käsittelyssä. Servlettien rakenne sekä yhteys servlettien ja Tomcatin välillä esitetään tällä videolla varsin selkeällä tavalla.
 
@@ -151,7 +151,7 @@ Tämä video esittelee perusteet HTTP-palvelimen toiminnassa dynaamisten sivujen
 
 **[YouTube: JSTL tutorial part 1](https://youtu.be/KmREMEhj5eE)**
 
-[![YouTube: JSTL tutorial part 1](https://img.youtube.com/vi/KmREMEhj5eE/mq3.jpg)](https://youtu.be/KmREMEhj5eE)
+[![YouTube: JSTL tutorial part 1](https://img.youtube.com/vi/KmREMEhj5eE/hq3.jpg)](https://youtu.be/KmREMEhj5eE)
 
 Tämä video esittelee Java-muuttujien välittämisen JSP-sivuille ja niiden arvojen näyttämisen sivulla.  
 
@@ -160,7 +160,7 @@ Tämä video esittelee Java-muuttujien välittämisen JSP-sivuille ja niiden arv
 
 **[JSTL Tutorial part 2 Core Tags](https://youtu.be/R0EnI9_ZMA0)**
 
-[![JSTL Tutorial part 2 Core Tags](https://img.youtube.com/vi/R0EnI9_ZMA0/mq3.jpg)](https://youtu.be/R0EnI9_ZMA0)
+[![JSTL Tutorial part 2 Core Tags](https://img.youtube.com/vi/R0EnI9_ZMA0/hq3.jpg)](https://youtu.be/R0EnI9_ZMA0)
 
 Video esittelee, miten JSTL tagikirjasto lisätään JSP-sivulle `taglib`-direktiivin avulla. Opit myös käyttämään `c:out` ja `c:forEach` tageja. Video näyttää myös konkreettisesti, miten lista olioita voidaan välittää servletiltä JSP-sivulle ja miten sillä olevat Java-oliot saadaan esitettyä sivulla HTML-muodossa.
 
@@ -169,7 +169,7 @@ Video esittelee, miten JSTL tagikirjasto lisätään JSP-sivulle `taglib`-direkt
 
 **[YouTube: Servlet and JSP Tutorial. Get and Post](https://youtu.be/_6ISkXSC1js)**
 
-[![YouTube: Servlet and JSP Tutorial. Get and Post](https://img.youtube.com/vi/_6ISkXSC1js/mq1.jpg)](https://youtu.be/_6ISkXSC1js)
+[![YouTube: Servlet and JSP Tutorial. Get and Post](https://img.youtube.com/vi/_6ISkXSC1js/hq1.jpg)](https://youtu.be/_6ISkXSC1js)
 
 Tämä video esittelee HTML-lomakkeen lähettämisen palvelimelle POST- ja GET-metodeilla sekä servlettien `doPost`- ja `doGet`-metodit. **Huom!** Videossa käytetään `web.xml`-tiedostoa, jota et tarvitse, mikäli käytät `@WebServlet`-annotaatiota esimerkkiprojektin ohjeistuksen mukaisesti.
 
@@ -179,6 +179,8 @@ Tämä video esittelee HTML-lomakkeen lähettämisen palvelimelle POST- ja GET-m
 **[Jenkov.com: Java Servlets](http://tutorials.jenkov.com/java-servlets/index.html)**
 
 Tämän tutoriaalin kappaleet 1-9 ovat Ohjelmointi 2 -kurssin kannalta hyvää sisältöä.
+
+&nbsp;
 
 **[Mozilla: HTTP Messages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages)**
 

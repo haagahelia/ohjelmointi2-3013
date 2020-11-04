@@ -152,6 +152,8 @@ Class.forName("org.sqlite.JDBC");
 
 **Huom!** Tämä on kaksiosaisen tehtävän ensimmäinen vaihe.
 
+Varmista ensin, että olet varmasti ladannut edellä [olevan ohjeistuksen mukaisesti](#jdbcn-sqlite-ajuri) SQLite-ajurin ja olet sijoittanut sen lib-kansioon, joka on projektisi build pathissa. 
+
 
 ### Ostoslista ja CRUD-operaatiot
 
@@ -168,13 +170,15 @@ CREATE TABLE ShoppingListItem (
 );
 ```
 
+Valmiin tietokantatiedoston voit ladata itsellesi [tästä](https://github.com/haagahelia/ohjelmointi2-3013/blob/master/sql/shoppingList.sqlite?raw=true). Tallenna tiedosto johonkin hakemistoon, jonka osoite on helposti kopioitavissa Java-koodiisi (esim. *C:\sqlite\shpopingList.sqlite* tai */home/omanimi/sqlite/shoppingList.sqlite*).
+
 ### SQL-kyselyiden tietoturva
 
 Huomaa, että SQL-kyselyjen muodostaminen merkkijonoja yhdistelemällä aiheuttaa mm. tietoturvaongelmia, kuten alla oleva esimerkki havainnollistaa:
 
 [![Exploits of a Mom](https://imgs.xkcd.com/comics/exploits_of_a_mom.png)](https://xkcd.com/327/)
 
-Kuva: Randall Munroe. Exploits of a Mom. [https://xkcd.com/327/](https://xkcd.com/327/)
+Kuva: Randall Munroe. Exploits of a Mom. [https://xkcd.com/327/](https://xkcd.com/327/). [CC BY-NC 2.5](https://creativecommons.org/licenses/by-nc/2.5/)
 
 Muista siis käyttää oppimateriaaleissa esiteltyä `PreparedStatement`-luokkaa aina muodostaessasi kyselyitä, joihin syötetään dynaamisesti parametreja!
 
@@ -240,4 +244,4 @@ Bye!
 
 ### Tehtävän palauttaminen
 
-Tämä on kaksiosaisen tehtävän ensimmäinen vaihe, joka palautetaan Teamsiin yhdessä seuraavan tehtävän kanssa.
+Tämä on kaksiosaisen tehtävän ensimmäinen vaihe, joka palautetaan Teamsiin yhdessä seuraavan tehtävän kanssa. Tarkemmat palautusohjeet löydät seuraavan aiheen lopusta.

@@ -150,7 +150,7 @@ public class Country implements Comparable<Country> {
 
 ### Testaus ja käyttöliittymä
 
-Tässä tehtävässä sinun ei tarvitse toteuttaa lainkaan käyttöliittymää omaan ohjelmaasi. Voit Testata ratkaisuasi erillisellä testiluokalla, jonka main-metodissa lisäät `Country`-olioita listalle ja järjestät listan. Yksi mahdollisuus järjestelylogiikan testaamiseksi on esim. seuraava `main`-metodi, jota käytetään myös koodin testaamisessa Viopessa:
+Tässä tehtävässä sinun ei tarvitse toteuttaa lainkaan käyttöliittymää omaan ohjelmaasi. Voit Testata ratkaisuasi erillisellä testiluokalla, jonka main-metodissa lisäät `Country`-olioita listalle ja järjestät listan. Yksi mahdollisuus järjestelylogiikan testaamiseksi on esim. seuraava `main`-metodi, jota käytetään koodin testaamisessa myös Viopessa:
 
 ```java
 public static void main(String[] args) {
@@ -168,6 +168,8 @@ public static void main(String[] args) {
     }
 }
 ```
+
+Väkilukujen lähde: [Wikipedia](https://en.wikipedia.org/wiki/Nordic_countries). Luettu 9.3.2018.
 
 Palauta lopuksi Country-luokkasi Viopeen.
 

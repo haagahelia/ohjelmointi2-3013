@@ -71,7 +71,7 @@ Tutustu itsenäisesti seuraavaan videoon, jossa esitellään tagikirjaston käyt
 
 **[JSTL Tutorial part 2 Core Tags](https://youtu.be/R0EnI9_ZMA0)**
 
-[![JSTL Tutorial part 2 Core Tags](https://img.youtube.com/vi/R0EnI9_ZMA0/mq1.jpg)](https://youtu.be/R0EnI9_ZMA0)
+[![JSTL Tutorial part 2 Core Tags](https://img.youtube.com/vi/R0EnI9_ZMA0/hq1.jpg)](https://youtu.be/R0EnI9_ZMA0)
 
 Tämä video esittelee, miten JSTL tagikirjasto lisätään JSP-sivulle `taglib`-direktiivin avulla. Opit myös käyttämään harjoituksessa tarvitsemiasi `c:out` ja `c:forEach` tageja. Video näyttää myös konkreettisesti, miten lista olioita voidaan välittää servletiltä JSP-sivulle ja miten sillä olevat Java-oliot saadaan esitettyä sivulla HTML-muodossa. Video on jatkoa viime viikon videolle [JSTL tutorial part 1](https://youtu.be/KmREMEhj5eE).
 
