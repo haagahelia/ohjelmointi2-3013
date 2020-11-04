@@ -125,20 +125,6 @@ Tällä videolla opettelemme välittämään dataa servletiltä JSP-sivulle muod
 &nbsp;
 
 
-**[Servlet-tehtävänannot ja staattisen HTML-sivun lisääminen](https://web.microsoftstream.com/video/8a8c1674-e137-4fbd-af51-d0774fc0c5c5)** <small>13:13</small>
-
-<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/8a8c1674-e137-4fbd-af51-d0774fc0c5c5?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
-
-Tällä videolla käsittelemme harjoitustehtävän tehtävänantoa. Videolla tehtävä import-komento on seuraava:
-
-```java
-import static java.time.temporal.ChronoUnit.DAYS;
-```
-
-Voit lukea staattisista `import`-komennoista lisää [tästä keskustelusta](https://stackoverflow.com/a/162195).
-
-&nbsp;
-
 
 ### Suositeltu lisämateriaali
 
@@ -204,7 +190,21 @@ Tällä kurssilla sovellamme MVC-mallia siten, että **käsittelijät toteutetaa
 
 ## Tehtävät
 
-Tämän viikon tehtävät palautetaan yhdellä kertaa Teamsiin. Tehtävänantoa täydennetään keskiviikon oppitunnilla uusilla ominaisuuksilla.
+
+**[Servlet-tehtävänannot ja staattisen HTML-sivun lisääminen](https://web.microsoftstream.com/video/8a8c1674-e137-4fbd-af51-d0774fc0c5c5)** <small>13:13</small>
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/8a8c1674-e137-4fbd-af51-d0774fc0c5c5?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tällä videolla käsittelemme harjoitustehtävän tehtävänantoa. Videolla tehtävä import-komento on seuraava:
+
+```java
+import static java.time.temporal.ChronoUnit.DAYS;
+```
+
+Voit lukea staattisista `import`-komennoista lisää [tästä keskustelusta](https://stackoverflow.com/a/162195).
+
+&nbsp;
+
 
 ### Tehtävä 1: toimiva verkkokehitysympäristö
 
