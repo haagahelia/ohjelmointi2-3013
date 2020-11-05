@@ -45,11 +45,9 @@ Tehtävät [Viopessa](https://vw4.viope.com/) (DL 8.11. klo 23:59)
 
 Tällä viikolla tutustumme yksikkötestaukseen ja testaamme valmista virheellisesti toimivaa ja tyylillisesti heikosti toteutettua metodia. Tutustumme lisäksi koodin laatuun vaikuttaviin tekijöihin ja sovellamme niitä annetun valmiin koodin parantamiseksi.
 
-Tämä aihe julkaistaan viikolla 45.
+[Siirry oppimateriaaliin ⇨](03_yksikkotestaus/junit)
 
-<!--[Siirry oppimateriaaliin ⇨](03_yksikkotestaus/junit)
-
-Tehtävät Teamsissa (DL 15.11. klo 23:59)-->
+Tehtävät Teamsissa (DL 15.11. klo 23:59)
 
 &nbsp;
 
