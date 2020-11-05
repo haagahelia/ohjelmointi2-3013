@@ -2,14 +2,24 @@
 
 # Yksikkötestauksen perusteet ja koodin laatu 
 
-Tällä viikolla tutustumme yksikkötestaukseen ja testaamme valmista virheellisesti toimivaa ja tyylillisesti heikosti toteutettua metodia. Tutustumme lisäksi koodin laatuun vaikuttaviin tekijöihin ja sovellamme niitä annetun valmiin koodin parantamiseksi.
+Tähän mennessä olemme ohjelmointikursseilla testanneet kirjoittamiamme ohjelmia suorittamalla niitä, antamalla niille syötteitä ja tarkistamalla ohjelman tulosteita manuaalisesti. Tehtävien arvioinnissa on hyödynnetty Viope-järjestelmää, jossa testausmenetelmä on hyvin samankaltainen: ohjelma suoritetaan, sille annetaan syötteitä ja lopulta ohjelman tulosteet tarkistetaan.
+
+Vaikka käyttämämme testaustapa auttaa sinua ratkaisemaan tehtävät, vähänkään isompien ohjelmistojen testaaminen tulosteiden manuaalisen läpikäynnin avulla olisi hyvin työlästä, jopa lähes mahdotonta. Jokaisen isomman muutoksen jälkeen ohjelma täytyisi myös testata uudelleen, jotta varmistutaan siitä, että muutos ei aiheuttanut virheitä jo toimineisiin osiin. Tämän vuoksi ohjelmistoja testataan usein ohjelmallisesti kirjoitettujen testien avulla.
+
+Ohjelmistotestauksen käsitteistöön kuuluu oleellisena osana eri testausmenetelmät, joilla erityisesti automatisoitua testausta suoritetaan. Yleisesti käytettyyn jakoon kuuluvat **järjestelmätestaus**, **integraatiotestaus** ja **yksikkötestaus**. Lisäksi testauksessa voidaan keskittyä tiettyihin tarkempiin kohteisiin, kuten käytettävyyteen, tietoturvaan tai tehokkuuteen. Voit lukea näistä lisää esimerkiksi Vertics Oy:n blogikirjoituksesta ["Ohjelmistotestauksen perusteet"](https://vertics.co/ohjelmistotestauksen-perusteet/).
+
+Tällä viikolla perehdymme tarkemmin yksikkötestaukseen ja Javan [JUnit-kirjastoon](https://junit.org/junit5/), joka on vakiintunut ratkaisu yksikkötestien toteuttamiseksi Javalla. JUnit integroituu moniin laadunvarmistusjärjestelmiin ja sovelluskehittimiin, minkä vuoksi samat testit voidaan suorittaa automatisoidusti niin kehittäjän omalla koneella kuin erillisessä testausympäristössä. Myös Eclipsessä on erittäin hyvät työkalut JUnit-testien kirjoittamiseksi ja suorittamiseksi. Lisäksi tutustumme koodin laatuun vaikuttaviin tekijöihin ja sovellamme niitä annetun valmiin koodin parantamiseksi.
 
 
-## Koodin laatu: luettavuus, ymmärrettävyys ja jatkokehitettävyys
+## Yksikkötestaus
 
-Tähän asti olet ohjelmointiopinnoissasi kenties keskittynyt lähinnä saamaan ohjelmasi toimimaan tehtävänannon mukaisesti kiinnittämättä suurempaa huomiota sen ymmärrettävyyteen tai jatkokehitettävyyteen. Ammatillisessa ohjelmistokehityksessä on harvinaista, että koodia kirjoitettaisiin kerran ja vain yhden kehittäjän toimesta. Päinvastoin, koodia kirjoitetaan isoissa tiimeissä, joissa kehittäjät vaihtuvat ja olemassa oleviin ominaisuuksiin tehdään jatkuvasti muutoksia. 
+> *"Yksikkötestauksella tarkoitetaan **pienimmän mahdollisen ohjelman osan**, esimerkiksi aliohjelman, toiminnan testaamista. Yksikkötesteillä varmistetaan, että ohjelman pienimmät osat toimivat odotetulla tavalla, ja että mahdolliset virhetilanteet on niiden osalta ennakoitu."*
+>
+> *"Yksikkötestauksen hyödyt näkyvät kehitysprosessin aikana erityisesti silloin, kun jo kirjoitettuun koodiin joudutaan tekemään muutoksia. Automatisoiduilla yksikkötesteillä voidaan **nopeasti** todeta, aiheuttavatko tehdyt muutokset virheitä."*
+>
+> Jyväskylän Yliopisto, Informaatioteknologian tiedekunta. Testauksen tasot. http://smarteducation.jyu.fi/projektit/systech/Periaatteet/suunnittelun-periaatteet/testaus/testauksen-tasot
 
-Tulet itse jatkokehittämään jonkun toisen vuosia sitten kirjoittamaa koodia, aivan kuten joku muu tulee jatkokehittämään sinun koodiasi. Tällöin on erittäin tärkeää, että koodi on muokattavissa ilman odottamattomia rikkoutumisia ja että muut kehittäjät ymmärtävät toistensa koodia ja pystyvät muokkaamaan sitä uusien vaatimusten mukaiseksi.
+Mikäli olisimme kehittämässä esimerkiksi verkkokauppaa ja siihen liittyvää laskujen viitenumeroiden generointia, voisi viitenumeroiden generoinnin testaaminen käyttöliittymän kautta edellyttää meiltä esimerkiksi sisäänkirjautumista, tuotteiden lisäämistä ostoskoriin, toimitustavan valintaa ja lukuisia muita erillisiä työvaiheita ennen pääsyä varsinaiseen testattavaan osaan. Testaus käyttöliittymän kautta onkin monessa tapauksessa erittäin aikaavievää. Yksikkötestauksen avulla voimme testata viitenumeroiden generoinnin erillään kaikesta muusta koodista, omana yksikkönään.
 
 
 ## Oppimateriaalit
@@ -22,7 +32,7 @@ Tulet itse jatkokehittämään jonkun toisen vuosia sitten kirjoittamaa koodia, 
 
 <iframe src="https://d38ynedpfya4s8.cloudfront.net/p/288/sp/28800/embedIframeJs/uiconf_id/23448708/partner_id/288?iframeembed=true&playerId=kaltura_player&entry_id=0_pl76xbuy&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[hotspots.plugin]=1&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=0_bvt6dx1t" width="608" height="402" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Kaltura Player"></iframe>
 
-Testiluokan luominen, annotaatiot, testimetodit, assertiot ja testin suorittaminen.
+Testiluokan luominen ja suorittaminen sekä käsitteet **testiluokka**, **annotaatio**, **testimetodi** ja **assertio**.
 
 &nbsp;
 
@@ -91,7 +101,7 @@ Lisäksi sinun kannattaa tutustua tämän viikon tehtävän alkuperäiseen läht
 
 # Tehtävä
 
-Tämän viikon tehtävänäsi on toteuttaa JUnit-testitapaukset tälle esimerkkiluokalle:
+Tämän viikon tehtävänäsi on toteuttaa JUnit-yksikkötestit tälle heikosti toteutetulle esimerkkiluokalle:
 
 ```java
 /**
@@ -137,28 +147,37 @@ public class DayOfYear {
 }
 ```
 
-Yksinkertaisuudessaan `dayOfYear`-metodi saa parametreinaan päivämäärän kolmena kokonaislukuna, ja palauttaa annetun päivämäärän järjestysnumeron kyseisenä vuonna (1-366). Saatat huomata luokan koodaustyylissä merkittäviä heikkouksia, joihin paneudutaan tehtävässä 3.
+Yksinkertaisuudessaan `dayOfYear`-metodi saa parametreinaan päivämäärän kolmena kokonaislukuna, ja palauttaa annetun päivämäärän järjestysnumeron kyseisenä vuonna (1-366). 
+
+Metodissa on oletettavasti bugeja, jotka tulee löytää omilla testeillä. Saatat lisäksi huomata luokan koodaustyylissä merkittäviä heikkouksia, joihin paneudutaan tehtävässä 3.
 
 
 ## Vaihe 1: kirjoita dayOfYear-metodille JUnit-yksikkötestit
 
 Tallenna itsellesi kopio testattavasta luokasta omaan koodieditoriisi. Kirjoita uusi testiluokka `DayOfYearTest`, jossa hyödynnät opetusvideoilla esiteltyä JUnit-testikirjastoa testataksesi valmiin metodin toimivuuden osoittamiseksi vaadittavat testitapaukset.
 
-**Kirjoittamasi testiluokan tulee osoittaa testattavan luokan virheellisyys**. Testiluokkasi saa sijaita projektissasi vapaasti valitsemassasi paketissa.
-
-Virheiden etsimiseksi sinun kannattaa testata ainakin erilaisia päivämääriä vuoden alussa ja lopussa niin tavallisina- kuin karkausvuosina.
+**Kirjoittamasi testiluokan tulee osoittaa testattavan luokan virheellisyys**. Testiluokkasi saa sijaita projektissasi vapaasti valitsemassasi paketissa. Virheiden etsimiseksi sinun kannattaa testata ainakin erilaisia päivämääriä vuoden alussa, keskellä ja lopussa niin tavallisina- kuin karkausvuosina.
 
 
 ## Vaihe 2: korjaa dayOfYear-luokan bugi(t)
 
-Korjattuasi löytämäsi bugit, edellisessä vaiheessa kirjoittamasi testiluokan kaikkien testien tulee mennä hyväksytysti läpi.
+Korjattuasi `DayOfYear`-luokkaan löytämäsi bugit. Bugien korjaamisen jälkeen edellisessä vaiheessa kirjoittamasi testiluokan kaikkien testien tulee mennä hyväksytysti läpi.
 
 
-## Vaihe 3: Muokkaa koodi hyvien ohjelmointikäytäntöjen mukaiseksi
+## Vaihe 3: koodin refaktorointi hyvien käytäntöjen mukaiseksi
 
-Kun luet koodia tarkemmin, huomaat, että `dayOfYear`-metodissa on käytetty ohjelmoinnin perusrakenteita melko suppeasti. Koodi koostuukin erittäin pitkästä `if-else`-rakenteesta sekä samanlaisista kokonaislukujen yhteenlaskuista. Samat numerot myös esiintyvät koodissa toistuvasti ja saattavat olla virheellisiä.
+Tähän asti olet ohjelmointiopinnoissasi kenties keskittynyt lähinnä saamaan ohjelmasi toimimaan tehtävänannon mukaisesti kiinnittämättä suurempaa huomiota sen ymmärrettävyyteen tai jatkokehitettävyyteen. Voimme olettaa myös `dayOfYear`-metodin syntyneen näin. Ammatillisessa ohjelmistokehityksessä on harvinaista, että samaa koodia työstettäisiin vain kerran tai vain yhden kehittäjän toimesta. Päinvastoin, koodia kirjoitetaan isoissa tiimeissä, joissa kehittäjät vaihtuvat ja olemassa oleviin ominaisuuksiin tehdään jatkuvasti muutoksia. 
 
-Tehtäväsi tässä vaiheessa on refaktoroida koodi hyvien ohjelmointitapojen mukaiseksi. Refaktoroidun koodin tulee siis olla ymmärrettävämpää ja ylläpidettävämpää kuin alkuperäinen koodi, mutta toimia ulkoisesti samalla tavalla.
+Tulet siis itse jatkokehittämään jonkun toisen vuosia sitten kirjoittamaa koodia, aivan kuten joku muu tulee jatkokehittämään sinun koodiasi. Tällöin on erittäin tärkeää, että koodi on muokattavissa ilman odottamattomia rikkoutumisia ja että muut kehittäjät ymmärtävät toistensa koodia ja pystyvät muokkaamaan sitä uusien vaatimusten mukaiseksi.
+
+Kun luet `dayOfYear`-metodin sisältämää koodia tarkemmin, huomaat, että siinä on käytetty ohjelmoinnin perusrakenteita melko suppeasti. Koodi koostuukin erittäin pitkästä `if-else`-rakenteesta sekä samanlaisista kokonaislukujen yhteenlaskuista. Samat numerot myös esiintyvät koodissa toistuvasti ja saattavat olla virheellisiä.
+
+Tämän viikon tehtävien viimeinen osa on refaktoroida koodi hyvien ohjelmointitapojen mukaiseksi. Refaktoroidun koodin tulee siis olla ymmärrettävämpää ja ylläpidettävämpää kuin alkuperäinen koodi, mutta toimia ulkoisesti samalla tavalla.
+
+
+> *"Refaktorointi tarkoittaa prosessia, jossa tietokoneohjelman lähdekoodia muutetaan siten, että sen toiminnallisuus säilyy, mutta sen sisäinen rakenne muuttuu. Muutokset voivat koskea esimerkiksi luettavuutta tai ohjelmakomponenttien työnjaon selkeyttämistä."*
+>
+> Wikipedia. [Refaktorointi](https://fi.wikipedia.org/wiki/Refaktorointi). Viitattu 5.11.2020. [CC BY–SA 3.0](https://fi.wikipedia.org/wiki/Wikipedia:Creative_Commons_Attribution-Share_Alike_3.0_Unported_-lisenssiehdot)
 
 Tutustu seuraaviin "koodin hajuihin" esimerkkikoodissa ja parantele koodia parhaasi mukaan:
 
@@ -168,24 +187,27 @@ Tutustu seuraaviin "koodin hajuihin" esimerkkikoodissa ja parantele koodia parha
 - Avoid Magic Numbers
 - One Purpose For Each Variable
 
-Edellä mainittu lista on käyty tämän esimerkkikoodin yhteydessä läpi osoitteessa [https://web.mit.edu/6.005/www/fa16/classes/04-code-review/](https://web.mit.edu/6.005/www/fa16/classes/04-code-review/). Voit käyttää myös muita lähteitä.
+Edellä mainittu lista on käyty läpi tämän saman esimerkkikoodin avulla osoitteessa [https://web.mit.edu/6.005/www/fa16/classes/04-code-review/](https://web.mit.edu/6.005/www/fa16/classes/04-code-review/). Voit käyttää myös muita lähteitä. Tehtävässä on suositeltavaa lisätä koodiin tarpeen mukaan uusia tietorakenteita ja metodeja.
 
-**Huom!** Javan standardikirjastossa on olemassa useita valmiita toimivia toteutuksia päivän järjestysnumeron laskemiselle. Oikeassa ohjelmistoprojektissa sinun tulisi ehdottomasti käyttää tällaisessa tapauksessa valmista ratkaisua, eikä yrittää toteuttaa omaa versiotasi. Tämän harjoituksen tavoitteena on kuitenkin opetella testaamaan ja jäsentämään koodi uudella tavalla.
+&nbsp;
 
-**Huom!** Javan `java.time`-paketista löytyvät `Month`-, `YearMonth` ja `Year`-luokat voivat olla refaktoroinnissa  erittäin hyödyllisiä. `Year`-luokan `isLeap`-metodin avulla voit selvittää onko tietty vuosi karkausvuosi, ja `length()` sekä `lengthOfMonth()`-metodit auttavat kuukauden pituuden selvittämisessä ilman kovakoodattuja numeroita.
+**Huom!** Javan standardikirjastossa on olemassa useita valmiita toimivia toteutuksia päivän järjestysnumeron laskemiselle. Oikeassa ohjelmistoprojektissa sinun tulisi luonnollisesti käyttää tällaisessa tapauksessa valmista ratkaisua, eikä yrittää toteuttaa omaa versiotasi. Tämän harjoituksen tavoitteena on kuitenkin opetella testaamaan ja jäsentämään koodi uudella tavalla.
+
+**Huom!** Javan `java.time`-paketista löytyvät `Month`-, `YearMonth` ja `Year`-luokat voivat olla refaktoroinnissa hyödyllisiä. `Year`-luokan `isLeap`-metodin avulla voit selvittää onko tietty vuosi karkausvuosi, ja `length()` sekä `lengthOfMonth()`-metodit auttavat kuukauden pituuden selvittämisessä ilman kovakoodattuja numeroita.
 
 Linkit:
 
-* [https://docs.oracle.com/javase/8/docs/api/java/time/Year.html](https://docs.oracle.com/javase/8/docs/api/java/time/Year.html)
-* [https://docs.oracle.com/javase/8/docs/api/java/time/Month.html](https://docs.oracle.com/javase/8/docs/api/java/time/Month.html)
-* [https://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html](https://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html)
+* [Year-luokka](https://docs.oracle.com/javase/8/docs/api/java/time/Year.html)
+* [Month-luokka](https://docs.oracle.com/javase/8/docs/api/java/time/Month.html)
+* [YearMonth-luokka](https://docs.oracle.com/javase/8/docs/api/java/time/YearMonth.html)
 
 ## Tehtävän palauttaminen
 
-Palauta luokat `DayOfYear` ja `DayOfYearTest` Teamsissa olevaan palautuslaatikkoon erillisinä tiedostoina (ei pakattuna). Riittää että palautat tehtävien lopputuloksen, eri vaiheiden tuloksia ei tarvitse palauttaa erikseen.
+Palauta luokat `DayOfYear` ja `DayOfYearTest` Teamsissa olevaan palautuslaatikkoon erillisinä tiedostoina (ei pakattuna). Riittää että palautat tehtävien lopputuloksen. Eri vaiheiden tuloksia ei tarvitse palauttaa erikseen.
+
 
 ## Arviointi
 
 Tehtävä arvioidaan asteikolla 0-5. Arvioinnissa suurin painoarvo on testien kirjoittamisella sekä bugien korjauksella (60 %). Koodin laadun parantamisella on pienempi painoarvo (40 %).
 
-Täysiin pisteisiin tehtävässä riittää, että kirjoitat muutaman toimivan testimetodin, korjaat löytämäsi bugit ja parannat annettua koodia yhden laatuongelman osalta.
+Täysiin pisteisiin tehtävässä riittää, että kirjoitat muutaman toimivan testimetodin, korjaat löytämäsi bugit ja parannat annettua koodia yhden laatuongelman osalta. Osittain valmiit ratkaisut pisteytetään suhteessa niiden valmiusasteeseen.
