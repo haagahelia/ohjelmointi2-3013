@@ -24,6 +24,8 @@ Tietokantalogiikan eriyttämiseksi muusta koodista käytetään usein ns. **DAO*
 
 ## Videot
 
+**Huom!** Näiden videoiden katsomiseksi sinun täytyy kirjautua sisään Microsoft Stream -palveluun Haaga-Helian käyttäjätunnuksellasi.
+
 
 **[JDBC-aiheen kertaus](https://web.microsoftstream.com/video/aea9daea-9811-4ba2-bd14-943658e381a1)** 13:03
 

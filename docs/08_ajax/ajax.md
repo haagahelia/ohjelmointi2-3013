@@ -11,6 +11,9 @@
 
 ### [Johdanto single page app -sovelluksiin](https://web.microsoftstream.com/video/29e3d53f-0f16-4cea-8015-d3a1399ccf44) <small>26 min</small>
 
+**Huom!** Kurssin videoiden katsomiseksi sinun täytyy kirjautua sisään Microsoft Stream -palveluun Haaga-Helian käyttäjätunnuksellasi.
+
+
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/29e3d53f-0f16-4cea-8015-d3a1399ccf44?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
 Tällä videolla teemme yleiskatsauksen viikon aiheeseen ja sen materiaaleihin sekä tehtäviin.

@@ -62,6 +62,8 @@ Voit ladata itsellesi kyseisen `sqlite3.exe`-komentorivityökalun osoitteesta: [
 
 ## Videot
 
+**Huom!** Näiden videoiden katsomiseksi sinun täytyy kirjautua sisään Microsoft Stream -palveluun Haaga-Helian käyttäjätunnuksellasi.
+
 Videoilla esiintyvä [PowerPoint-esitys on ladattavissa tästä](./jdbc.pdf).
 
 **[JDBC ja SQLite](https://web.microsoftstream.com/video/4906ef8a-22f3-4322-9673-df55481b3624)** 8:12

@@ -9,6 +9,7 @@ Vaikka harjoitustyö tehdään itsenäisesti, saatte keskustella siitä esimerki
 
 ## Videot
 
+**Huom!** Näiden videoiden katsomiseksi sinun täytyy kirjautua sisään Microsoft Stream -palveluun Haaga-Helian käyttäjätunnuksellasi.
 
 **[Harjoitustyön tehtävänanto](https://web.microsoftstream.com/video/d2c07537-4300-493a-957b-61b5153b4a16)** <small>22:44</small>
 
@@ -27,8 +28,6 @@ Tällä videolla käymme läpi harjoitustyön tehtävänannon ja arviontikriteer
 Tällä videolla teemme pohjatyön harjoitustyöprojektin luomiseksi. Samalla kertaamme kurssin aikana opeteltuja asioita.
 
 &nbsp;
-
-
 
 
 ## Harjoitustyön opppimistavoitteet

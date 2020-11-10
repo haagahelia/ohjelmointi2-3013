@@ -15,7 +15,10 @@ Tämän tehtävän palautusaika on umpeutunut. Voit katsoa malliratkaisun tääl
 * [JSP-sivut](https://github.com/haagahelia/embedded-tomcat-template/tree/kevat2020/src/main/webapp/WEB-INF)
 -->
 
-## Oppitunnin videot
+## Videot
+
+**Huom!** Näiden videoiden katsomiseksi sinun täytyy kirjautua sisään Microsoft Stream -palveluun Haaga-Helian käyttäjätunnuksellasi.
+
 
 **[Tietokantaluokkien tuominen web-sovellukseen](https://web.microsoftstream.com/video/3998be63-0576-44e2-8e05-fb3da6008789)** <small>10:33</small>
 

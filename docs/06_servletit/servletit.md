@@ -35,20 +35,23 @@ Gitin avulla ohjelmistokehittäjät hallinnoivat ohjelmistojensa versioita ja ja
 
 Yksi tämän kurssin tavoitteista on tutustuttaa sinut versionhallinnan perusteisiin. Siksi kaikki kurssin materiaalit ja esimerkkikoodit jaetaan gitin avulla. Jotta sinä pääset käsiksi koodeihin ja tehtävänantoihin, on ne laitettu saataville tänne GitHub-palveluun. GitHub on yksi palveluntarjoaja versionhallinnan keskitetyille varastoille (remote repository).
 
-Saadaksesi kurssin web-projektipohjan koodit itsellesi, sinun tulee kloonata (clone) valmis projektipohja GitHubista. Perehdy seuraavaksi kurssin web-sovelluksen projektipohjaan osoitteessa https://github.com/haagahelia/embedded-tomcat-template ja luo itsellesi toimiva web-kehitysympäristö projektipohjan ohjeiden mukaisesti.
+Saadaksesi kurssin web-projektipohjan koodit itsellesi, sinun tulee kloonata (clone) valmis projektipohja GitHubista. Perehdy seuraavaksi kurssin web-sovelluksen projektipohjaan osoitteessa [https://github.com/ohjelmointi2/embedded-tomcat-template](https://github.com/ohjelmointi2/embedded-tomcat-template) ja luo itsellesi toimiva web-kehitysympäristö projektipohjan ohjeiden mukaisesti.
 
 ### Kurssin esimerkkiprojekti
 
-[Kurssin esimerkkiprojekti](https://github.com/haagahelia/embedded-tomcat-template) käyttää Tomcat-sovelluspalvelinta "upotettuna" Java-projektiisi (embedded Tomcat). Projekti on rakennettu siten, että sen riippuvuuksia hallitaan automaattisesti Maven-työkalun avulla. Maven-plugin löytyy onneksi Eclipsestä valmiiksi asennettuna, ja sen avulla Eclipse osaa asentaa mm. Tomcatin ja muut projektin mahdolliset riippuvuudet automaattisesti. Tomcatia voitaisiin käyttää myös lukuisilla muilla tavoilla, joten löydät mahdollisesti netistä ohjeita, jotka eivät täysin vastaa omia asetuksiasi ja asennustapojasi. 
+[Kurssin esimerkkiprojekti](https://github.com/ohjelmointi2/embedded-tomcat-template) käyttää Tomcat-sovelluspalvelinta "upotettuna" Java-projektiisi (embedded Tomcat). Projekti on rakennettu siten, että sen riippuvuuksia hallitaan automaattisesti Maven-työkalun avulla. Maven-plugin löytyy onneksi Eclipsestä valmiiksi asennettuna, ja sen avulla Eclipse osaa asentaa mm. Tomcatin ja muut projektin mahdolliset riippuvuudet automaattisesti. Tomcatia voitaisiin käyttää myös lukuisilla muilla tavoilla, joten löydät mahdollisesti netistä ohjeita, jotka eivät täysin vastaa omia asetuksiasi ja asennustapojasi. 
 
 Projektipohjan asennustapa on todettu kohtuullisen helpoksi ja samat tavat ovat hyödynnettävissä myös muilla kehitystyökaluilla (esim. [VS Code](https://code.visualstudio.com/), [IntelliJ IDEA](https://www.jetbrains.com/idea/)) ja erilaisissa suoritusympäristöissä (esim. [Heroku-pilvialusta](https://devcenter.heroku.com/articles/create-a-java-web-application-using-embedded-tomcat), [Spring boot -sovelluskehys](https://www.springboottutorial.com/spring-boot-with-embedded-servers-tomcat-jetty)).
 
 ## Virheiden paikantaminen
 
-Tästä viikosta alkaen käytämme koodissa merkittävästi enemmän valmiita kirjastoja, joiden myötä ohjelman virheiden tulkitseminen tulee usein hankalammaksi. Kun virheilmoitus liittyy jossain muussa kirjastossa ilmenneeseen virheeseen, voi olla vaikeaa hahmottaa, missä kohdassa omaa koodiasi on syy tuolle virheelle. Suosittelen lukemaan artikkelin [https://www.twilio.com/blog/how-to-read-and-understand-a-java-stacktrace](https://www.twilio.com/blog/how-to-read-and-understand-a-java-stacktrace), joka opettaa lukemaan Javan pitkiä mutta hyviä virheilmoituksia. Jakakaa myös Teamsissa kopioita virheilmoituksista tai kuvankaappauksia, mikäli ette saa virheilmoituksia tulkittua.
+Tästä viikosta alkaen käytämme koodissa merkittävästi enemmän valmiita kirjastoja, joiden myötä ohjelman virheiden tulkitseminen tulee usein hankalammaksi. Kun virheilmoitus liittyy jossain muussa kirjastossa ilmenneeseen virheeseen, voi olla vaikeaa hahmottaa, missä kohdassa omaa koodiasi on syy tuolle virheelle. Suosittelen lukemaan artikkelin ["How to read and understand a Java stacktrace"](https://www.twilio.com/blog/how-to-read-and-understand-a-java-stacktrace), joka opettaa lukemaan Javan pitkiä mutta hyviä virheilmoituksia. Jakakaa myös Teamsissa kopioita virheilmoituksista tai kuvankaappauksia, mikäli ette saa virheilmoituksia tulkittua.
 
 
 ## Videot
+
+**Huom!** Näiden videoiden katsomiseksi sinun täytyy kirjautua sisään Microsoft Stream -palveluun Haaga-Helian käyttäjätunnuksellasi.
+
 
 **[Johdatus HTTP-protokollaan ja Tomcatiin + Git clone](https://web.microsoftstream.com/video/710ad286-f65f-442b-ba25-2fc5da82d522)** <small>21:41</small>
 
@@ -56,7 +59,7 @@ Tästä viikosta alkaen käytämme koodissa merkittävästi enemmän valmiita ki
 
 Tällä videolla tutustumme HTTP-protokollaan ja siihen liittyviin pyyntöihin ja vastauksiin. Tutustumme siihen, miten sovelluspalvelin välittää HTTP-pyynnöt Java-ohjelmallemme ja miten ohjelmamme vastaa pyyntöön siten, että vastaus päätyy käyttäjän selaimelle. Kloonaamme myös GitHubista esimerkkiprojektin, jota käytämme jatkossa web-sovelluksemme pohjana.
 
-[Esimerkkiprojektin GitHub-sivu](https://github.com/haagahelia/embedded-tomcat-template)
+Esimerkkiprojektin GitHub-sivu: [https://github.com/ohjelmointi2/embedded-tomcat-template](https://github.com/ohjelmointi2/embedded-tomcat-template)
 
 &nbsp;
 
@@ -208,7 +211,7 @@ Voit lukea staattisista `import`-komennoista lisää [tästä keskustelusta](htt
 
 ### Tehtävä 1: toimiva verkkokehitysympäristö
 
-Rakenna itsellesi toimiva web-kehitysympäristö servlettien ja JSP-sivujen käyttämiseksi (JavaServer Pages). Suosittelen vahvasti seuraamaan [esimerkkiprojektin ohjeita ja esimerkkejä](https://github.com/haagahelia/embedded-tomcat-template), vaikka esimerkkiprojekti ei ole ainoa oikea tapa tehdä asioita. 
+Rakenna itsellesi toimiva web-kehitysympäristö servlettien ja JSP-sivujen käyttämiseksi (JavaServer Pages). Suosittelen vahvasti seuraamaan [esimerkkiprojektin ohjeita ja esimerkkejä](https://github.com/ohjelmointi2/embedded-tomcat-template), vaikka esimerkkiprojekti ei ole ainoa oikea tapa tehdä asioita. 
 
 Kun saat esimerkkiprojektin etusivun aukeamaan omalla koneellasi osoitteessa http://localhost:8080/, voit siirtyä seuraavaan vaiheeseen.
 
