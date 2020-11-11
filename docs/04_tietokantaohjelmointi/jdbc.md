@@ -94,7 +94,9 @@ Voit ladata itsellesi kyseisen `sqlite3.exe`-komentorivityökalun osoitteesta: [
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/581f69fe-9594-4488-b841-e44954f303f2?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tällä videolla esitellään Javan luokat, joita tarvitset tietokantayhteyksien ja -kyselyiden muodostamiseksi. Videolla esiintyvän lähdekooditiedoston `TietokantaanYhdistaminen.java` löydät [täältä](./videoiden_lahdekoodit). Videolla esiintyvä [PowerPoint-esitys on ladattavissa tästä](./jdbc.pdf).
+Tällä videolla esitellään Javan luokat, joita tarvitset tietokantayhteyksien ja -kyselyiden muodostamiseksi. 
+
+Videolla esiintyvän `shoppingList.sqlite`-tietokantatiedoston voit ladata itsellesi [kurssin GitHub-repositoriosta](https://github.com/haagahelia/ohjelmointi2-3013/blob/master/sql/shoppingList.sqlite?raw=true). Videolla valmistuvan lähdekooditiedoston `TietokantaanYhdistaminen.java` löydät [täältä](./videoiden_lahdekoodit). Videolla esiintyvä [PowerPoint-esitys on ladattavissa tästä](./jdbc.pdf).
 
 &nbsp;
 
@@ -155,9 +157,7 @@ Class.forName("org.sqlite.JDBC");
 
 ## Tehtävä: tietokantapohjainen ostoslistasovellus 1/2
 
-**Huom!** Tämä on kaksiosaisen tehtävän ensimmäinen vaihe.
-
-Varmista ensin, että olet varmasti ladannut edellä [olevan ohjeistuksen mukaisesti](#jdbcn-sqlite-ajuri) SQLite-ajurin ja olet sijoittanut sen lib-kansioon, joka on projektisi build pathissa. 
+Tämä on kaksiosaisen tehtävän ensimmäinen vaihe, joka palautetaan Teamsiin yhdessä seuraavan tehtävän kanssa. Tarkemmat palautusohjeet löydät seuraavan aiheen lopusta. Muista, että voit kysyä Teamsissa neuvoja tehtävään.
 
 
 ### Ostoslista ja CRUD-operaatiot
@@ -176,6 +176,9 @@ CREATE TABLE ShoppingListItem (
 ```
 
 Valmiin tietokantatiedoston voit ladata itsellesi [tästä](https://github.com/haagahelia/ohjelmointi2-3013/blob/master/sql/shoppingList.sqlite?raw=true). Tallenna tiedosto johonkin hakemistoon, jonka osoite on helposti kopioitavissa Java-koodiisi (esim. `C:\sqlite\shpopingList.sqlite` tai `/home/omanimi/sqlite/shoppingList.sqlite`).
+
+Varmista myös, että olet varmasti ladannut edellä [olevan ohjeistuksen mukaisesti](#jdbcn-sqlite-ajuri) SQLite-ajurin ja olet sijoittanut sen lib-kansioon, joka on projektisi build pathissa. 
+
 
 ### SQL-kyselyiden tietoturva
 
@@ -249,4 +252,4 @@ Bye!
 
 ### Tehtävän palauttaminen
 
-Tämä on kaksiosaisen tehtävän ensimmäinen vaihe, joka palautetaan Teamsiin yhdessä seuraavan tehtävän kanssa. Tarkemmat palautusohjeet löydät seuraavan aiheen lopusta.
+Tämä on kaksiosaisen tehtävän ensimmäinen vaihe, joka palautetaan Teamsiin yhdessä seuraavan tehtävän kanssa. Tarkemmat palautusohjeet löydät seuraavan aiheen lopusta. Muista, että voit kysyä Teamsissa neuvoja tehtävään.
