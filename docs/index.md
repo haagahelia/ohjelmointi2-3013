@@ -57,7 +57,7 @@ Tällä viikolla opettelemme ensin muodostamaan yhteyden tietokantaan Java-ohjel
 
 [Siirry oppimateriaaliin ⇨](04_tietokantaohjelmointi/jdbc)
 
-Tehtävät Teamsissa (DL 22.11. klo 23:59)
+Tehtävät Teamsissa (palautetaan yhdessä DAO-tehtävän kanssa)
 
 &nbsp;
 

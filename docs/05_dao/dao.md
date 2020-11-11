@@ -141,7 +141,7 @@ public class JDBCShoppingListItemDao implements ShoppingListItemDao
                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ```
 
-Kaikkien luokan metodien edessä esiintyy `@Override`-annotaatio, joka tarkoittaa sitä, että kyseinen metodi on määritetty luokan toteuttamassa rajapinnassa. Tallenna itsellesi myös luokan tarvitsema rajapinta:
+Kaikissa luokan metodeissa esiintyy `@Override`-annotaatio, joka tarkoittaa sitä, että kyseinen metodi on määritetty luokan toteuttamassa rajapinnassa. Tallenna itsellesi myös luokan tarvitsema rajapinta:
 
 ```java
 // tiedosto ShoppingListItemDao.java
@@ -224,7 +224,7 @@ Sen sijaan käyttöliittymäluokkasi tulee hyödyntää uutta DAO-luokkaa tietok
 
 ----
 
-### Vapaahetoinen tehtävä 1: ympäristömuuttujat
+### ⭐ Vapaahetoinen tehtävä 1: ympäristömuuttujat
 
 *Tämä osa on valinnainen, mutta sitä suositellaan, mikäli olet saanut kaikki tähänastiset harjoitukset tehtyä.*
 
@@ -264,7 +264,7 @@ Määrittele siis edellä mainitun ohjeen mukaisesti itsellesi Eclipseen ympäri
 
 ----
 
-### Vapaaehtoinen tehtävä 2: DAO-luokan testaaminen JUnit-testillä
+### ⭐ Vapaaehtoinen tehtävä 2: DAO-luokan testaaminen JUnit-testillä
 
 *Tämä osa on valinnainen, mutta sitä suositellaan, mikäli olet saanut kaikki tähänastiset harjoitukset tehtyä.*
 
@@ -308,6 +308,9 @@ class JDBCShoppingListItemDaoTest {
     // Write the actual tests methods here. You can use Milk (1) and Eggs (2) in all of your tests!
 }
 ```
+
+
+----
 
 ## Tehtävän palauttaminen
 
