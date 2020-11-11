@@ -1,4 +1,4 @@
-## src/main/java/tietokanta/TietokantaanYhdistaminen.java
+## TietokantaanYhdistaminen.java
 
 ```java
 package tietokanta;

@@ -55,12 +55,9 @@ Tehtävät Teamsissa (DL 15.11. klo 23:59)
 
 Tällä viikolla opettelemme ensin muodostamaan yhteyden tietokantaan Java-ohjelmasta ja tekemään yksinkertaisia CRUD-toimenpiteitä (Create, Read, Update & Delete). 
 
-Tämä aihe julkaistaan viikolla 46.
-
-<!--
 [Siirry oppimateriaaliin ⇨](04_tietokantaohjelmointi/jdbc)
 
-Tehtävät Teamsissa (DL 22.11. klo 23:59)-->
+Tehtävät Teamsissa (DL 22.11. klo 23:59)
 
 &nbsp;
 
@@ -68,11 +65,9 @@ Tehtävät Teamsissa (DL 22.11. klo 23:59)-->
 
 Tällä viikolla jatkokehitämme ostoslistasovelluksen arkkitehtuuria siten, että tietokantalogiikkamme eriytetään tekstikäyttöliittymästä. Eriyttäminen mahdollistaa tietokantalogiikan testaamisen yksikkötesteillä sekä myöhemmin saman koodin uudelleenkäytön web-pohjaisella käyttöliittymällä.
 
-Tämä aihe julkaistaan viikolla 47.
+[Siirry oppimateriaaliin ⇨](05_dao/dao)
 
-<!--[Siirry oppimateriaaliin ⇨](05_dao/dao)
-
-Tehtävät Teamsissa (DL 29.11. klo 23:59)-->
+Tehtävät Teamsissa (DL 29.11. klo 23:59)
 
 &nbsp;
 

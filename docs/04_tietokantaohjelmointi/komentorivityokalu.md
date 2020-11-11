@@ -1,5 +1,4 @@
-
-### SQLite-komentorivityökalun käyttö
+# SQLite-komentorivityökalun käyttö
 
 SQLite-komentorivityökalulla voit antaa kahdenlaisia komentoja:
 1. SQL-kyselyitä (normaali SQL-kysely, joka päättyy puolipisteeseen)

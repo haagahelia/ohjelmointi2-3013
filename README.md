@@ -10,7 +10,7 @@ Tämä video esittelee perusteet HTTP-palvelimen toiminnassa dynaamisten sivujen
 
 ## Projektin kopioiminen
 
-Voit tallentaa projektin lähdekoodit itsellesi GitHub-palvelusta monilla eri tavoilla. Yksinkertaisimmillaan voit tallentaa sen [zip-pakettina](https://github.com/haagahelia/embedded-tomcat-template/archive/master.zip), jonka tuot itsellesi Eclipseen import-ominaisuudella. 
+Voit tallentaa projektin lähdekoodit itsellesi GitHub-palvelusta monilla eri tavoilla. Yksinkertaisimmillaan voit tallentaa sen [zip-pakettina](https://github.com/ohjelmointi2/embedded-tomcat-template/archive/master.zip), jonka tuot itsellesi Eclipseen import-ominaisuudella. 
 
 Mikäli haluat käyttää omassa työssäsi versionhallintaa, voit kloonata projektin joko [Eclipsen Git-pluginin](https://www.google.com/search?q=git+clone+eclipse) tai jonkin ulkoisen [Git-käyttöliittymän](https://www.google.com/search?q=git+bash+clone) avulla. Toinen vaihtoehto on luoda tästä projektista linkitetty kopio, eli ["fork", jossa voit kokeilla vapaasti omia muutoksiasi](https://github.community/t5/Support-Protips/The-difference-between-forking-and-cloning-a-repository/ba-p/1372).
 
