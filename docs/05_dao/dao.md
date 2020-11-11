@@ -73,67 +73,80 @@ Tällä videolla parannamme ShoppingListApp-sovelluksemme rakennetta hyödyntäm
 Lue DAO-suunnittelumallin esittely esimerkkikoodeineen osoittessa [https://www.tutorialspoint.com/design_pattern/data_access_object_pattern.htm](https://www.tutorialspoint.com/design_pattern/data_access_object_pattern.htm). Kyseisen tutoriaalin koodiesimerkit eivät hyödynnä oikeaa tietokantaa, vaan tavallista `ArrayList`-listaa. Vastaavalla tavalla toteutettu listapohjainen DAO-luokka ostoslistasta on nähtävissä esimerkkisovelluksen lähdekoodeissa: [FakeShoppingListItemDao.java](https://github.com/haagahelia/ShoppingListExample/blob/master/src/main/java/database/FakeShoppingListItemDao.java).
 
 
+
 ## Palautettava tehtävä
 
-### JDBCShoppingListItemDao-luokka
+Tällä kertaa jatkamme edellisessä JDBC-aiheessa aloittamaamme ostoslistasovellusta, joka hyödyntää `shoppingList.sqlite`-tietokantaa ja siinä olevaa `ShoppingListItem`-tietokantataulua. Aikaisemman toteutuksen sijaan ohjelman logiikka halutaan nyt jäsennellä uudelleen siten, että ohjelman käyttöliittymä on erillään ohjelman tietokantalogiikasta. Käyttöliittymä ja tietokantakerros (DAO) kommunikoivat keskenään tavallisten Java-olioiden, kuten listojen ja ShoppingListItem-olioiden avulla. Ratkaisusi ei tarvitse olla laajuudeltaan tai toimivuudeltaan täydellinen, vaan myös osittain toimivat ratkaisut arvostellaan.
 
-Toteuta videolla esitellyn `ShoppingListItem`-tietokantataulun CRUD-operaatiot videolla 4 käsiteltyyn DAO-luokkaan nimeltä `JDBCShoppingListItemDao`. 
+Varsinaisen DAO-osuuden lisäksi tehtävänannossa on kaksi vapaaehtoista bonustehtävää: ympäristömuuttujien hyödyntäminen sekä tietokantalogiikan yksikkötestaus. Nämä syventävät tehtävät eivät ole kurssin oppimistavoitteiden kannalta pakollisia, mutta ne syventävät kurssin aiheita ammatillisesti hyödyllisillä tavoilla.
 
-Voit käyttää DAO-luokkasi pohjana alla esitettyä keskeneräistä luokkaa. Muuta tarvittaessa yksityiskohdat, kuten package, vastaamaan omaa projektiasi:
+
+### Model-luokka
+
+Kaikki tietokannasta luetut tiedot mallinnetaan DAO-mallissa olio-ohjelmointiparadigman mukaisesti olioina, joten tarvitset myös uutta `ShoppingListItem`-luokkaa. Tämän luokan oliot mallintavat yksittäisiä tietokannan tuoterivejä, eli ohjelman dataa. Vastaavista luokista käytetään usein termejä [bean, business object tai entity](https://en.wikipedia.org/wiki/Business_object).
+
+Jokaisella ostoslistan rivillä on sekä `id` että tuotteen nimi `title`, joten lisää nämä tietueet myös omaan `ShoppingListItem`-luokkaasi. Lisäksi tarvitset konstruktoreja, gettereitä ja settereitä, jotka voit toteuttaa oman ohjelmasi tarpeiden mukaisesti.
+
+
+### DAO-luokka
+
+DAO-mallissa tietokantaoperaatiot kirjoitetaan omaan luokkaansa, joka palauttaa metodeistaan tavallisia Java-olioita. Tämän ohjelman tapauksessa DAO-luokkasi palauttaa edellä esiteltyjä ShoppingListItem-olioita sekä yksitellen että listoina. Toteuta ShoppingListItemDao-luokka ja sen tarvitsemat tietokantaa käsittelevät metodit alla esitetyn keskeneräisen rungon mukaisesti. Muuta tarvittaessa yksityiskohdat vastaamaan omaa projektiasi:
 
 ```java
 // tiedosto JDBCShoppingListItemDao.java
-package database;
+
+package database; // muuta tämä tarvittaessa
 
 import java.util.List;
 
 import model.ShoppingListItem;
 
-/**
- * TODO: Complete the implementation of this DAO-class 
- * by implementing database operations for each of the 
- * CRUD methods.
- */
 public class JDBCShoppingListItemDao implements ShoppingListItemDao {
 
     @Override
     public List<ShoppingListItem> getAllItems() {
+        // TODO: Toteuta tämä metodi
         return null;
     }
 
     @Override
     public ShoppingListItem getItem(long id) {
+        // TODO: Toteuta tämä metodi
         return null;
     }
 
     @Override
     public boolean addItem(ShoppingListItem newItem) {
+        // TODO: Toteuta tämä metodi
         return false;
     }
 
     @Override
     public boolean removeItem(ShoppingListItem item) {
+        // TODO: Toteuta tämä metodi
         return false;
     }
 
 }
 ```
 
-Huomaa, että `JDBCShoppingListItemDao` on JDBC-teknologiaa hyödyntävä luokka, joka toteuttaa `ShoppingListItemDao`-rajapinnan:
+Tutustu tarvittaessa vielä videoon 4, jossa käsitellään tämän luokan toimintaa ja sen yhteyttä `ShoppingListApp`-ohjelmaluokkaan.
+
+### DAO-luokan rajapinta
+
+Edellä esitetty `JDBCShoppingListItemDao` on JDBC-teknologiaa hyödyntävä luokka, joka toteuttaa `ShoppingListItemDao`-rajapinnan:
 
 ```java
-public class JDBCShoppingListItemDao implements ShoppingListItemDao {
+public class JDBCShoppingListItemDao implements ShoppingListItemDao 
                                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-}
 ```
 
-Itse rajapinnan määrittelyssä tai nimeämisessä ei ole otettu kantaa siihen, ladataanko tieto tietokannasta, tiedostosta tai vaikka verkosta. Kaikkien metodien edessä esiintyy `@Override`-annotaatio, joka tarkoittaa, että kyseinen metodi on määritetty kyseisessä rajapinnassa. 
-
-Tallenna itsellesi myös luokan tarvitsema rajapinta:
+Kaikkien luokan metodien edessä esiintyy `@Override`-annotaatio, joka tarkoittaa sitä, että kyseinen metodi on määritetty luokan toteuttamassa rajapinnassa. Tallenna itsellesi myös luokan tarvitsema rajapinta:
 
 ```java
 // tiedosto ShoppingListItemDao.java
-package database;
+
+package database; // muuta tämä tarvittaessa
 
 import java.util.List;
 
@@ -151,32 +164,28 @@ public interface ShoppingListItemDao {
 }
 ```
 
-Muuta tarvittaessa yksityiskohdat, kuten `package`, vastaamaan omaa projektiasi. Mikäli rajapinnat eivät ole sinulle täysin tuttuja, riittää että tiedät, että rajapinta määrittelee metodit, jotka sen toteuttavien luokkien on toteutettava samoilla parametriarvoilla  ja paluuarvoilla.
+Muuta jälleen yksityiskohdat, kuten package, vastaamaan omaa projektiasi. Mikäli rajapinnat eivät ole sinulle tässä vaiheessa täysin tuttuja, riittää että tiedät, että rajapinta määrittelee metodit, jotka sen toteuttavien luokkien on toteutettava samoilla parametriarvoilla ja paluuarvoilla.
 
 
-### ShoppingListItem-luokka
-
-Kaikki tietokannasta luetut tiedot mallinnetaan DAO-mallissa olio-ohjelmointiparadigman mukaisesti olioina, joten tarvitset myös uutta `ShoppingListItem`-luokkaa. Tämän luokan oliot mallintavat yksittäisiä tietokannan tuoterivejä, eli ohjelman dataa. Vastaavista luokista käytetään usein termejä [bean, business object tai entity](https://en.wikipedia.org/wiki/Business_object).
-
-Jokaisella ostoslistan rivillä on sekä `id` että tuotteen nimi `title`, joten lisää nämä tietueet myös omaan `ShoppingListItem`-luokkaasi. 
-
-
-### DAO-metodien toteuttaminen
+### DAO-luokan metodien toteuttaminen
 
 Toteuta DAO-luokkaasi `ShoppingListItem`-olioita käsittelevät metodit seuraavien kuvausten mukaisesti.
 
 
 #### getAllItems()
 
-Toteuta tämä metodi siten, että metodin sisällä luetaan tietokantataulun kaikki rivit, ja niistä luodaan rivejä vastaavat `ShoppingListItem`-oliot. Laita oliot metodin sisällä listalle, ja palauta lista lopuksi metodista. Jos tietokannassa ei ole lainkaan rivejä, palauta tyhjä lista.
+Toteuta tämä metodi siten, että metodin sisällä luetaan tietokantataulun kaikki rivit, ja niistä luodaan rivejä vastaavat `ShoppingListItem`-oliot. Laita oliot metodin sisällä listalle, ja palauta lista lopuksi metodista. Jos tietokannassa ei ole lainkaan rivejä, palauta tyhjä lista. Katso tarvittaessa vinkkejä yllä esitetyltä videolta "DAO-käsitteen esittely ja ostoslistan DAO-luokat".
+
 
 #### getItem(long id)
 
 Toteuta tämä metodi siten, että metodin sisällä etsit riviä, jonka `id`-sarakkeen arvona on annettu arvo. Jos vastaava rivi löytyy, luo uusi `ShoppingListItem`-olio ja palauta se. Muussa tapauksessa palauta `null`.
 
+
 #### addItem(ShoppingListItem lisattava)
 
 Toteuta tämä metodi siten, että metodin sisällä lisäät tietokantaan uuden rivin. Lisättävän rivin `title`-sarakkeen arvoksi laitetaan metodille annetun olion `title`.
+
 
 #### removeItem(ShoppingListItem poistettava)
 
@@ -185,9 +194,9 @@ Toteuta tämä metodi siten, että metodin sisällä poistat tietokannasta metod
 
 #### Extra: lisätyn rivin automaattisen id:n selvittäminen
 
-`addItem`-metodin on tarkoitus lisätä uusi rivi tietokantaan. Tällöin voi olla tarpeellista, että päivität `ShoppingListItem`-oliolle `id`-arvoksi tietokantaan lisätyn uuden rivin id:n.
+SQLite-tietokantamme huolehtii automaattisesti sinne lisättyjen rivien `id`-arvojen generoinnista kasvavassa järjestyksessä. `addItem`-metodia kutsuttaessa voi olla tarpeellista, että päivität lisättävälle `ShoppingListItem`-oliolle `id`-arvoksi sitä vastaavan automaattisesti generoidun id-arvon.
 
-Voit lisäyksen jälkeen selvittää lisätyn rivin id:n `Statement.RETURN_GENERATED_KEYS`-arvon ja `.getGeneratedKeys()`-metodin avulla seuraavasti:
+Voit selvittää insert-komennon jälkeen lisätyn rivin id:n `Statement.RETURN_GENERATED_KEYS`-arvon ja `.getGeneratedKeys()`-metodin avulla seuraavasti:
 
 ```java
 // By Yishai & Lukas Eder, cc by-sa 4.0. https://stackoverflow.com/a/1376241/12748248
@@ -196,23 +205,26 @@ String sql = "INSERT INTO table (column1, column2) values(?, ?)";
 PreparedStatement stmt = conn.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS);
 stmt.executeUpdate();
 
+// haetaan generoidut pääavaimet
 ResultSet rs = stmt.getGeneratedKeys();
 rs.next();
 
+// lisäämämme rivin id saadaan kutsumalla getInt(1)
 int automaticallyGeneratedId = rs.getInt(1);
 ```
 
-Tutustu aiheeseen tarkemmin [StackOverflow-keskustelussa](https://stackoverflow.com/questions/1376218/is-there-a-way-to-retrieve-the-autoincrement-id-from-a-prepared-statement).
+Voit tutustua aiheeseen tarkemmin tässä [StackOverflow-keskustelussa](https://stackoverflow.com/questions/1376218/is-there-a-way-to-retrieve-the-autoincrement-id-from-a-prepared-statement).
 
 
 ### Ostoslistasovelluksen liittäminen DAO-luokkaan
 
 Muuta tunnilla esiteltyä ja edellisessä tehtävässä kehittämääsi `ShoppingListApp`-ostoslistasovellusta siten, että **tietokantakyselyitä ei suoriteta enää samassa luokassa käyttöliittymän kanssa**. 
 
-Sen sijaan käyttöliittymäluokkasi tulee hyödyntää DAO-luokkaa tietokannan käsittelyyn ja toimia olio-ohjelmointikäytäntöjen mukaisesti hyödyntäen listoja ja `ShoppingListItem`-olioiden metodeja.
+Sen sijaan käyttöliittymäluokkasi tulee hyödyntää uutta DAO-luokkaa tietokannan käsittelyyn ja toimia olio-ohjelmointikäytäntöjen mukaisesti hyödyntäen listoja ja `ShoppingListItem`-olioita.
 
+----
 
-### Extra 1: kovakoodatut ympäristökohtaiset asetukset ympäristömuuttujiin
+### Vapaahetoinen tehtävä 1: ympäristömuuttujat
 
 *Tämä osa on valinnainen, mutta sitä suositellaan, mikäli olet saanut kaikki tähänastiset harjoitukset tehtyä.*
 
@@ -250,15 +262,17 @@ Voit soveltaa edellä esitettyä esimerkkiä omassa koodissasi tai kopioida sen 
 
 Määrittele siis edellä mainitun ohjeen mukaisesti itsellesi Eclipseen ympäristömuuttuja `JDBC_DATABASE_URL`, joka sisältää JDBC-yhteysrivin esimerkiksi muodossa `jdbc:sqlite:c:\polku\tiedosto.sqlite`.
 
-### Extra 2: DAO-luokan testaaminen JUnit-testillä
+----
+
+### Vapaaehtoinen tehtävä 2: DAO-luokan testaaminen JUnit-testillä
 
 *Tämä osa on valinnainen, mutta sitä suositellaan, mikäli olet saanut kaikki tähänastiset harjoitukset tehtyä.*
 
 Nyt kun tietokannan sijainti on konfiguroitavissa ympäristömuuttujilla, voit toteuttaa DAO-luokkasi metodeille yksikkötestit, jotka käyttävät eri tietokantaa kuin varsinainen `ShoppingListApp`-ohjelmaluokka. 
 
-Luo itsellesi testejä varten kopio SQLite-tietokannasta (tiedostosta `shoppingList.sqlite`). Näin voit poistaa ja lisätä rivejä testeissä ilman, että se vaikuttaa ohjelman normaaliin käyttöön.
+Luo itsellesi testejä varten kopio SQLite-tietokannasta (tiedostosta `shoppingList.sqlite`). Näin voit poistaa ja lisätä rivejä testeissäsi ilman, että se vaikuttaa ohjelman normaaliin käyttöön.
 
-Aseta Eclipseen testiluokan suoritusasetuksista ympäristömuuttujaan testitietokannan sijainti edellisen vaiheen ohjeen mukaisesti, esim. `jdbc:sqlite:c:\polku\testit\tiedosto.sqlite`.
+Aseta Eclipseen testiluokan suoritusasetuksista ympäristömuuttujaan testitietokannan sijainti edellisen vaiheen ohjeen mukaisesti, esim. `jdbc:sqlite:c:\sqlite\testit\shoppingListTest.sqlite`.
 
 #### Tietokannan alustaminen testeissä
 
@@ -266,7 +280,7 @@ Tietokantaa hyödyntävän koodin testaaminen voi olla vaikeaa, mikäli tietokan
 
 Voit kirjoittaa testiluokkaasi testien alustuksen erilliseen metodiin [`@BeforeEach`](https://howtodoinjava.com/junit5/before-each-annotation-example/)-annotaation avulla. JUnit suorittaa `@BeforeEach`-metodisi automaattisesti ennen jokaista `@Test`-metodia, joten tietokannassa on ennen jokaista testiä aina ennalta tiedossa oleva sisältö.
 
-Voit lainata omaan testiisi alla esitettyä `@BeforeEach`-metodia, joka tyhjentää ensin `ShoppingListItem`-taulun ja lisää tauluun kaksi riviä ennen jokaista testiä:
+Voit lainata omaan testiisi alla esitettyä `@BeforeEach`-metodia, joka tyhjentää ensin `ShoppingListItem`-taulun ja sen jälkeen lisää tauluun kaksi riviä ennen jokaista testiä:
 
 ```java
 class JDBCShoppingListItemDaoTest {
@@ -297,6 +311,6 @@ class JDBCShoppingListItemDaoTest {
 
 ## Tehtävän palauttaminen
 
-Palauta kaikki tehtävässä kirjoittamasi lähdekoodit Teamsiin määräaikaan mennessä. Palauta tiedostot yksittäin, eli ei pakattuna.
+Ratkaisusi ei tarvitse olla laajuudeltaan tai toimivuudeltaan täydellinen, vaan myös osittain toimivat ratkaisut arvostellaan. Osittain ratkaistut palautukset arvostellaan suhteessa niiden toimivuuteen ja valmiusasteeseen.
 
-Muistakaa kysyä kaikissa tehtäviin liittyvissä aiheissa Teamsissa!
+Palauta kaikki tehtävissä kirjoittamasi lähdekoodit Teamsiin määräaikaan mennessä. Palauta tiedostot yksittäin, eli ei pakattuna. Muista myös, että voit kysyä kaikissa tehtäviin liittyvissä aiheissa Teamsissa!
