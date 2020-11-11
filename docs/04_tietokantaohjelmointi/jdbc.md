@@ -157,7 +157,9 @@ Class.forName("org.sqlite.JDBC");
 
 ## Tehtävä: tietokantapohjainen ostoslistasovellus 1/2
 
-Tämä on kaksiosaisen tehtävän ensimmäinen vaihe, joka palautetaan Teamsiin yhdessä seuraavan tehtävän kanssa. Tarkemmat palautusohjeet löydät seuraavan aiheen lopusta. Muista, että voit kysyä Teamsissa neuvoja tehtävään.
+Tämä on kaksiosaisen tehtävän ensimmäinen vaihe, joka palautetaan Teamsiin yhdessä seuraavan DAO-tehtävän kanssa. Tehtävän ratkaisemiseksi sinulle voi olla hyödyllistä tutustua myös videoon ["ShoppingListApp-sovelluksen ensimmäinen vaihe"](https://web.microsoftstream.com/video/8efb239a-4700-444a-a4a8-f6ef9bac10e9).
+
+Tarkemmat palautusohjeet löydät seuraavan aiheen lopusta. Muista, että voit kysyä Teamsissa neuvoja tehtävään.
 
 
 ### Ostoslista ja CRUD-operaatiot

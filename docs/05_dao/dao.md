@@ -5,11 +5,22 @@
 
 Tähän mennessä kurssia olemme tutustuneet ymmärrettävän ja ylläpidettävän koodin kirjoittamiseen, koodin testaamiseen ja tietokantaohjelmointiin. Seuraavaksi rakennamme pienen tietokantaa hyödyntävän komentorivisovelluksen, jonka logiikkaa on mahdollista uudelleenkäyttää ja testata.
 
-Lopulta tavoitteenamme on sovellus, joka on ensinnäkin toimiva, mutta sen lisäksi ylläpidettävissä ja laajennettavissa elinkaarensa aikana. Seuraavissa vaiheissa jatkammekin saman sovelluksen kehittämistä web-pohjaiseksi palveluksi. Voit tutustua tavoittelemaamme lopputulokseen jo etukäteen osoitteessa [http://shoppinglist-example.herokuapp.com/](http://shoppinglist-example.herokuapp.com/)!
+Lopulta tavoitteenamme on sovellus, joka on ensinnäkin toimiva, mutta sen lisäksi ylläpidettävissä ja laajennettavissa elinkaarensa aikana. Seuraavissa vaiheissa jatkammekin saman sovelluksen kehittämistä web-pohjaiseksi palveluksi. Voit tutustua tavoittelemaamme lopputulokseen jo etukäteen osoitteessa [https://shoppinglist-example.herokuapp.com/](https://shoppinglist-example.herokuapp.com/)!
+
+**Huom!** Videoiden katsomiseksi sinun täytyy kirjautua sisään Microsoft Stream -palveluun Haaga-Helian käyttäjätunnuksellasi.
 
 <!--## Malliratkaisu
 
 Tämän tehtävän palautusaika on umpeutunut. Voit katsoa malliratkaisun [tältä videolta](https://web.microsoftstream.com/video/61360881-77bb-4610-b22c-4a6ef3b298a6).-->
+
+
+## Video 1: [JDBC-aiheen kertaus](https://web.microsoftstream.com/video/aea9daea-9811-4ba2-bd14-943658e381a1) <small>13:03</small>
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/aea9daea-9811-4ba2-bd14-943658e381a1?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tällä videolla kerrataan edellisessä aiheessa käsitellyt JDBC-aiheeseen liittyvät käsitteet ja työkalut kuten ajuri, tietokantatiedosto, build path, SQLite tools, yhteysosoite ja prepared statement. Mikäli edellisen JDBC-aiheen sisältö ehti jo unohtua, sinun kannattaa aloittaa tästä videosta.
+
+&nbsp;
 
 
 ## DAO (Data Access Object)
@@ -18,53 +29,40 @@ Ohjelman rakenteen ja arkkitehtuurin suunnittelemiseksi on hyviä tunnettuja ja 
 
 Tietokantalogiikan eriyttämiseksi muusta koodista käytetään usein ns. **DAO**-mallia:
 
-> "DAO stands for **Data Access Object**. DAO Design Pattern is used to separate the data persistence logic in a separate layer. This way, the service remains completely in dark about how the low-level operations to access the database is done. This is known as the principle of **Separation of Logic**."
+> *"DAO stands for **Data Access Object**. DAO Design Pattern is used to separate the data persistence logic in a separate layer. This way, the service remains completely in dark about how the low-level operations to access the database is done. This is known as the principle of **Separation of Logic**."*
 >
-> [*DAO Design Pattern*](https://www.journaldev.com/16813/dao-design-pattern)
-
-## Videot
-
-**Huom!** Näiden videoiden katsomiseksi sinun täytyy kirjautua sisään Microsoft Stream -palveluun Haaga-Helian käyttäjätunnuksellasi.
+> JournalDEV. DAO Design Pattern. [https://www.journaldev.com/16813/dao-design-pattern](https://www.journaldev.com/16813/dao-design-pattern)
 
 
-**[JDBC-aiheen kertaus](https://web.microsoftstream.com/video/aea9daea-9811-4ba2-bd14-943658e381a1)** 13:03
-
-<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/aea9daea-9811-4ba2-bd14-943658e381a1?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
-
-Tällä videolla kerrataan edellisessä aiheessa käsitellyt JDBC-aiheeseen liittyvät käsitteet ja työkalut kuten ajuri, tietokantatiedosto, build path, SQLite tools, yhteysosoite ja prepared statement. 
-
-&nbsp;
-
-
-**[Intro DAO-patterniin](https://web.microsoftstream.com/video/ec6e052c-ba95-4c59-975f-6322c81097e6?st=33)** 3:53
+## Video 2: [Intro DAO-patterniin](https://web.microsoftstream.com/video/ec6e052c-ba95-4c59-975f-6322c81097e6?st=33) <small>3:53</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/ec6e052c-ba95-4c59-975f-6322c81097e6?st=33&amp;autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tällä videolla esitellään motivaatio tietokantapohjaisen Java-ohjelman rakenteen parantamiseksi DAO-kehitysmallin avulla. 
+Tällä videolla esitellään motivaatio tietokantapohjaisen Java-ohjelman rakenteen parantamiseksi DAO-kehitysmallin avulla. Videolla käsiteltävän luokan `TietokantaanYhdistaminen.java` löydät [täältä](../04_tietokantaohjelmointi/videoiden_lahdekoodit).
 
 &nbsp;
 
 
-**[ShoppingListApp-sovelluksen ensimmäinen vaihe](https://web.microsoftstream.com/video/8efb239a-4700-444a-a4a8-f6ef9bac10e9)** 41:41
+## Video 3: [ShoppingListApp-sovelluksen ensimmäinen vaihe](https://web.microsoftstream.com/video/8efb239a-4700-444a-a4a8-f6ef9bac10e9) <small>41:41</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/8efb239a-4700-444a-a4a8-f6ef9bac10e9?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tällä videolla toteutamme ShoppingListApp-sovelluksen käyttöliittymän ensimmäisiä komentoja switch-case-rakenteella.
+Tällä videolla toteutamme ShoppingListApp-sovelluksen käyttöliittymän ensimmäisiä komentoja [switch-case-rakenteella](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html). Videoilla esiintyvä PowerPoint-esitys on ladattavissa [tästä](../04_tietokantaohjelmointi/jdbc.pdf). Käyttöliittymän erillinen ohje löytyy [täältä](../04_tietokantaohjelmointi/ostoslista-kayttoliittyma).
 
-Videoilla esiintyvä [PowerPoint-esitys on ladattavissa tästä](../04_tietokantaohjelmointi/jdbc.pdf).
+Videon lopussa käsitellään `finally`-lohkon käyttämistä JDBC-resurssien sulkemiseen kyselyn tekemisen jälkeen. Vaikka videon alkuosa olisi sinulle jo tuttua, katso yhteyksien sulkemista koskeva osuus kohdasta 29:50 alkaen.
 
 &nbsp;
 
 
-**[DAO-käsitteen esittely ja ostoslistan DAO-luokat](https://web.microsoftstream.com/video/0c7e026d-5064-4ceb-8afc-58940bfeced7)** 27:48
+## Video 4: [DAO-käsitteen esittely ja ostoslistan DAO-luokat](https://web.microsoftstream.com/video/0c7e026d-5064-4ceb-8afc-58940bfeced7) <small>27:48</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/0c7e026d-5064-4ceb-8afc-58940bfeced7?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
 Tällä videolla parannamme ShoppingListApp-sovelluksemme rakennetta hyödyntämällä DAO-luokkaa. Videolla hyödynnämme seuraavaa model-luokkaa ja rajapintaa:
 
-[ShoppingListItem.java](https://github.com/haagahelia/ShoppingListExample/blob/master/src/main/java/model/ShoppingListItem.java)
+* [ShoppingListItem](https://github.com/haagahelia/ShoppingListExample/blob/master/src/main/java/model/ShoppingListItem.java)-luokka
 
-[ShoppingListItemDao.java](https://github.com/haagahelia/ShoppingListExample/blob/master/src/main/java/database/ShoppingListItemDao.java)
+* [ShoppingListItemDao](https://github.com/haagahelia/ShoppingListExample/blob/master/src/main/java/database/ShoppingListItemDao.java)-rajapinta
 
 
 &nbsp;
@@ -79,7 +77,7 @@ Lue DAO-suunnittelumallin esittely esimerkkikoodeineen osoittessa [https://www.t
 
 ### JDBCShoppingListItemDao-luokka
 
-Toteuta oppitunnilla esitellyn `ShoppingListItem`-tietokantataulun CRUD-operaatiot uuteen DAO-luokkaan nimeltä `JDBCShoppingListItemDao`. 
+Toteuta videolla esitellyn `ShoppingListItem`-tietokantataulun CRUD-operaatiot videolla 4 käsiteltyyn DAO-luokkaan nimeltä `JDBCShoppingListItemDao`. 
 
 Voit käyttää DAO-luokkasi pohjana alla esitettyä keskeneräistä luokkaa. Muuta tarvittaessa yksityiskohdat, kuten package, vastaamaan omaa projektiasi:
 

@@ -104,4 +104,6 @@ default:
 }
 ```
 
+Voit lukea switch/case -rakenteesta lisää [Oraclen oppimateriaalista](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/switch.html).
+
 Koska ohjelman halutaan toimivan toistaiseksi ja kysyvän käyttäjän syötettä aina uudelleen, on edellä esitetyt syötteen kyselyt ja ehtorakenteet toteutettava jonkin toistorakenteen sisään.
