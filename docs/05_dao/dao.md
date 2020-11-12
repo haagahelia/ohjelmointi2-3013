@@ -250,7 +250,7 @@ Ympäristömuuttujat ovat eräänlainen käyttöjärjestelmäkohtainen Map-tieto
 - private static final String JDBC_URL = "jdbc:sqlite:c:\\sqlite\\shoppingList.sqlite";
 ```
 
-Alemmalla rivillä merkkijono ei siis ole enää "kovakoodattuna", vaan se määritellään ympäristömuuttujiin avaimella **JDBC_DATABASE_URL**. Avaimena voitaisiin käyttää periaatteessa mitä vain merkkijonoa, mutta tässä käyttämämme **JDBC_DATABASE_URL** noudattaa mm. [Heroku-sovellusalustan ympäristömuuttujakäytäntöä](https://devcenter.heroku.com/articles/connecting-to-relational-databases-on-heroku-with-java#using-the-database_url-in-plain-jdbc).
+Ylemmällä rivillä merkkijono ei siis ole enää "kovakoodattuna", vaan se määritellään ympäristömuuttujiin avaimella **JDBC_DATABASE_URL**. Avaimena voitaisiin käyttää periaatteessa mitä vain merkkijonoa, mutta tässä käyttämämme **JDBC_DATABASE_URL** noudattaa mm. [Heroku-sovellusalustan ympäristömuuttujakäytäntöä](https://devcenter.heroku.com/articles/connecting-to-relational-databases-on-heroku-with-java#using-the-database_url-in-plain-jdbc).
 
 Alla olevassa esimerkissä dao-luokkaan on luotu uusi yksityinen `connect`-niminen metodi yhteyden luomiseksi, jota muut saman luokan metodit kutsuvat. Tällainen metodi voi olla hyödyllinen myös omassa koodissasi. `connect`-metodi käyttää yhteysosoitteena ympäristömuuttujasta haettua yhteysosoitetta, eikä kovakoodattua merkkijonoa:
 
