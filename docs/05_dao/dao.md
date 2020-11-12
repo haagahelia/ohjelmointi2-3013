@@ -239,7 +239,21 @@ Yleinen tapa ratkaista edellä esitetty ongelma on asettaa ympäristökohtaisest
 
 #### Ympäristömuuttujien hyödyntäminen
 
-Ympäristömuuttujien arvoja voidaan Javassa lukea `System.getenv`-metodilla. Alla olevassa esimerkissä dao-luokkaan on luotu `connect`-niminen metodi yhteyden luomiseksi, jota muut saman luokan metodit kutsuvat. `connect`-metodi käyttää yhteysosoitteena ympäristömuuttujasta haettua yhteysosoitetta, eikä kovakoodattua merkkijonoa:
+Ympäristömuuttujat ovat eräänlainen käyttöjärjestelmäkohtainen Map-tietorakenne, jossa eri arvoja voidaan käsitellä avainten, eli ympäristömuuttujien nimien, avulla. Ympäristömuuttujien arvoja voidaan Javassa lukea `System.getenv`-metodilla esimerkiksi seuraavasti. 
+
+```diff
+
++ // merkkijono luetaan ympäristömuuttujasta:
++ private static final String JDBC_URL = System.getenv("JDBC_DATABASE_URL");
+
+- // kovakoodattu merkkijono:
+- private static final String JDBC_URL = "jdbc:sqlite:c:\\sqlite\\shoppingList.sqlite";
+```
+
+Alemmalla rivillä merkkijono ei siis ole enää "kovakoodattuna", vaan se määritellään ympäristömuuttujiin avaimella **JDBC_DATABASE_URL**. Avaimena voitaisiin käyttää periaatteessa mitä vain merkkijonoa, mutta tässä käyttämämme **JDBC_DATABASE_URL** noudattaa mm. [Heroku-sovellusalustan ympäristömuuttujakäytäntöä](https://devcenter.heroku.com/articles/connecting-to-relational-databases-on-heroku-with-java#using-the-database_url-in-plain-jdbc).
+
+Alla olevassa esimerkissä dao-luokkaan on luotu uusi yksityinen `connect`-niminen metodi yhteyden luomiseksi, jota muut saman luokan metodit kutsuvat. Tällainen metodi voi olla hyödyllinen myös omassa koodissasi. `connect`-metodi käyttää yhteysosoitteena ympäristömuuttujasta haettua yhteysosoitetta, eikä kovakoodattua merkkijonoa:
+
 
 ```java
 import java.sql.Connection;
@@ -250,19 +264,20 @@ public class JDBCShoppingListItemDao implements ShoppingListItemDao {
     // read the database connection String from an environment variable:
     private static final String JDBC_URL = System.getenv("JDBC_DATABASE_URL");
 
-    private Connection connect throws SQLException () {
+    private Connection connect() throws SQLException {
         return DriverManager.getConnection(JDBC_URL);
     }
 }
 ``` 
 
-*Tämä esimerkki noudattaa [Heroku-sovellusalustan ympäristömuuttujakäytäntöä](https://devcenter.heroku.com/articles/connecting-to-relational-databases-on-heroku-with-java#using-the-database_url-in-plain-jdbc).*
+Kun koodi on asetettu lukemaan tietokannan sijainti ympäristömuuttujasta, täytyy tämä sijainti lisätä seuraavaksi `JDBC_DATABASE_URL`-nimiseen ympäristömuuttujaan.
+
 
 #### Ympäristömuuttujien asettaminen Eclipsessä
 
-Voit soveltaa edellä esitettyä esimerkkiä omassa koodissasi tai kopioida sen itsellesi suoraan. Muutos edellyttää lähdekoodin muuttamisen lisäksi sitä, että siirrät aikaisemmin koodissa olleen kovakoodatun yhteysosoitteen Eclipsen suoritusasetuksiin. Voit Eclipsessä muokata ohjelmasi suoritusympäristöä seuraavan ohjeen mukaan: [https://examples.javacodegeeks.com/desktop-java/ide/eclipse/eclipse-environment-variable-setup-example/](https://examples.javacodegeeks.com/desktop-java/ide/eclipse/eclipse-environment-variable-setup-example/).
+Voit Eclipsessä lisätä ohjelmallesi ympäristömuuttujia tämän [Stack Overflow -ketjun](https://stackoverflow.com/a/12810433) ohjeiden mukaisesti. Pidempi ohje löytyy tarvittaessa esimerkiksi [javacodegeeks.com:ista](https://examples.javacodegeeks.com/desktop-java/ide/eclipse/eclipse-environment-variable-setup-example/).
 
-Määrittele siis edellä mainitun ohjeen mukaisesti itsellesi Eclipseen ympäristömuuttuja `JDBC_DATABASE_URL`, joka sisältää JDBC-yhteysrivin esimerkiksi muodossa `jdbc:sqlite:c:\polku\tiedosto.sqlite`.
+Määrittele siis edellä mainitun ohjeen mukaisesti itsellesi Eclipseen ympäristömuuttuja `JDBC_DATABASE_URL`, joka sisältää JDBC-yhteysrivin esimerkiksi muodossa `jdbc:sqlite:c:\polku\tiedosto.sqlite`. Huomaa, että koska ympäristömuuttuja ei ole Javan merkkijono, ei sen ympärille kirjoiteta lainausmerkkejä eikä kenoviivaa `\` kirjoiteta tuplana ~~`\\`~~.
 
 Vaihtoehtoisesti ympäristömuuttujia voidaan määritellä koko järjestelmän tasolla [Windowsissa](https://docs.oracle.com/en/database/oracle/r-enterprise/1.5.1/oread/creating-and-modifying-environment-variables-on-windows.html#GUID-DD6F9982-60D5-48F6-8270-A27EC53807D0), [Linuxissa](https://www.google.com/search?q=linux+set+environment+variable) ja [MacOS:ssa](https://www.google.com/search?q=macos+set+environment+variable). Tätä tapaa ei kuitenkaan suositella tällä kurssilla.
 
