@@ -260,9 +260,11 @@ public class JDBCShoppingListItemDao implements ShoppingListItemDao {
 
 #### Ympäristömuuttujien asettaminen Eclipsessä
 
-Voit soveltaa edellä esitettyä esimerkkiä omassa koodissasi tai kopioida sen itsellesi suoraan. Muutos edellyttää lähdekoodin muuttamisen lisäksi sitä, että siirrät aikaisemmin koodissa olleen kovakoodatun yhteysosoitteen Eclipsen suoritusasetuksiin. Voit Eclipsessä muokata ohjelmasi suoritusympäristöä seuraavan ohjeen mukaan: https://examples.javacodegeeks.com/desktop-java/ide/eclipse/eclipse-environment-variable-setup-example/.
+Voit soveltaa edellä esitettyä esimerkkiä omassa koodissasi tai kopioida sen itsellesi suoraan. Muutos edellyttää lähdekoodin muuttamisen lisäksi sitä, että siirrät aikaisemmin koodissa olleen kovakoodatun yhteysosoitteen Eclipsen suoritusasetuksiin. Voit Eclipsessä muokata ohjelmasi suoritusympäristöä seuraavan ohjeen mukaan: [https://examples.javacodegeeks.com/desktop-java/ide/eclipse/eclipse-environment-variable-setup-example/](https://examples.javacodegeeks.com/desktop-java/ide/eclipse/eclipse-environment-variable-setup-example/).
 
 Määrittele siis edellä mainitun ohjeen mukaisesti itsellesi Eclipseen ympäristömuuttuja `JDBC_DATABASE_URL`, joka sisältää JDBC-yhteysrivin esimerkiksi muodossa `jdbc:sqlite:c:\polku\tiedosto.sqlite`.
+
+Vaihtoehtoisesti ympäristömuuttujia voidaan määritellä koko järjestelmän tasolla [Windowsissa](https://docs.oracle.com/en/database/oracle/r-enterprise/1.5.1/oread/creating-and-modifying-environment-variables-on-windows.html#GUID-DD6F9982-60D5-48F6-8270-A27EC53807D0), [Linuxissa](https://www.google.com/search?q=linux+set+environment+variable) ja [MacOS:ssa](https://www.google.com/search?q=macos+set+environment+variable). Tätä tapaa ei kuitenkaan suositella tällä kurssilla.
 
 ----
 
