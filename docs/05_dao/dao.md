@@ -80,6 +80,8 @@ Tällä kertaa jatkamme edellisessä JDBC-aiheessa aloittamaamme ostoslistasovel
 
 Varsinaisen DAO-osuuden lisäksi tehtävänannossa on kaksi vapaaehtoista bonustehtävää: ympäristömuuttujien hyödyntäminen sekä tietokantalogiikan yksikkötestaus. Nämä syventävät tehtävät eivät ole kurssin oppimistavoitteiden kannalta pakollisia, mutta ne syventävät kurssin aiheita ammatillisesti hyödyllisillä tavoilla.
 
+💡 Tehtävänannossa ei ole kuvailtu tarkemmin mahdollisia yksityisia apumetodeja tai apuluokkia, jotka voivat tehdä koodistasi helpommin ymmärrettävää tai ylläpidettävää. Voit tehtävänannossa mainittujen luokkien ja metodien lisäksi luoda esimerkiksi `Database`-luokan, jonne sijoitat tietokannan yhteyksien avaamiseen ja sulkemiseen liittyvän logiikan. Vaihtoehtoisesti voit toteuttaa halutessasi DAO-luokkaasi erilliset metodit yhteyksien avaamiseksi ja resurssien sulkemiseksi, jotta tätä samaa logiikkaa ei tarvitse toistaa kaikissa tietokantaa käsittelevissä metodeissa.
+
 
 ### Model-luokka
 
@@ -314,6 +316,7 @@ class JDBCShoppingListItemDaoTest {
 
 ## Tehtävän palauttaminen
 
+Palauta kaikki tehtävissä kirjoittamasi lähdekoodit Teamsiin määräaikaan mennessä. Palauta tiedostot yksittäin, eli ei pakattuna. Muista myös, että voit kysyä kaikissa tehtäviin liittyvissä aiheissa Teamsissa!
+
 Ratkaisusi ei tarvitse olla laajuudeltaan tai toimivuudeltaan täydellinen, vaan myös osittain toimivat ratkaisut arvostellaan. Osittain ratkaistut palautukset arvostellaan suhteessa niiden toimivuuteen ja valmiusasteeseen.
 
-Palauta kaikki tehtävissä kirjoittamasi lähdekoodit Teamsiin määräaikaan mennessä. Palauta tiedostot yksittäin, eli ei pakattuna. Muista myös, että voit kysyä kaikissa tehtäviin liittyvissä aiheissa Teamsissa!
