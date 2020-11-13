@@ -96,7 +96,7 @@ Voit ladata itsellesi kyseisen `sqlite3.exe`-komentorivityökalun osoitteesta: [
 
 Tällä videolla esitellään Javan luokat, joita tarvitset tietokantayhteyksien ja -kyselyiden muodostamiseksi. 
 
-Videolla esiintyvän `shoppingList.sqlite`-tietokantatiedoston voit ladata itsellesi [kurssin GitHub-repositoriosta](https://github.com/haagahelia/ohjelmointi2-3013/blob/master/sql/shoppingList.sqlite?raw=true). Videolla valmistuvan lähdekooditiedoston `TietokantaanYhdistaminen.java` löydät [täältä](./videoiden_lahdekoodit). Videolla esiintyvä [PowerPoint-esitys on ladattavissa tästä](./jdbc.pdf).
+Videolla esiintyvän `shoppingList.sqlite`-tietokantatiedoston voit ladata itsellesi [kurssin GitHub-repositoriosta](https://github.com/haagahelia/ohjelmointi2-3013/blob/main/sql/shoppingList.sqlite?raw=true). Videolla valmistuvan lähdekooditiedoston `TietokantaanYhdistaminen.java` löydät [täältä](./videoiden_lahdekoodit). Videolla esiintyvä [PowerPoint-esitys on ladattavissa tästä](./jdbc.pdf).
 
 &nbsp;
 
@@ -168,7 +168,7 @@ Tällä viikolla sinun tulee toteuttaa Java-ohjelma, joka toimii käyttöliittym
 
 Käyttöliittymän kautta tulee voida tehdä CRUD-operaatiot tietojen päivittämistä lukuun ottamatta (Create, Read, ~~Update~~ & Delete).
 
-Ostoslistan sisällöksi riittää kutakin tuoteriviä kohden yksilöllinen `id` sekä ostettavan tuotteen nimi (`title`). Voit hyödyntää tässä tehtävässä valmista [SQLite-tietokantatiedostoa](https://github.com/haagahelia/ohjelmointi2-3013/blob/master/sql/shoppingList.sqlite?raw=true), johon on ajettu seuraava luontikäsky ja muutama esimerkkirivi:
+Ostoslistan sisällöksi riittää kutakin tuoteriviä kohden yksilöllinen `id` sekä ostettavan tuotteen nimi (`title`). Voit hyödyntää tässä tehtävässä valmista [SQLite-tietokantatiedostoa](https://github.com/haagahelia/ohjelmointi2-3013/blob/main/sql/shoppingList.sqlite?raw=true), johon on ajettu seuraava luontikäsky ja muutama esimerkkirivi:
 
 ```sql
 CREATE TABLE ShoppingListItem (
@@ -177,7 +177,7 @@ CREATE TABLE ShoppingListItem (
 );
 ```
 
-Valmiin tietokantatiedoston voit ladata itsellesi [tästä](https://github.com/haagahelia/ohjelmointi2-3013/blob/master/sql/shoppingList.sqlite?raw=true). Tallenna tiedosto johonkin hakemistoon, jonka osoite on helposti kopioitavissa Java-koodiisi (esim. `C:\sqlite\shpopingList.sqlite` tai `/home/omanimi/sqlite/shoppingList.sqlite`).
+Valmiin tietokantatiedoston voit ladata itsellesi [tästä](https://github.com/haagahelia/ohjelmointi2-3013/blob/main/sql/shoppingList.sqlite?raw=true). Tallenna tiedosto johonkin hakemistoon, jonka osoite on helposti kopioitavissa Java-koodiisi (esim. `C:\sqlite\shpopingList.sqlite` tai `/home/omanimi/sqlite/shoppingList.sqlite`).
 
 Varmista myös, että olet varmasti ladannut edellä [olevan ohjeistuksen mukaisesti](#jdbcn-sqlite-ajuri) SQLite-ajurin ja olet sijoittanut sen lib-kansioon, joka on projektisi build pathissa. 
 

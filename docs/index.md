@@ -294,7 +294,7 @@ Yrityspostinumeroita käsittelevässä esimerkissä hyödynnetty tekstimuotoinen
 
 ## SQLite-tietokanta-ajuri
 
-Tietokanta-ajuri `sqlite-jdbc-3.30.1.jar` noudattaa lisenssiä [Apache License version 2.0](http://www.apache.org/licenses/). Lisätiedot: [https://xerial.org/software/](https://xerial.org/software/)
+Tietokanta-ajuri `sqlite-jdbc-\*.jar` noudattaa lisenssiä [Apache License version 2.0](http://www.apache.org/licenses/). Lisätiedot: [https://xerial.org/software/](https://xerial.org/software/)
 
 
 ## Chinook-tietokanta
