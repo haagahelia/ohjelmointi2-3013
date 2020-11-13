@@ -151,10 +151,21 @@ public class DayOfYear {
 }
 ```
 
+Lisää tarpeen mukaan luokkaan `package`-rivi vastaamaan oman Java-projektisi hakemistorakennetta.
+
 Yksinkertaisuudessaan `dayOfYear`-metodi saa parametreinaan päivämäärän kolmena kokonaislukuna, ja palauttaa annetun päivämäärän järjestysnumeron kyseisenä vuonna (1-366). 
 
 Metodissa on oletettavasti bugeja, jotka tulee löytää omilla testeillä. Saatat lisäksi huomata luokan koodaustyylissä merkittäviä heikkouksia, joihin paneudutaan tehtävässä 3.
 
+### Staattisen metodin kutsumisesta
+
+`dayOfYear`-metodin otsikossa esiintyy avainsana `static`, joten se on **staattinen luokkametodi**:
+
+> *"Koska luokkametodi ei liity mihinkään olioon, ei sitä kutsuta oliometodien tapaan olionNimi.metodinNimi(), vaan sen kutsumisessa (saman luokan sisällä) käytetään pelkkää metodin nimeä. Mikäli luokkametodin koodi on eri luokan sisällä kuin sitä kutsuva metodi, voi luokkametodia kutsua muodossa LuokanNimi.staattisenMetodinNimi().*"
+>
+> Agile Education Research -tutkimusryhmä. [Luokka- ja oliometodit: määre static](https://ohjelmointi-19.mooc.fi/osa-6/1-luokka-ja-oliometodit). [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fi)
+
+`dayOfYear`-metodin kutsu omasta luokastasi käsin tehdään siis luokan nimen avulla, esimerkiksi `DayOfYear.dayOfYear(12, 31, 2020)`.
 
 ## Vaihe 1: kirjoita dayOfYear-metodille JUnit-yksikkötestit
 
