@@ -154,16 +154,12 @@ Tällä videolla opettelemme välittämään dataa servletiltä JSP-sivulle muod
 
 Tämä video esittelee perusteet HTTP-palvelimen toiminnassa dynaamisten sivujen (servlet) käsittelyssä. Servlettien rakenne sekä yhteys servlettien ja Tomcatin välillä esitetään tällä videolla varsin selkeällä tavalla.
 
-&nbsp;
-
 
 **[YouTube: JSTL tutorial part 1](https://youtu.be/KmREMEhj5eE)**
 
 <!--[![YouTube: JSTL tutorial part 1](https://img.youtube.com/vi/KmREMEhj5eE/hq3.jpg)](https://youtu.be/KmREMEhj5eE)-->
 
 Tämä video esittelee Java-muuttujien välittämisen JSP-sivuille ja niiden arvojen näyttämisen sivulla.  
-
-&nbsp;
 
 
 **[YouTube: JSTL Tutorial part 2 Core Tags](https://youtu.be/R0EnI9_ZMA0)**
@@ -172,8 +168,6 @@ Tämä video esittelee Java-muuttujien välittämisen JSP-sivuille ja niiden arv
 
 Video esittelee, miten JSTL tagikirjasto lisätään JSP-sivulle `taglib`-direktiivin avulla. Opit myös käyttämään `c:out` ja `c:forEach` tageja. Video näyttää myös konkreettisesti, miten lista olioita voidaan välittää servletiltä JSP-sivulle ja miten sillä olevat Java-oliot saadaan esitettyä sivulla HTML-muodossa.
 
-&nbsp;
-
 
 **[YouTube: Servlet and JSP Tutorial. Get and Post](https://youtu.be/_6ISkXSC1js)**
 
@@ -181,19 +175,15 @@ Video esittelee, miten JSTL tagikirjasto lisätään JSP-sivulle `taglib`-direkt
 
 Tämä video esittelee HTML-lomakkeen lähettämisen palvelimelle POST- ja GET-metodeilla sekä servlettien `doPost`- ja `doGet`-metodit. **Huom!** Videossa käytetään `web.xml`-tiedostoa, jota et tarvitse, mikäli käytät `@WebServlet`-annotaatiota projektipohjan ohjeistuksen mukaisesti.
 
-&nbsp;
-
 
 **[Jenkov.com: Java Servlets](http://tutorials.jenkov.com/java-servlets/index.html)**
 
 Tämän tutoriaalin kappaleet 1-9 ovat Ohjelmointi 2 -kurssin kannalta hyvää sisältöä.
 
-&nbsp;
 
 **[Mozilla: HTTP Messages](https://developer.mozilla.org/en-US/docs/Web/HTTP/Messages)**
 
 Tämä Mozillan kehittäjäsivu esittelee lyhyesti webin taustalla olevan HTTP-protokollan toimintaa.
-
 
 
 
