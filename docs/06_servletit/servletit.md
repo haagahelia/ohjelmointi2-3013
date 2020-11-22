@@ -14,7 +14,7 @@ Tällä viikolla päätavoitteena on tutustua Javan web-kehityksessä käytettä
 * Servlet
 * JSP: JavaServer Pages
 * Tomcat
-* (Git-versionhallinta)
+* Git-versionhallinta
 
 
 <!--## Malliratkaisu
@@ -75,8 +75,7 @@ Tällä videolla luomme projektiin itsellemme uuden kehityshaaran ja viemme sen 
 &nbsp;
 
 
-
-## MVC-malli (Model, View, Controller)
+## MVC-arkkitehtuuri (Model, View, Controller)
 
 > *"Web-sovellusten suunnittelussa noudatetaan useita arkkitehtuurimalleja. Tyypillisimpiä näistä ovat MVC-arkkitehtuuri sekä kerrosarkkitehtuuri. Kummassakin perusperiaatteena on vastuiden jako selkeisiin osakokonaisuuksiin.*
 >
@@ -88,6 +87,10 @@ Tällä videolla luomme projektiin itsellemme uuden kehityshaaran ja viemme sen 
 
 Tällä kurssilla sovellamme MVC-mallia siten, että **käsittelijät toteutetaan Servlet-luokilla** ja **näkymät toteutetaan JSP-sivuina** (JavaServer Pages). Malleina tulemme seuraavasta viikosta alkaen käyttämään aikaisemmilla viikoilla toteuttamiamme DAO- sekä ShoppingListItem-luokkia.
 
+
+## Servletit
+
+Seuraavilla videoilla käsittelemme servlet-luokkien erityispiirteitä, tiedonvälitystä selaimelta servlet-luokalle sekä Tomcat-palvelinohjelmiston hyödyntämistä omien servlettien kanssa.
 
 
 ### Video 4: [Servletin anatomia: HttpServlet, @WebServlet, doGet...](https://web.microsoftstream.com/video/c040b244-2592-46a4-b271-22af48a7b574) <small>19:40
