@@ -40,9 +40,13 @@ Projektipohjan dokumentaatio ja lähdekoodit löytyävt GitHub-palvelusta osoitt
 
 ## Kurssin projektipohja
 
-[Kurssin projektipohja](https://github.com/ohjelmointi2/embedded-tomcat-template) käyttää Tomcat-sovelluspalvelinta "upotettuna" Java-projektiisi (embedded Tomcat). Projekti on rakennettu siten, että sen riippuvuuksia hallitaan automaattisesti Maven-työkalun avulla. Maven-plugin löytyy onneksi Eclipsestä valmiiksi asennettuna, ja sen avulla Eclipse osaa asentaa mm. Tomcatin ja muut projektin mahdolliset riippuvuudet automaattisesti. Tomcatia voitaisiin käyttää myös lukuisilla muilla tavoilla, joten löydät mahdollisesti netistä ohjeita, jotka eivät täysin vastaa omia asetuksiasi ja asennustapojasi. 
+[Kurssin projektipohja](https://github.com/ohjelmointi2/embedded-tomcat-template) käyttää Tomcat-sovelluspalvelinta "upotettuna" Java-projektiisi (embedded Tomcat). Projekti on rakennettu siten, että sen riippuvuuksia hallitaan automaattisesti Maven-työkalun avulla. Maven-työkalun avulla projektin riippuvuudet, kuten web-palvelin, on mahdollista asentaa automaattisesti.
+
+Maven-plugin löytyy Eclipsestä valmiiksi asennettuna, joten et tarvitse Mavenin käyttämiseksi erillisiä asennuksia tai asetuksia. Eclipse osaa siis Mavenin kanssa asentaa mm. Tomcatin ja muut projektin mahdolliset riippuvuudet automaattisesti. Tomcatia voitaisiin käyttää myös lukuisilla muilla tavoilla, joten löydät mahdollisesti netistä ohjeita, jotka eivät täysin vastaa omia asetuksiasi ja asennustapojasi. 
 
 Projektipohjan asennustapa on todettu kohtuullisen helpoksi ja samat tavat ovat hyödynnettävissä myös muilla kehitystyökaluilla (esim. [VS Code](https://code.visualstudio.com/), [IntelliJ IDEA](https://www.jetbrains.com/idea/)) ja erilaisissa suoritusympäristöissä (esim. [Heroku-pilvialusta](https://devcenter.heroku.com/articles/create-a-java-web-application-using-embedded-tomcat), [Spring boot -sovelluskehys](https://www.springboottutorial.com/spring-boot-with-embedded-servers-tomcat-jetty)).
+
+Voit halutessasi lukea lisää Mavenista artikkelista ["Maven in 5 Minutes"](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) tai keskustelusta ["Is Maven similar to npm?"](https://stackoverflow.com/a/38392716)
 
 
 ### Video 2: [Maven ja Tomcat malliprojektissa](https://web.microsoftstream.com/video/527282e4-961e-453e-a350-af766e50559f) <small>15:31</small>
@@ -124,7 +128,7 @@ Tällä videolla opettelemme käsittelemään HTTP-pyynnön mukana tulevia param
 
 ## JSP-sivut
 
-Servlettien yhteydessä HTML-koodi halutaan eriyttää muusta Java-koodista omiksi tiedostoikseen. Näiden tiedostojen muoto on usein JSP, eli JavaServer Pages. Servletit voivat kutsua JSP-sivuja sisäisesti ja välittää niille tietoa, kuten sivuilla näytettäviä merkkijonoja tai muita olioita. Seuraavilla videoilla perehdymme dynaamisten HTML-muotoisten vastausten muodostamiseen verkkopalvelussamme.
+Servlettien yhteydessä HTML-koodi halutaan eriyttää muusta Java-koodista omiksi tiedostoikseen. Näiden HTML-tiedostojen muoto on usein JSP, eli JavaServer Pages. Servletit voivat kutsua JSP-sivuja sisäisesti ja välittää niille tietoa, kuten sivuilla näytettäviä merkkijonoja tai muita olioita. Seuraavilla videoilla perehdymme dynaamisten HTML-muotoisten vastausten muodostamiseen verkkopalvelussamme.
 
 
 ### Video 7: [Lomakkeen näyttäminen ja lomakedatan käsittely servletillä](https://web.microsoftstream.com/video/44037d9b-8237-4f63-9d45-75d35ccb447d) <small>18:27</small>
@@ -141,6 +145,8 @@ Tällä videolla luomme HTML-lomakkeen, jolla lähetämme dataa servletillemme. 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/72ecee3d-98b1-4d97-8a55-214fc4ca90a1?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
 Tällä videolla opettelemme välittämään dataa servletiltä JSP-sivulle muodostaaksemme HTML-sivuja dynaamisella sisällöllä.
+
+Lisätietoa JSP-sivuilla käytettävästä Expression Language -kielestä löydät Oraclen dokumentaatiosta ["Unified Expression Language"](https://docs.oracle.com/javaee/5/tutorial/doc/bnahq.html).
 
 &nbsp;
 
@@ -223,6 +229,11 @@ Välitä servletissä laskettu arvo, eli jäljellä olevien päivien määrä, t
 ![Christmas countdown](img/christmasCountdown.png)
 
 Arvojen ja pyynnön välittäminen servletiltä JSP-sivulle on esitelty projektipohjassa ja yllä videolla ["Datan välittäminen servletiltä JSP-sivulle"](https://web.microsoftstream.com/video/72ecee3d-98b1-4d97-8a55-214fc4ca90a1). Aiheesta löytyy myös [paljon muita ohjeita](https://www.google.com/search?q=pass+data+from+servlet+to+jsp+tutorial). Oppimistavoitteiden kannalta tärkeintä on, että päivien laskentaan liittyvä logiikka toteutetaan servletissä, josta tieto välitetään attribuuttina näkymälle (jsp-sivu).
+
+> *"Huomaa, että JSP-sivussa käytetyt attribuutit ovat täysin erillisiä servletin sisältämistä muuttujista ja niiden nimistä. Yhteys näiden kahden välille muodostuu ainoastaan setAttribute-metodin kutsujen myötä. Selkeyden vuoksi on kuitenkin hyvä idea nimetä sekä normaalit Java-muuttujat että JSP-sivun käyttämät attribuutit samaan tapaan."*
+>
+> [David Consuegra and others](http://advancedkittenry.github.io/credits.html). [Näkymien tekeminen ja JSP](https://advancedkittenry.github.io/koodaaminen/java/nakymat.html). [CC BY-SA](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US)
+
 
 **Huom!** Joudut käynnistämään palvelimesi uudelleen vähintään silloin, kun luot uuden servletin. Projektipohjan dokumentaatiossa on kuvattu [toimet palvelimen käynnistämiseksi ja uudelleenkäynnistämiseksi](https://github.com/ohjelmointi2/embedded-tomcat-template#palvelinohjelmiston-uudelleenk%C3%A4ynnistys).
 

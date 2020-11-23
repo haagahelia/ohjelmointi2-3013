@@ -75,11 +75,9 @@ Tehtävät Teamsissa (DL 29.11. klo 23:59)
 
 Verkkosovellusten osuuden ensimmäisellä viikolla toteutamme yksinkertaisia servlettejä päivämäärien laskemiseksi. Voimme halutessamme hyödyntää ensimmäisellä viikolla esiteltyä `dayOfYear`-metodia tai Javan valmiita päivämääräluokkia.
 
-Tämä aihe julkaistaan viikolla 48.
+[Siirry oppimateriaaliin ⇨](06_servletit/servletit)
 
-<!--[Siirry oppimateriaaliin ⇨](06_servletit/servletit)
-
-Tehtävät Teamsissa (DL 6.12. klo 23:59)-->
+Tehtävät Teamsissa (DL 6.12. klo 23:59)
 
 &nbsp;
 
