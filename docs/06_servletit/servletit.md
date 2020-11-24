@@ -32,7 +32,7 @@ Tämän tehtävän palautusaika on umpeutunut. Voit katsoa malliratkaisun lähde
 
 Tällä videolla tutustumme HTTP-protokollaan ja siihen liittyviin pyyntöihin ja vastauksiin. Tutustumme siihen, miten sovelluspalvelin välittää HTTP-pyynnöt Java-ohjelmallemme ja miten ohjelmamme vastaa pyyntöön siten, että vastaus päätyy käyttäjän selaimelle. Kloonaamme myös GitHubista projektipohjan, jota käytämme jatkossa web-sovelluksemme pohjana.
 
-Projektipohjan dokumentaatio ja lähdekoodit löytyävt GitHub-palvelusta osoitteesta [https://github.com/ohjelmointi2/embedded-tomcat-template](https://github.com/ohjelmointi2/embedded-tomcat-template).
+Projektipohjan dokumentaatio ja lähdekoodit löytyvät GitHub-palvelusta osoitteesta [https://github.com/ohjelmointi2/embedded-tomcat-template](https://github.com/ohjelmointi2/embedded-tomcat-template).
 
 &nbsp;
 
@@ -112,7 +112,16 @@ Videolla hyödynnetään tutoriaalia [http://tutorials.jenkov.com/java-servlets/
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/c26141c3-2681-45f6-8aef-8e40b72bff88?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tällä videolla nopeutamme servlettien kehityssykliä Tomcatin reload-ominaisuuden sekä Eclipsen debug-tilan avulla.
+Mikäli haluat nopeuttaa kehityssykliäsi, voit konfiguroida Tomcatin lataamaan muuttuneet luokat automaattisesti uudelleen tehtyäsi niihin muutoksia. Poista kommentit seuraavalta riviltä `Main.java`-tiedostossa ottaaksesi tämän ominaisuuden käyttöön:
+
+```diff
+- // webApp.setReloadable(true);
++ webApp.setReloadable(true);
+```
+
+Toinen keino tiedostojen muutosten nopeuttamiseksi on hyödyntää Eclipsen debug-tilaa ja sen ["hot code replace"-ominaisuutta](https://wiki.eclipse.org/FAQ_What_is_hot_code_replace%3F) yllä olevan videon esimerkkien mukaisesti.
+
+Monissa tapauksissa luokkien uudelleenlataaminen riittää, mutta uusia servlettejä lisätessäsi joudut yhä käynnistämään palvelimen itse uudelleen.
 
 &nbsp;
 
@@ -234,17 +243,14 @@ Arvojen ja pyynnön välittäminen servletiltä JSP-sivulle on esitelty projekti
 >
 > [David Consuegra and others](http://advancedkittenry.github.io/credits.html). [Näkymien tekeminen ja JSP](https://advancedkittenry.github.io/koodaaminen/java/nakymat.html). [CC BY-SA](http://creativecommons.org/licenses/by-sa/3.0/deed.en_US)
 
+**Muista palvelimen uudelleenkäynnistys**
 
-**Huom!** Joudut käynnistämään palvelimesi uudelleen vähintään silloin, kun luot uuden servletin. Projektipohjan dokumentaatiossa on kuvattu [toimet palvelimen käynnistämiseksi ja uudelleenkäynnistämiseksi](https://github.com/ohjelmointi2/embedded-tomcat-template#palvelinohjelmiston-uudelleenk%C3%A4ynnistys).
+Joudut käynnistämään palvelimesi uudelleen vähintään silloin, kun luot uuden servletin. Projektipohjan dokumentaatiossa on kuvattu [toimet palvelimen käynnistämiseksi ja uudelleenkäynnistämiseksi](https://github.com/ohjelmointi2/embedded-tomcat-template#palvelinohjelmiston-uudelleenk%C3%A4ynnistys).
 
-**Huom!** Mikäli haluat nopeuttaa kehityssykliäsi, voit konfiguroida Tomcatin lataamaan muuttuneet luokat automaattisesti uudelleen tehtyäsi niihin muutoksia. Monissa tapauksissa luokkien uudelleenlataaminen riittää, mutta uusia servlettejä lisätessäsi joudut yhä käynnistämään palvelimen itse uudelleen. Poista kommentit seuraavalta riviltä `Main.java`-tiedostossa ottaaksesi tämän ominaisuuden käyttöön:
 
-```diff
-- // webApp.setReloadable(true);
-+ webApp.setReloadable(true);
-```
+**The serializable class does not declare a static final serialVersionUID field of type long**
 
-**Huom!** Mikäli Java varoittaa luokkasi kanssa seuraavaa: *"The serializable class XYZ does not declare a static final serialVersionUID field of type long"*, voit jättää varoituksen huomioimatta. `serialVersionUID` nimistä muuttujaa käytetään luokasta luotujen olioiden versiointiin, lue tarvittaessa lisää [täältä](https://stackoverflow.com/a/285809).
+Mikäli Java varoittaa luokkasi kanssa seuraavaa: *"The serializable class XYZ does not declare a static final serialVersionUID field of type long"*, voit jättää varoituksen huomioimatta. `serialVersionUID` nimistä muuttujaa käytetään luokasta luotujen olioiden versiointiin, lue tarvittaessa lisää [täältä](https://stackoverflow.com/a/285809).
 
 
 ### Tehtävä 3: HTTP-pyynnön parametrien ja lomaketietojen hyödyntäminen
