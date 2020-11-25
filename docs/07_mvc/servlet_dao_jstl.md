@@ -2,9 +2,9 @@
 
 # Verkkosovellus kolmikerrosarkkitehtuurilla
 
-Tällä viikolla tavoitteinamme on rakentaa kolmikerroksinen web-sovellus, joka yhdistää tähän mennessä opettelemamme erilliset teknologiat loogiseksi kokonaisuudeksi.
+Tällä viikolla tavoitteinamme on rakentaa kolmikerrosarkkitehtuuria noudattava web-sovellus, joka yhdistää tähän mennessä opettelemamme erilliset tietokanta- ja web-teknologiat yhdeksi loogiseksi kokonaisuudeksi.
 
-Jatkat tällä viikolla edellisellä viikolla aloittamasi web-projektin kehittämistä.
+Jatkat siis tällä viikolla edellisellä viikolla aloittamasi web-projektin kehittämistä ja tarvitset myös shopping list -tietokantaluokkiasi. Mikäli aikaisemmat aiheet ovat jääneet sinulta kesken, voit hyödyntää tällä viikolla myös kurssin malliratkaisuja, jotka julkaistaan edellisten tehtävien määräajan päätyttyä.
 
 <!-- ## Malliratkaisu
 
@@ -20,31 +20,18 @@ Tämän tehtävän palautusaika on umpeutunut. Voit katsoa malliratkaisun tääl
 
 ## Kolmikerrosarkkitehtuuri
 
-Sovellusten kehitettävyyden ja ylläpidettävyyden kannalta on tärkeää, että ne noudattavat jotain tiettyä arkkitehtuuria ja että niissä erilliset loogiset kokonaisuudet on toteutettu toisistaan irrallaan. Meidän ostoslistasovelluksessamme mukailemme kolmikerrosarkkitehtuuria ja MVC-mallia:
+Sovellusten kehitettävyyden ja ylläpidettävyyden kannalta on tärkeää, että ne noudattavat jotain tiettyä arkkitehtuuria ja että niissä erilliset loogiset kokonaisuudet on toteutettu toisistaan irrallaan. Meidän ostoslistasovelluksessamme noudatamme kolmikerrosarkkitehtuuria ja MVC-mallia:
 
 > *"Three-tier architecture is a client-server software architecture pattern in which the user interface (presentation), functional process logic ("business rules"), computer data storage and data access are developed and maintained as independent modules, most often on separate platforms."*
 >
 > [Multitier architecture, Wikipedia](https://en.wikipedia.org/wiki/Multitier_architecture#Three-tier_architecture)
 
-Meidän ostoslistasovelluksemme kolme kerrosta ovat:
+Meidän ostoslistasovelluksemme kolme kerrosta ovat siis:
 
 1. Käyttöliittymäkerros (JSP ja JSTL)
-2. Sovelluslogiikka (Servletit)
-3. Datan tallennuskerros (DAO + JDBC)
+2. Looginen kerros (Servletit)
+3. Datan tallennuskerros (DAO, JDBC ja SQLite)
 
-
-
-## JSTL (JSP Standard Tag Library)
-
-Dynaamisten ominaisuuksien, kuten ehto- ja toistorakenteiden toteuttaminen JSP-sivuilla onnistuu kätevimmin hyödyntäen JSTL-kirjastoa, jonka avulla rakenteet voidaan toteuttaa XML-muotoisten tagien avulla. JSTL-kirjaston avulla voimme myös turvallisesti näyttää sivulla syötteinä saatuja merkkijonoja, jotka saattavat sisältää haitallista HTML-koodia.
-
-Tutustu itsenäisesti seuraavaan videoon, jossa esitellään tagikirjaston käyttöönotto sekä sen keskeisiä tageja:
-
-**YouTube: [JSTL Tutorial part 2 Core Tags](https://youtu.be/R0EnI9_ZMA0)**
-
-<!--[![JSTL Tutorial part 2 Core Tags](https://img.youtube.com/vi/R0EnI9_ZMA0/hq1.jpg)](https://youtu.be/R0EnI9_ZMA0)-->
-
-Tämä video esittelee, miten JSTL tagikirjasto lisätään JSP-sivulle `taglib`-direktiivin avulla. Opit myös käyttämään `c:out` ja `c:forEach` tageja. Video näyttää myös konkreettisesti, miten lista olioita voidaan välittää servletiltä JSP-sivulle ja miten sillä olevat Java-oliot saadaan esitettyä sivulla HTML-muodossa. Video on jatkoa viime viikon videolle [JSTL tutorial part 1](https://youtu.be/KmREMEhj5eE).
 
 
 ## DAO- ja Model-luokkien lisääminen projektiin
@@ -159,16 +146,31 @@ Itse riippuvuudet määritellään `<dependencies>`-tagin sisään, kukin riippu
 
 Tallennettuasi muutetun `pom.xml`-tiedoston Eclipse käynnistää Maven-pluginin asentaakseen uudet riippuvuudet. Varmuuden vuoksi aina tämän tiedoston muokkaamisen jälkeen kannattaa vielä klikata projektia Eclipsen hakemistopuussa hiiren kakkospainikkeella ja valita [Maven-valikosta kohta "Update Project"](https://stackoverflow.com/a/20547404).
 
+## JSTL (JSP Standard Tag Library)
+
+Dynaamisten ominaisuuksien, kuten ehto- ja toistorakenteiden toteuttaminen JSP-sivuilla onnistuu kätevimmin hyödyntäen JSTL-kirjastoa, jonka avulla rakenteet voidaan toteuttaa XML-muotoisten tagien avulla. JSTL-kirjaston avulla voimme myös turvallisesti näyttää sivulla syötteinä saatuja merkkijonoja, jotka saattavat sisältää haitallista HTML-koodia.
+
+Tutustu itsenäisesti seuraavaan videoon, jossa esitellään tagikirjaston käyttöönotto sekä sen keskeisiä tageja:
+
+**YouTube: [JSTL Tutorial part 2 Core Tags](https://youtu.be/R0EnI9_ZMA0)**
+
+<!--[![JSTL Tutorial part 2 Core Tags](https://img.youtube.com/vi/R0EnI9_ZMA0/hq1.jpg)](https://youtu.be/R0EnI9_ZMA0)-->
+
+Tämä video esittelee, miten JSTL tagikirjasto lisätään JSP-sivulle `taglib`-direktiivin avulla. Opit myös käyttämään `c:out` ja `c:forEach` tageja. Video näyttää myös konkreettisesti, miten lista olioita voidaan välittää servletiltä JSP-sivulle ja miten sillä olevat Java-oliot saadaan esitettyä sivulla HTML-muodossa. Video on jatkoa viime viikon videolle [JSTL tutorial part 1](https://youtu.be/KmREMEhj5eE).
+
 
 ## Video 2: [Tietokantapohjaisen servletin toteuttaminen ja tulosten näyttäminen JSP-sivulla](https://web.microsoftstream.com/video/515b523d-bc9b-4892-a2cf-78e75206e9a9) <small>58:31</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/515b523d-bc9b-4892-a2cf-78e75206e9a9?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tällä videolla lisäämme verkkopalvelumme tarvitsemat riippuvuudet Maven-työkalun avulla. Tietokantaluokat kopioidaan aikaisemmista harjoituksistamme, ja kopioinnin onnistuminen varmistetaan yksikkötesteillä. Videolla esitellään myös tyypillinen ongelma Tomcatin käynnistämisessä, joka johtuu siitä, että vanha Tomcat-suoritus on edelleen käynnissä taustalla (kohta 15:30).
+Tällä videolla lisäämme verkkopalvelumme tarvitsemat riippuvuudet Maven-työkalun avulla. Tietokantaluokat kopioidaan aikaisemmista harjoituksistamme, ja kopioinnin onnistuminen varmistetaan yksikkötesteillä. Lopulta näytämme tietokannasta löytyvät ostoslistan rivit HTML-muodossa JSP-sivulla.
 
-Toteutamme lisäksi uuden servletin, joka näyttää JSP-sivun ja JSTL-tagien avulla tietokannassa olevat ostoslistan rivit. Käymme läpi tyypilliset ongelmatilanteet ja ratkaisut Tomcatin käynnistysongelmiin ja servletteihin liittyen. 
+Videolla esitellään myös tyypillinen ongelma Tomcatin käynnistämisessä, joka johtuu siitä, että vanha Tomcat-suoritus on edelleen käynnissä taustalla (kohta 15:30).
 
-Videolla muokattavan [pom.xml-tiedoston, ShoppingListServlet-luokan ja list.jsp-tiedoston lähdekoodit löydät täältä](https://gist.github.com/swd1tn002/c2adb55f198846d6f44bf6d96275dead).
+Tärkeä aihe web-palvelun suojaamiseksi haitallisilta JavaScript-koodeilta (Cross Site Scripting, XSS) esitellään videolla kohdassa 44:13.
+
+
+<!--Videolla muokattavan [pom.xml-tiedoston, ShoppingListServlet-luokan ja list.jsp-tiedoston lähdekoodit löydät täältä](https://gist.github.com/swd1tn002/c2adb55f198846d6f44bf6d96275dead).-->
 
 &nbsp;
 
@@ -177,14 +179,18 @@ Videolla muokattavan [pom.xml-tiedoston, ShoppingListServlet-luokan ja list.jsp-
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/d4adda6c-9b93-4a0a-a92a-57067f3493fb?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tällä videolla toteutamme servletin, joka välittää JSP-sivulle useita attribuutteja. Tutustumme myös `c:if`-ehtorakenteisiin ja JSP-sivujen virheenkäsittelyyn. Videolla käsiteltävän [SummerCountdownServlet.java-luokan ja countdown.jsp-sivun löydät täältä](https://gist.github.com/swd1tn002/1a9eac1b32179a8411e6f611ef0f731a).
+Tällä videolla toteutamme servletin, joka välittää JSP-sivulle useita attribuutteja. Tutustumme myös `c:if`-ehtorakenteisiin ja JSP-sivujen virheenkäsittelyyn. 
+
+<!--Videolla käsiteltävän [SummerCountdownServlet.java-luokan ja countdown.jsp-sivun löydät täältä](https://gist.github.com/swd1tn002/1a9eac1b32179a8411e6f611ef0f731a).-->
 
 &nbsp;
 
 
 ## Tehtävät
 
-Näissä tehtävissä tarvitset aikaisempina viikkoina toteutettuja tietokantaluokkia. Mikäli tehtävät jäivät sinulta kesken tai et ole tyytyväinen koodisi toimintaan, voit käyttää tehtävän pohjana [malliratkaisun lähdekoodeja](/src/main/java/shoppinglist).
+Näissä tehtävissä tarvitset aikaisempina viikkoina toteutettuja tietokantaluokkia. Mikäli tehtävät jäivät sinulta kesken tai et ole tyytyväinen koodisi toimintaan, voit käyttää tehtävän pohjana malliratkaisun lähdekoodeja, jotka on julkaistu kurssin Teams-kanavalla JDBC- ja DAO-aiheiden tehtävän määräajan päätyttyä.
+
+Tehtävät liittyvät vahvasti edellä oleviin videoihin, joten videoiden katsominen on suositeltavaa.
 
 
 ### Osa 1: Toteuta ostoslistan sisällön hakeva servletti ja sen `doGet`-metodi
@@ -204,7 +210,7 @@ Toteuta uusi JSP-sivu ostoslistan tuotteiden listaamista varten. Yllä esimerkki
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 ```
 
-[Tehtävän videomateriaali (YouTube)](https://youtu.be/R0EnI9_ZMA0) näyttää, miten ostoslista voidaan käydä läpi `c:forEach`-tagin avulla ja miten tuoterivit tulostetaan turvallisesti `c:out`-tagin avulla.
+Ylempänä sivulta löytyvä video 2 näyttää, miten ostoslista voidaan käydä läpi `c:forEach`-tagin avulla ja miten tuoterivit tulostetaan turvallisesti `c:out`-tagin avulla.
 
 Sivun HTML-rakenteella ei periaatteessa ole tämän tehtävän kannalta merkitystä, eli voit näyttää ostoslistan sisällön valintasi mukaan esimerkiksi listaelementeillä tai taulukolla:
 
