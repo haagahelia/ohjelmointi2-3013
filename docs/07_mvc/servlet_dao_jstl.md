@@ -298,7 +298,7 @@ Pyynnön mukana välitetään käyttäjän kirjoittama tuotenimi, joka on palvel
 
 Tässä tapauksessa attribuutin arvona on `title`, joten se saadaan servletissä luettua esimerkiksi seuraavasti:
 
-```
+```java
 String itemTitle = req.getParameter("title");
 ```
 
