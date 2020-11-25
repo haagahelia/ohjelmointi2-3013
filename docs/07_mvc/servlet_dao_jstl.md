@@ -18,7 +18,7 @@ Tämän tehtävän palautusaika on umpeutunut. Voit katsoa malliratkaisun tääl
 
 
 
-## Kolmikerrosarkkitehtuuri
+## Sovelluksemme arkkitehtuuri
 
 Sovellusten kehitettävyyden ja ylläpidettävyyden kannalta on tärkeää, että ne noudattavat jotain tiettyä arkkitehtuuria ja että niissä erilliset loogiset kokonaisuudet on toteutettu toisistaan irrallaan. Meidän ostoslistasovelluksessamme noudatamme kolmikerrosarkkitehtuuria ja MVC-mallia:
 
@@ -26,17 +26,22 @@ Sovellusten kehitettävyyden ja ylläpidettävyyden kannalta on tärkeää, ett�
 >
 > [Multitier architecture, Wikipedia](https://en.wikipedia.org/wiki/Multitier_architecture#Three-tier_architecture)
 
-Meidän ostoslistasovelluksemme kolme kerrosta ovat siis:
+Model-View-Controller -suunnittelumallissa (MVC) sovelluksen eri vastuualueet eriytetään toisistaan sovelluksen sisällä kolmikerrosarkkitehtuurin mukaisesti malleihin, näkymiin, ja ohjauslogiikkaan. Tämä suunnittelumalli on tyypillinen erityisesti olio-ohjelmointiparadigmaa noudattavissa web-sovelluksissa ja suosittelen lukemaan aiheesta blogikirjoituksen ["MVC for dummies: malli, näkymä ja ohjain -arkkitehtuuri web-sovelluksissa " (Hurja, 2020)](https://www.hurja.fi/blogi/mvc-for-dummies-malli-nakyma-ja-ohjain-arkkitehtuuri-web-sovelluksissa/).
 
-1. Käyttöliittymäkerros (JSP ja JSTL)
-2. Looginen kerros (Servletit)
-3. Datan tallennuskerros (DAO, JDBC ja SQLite)
+Näiden arkkitehtuurimallien mukaisesti sovelluksemme kolme osakokonaisuutta ovat siis:
 
+1. datan tallennuskerros (model: dao, jdbc ja SQLite)
+2. käyttöliittymäkerros (view: jsp ja jstl)
+3. looginen kerros (controller: servlet)
+
+Seuraavissa kappaleissa ja videoissa käsittelemme jo aikaisemmin toteuttamamme datan tallennuskerroksen tuomisen osaksi web-sovellustamme.
 
 
 ## DAO- ja Model-luokkien lisääminen projektiin
 
-Olet aikaisemmassa tehtävässä luonut `ShoppingListITem`-luokan, joka mallintaa yksittäisiä tietokannassa olevia rivejä. Olet lisäksi luonut DAO-luokan, jonka avulla pystyt tekemään CRUD-operaatioita tietokantatauluusi. Tulet tässä tehtävässä tarvitsemaan näitä luokkia osana uutta sovellusta. Saat luokat helpoiten käyttöön web-projektissasi kopioimalla luokkien pakettirakenteen `src/main/java`-hakemiston alle. Valinnaisesti toteuttamasi JUnit-testiluokat puolestaan kuuluvat `src/test/java`-hakemiston alle.
+Olet aikaisemmassa tehtävässä luonut `ShoppingListITem`-luokan, joka mallintaa yksittäisiä tietokannassa olevia rivejä. Olet lisäksi luonut DAO-luokan, jonka avulla pystyt tekemään CRUD-operaatioita tietokantaasi. Tulet tällä viikolla tarvitsemaan näitä luokkia osana isompaa sovellusta. 
+
+Saat valmiit luokat helpoiten käyttöön web-projektissasi kopioimalla luokkien pakettirakenteen `src/main/java`-hakemiston alle. Mahdollisesti toteuttamasi JUnit-testiluokat puolestaan kuuluvat `src/test/java`-hakemiston alle.
 
 Ohjelmasi hakemistorakenne voi olla luokkien lisäämisen jälkeen esimerkiksi seuraava:
 
@@ -71,14 +76,14 @@ Ohjelmasi hakemistorakenne voi olla luokkien lisäämisen jälkeen esimerkiksi s
 │       │           JDBCShoppingListItemDaoTest.java
 ```
 
-**HUOM!** Mikäli käytit `JDBCShoppingListItemDao`-luokkasi kanssa ympäristömuuttujaa tietokannan osoitteen säilyttämisessä, joudut määrittelemään ympäristömuuttujan myös `Main`-luokan ympäristömuuttujiin.
+**HUOM!** Mikäli käytit `JDBCShoppingListItemDao`-luokkasi kanssa ympäristömuuttujaa tietokannan osoitteen säilyttämisessä, määrittele sama ympäristömuuttuja myös `launch.Main`-luokan ympäristömuuttujiin.
 
 
 ## Video 1: [Tietokantaluokkien tuominen web-sovellukseen](https://web.microsoftstream.com/video/3998be63-0576-44e2-8e05-fb3da6008789) <small>10:33</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/3998be63-0576-44e2-8e05-fb3da6008789?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tässä videossa lisäämme verkkopalveluumme aikaisemmalla viikolla toteuttamamme tietokantaluokat. Määrittelemme `Main`-luokallemme `JDBC_DATABASE_URL`-ympäristömuuttujan, jonka avulla verkkosovellus hyödyntää samaa tietokantaa kuin aikaisempi tekstikäyttöliittymämme.
+Tässä videossa lisäämme verkkopalveluumme aikaisemmalla viikolla toteuttamamme tietokantaluokat. Lisäämme `Main`-luokallemme `JDBC_DATABASE_URL`-ympäristömuuttujan, jonka avulla verkkosovellus hyödyntää samaa tietokantaa kuin aikaisempi tekstikäyttöliittymämme.
 
 Tällä videolla esiintyvät lähdekoodit löydät JDBC ja DAO -tehtävien malliratkaisuista Teamsissa.
 
@@ -88,14 +93,20 @@ Tällä videolla esiintyvät lähdekoodit löydät JDBC ja DAO -tehtävien malli
 
 ## Riippuvuuksien asentaminen
 
-Verkkoprojektissamme on käytössä Maven-automaatiotyökalu riippuvuuksien hallitsemiseksi. Sen avulla voimme lisätä tutut riippuvuudet, eli SQLite-ajurin ja JUnit-testikirjaston. Myös JSTL-tagikirjaston (JSP Standard Tag Library) asennus sujuu helpoiten lisäämällä se riippuvuutena `pom.xml`-tiedostoon. 
+Omien lähdekooditiedostojemme lisäksi tarvitsemme web-projektiimme sen ulkoiset riippuvuudet, eli SQLite-ajurin ja JUnit-testikirjaston. Projektipohjassa on valmiiksi käytössä Maven-automaatiotyökalu riippuvuuksien hallitsemiseksi. Aikaisempien riippuvuuksien ja uuden JSTL-tagikirjaston (JSP Standard Tag Library) asennus sujuu helpoiten lisäämällä se riippuvuutena Mavenin hyödyntämään `pom.xml`-tiedostoon. 
 
-Toinen vaihtoehto olisi tallentaa riippuvuudet .jar-paketteina (Java Archive), kuten aikaisemmin tällä kurssilla teimme SQLite-kirjaston kanssa.
+<!--Toinen vaihtoehto olisi tallentaa riippuvuudet .jar-paketteina (Java Archive), kuten aikaisemmin tällä kurssilla teimme SQLite-kirjaston kanssa.-->
 
 
-### pom.xml:n muokkaaminen
+### Riippuvuuksien määrittely pom.xml:ään
 
-`pom.xml`-projektitiedosto on normaali XML-tiedosto, jota voit muokata esimerkiksi Eclipsen tekstieditorilla. Riippuvuuksien versionumerot on tapana määritellä `<properties>`-tagin sisään ja itse riippuvuudet `<dependencies>`-tagin sisään. Lisää plus-merkillä merkityt rivit pom.xml-tiedostoosi properties-tagin sisään (jätä `+`-merkit pois rivien alusta.):
+Tomcat-projektipohjan juurihakemistossa sijaitseva `pom.xml`-projektitiedosto on normaali XML-tiedosto, jota voit muokata esimerkiksi Eclipsen tekstieditorilla. Avatessasi tiedostoa Eclipse saattaa avata sen "Overview"-näkymässä, jolloin voit vaihtaa näkymän klikkaamalla sen alalaidan `pom.xml`-välilehteä [tämän videon mukaisesti](https://javavids.com/video/open-xml-in-pomxml-by-default-in-eclipse).
+
+Tehdessäsi muutoksia ja tallentaessasi tiedoston Eclipsen Maven-lisäosa asentaa automaattisesti uudet riippuvuudet projektiisi.
+
+### Versionumeroiden määritteleminen
+
+Riippuvuuksien versionumerot on tapana määritellä projektitiedostoon `<properties>`-tagin sisään ja itse riippuvuudet `<dependencies>`-tagin sisään. Lisää plus-merkillä merkityt rivit pom.xml-tiedostoosi properties-tagin sisään (huom, jätä `+`-merkit pois rivien alusta):
 
 ```diff
  <properties>
@@ -108,13 +119,13 @@ Toinen vaihtoehto olisi tallentaa riippuvuudet .jar-paketteina (Java Archive), k
 +    <jstl.api.version>1.2</jstl.api.version>
 ```
 
-Tämä tapa esittää tiedoston uudet rivit vihreällä ja `+`-merkillä on myös gitin tapa esittää tiedostojen muutoksia. Lisätyt tagit määrittelevät seuraavat kolme uutta muuttujaa versionumeroita varten:
+Yllä käytetty tapa esittää tiedoston uudet rivit vihreällä sekä `+`-merkillä on myös gitin tapa esittää tiedostojen muutoksia. Lisätyt tagit määrittelevät seuraavat kolme uutta muuttujaa versionumeroita varten:
 
 Muuttuja                | Versionumero  | Tarkoitus
 ------------------------|---------------|----------
 sqlite.driver.version   | 3.30.1        | SQLite-ajuri JDBC-kirjastolle
 junit.jupiter.version   | 5.6.0         | JUnit-yksikkötestikirjasto
-jstl.api.version        | 1.2           | JSTL-tagikirjasto, jota tarvitset tässä tehtävässä
+jstl.api.version        | 1.2           | JSTL-tagikirjasto
 
 Itse riippuvuudet määritellään `<dependencies>`-tagin sisään, kukin riippuvuus omana `<dependency>`-tagina. Lisää seuraavat kolme riippuvuutta dependencies-tagin loppuun:
 
@@ -146,33 +157,33 @@ Itse riippuvuudet määritellään `<dependencies>`-tagin sisään, kukin riippu
 
 Tallennettuasi muutetun `pom.xml`-tiedoston Eclipse käynnistää Maven-pluginin asentaakseen uudet riippuvuudet. Varmuuden vuoksi aina tämän tiedoston muokkaamisen jälkeen kannattaa vielä klikata projektia Eclipsen hakemistopuussa hiiren kakkospainikkeella ja valita [Maven-valikosta kohta "Update Project"](https://stackoverflow.com/a/20547404).
 
+
 ## JSTL (JSP Standard Tag Library)
 
-Dynaamisten ominaisuuksien, kuten ehto- ja toistorakenteiden toteuttaminen JSP-sivuilla onnistuu kätevimmin hyödyntäen JSTL-kirjastoa, jonka avulla rakenteet voidaan toteuttaa XML-muotoisten tagien avulla. JSTL-kirjaston avulla voimme myös turvallisesti näyttää sivulla syötteinä saatuja merkkijonoja, jotka saattavat sisältää haitallista HTML-koodia.
+Dynaamisten ominaisuuksien, kuten ehto- ja toistorakenteiden toteuttaminen JSP-sivuilla onnistuu kätevimmin hyödyntäen edellä projektiimme lisättyä JSTL-kirjastoa. JSTL-kirjaston avulla esimerkiksi ehto- ja toistorakenteet voidaan toteuttaa JSP-sivuille XML-muotoisten tagien avulla (`c:if`- ja `c:forEach`-tagit). JSTL-kirjaston avulla voimme myös turvallisesti näyttää sivulla syötteinä saatuja merkkijonoja, jotka saattavat sisältää haitallista HTML-koodia (`c:out`-tagi).
 
-Tutustu itsenäisesti seuraavaan videoon, jossa esitellään tagikirjaston käyttöönotto sekä sen keskeisiä tageja:
+Katso seuraava video, jossa esitellään tagikirjaston käyttöönotto sekä sen keskeisiä tageja:
 
 **YouTube: [JSTL Tutorial part 2 Core Tags](https://youtu.be/R0EnI9_ZMA0)**
 
 <!--[![JSTL Tutorial part 2 Core Tags](https://img.youtube.com/vi/R0EnI9_ZMA0/hq1.jpg)](https://youtu.be/R0EnI9_ZMA0)-->
 
-Tämä video esittelee, miten JSTL tagikirjasto lisätään JSP-sivulle `taglib`-direktiivin avulla. Opit myös käyttämään `c:out` ja `c:forEach` tageja. Video näyttää myös konkreettisesti, miten lista olioita voidaan välittää servletiltä JSP-sivulle ja miten sillä olevat Java-oliot saadaan esitettyä sivulla HTML-muodossa. Video on jatkoa viime viikon videolle [JSTL tutorial part 1](https://youtu.be/KmREMEhj5eE).
+> *Tämä video esittelee, miten JSTL tagikirjasto lisätään JSP-sivulle `taglib`-direktiivin avulla. Opit myös käyttämään `c:out` ja `c:forEach` tageja. Video näyttää myös konkreettisesti, miten lista olioita voidaan välittää servletiltä JSP-sivulle ja miten sillä olevat Java-oliot saadaan esitettyä sivulla HTML-muodossa. Video on jatkoa viime viikon videolle [JSTL tutorial part 1](https://youtu.be/KmREMEhj5eE).*
 
 
 ## Video 2: [Tietokantapohjaisen servletin toteuttaminen ja tulosten näyttäminen JSP-sivulla](https://web.microsoftstream.com/video/515b523d-bc9b-4892-a2cf-78e75206e9a9) <small>58:31</small>
 
+Seuraavalla videolla lisäämme verkkopalvelumme tarvitsemat riippuvuudet ohjeen mukaisesti Maven-työkalun avulla. Tietokantaluokat kopioidaan aikaisemmista harjoituksistamme ja kopioinnin onnistuminen varmistetaan yksikkötesteillä. Lopulta näytämme tietokannasta löytyvät ostoslistan rivit HTML-muodossa JSP-sivulla:
+
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/515b523d-bc9b-4892-a2cf-78e75206e9a9?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tällä videolla lisäämme verkkopalvelumme tarvitsemat riippuvuudet Maven-työkalun avulla. Tietokantaluokat kopioidaan aikaisemmista harjoituksistamme, ja kopioinnin onnistuminen varmistetaan yksikkötesteillä. Lopulta näytämme tietokannasta löytyvät ostoslistan rivit HTML-muodossa JSP-sivulla.
-
-Videolla esitellään myös tyypillinen ongelma Tomcatin käynnistämisessä, joka johtuu siitä, että vanha Tomcat-suoritus on edelleen käynnissä taustalla (kohta 15:30).
+Videolla esitellään lisäksi tyypillinen ongelma Tomcatin käynnistämisessä, joka johtuu siitä, että vanha Tomcat-suoritus on edelleen käynnissä taustalla (kohta 15:30).
 
 Tärkeä aihe web-palvelun suojaamiseksi haitallisilta JavaScript-koodeilta (Cross Site Scripting, XSS) esitellään videolla kohdassa 44:13.
 
+&nbsp;
 
 <!--Videolla muokattavan [pom.xml-tiedoston, ShoppingListServlet-luokan ja list.jsp-tiedoston lähdekoodit löydät täältä](https://gist.github.com/swd1tn002/c2adb55f198846d6f44bf6d96275dead).-->
-
-&nbsp;
 
 
 ## Video 3: [JSP-sivujen ehtorakenteet ja "fail silently"-ominaisuus](https://web.microsoftstream.com/video/d4adda6c-9b93-4a0a-a92a-57067f3493fb) <small>31:21</small>
@@ -188,23 +199,23 @@ Tällä videolla toteutamme servletin, joka välittää JSP-sivulle useita attri
 
 ## Tehtävät
 
-Näissä tehtävissä tarvitset aikaisempina viikkoina toteutettuja tietokantaluokkia. Mikäli tehtävät jäivät sinulta kesken tai et ole tyytyväinen koodisi toimintaan, voit käyttää tehtävän pohjana malliratkaisun lähdekoodeja, jotka on julkaistu kurssin Teams-kanavalla JDBC- ja DAO-aiheiden tehtävän määräajan päätyttyä.
+Näissä tehtävissä tarvitset aikaisempina viikkoina toteutettuja tietokantaluokkia. Mikäli tehtävät jäivät sinulta kesken tai et ole tyytyväinen koodisi toimintaan, voit käyttää tehtävän pohjana malliratkaisun lähdekoodeja, jotka julkaistaan kurssin Teams-kanavalla tehtävien määräajan päätyttyä.
 
-Tehtävät liittyvät vahvasti edellä oleviin videoihin, joten videoiden katsominen on suositeltavaa.
+Tehtävät liittyvät vahvasti edellä esitettyihin videoihin, joten videoiden katsominen on suositeltavaa.
 
 
 ### Osa 1: Toteuta ostoslistan sisällön hakeva servletti ja sen `doGet`-metodi
 
-Tarvitset ostoslistan esittämistä varten uuden servletin, joka voi löytyä palvelimeltasi esimerkiksi juuresta (`/`) tai polusta (`/list`). Voit vapaasti valita haluamasi polun, joka määritellään kuten edellisessä tehtävässä `@WebServlet("/")`-annotaation avulla. Yllä esitetyssä esimerkkihakemistorakenteessa tämän servletin tiedostonimi on `ShoppingListServlet.java`.
+Tarvitset ostoslistan esittämistä varten uuden servletin, joka voi löytyä palvelimeltasi esimerkiksi juuresta (`/`) tai polusta (`/list`). Voit vapaasti valita haluamasi polun, joka määritellään kuten edellisessä tehtävässä, eli `@WebServlet("/")`-annotaation avulla. Ylempänä esitetyssä esimerkkihakemistorakenteessa tämän servletin tiedostonimi on `ShoppingListServlet.java`, mutta voit nimetä tiedoston haluamallasi tavalla.
 
-Tarvitset servletissä aikaisemmin toteuttamaasi DAO-luokkaa tuotteiden hakemista ja lisäämistä varten. Lisää servlet-luokkaan tarvittavat `import`-komennot DAO-luokkaa sekä sen hyödyntämää model-luokkaa varten.
+Tarvitset servletissä aikaisemmin toteuttamaasi DAO-luokkaa tuotteiden hakemista ja lisäämistä varten. Lisää servlet-luokkaan tarvittavat `import`-komennot DAO-luokkaa sekä model-luokkaa varten.
 
-`doGet`-metodin on tarkoitus hakea kaikki ostoslistan tuoterivit listana. Sen jälkeen servletin tulee välittää lista JSP-sivulle `HttpServletRequest`-olion `setAttribute`-metodin avulla. [Tämä YouTube-video](https://youtu.be/R0EnI9_ZMA0) havainnollistaa listan välittämisen JSP-sivulle sekä listan käyttämisen tagikirjaston avulla.
+`doGet`-metodin on tarkoitus hakea kaikki ostoslistan tuoterivit listana. Sen jälkeen servletin tulee välittää kyseinen lista seuraavassa osassa toteutettavalle JSP-sivulle `setAttribute`-metodin avulla. [Tämä YouTube-video](https://youtu.be/R0EnI9_ZMA0) havainnollistaa listan välittämisen JSP-sivulle sekä listan käyttämisen tagikirjaston avulla.
 
 
 ### Osa 2: Toteuta JSP-sivu ostoslistan sisällön esittämistä varten
 
-Toteuta uusi JSP-sivu ostoslistan tuotteiden listaamista varten. Yllä esimerkkihakemistorakenteessa tämän sivun tiedostonimi on `list.jsp`. Tällä JSP-sivulla tarvitset aikaisemmin asentamaasi **JSTL-kirjastoa**, joka otetaan käyttöön sivulla `taglib`-direktiivin avulla:
+Toteuta tietokannasta haettujen ostoslistan tuoterivien näyttämiseksi uusi JSP-sivu. Yllä esimerkkihakemistorakenteessa tämän sivun tiedostonimi on `list.jsp`, mutta voit nimetä tiedoston myös muulla tavalla. Tällä JSP-sivulla tarvitset aikaisemmin asentamaasi **JSTL-kirjastoa**, joka otetaan käyttöön sivulla `taglib`-direktiivin avulla:
 
 ```jsp
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -212,7 +223,7 @@ Toteuta uusi JSP-sivu ostoslistan tuotteiden listaamista varten. Yllä esimerkki
 
 Ylempänä sivulta löytyvä video 2 näyttää, miten ostoslista voidaan käydä läpi `c:forEach`-tagin avulla ja miten tuoterivit tulostetaan turvallisesti `c:out`-tagin avulla.
 
-Sivun HTML-rakenteella ei periaatteessa ole tämän tehtävän kannalta merkitystä, eli voit näyttää ostoslistan sisällön valintasi mukaan esimerkiksi listaelementeillä tai taulukolla:
+Sivun HTML-rakenteella ei ole tämän tehtävän kannalta suurta merkitystä, kunhan ratkaisusi on järkevää HTML-koodia. Voit näyttää ostoslistan sisällön valintasi mukaan esimerkiksi `<ul>`- ja `<li>`-listaelementeillä ([ohje](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/li)):
 
 ```html
 <!-- lista -->
@@ -222,6 +233,8 @@ Sivun HTML-rakenteella ei periaatteessa ole tämän tehtävän kannalta merkitys
     <li>Eggs</li>
 </ul>
 ```
+
+Vaihtoehtoisesti voit luoda `<table>`-taulukkorakenteen esimerkiksi seuraavasti ([ohje](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/table)):
 
 ```html
 <!-- taulukko -->
@@ -239,9 +252,13 @@ Sivun HTML-rakenteella ei periaatteessa ole tämän tehtävän kannalta merkitys
 
 ### Injektioilta suojautuminen (Cross Site Scripting, XSS)
 
-SQL-aiheen yhteydessä käytimme `PreparedStatement`-luokkaa välttääksemme tekstidatan tulkitsemisen SQL-lausekkeina (SQL-injektio). Koska **ostoslistan tuotteet ovat käyttäjien syöttämää dataa, myös ne saattavat sisältää mitä tahansa merkkijonoja**. On siis mahdollista, että käyttäjä kirjoittaa tuotteen nimeen **esimerkiksi HTML- tai JavaScript-koodia**, joka muuttaa sivun sisältöä haitallisesti toisen käyttäjän avatessa sivua (Cross Site Scripting, XSS). Voit lukea aiheesta lisää [täällä](https://owasp.org/www-community/attacks/xss/) (Open Web Application Security Project, OWASP).
+SQL-aiheen yhteydessä käytimme `PreparedStatement`-luokkaa välttääksemme tekstidatan tulkitsemisen SQL-lausekkeina (SQL-injektio). Koska **ostoslistan tuotteet ovat käyttäjien syöttämää dataa, myös ne saattavat sisältää mitä tahansa merkkijonoja**. On siis mahdollista, että käyttäjä kirjoittaa tuotteen nimeen **esimerkiksi HTML- tai JavaScript-koodia**, joka muuttaa sivun sisältöä haitallisesti toisen käyttäjän avatessa sivua. Tästä haavoittuvuudesta käytetään termiä Cross Site Scripting (XSS). Voit lukea aiheesta lisää [Open Web Application Security Project -projektin sivuilla (OWASP)](https://owasp.org/www-community/attacks/xss/).
 
 HTML-koodin yhteydessä onkin erittäin tärkeää huolehtia siitä, että kaikki dynaaminen teksti enkoodataan siten, että esimerkiksi kulmasulkeita `<` ja `>` ei tulkita osaksi HTML-tageja, vaan pelkiksi kirjainmerkeiksi. `c:out`-tagi huolehtii juuri tästä ja muuttaa esimerkiksi `<`-merkin ns. HTML-entiteetiksi `&lt;`, jonka selain tulkitsee aina kirjainmerkiksi.
+
+> *"An HTML entity is a piece of text ("string") that begins with an ampersand (&) and ends with a semicolon (;) . Entities are frequently used to display reserved characters (which would otherwise be interpreted as HTML code), and invisible characters (like non-breaking spaces)."*
+>
+> *MDN web docs. Entity. [https://developer.mozilla.org/en-US/docs/Glossary/Entity](https://developer.mozilla.org/en-US/docs/Glossary/Entity)*
 
 Esimerkiksi käyttäjän syöttämä tuotenimi `"Milk <script>alert('attack!');</script>"` ei siis saa tuottaa HTML-sivulle sisältöä:
 
@@ -252,10 +269,10 @@ Esimerkiksi käyttäjän syöttämä tuotenimi `"Milk <script>alert('attack!');<
 `c:out`-tagin avulla käyttäjän syöte voidaan muuttaa turvalliseksi:
 
 ```html
-<li>Milk &lt;script&gt;alert('attack!');&lt;/script&gt;</li>
+<li>Milk &lt;script&gt;alert(&#039;attack!&#039;);&lt;/script&gt;</li>
 ```
 
-Lue myös tarvittaessa keskustelu aiheesta ["what exactly does the &lt;c:out&gt; do?"](https://stackoverflow.com/q/291031) (StackOverflow)
+Lue myös tarvittaessa keskustelu aiheesta ["what exactly does the &lt;c:out&gt; do?"](https://stackoverflow.com/q/291031)
 
 
 ### Osa 3: Toteuta lomake ja `doPost`-metodi uuden rivin lisäämiseksi ostoslistalle
@@ -273,17 +290,32 @@ Voit lisätä lomakkeen samalle JSP-sivulle, jolla näytät myös tuotelistan. L
 
 Tällä `form`-tagilla ei ole `action`-attribuuttia, joten sen lähettäminen tekee `post`-tyyppisen HTTP-pyynnön samaan osoitteeseen, josta sivu on ladattu. Voit tarvittaessa määritellä eri osoitteen lisäämällä `action`-attribuutin.
 
-Pyynnön mukana välitetään käyttäjän kirjoittama tuotenimi, joka on palvelimella käsiteltävissä `title`-parametrin avulla. HTTP-parametrin nimi määräytyy `<input>`-elementin `name`-attribuutin mukaan.
+Pyynnön mukana välitetään käyttäjän kirjoittama tuotenimi, joka on palvelimella käsiteltävissä sillä nimellä, joka on määritetty kyseisen tekstikentän `name`-attribuutin arvoksi:
 
+```html
+<input name="title" />
+```
+
+Tässä tapauksessa attribuutin arvona on `title`, joten se saadaan servletissä luettua esimerkiksi seuraavasti:
+
+```
+String itemTitle = req.getParameter("title");
+```
 
 ### Lomaketietojen käsitteleminen palvelimella
 
-Lomakkeen lähetyksen jälkeen se käsitellään palvelimella `doPost`-käsittelijämetodilla. Jos et määritellyt lomakkeelle `action`-attribuuttia, tulee pyyntö samalle servletille, jonka `doGet`-metodi palautti selaimelle lomakkeen HTML:n. 
+Lomakkeen lähetyksen jälkeen se käsitellään palvelimella joko `doGet` tai `doPost`-käsittelijämetodilla. Käytettävä metodi riippuu siitä, mikä HTTP-metodi on määritetty sivun lomakkeelle. Tässä tehtävässä lomake lähetetään post-metodilla:
 
-Lisää servlettiin `doPost`-käsittelijä, joka lukee parametrina lähetetyn tuotenimen ja luo dao-luokan avulla uuden tuoterivin tietokantaan:
+```html
+<form method="post">
+```
+
+Jos et määritellyt lomakkeelle erillistä `action`-attribuuttia, lähetetään pyyntö samaan osoitteeseen josta HTML-sivu ladattiin. Meidän tapauksessamme pyyntö päätyy siis samalle servletille, tällä kertaa `doPost`-metodille.
+
+Lisää omaan servlettiisi uusi `doPost`-metodi, joka lukee parametrina lähetetyn tuotenimen ja lisää tietokantaan uuden tuoterivin kyseisellä nimellä. Huom! Noudata MVC-mallia ja hyödynnä DAO-luokkaa, äläkä tee tietokantaoperaatiota servlet-luokassasi:
 
 ```java
-protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
     // todo: get the product title from request parameters
     // todo: use the title to create a new product object
     // todo: use the DAO to store the product object into the database
@@ -292,20 +324,19 @@ protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws I
 
 ### Bonus: uudelleenohjaus POST-pyynnön jälkeen (Post/Redirect/Get)
 
-Onnistuneen tuotteen lisäyksen jälkeen on hyvä tehdä uudelleenohjaus, eikä palauttaa vastaukseksi HTML-sivua. Uudelleenohjauksen johdosta selain tekee onnistuneen POST-pyynnön jälkeen uuden GET-tyyppisen pyynnön ohjaamallesi sivulle, joka käsitellään normaalisti servletin `doGet`-metodilla. Tämän seurauksena käyttäjä ei voi vahingossa käyttää selaimensa päivitä-toimintoa, ja toistaa POST-tyyppistä kutsua, joka saattaisi luoda saman rivin uudelleen.
+> "*The post / redirect / get pattern or PRG pattern is a development approach that prevents duplicate content when submitting forms and provides a more intuitive user interface. The post-redirect-get pattern allows you to set bookmarks, share URLs, and reload a website that queries and sends form data - without creating duplicate content or near duplicate content.*"
+>
+> *Ryte Wiki. Post-Redirect-Get. [https://en.ryte.com/wiki/Post-Redirect-Get](https://en.ryte.com/wiki/Post-Redirect-Get)*
 
-Tätä ratkaisua kutsutaan osuvasti nimellä "[Post/Redirect/Get](https://en.wikipedia.org/wiki/Post/Redirect/Get)". Selaimen uudelleenohjauksen voi toteuttaa servletissä `HttpServletResponse`-olion `sendRedirect`-metodilla seuraavasti:
+Onnistuneen POST-tyyppisen lomakkeen lähetyksen jälkeen on aina hyvä tehdä uudelleenohjaus, eli pyytää selainta lataamaan sivu GET-pyynnöllä. Tällä tavoin käyttäjä ei voi esimerkiksi vahingossa käyttää selaimensa päivitä-toimintoa tai sivuhistoriaa ja toistaa POST-tyyppistä kutsua, joka saattaisi luoda esimerkiksi tietokantaan saman rivin uudelleen.
+
+POST-pyyntöihin vastaamista uudelleenohjauksilla kutsutaan osuvasti nimellä ["Post/Redirect/Get"](https://en.wikipedia.org/wiki/Post/Redirect/Get)". Selaimen uudelleenohjauksen voi käytännössä toteuttaa servletissä `HttpServletResponse`-olion `sendRedirect`-metodilla seuraavasti:
 
 ```java
-protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-    // todo: get the product title from request parameters
-    // todo: use the title to create a new product object
-    // todo: use the DAO to store the product object into database
-
-    // after everything is done, send a redirect to create a GET request:
-    resp.sendRedirect("/"); // redirects to server root (/), change the path if necessary
-}
+resp.sendRedirect("/polku/johon/ohjataan");
 ```
+
+Käytännössä `"/polku/johon/ohjataan"` on tyypillisesti sama polku, joka on määritetty servletin osoitteeksi `@WebServlet`-annotaatiolla.
 
 ---
 
