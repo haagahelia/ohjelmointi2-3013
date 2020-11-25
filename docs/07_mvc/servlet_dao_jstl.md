@@ -44,7 +44,7 @@ Tutustu itsenäisesti seuraavaan videoon, jossa esitellään tagikirjaston käyt
 
 <!--[![JSTL Tutorial part 2 Core Tags](https://img.youtube.com/vi/R0EnI9_ZMA0/hq1.jpg)](https://youtu.be/R0EnI9_ZMA0)-->
 
-Tämä video esittelee, miten JSTL tagikirjasto lisätään JSP-sivulle `taglib`-direktiivin avulla. Opit myös käyttämään harjoituksessa tarvitsemiasi `c:out` ja `c:forEach` tageja. Video näyttää myös konkreettisesti, miten lista olioita voidaan välittää servletiltä JSP-sivulle ja miten sillä olevat Java-oliot saadaan esitettyä sivulla HTML-muodossa. Video on jatkoa viime viikon videolle [JSTL tutorial part 1](https://youtu.be/KmREMEhj5eE).
+Tämä video esittelee, miten JSTL tagikirjasto lisätään JSP-sivulle `taglib`-direktiivin avulla. Opit myös käyttämään `c:out` ja `c:forEach` tageja. Video näyttää myös konkreettisesti, miten lista olioita voidaan välittää servletiltä JSP-sivulle ja miten sillä olevat Java-oliot saadaan esitettyä sivulla HTML-muodossa. Video on jatkoa viime viikon videolle [JSTL tutorial part 1](https://youtu.be/KmREMEhj5eE).
 
 
 ## DAO- ja Model-luokkien lisääminen projektiin
@@ -92,6 +92,8 @@ Ohjelmasi hakemistorakenne voi olla luokkien lisäämisen jälkeen esimerkiksi s
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/3998be63-0576-44e2-8e05-fb3da6008789?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
 Tässä videossa lisäämme verkkopalveluumme aikaisemmalla viikolla toteuttamamme tietokantaluokat. Määrittelemme `Main`-luokallemme `JDBC_DATABASE_URL`-ympäristömuuttujan, jonka avulla verkkosovellus hyödyntää samaa tietokantaa kuin aikaisempi tekstikäyttöliittymämme.
+
+Tällä videolla esiintyvät lähdekoodit löydät JDBC ja DAO -tehtävien malliratkaisuista Teamsissa.
 
 &nbsp;
 
@@ -162,9 +164,11 @@ Tallennettuasi muutetun `pom.xml`-tiedoston Eclipse käynnistää Maven-pluginin
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/515b523d-bc9b-4892-a2cf-78e75206e9a9?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tällä videolla lisäämme verkkopalvelumme tarvitsemat riippuvuudet Maven-työkalun avulla. Tietokantaluokat kopioidaan aikaisemmista harjoituksistamme, ja kopioinnin onnistuminen varmistetaan yksikkötesteillä.
+Tällä videolla lisäämme verkkopalvelumme tarvitsemat riippuvuudet Maven-työkalun avulla. Tietokantaluokat kopioidaan aikaisemmista harjoituksistamme, ja kopioinnin onnistuminen varmistetaan yksikkötesteillä. Videolla esitellään myös tyypillinen ongelma Tomcatin käynnistämisessä, joka johtuu siitä, että vanha Tomcat-suoritus on edelleen käynnissä taustalla (kohta 15:30).
 
 Toteutamme lisäksi uuden servletin, joka näyttää JSP-sivun ja JSTL-tagien avulla tietokannassa olevat ostoslistan rivit. Käymme läpi tyypilliset ongelmatilanteet ja ratkaisut Tomcatin käynnistysongelmiin ja servletteihin liittyen. 
+
+Videolla muokattavan [pom.xml-tiedoston, ShoppingListServlet-luokan ja list.jsp-tiedoston lähdekoodit löydät täältä](https://gist.github.com/swd1tn002/c2adb55f198846d6f44bf6d96275dead).
 
 &nbsp;
 
@@ -173,7 +177,7 @@ Toteutamme lisäksi uuden servletin, joka näyttää JSP-sivun ja JSTL-tagien av
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/d4adda6c-9b93-4a0a-a92a-57067f3493fb?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tällä videolla toteutamme servletin, joka välittää JSP-sivulle useita attribuutteja. Tutustumme myös `c:if`-ehtorakenteisiin ja JSP-sivujen virheenkäsittelyyn.
+Tällä videolla toteutamme servletin, joka välittää JSP-sivulle useita attribuutteja. Tutustumme myös `c:if`-ehtorakenteisiin ja JSP-sivujen virheenkäsittelyyn. Videolla käsiteltävän [SummerCountdownServlet.java-luokan ja countdown.jsp-sivun löydät täältä](https://gist.github.com/swd1tn002/1a9eac1b32179a8411e6f611ef0f731a).
 
 &nbsp;
 
