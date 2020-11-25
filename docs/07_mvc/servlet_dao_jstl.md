@@ -324,11 +324,12 @@ public void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOEx
 
 ### Bonus: uudelleenohjaus POST-pyynnön jälkeen (Post/Redirect/Get)
 
+Onnistuneen POST-tyyppisen lomakkeen lähetyksen jälkeen on aina hyvä tehdä uudelleenohjaus, eli pyytää selainta lataamaan sivu GET-pyynnöllä. Tällä tavoin käyttäjä ei voi esimerkiksi vahingossa käyttää selaimensa päivitä-toimintoa tai sivuhistoriaa ja toistaa POST-tyyppistä kutsua, joka saattaisi luoda esimerkiksi tietokantaan saman rivin uudelleen:
+
 > "*The post / redirect / get pattern or PRG pattern is a development approach that prevents duplicate content when submitting forms and provides a more intuitive user interface. The post-redirect-get pattern allows you to set bookmarks, share URLs, and reload a website that queries and sends form data - without creating duplicate content or near duplicate content.*"
 >
 > *Ryte Wiki. Post-Redirect-Get. [https://en.ryte.com/wiki/Post-Redirect-Get](https://en.ryte.com/wiki/Post-Redirect-Get)*
 
-Onnistuneen POST-tyyppisen lomakkeen lähetyksen jälkeen on aina hyvä tehdä uudelleenohjaus, eli pyytää selainta lataamaan sivu GET-pyynnöllä. Tällä tavoin käyttäjä ei voi esimerkiksi vahingossa käyttää selaimensa päivitä-toimintoa tai sivuhistoriaa ja toistaa POST-tyyppistä kutsua, joka saattaisi luoda esimerkiksi tietokantaan saman rivin uudelleen.
 
 POST-pyyntöihin vastaamista uudelleenohjauksilla kutsutaan osuvasti nimellä ["Post/Redirect/Get"](https://en.wikipedia.org/wiki/Post/Redirect/Get)". Selaimen uudelleenohjauksen voi käytännössä toteuttaa servletissä `HttpServletResponse`-olion `sendRedirect`-metodilla seuraavasti:
 
