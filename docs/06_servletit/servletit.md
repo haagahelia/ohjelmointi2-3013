@@ -130,7 +130,7 @@ Monissa tapauksissa luokkien uudelleenlataaminen riittää, mutta uusia servlett
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/8fed5e77-69ae-415f-8a48-418ea39330a4?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tällä videolla opettelemme käsittelemään HTTP-pyynnön mukana tulevia parametreja servletissämme.
+Tällä videolla opettelemme käsittelemään HTTP-pyynnön mukana tulevia parametreja servletissämme. Videolla koodattavat [Servlet-luokat löydät täältä](https://gist.github.com/swd1tn002/ef056a7262b8c27a2dd66c6772343807).
 
 &nbsp;
 
@@ -144,7 +144,7 @@ Servlettien yhteydessä HTML-koodi halutaan eriyttää muusta Java-koodista omik
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/44037d9b-8237-4f63-9d45-75d35ccb447d?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tällä videolla luomme HTML-lomakkeen, jolla lähetämme dataa servletillemme. Opettelemme myös välittämään servleteille tulleet pyynnöt palvelimen sisäisesti JSP-sivulle.
+Tällä videolla luomme HTML-lomakkeen, jolla lähetämme dataa servletillemme. Opettelemme myös välittämään servleteille tulleet pyynnöt palvelimen sisäisesti JSP-sivulle. Videolla koodattavan [Servletin ja JSP-sivut löydät täältä](https://gist.github.com/swd1tn002/fed086e14a8de2a12a0d4db2e59951e1).
 
 &nbsp;
 
@@ -153,7 +153,7 @@ Tällä videolla luomme HTML-lomakkeen, jolla lähetämme dataa servletillemme. 
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/72ecee3d-98b1-4d97-8a55-214fc4ca90a1?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tällä videolla opettelemme välittämään dataa servletiltä JSP-sivulle muodostaaksemme HTML-sivuja dynaamisella sisällöllä.
+Tällä videolla opettelemme välittämään dataa servletiltä JSP-sivulle muodostaaksemme HTML-sivuja dynaamisella sisällöllä. Videolla koodattavan [Servletin ja JSP-sivut löydät täältä](https://gist.github.com/swd1tn002/fed086e14a8de2a12a0d4db2e59951e1).
 
 Lisätietoa JSP-sivuilla käytettävästä Expression Language -kielestä löydät Oraclen dokumentaatiosta ["Unified Expression Language"](https://docs.oracle.com/javaee/5/tutorial/doc/bnahq.html).
 
