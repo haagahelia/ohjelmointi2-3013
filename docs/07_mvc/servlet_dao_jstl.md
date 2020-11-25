@@ -15,38 +15,6 @@ Tämän tehtävän palautusaika on umpeutunut. Voit katsoa malliratkaisun tääl
 * [JSP-sivut](https://github.com/haagahelia/embedded-tomcat-template/tree/kevat2020/src/main/webapp/WEB-INF)
 -->
 
-## Videot
-
-**Huom!** Näiden videoiden katsomiseksi sinun täytyy kirjautua sisään Microsoft Stream -palveluun Haaga-Helian käyttäjätunnuksellasi.
-
-
-**[Tietokantaluokkien tuominen web-sovellukseen](https://web.microsoftstream.com/video/3998be63-0576-44e2-8e05-fb3da6008789)** <small>10:33</small>
-
-<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/3998be63-0576-44e2-8e05-fb3da6008789?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
-
-Tässä videossa lisäämme verkkopalveluumme aikaisemmalla viikolla toteuttamamme tietokantaluokat. Määrittelemme `Main`-luokallemme `JDBC_DATABASE_URL`-ympäristömuuttujan, jonka avulla verkkosovellus hyödyntää samaa tietokantaa kuin aikaisempi tekstikäyttöliittymämme.
-
-&nbsp;
-
-
-**[Tietokantapohjaisen servletin toteuttaminen ja tulosten näyttäminen JSP-sivulla](https://web.microsoftstream.com/video/515b523d-bc9b-4892-a2cf-78e75206e9a9)** <small>58:31</small>
-
-<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/515b523d-bc9b-4892-a2cf-78e75206e9a9?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
-
-Tällä videolla lisäämme verkkopalvelumme tarvitsemat riippuvuudet Maven-työkalun avulla. Tietokantaluokat kopioidaan aikaisemmista harjoituksistamme, ja kopioinnin onnistuminen varmistetaan yksikkötesteillä.
-
-Toteutamme lisäksi uuden servletin, joka näyttää JSP-sivun ja JSTL-tagien avulla tietokannassa olevat ostoslistan rivit. Käymme läpi tyypilliset ongelmatilanteet ja ratkaisut Tomcatin käynnistysongelmiin ja servletteihin liittyen. 
-
-&nbsp;
-
-
-**[JSP-sivujen ehtorakenteet ja "fail silently"-ominaisuus](https://web.microsoftstream.com/video/d4adda6c-9b93-4a0a-a92a-57067f3493fb)** <small>31:21</small>
-
-<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/d4adda6c-9b93-4a0a-a92a-57067f3493fb?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
-
-Tällä videolla toteutamme servletin, joka välittää JSP-sivulle useita attribuutteja. Tutustumme myös `c:if`-ehtorakenteisiin ja JSP-sivujen virheenkäsittelyyn.
-
-&nbsp;
 
 
 
@@ -60,9 +28,10 @@ Sovellusten kehitettävyyden ja ylläpidettävyyden kannalta on tärkeää, ett�
 
 Meidän ostoslistasovelluksemme kolme kerrosta ovat:
 
-* Käyttöliittymäkerros (JSP ja JSTL)
-* Sovelluslogiikka (Servletit)
-* Datan tallennuskerros (DAO + JDBC)
+1. Käyttöliittymäkerros (JSP ja JSTL)
+2. Sovelluslogiikka (Servletit)
+3. Datan tallennuskerros (DAO + JDBC)
+
 
 
 ## JSTL (JSP Standard Tag Library)
@@ -71,10 +40,9 @@ Dynaamisten ominaisuuksien, kuten ehto- ja toistorakenteiden toteuttaminen JSP-s
 
 Tutustu itsenäisesti seuraavaan videoon, jossa esitellään tagikirjaston käyttöönotto sekä sen keskeisiä tageja:
 
+**YouTube: [JSTL Tutorial part 2 Core Tags](https://youtu.be/R0EnI9_ZMA0)**
 
-**[JSTL Tutorial part 2 Core Tags](https://youtu.be/R0EnI9_ZMA0)**
-
-[![JSTL Tutorial part 2 Core Tags](https://img.youtube.com/vi/R0EnI9_ZMA0/hq1.jpg)](https://youtu.be/R0EnI9_ZMA0)
+<!--[![JSTL Tutorial part 2 Core Tags](https://img.youtube.com/vi/R0EnI9_ZMA0/hq1.jpg)](https://youtu.be/R0EnI9_ZMA0)-->
 
 Tämä video esittelee, miten JSTL tagikirjasto lisätään JSP-sivulle `taglib`-direktiivin avulla. Opit myös käyttämään harjoituksessa tarvitsemiasi `c:out` ja `c:forEach` tageja. Video näyttää myös konkreettisesti, miten lista olioita voidaan välittää servletiltä JSP-sivulle ja miten sillä olevat Java-oliot saadaan esitettyä sivulla HTML-muodossa. Video on jatkoa viime viikon videolle [JSTL tutorial part 1](https://youtu.be/KmREMEhj5eE).
 
@@ -117,6 +85,16 @@ Ohjelmasi hakemistorakenne voi olla luokkien lisäämisen jälkeen esimerkiksi s
 ```
 
 **HUOM!** Mikäli käytit `JDBCShoppingListItemDao`-luokkasi kanssa ympäristömuuttujaa tietokannan osoitteen säilyttämisessä, joudut määrittelemään ympäristömuuttujan myös `Main`-luokan ympäristömuuttujiin.
+
+
+## Video 1: [Tietokantaluokkien tuominen web-sovellukseen](https://web.microsoftstream.com/video/3998be63-0576-44e2-8e05-fb3da6008789) <small>10:33</small>
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/3998be63-0576-44e2-8e05-fb3da6008789?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tässä videossa lisäämme verkkopalveluumme aikaisemmalla viikolla toteuttamamme tietokantaluokat. Määrittelemme `Main`-luokallemme `JDBC_DATABASE_URL`-ympäristömuuttujan, jonka avulla verkkosovellus hyödyntää samaa tietokantaa kuin aikaisempi tekstikäyttöliittymämme.
+
+&nbsp;
+
 
 
 ## Riippuvuuksien asentaminen
@@ -178,6 +156,26 @@ Itse riippuvuudet määritellään `<dependencies>`-tagin sisään, kukin riippu
 **Huom!** Esimerkkikoodien vihreiden rivien vasemmassa laidassa olevat plus-merkit (`+`) ovat osa muuttuneita rivejä korostavaa diff-syntaksia, jotka eivät kuulu mukaan pom-tiedostoon. 
 
 Tallennettuasi muutetun `pom.xml`-tiedoston Eclipse käynnistää Maven-pluginin asentaakseen uudet riippuvuudet. Varmuuden vuoksi aina tämän tiedoston muokkaamisen jälkeen kannattaa vielä klikata projektia Eclipsen hakemistopuussa hiiren kakkospainikkeella ja valita [Maven-valikosta kohta "Update Project"](https://stackoverflow.com/a/20547404).
+
+
+## Video 2: [Tietokantapohjaisen servletin toteuttaminen ja tulosten näyttäminen JSP-sivulla](https://web.microsoftstream.com/video/515b523d-bc9b-4892-a2cf-78e75206e9a9) <small>58:31</small>
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/515b523d-bc9b-4892-a2cf-78e75206e9a9?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tällä videolla lisäämme verkkopalvelumme tarvitsemat riippuvuudet Maven-työkalun avulla. Tietokantaluokat kopioidaan aikaisemmista harjoituksistamme, ja kopioinnin onnistuminen varmistetaan yksikkötesteillä.
+
+Toteutamme lisäksi uuden servletin, joka näyttää JSP-sivun ja JSTL-tagien avulla tietokannassa olevat ostoslistan rivit. Käymme läpi tyypilliset ongelmatilanteet ja ratkaisut Tomcatin käynnistysongelmiin ja servletteihin liittyen. 
+
+&nbsp;
+
+
+## Video 3: [JSP-sivujen ehtorakenteet ja "fail silently"-ominaisuus](https://web.microsoftstream.com/video/d4adda6c-9b93-4a0a-a92a-57067f3493fb) <small>31:21</small>
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/d4adda6c-9b93-4a0a-a92a-57067f3493fb?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tällä videolla toteutamme servletin, joka välittää JSP-sivulle useita attribuutteja. Tutustumme myös `c:if`-ehtorakenteisiin ja JSP-sivujen virheenkäsittelyyn.
+
+&nbsp;
 
 
 ## Tehtävät
