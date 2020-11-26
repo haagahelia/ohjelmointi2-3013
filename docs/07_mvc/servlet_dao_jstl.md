@@ -36,47 +36,59 @@ Näiden arkkitehtuurimallien mukaisesti sovelluksemme kolme osakokonaisuutta ova
 
 Seuraavissa kappaleissa ja videoissa käsittelemme jo aikaisemmin toteuttamamme datan tallennuskerroksen tuomisen osaksi web-sovellustamme.
 
+## Projektipohja
+
+Tällä viikolla tarkoituksena on jatkaa web-sovelluksen kehittämistä viime viikolla käyttämääsi projektipohjaan. Mikäli edellinen tehtävä jäi sinulta ratkaisematta tai haluat aloittaa puhtaalta pöydältä, voit kloonata itsellesi uuden kopion [kurssin projektipohjasta](https://github.com/ohjelmointi2/embedded-tomcat-template) edellisen viikon ohjevideoiden mukaisesti.
+
 
 ## DAO- ja Model-luokkien lisääminen projektiin
 
-Olet aikaisemmassa tehtävässä luonut `ShoppingListITem`-luokan, joka mallintaa yksittäisiä tietokannassa olevia rivejä. Olet lisäksi luonut DAO-luokan, jonka avulla pystyt tekemään CRUD-operaatioita tietokantaasi. Tulet tällä viikolla tarvitsemaan näitä luokkia osana isompaa sovellusta. 
+Olet aikaisemmassa tehtävässä luonut `ShoppingListITem`-luokan, joka mallintaa yksittäisiä tietokannassa olevia rivejä. Olet lisäksi luonut DAO-luokan, jonka avulla pystyt tekemään CRUD-operaatioita tietokantaasi. Tulet tällä viikolla tarvitsemaan näitä luokkia osana isompaa sovellusta. Mikäli aikaisemmat aiheet ovat jääneet sinulta kesken, hyödynnä kurssin malliratkaisuja osana omaa projektiasi.
 
 Saat valmiit luokat helpoiten käyttöön web-projektissasi kopioimalla luokkien pakettirakenteen `src/main/java`-hakemiston alle. Mahdollisesti toteuttamasi JUnit-testiluokat puolestaan kuuluvat `src/test/java`-hakemiston alle.
 
 Ohjelmasi hakemistorakenne voi olla luokkien lisäämisen jälkeen esimerkiksi seuraava:
 
 ```
-├───src
-│   ├───main
-│   │   ├───java
-│   │   │   ├───database
-│   │   │   │       JDBCShoppingListItemDao.java
-│   │   │   │       ShoppingListItemDao.java
-│   │   │   │
-│   │   │   ├───launch
-│   │   │   │       Main.java
-│   │   │   │
-│   │   │   ├───model
-│   │   │   │       ShoppingListItem.java
-│   │   │   │
-│   │   │   └───servlet
-│   │   │           ShoppingListServlet.java // luodaan tällä harjoituskierroksella
-│   │   │
-│   │   └───webapp
-│   │       ├───styles
-│   │       │       demo.css
-│   │       │
-│   │       └───WEB-INF
-│   │               list.jsp // luodaan tällä harjoituskierroksella
-│   │
-│   └───test
-│       ├───java
-│       │   │
-│       │   └───database
-│       │           JDBCShoppingListItemDaoTest.java
+pom.xml
+src
+ ├───main
+ │   ├───java
+ │   │   ├───database
+ │   │   │       JDBCShoppingListItemDao.java
+ │   │   │       ShoppingListItemDao.java
+ │   │   │       Database.java *
+ │   │   │
+ │   │   ├───launch
+ │   │   │       Main.java
+ │   │   │
+ │   │   ├───model
+ │   │   │       ShoppingListItem.java
+ │   │   │
+ │   │   └───servlet
+ │   │           ShoppingListServlet.java **
+ │   │
+ │   └───webapp
+ │       ├───styles
+ │       │       demo.css
+ │       │
+ │       └───WEB-INF
+ │               list.jsp **
+ │
+ └───test
+     └───java
+         └───database
+                 JDBCShoppingListItemDaoTest.java *
+
+---
+
+*  toteutettu vapaaehtoisena tehtävänä
+** luodaan tällä harjoituskierroksella
 ```
 
-**HUOM!** Mikäli käytit `JDBCShoppingListItemDao`-luokkasi kanssa ympäristömuuttujaa tietokannan osoitteen säilyttämisessä, määrittele sama ympäristömuuttuja myös `launch.Main`-luokan ympäristömuuttujiin.
+**Ympäristömuuttujan lisääminen**
+
+Mikäli toteutit DAO-tehtävän bonus-osuuden ja käytit `JDBCShoppingListItemDao`-luokkasi kanssa `JDBC_DATABASE_URL`-ympäristömuuttujaa, määrittele sama ympäristömuuttuja myös `Main`-luokan ympäristömuuttujiin. Eclipsen ympäristömuuttujat ovat luokkakohtaisia ja aikaisempi ympäristömuuttujasi ei ole automaattisesti `Main`-luokan käytettävissä. Ohjeet muuttujan määrittelemiseksi löydät myös seuraavalta videolta.
 
 
 ## Video 1: [Tietokantaluokkien tuominen web-sovellukseen](https://web.microsoftstream.com/video/3998be63-0576-44e2-8e05-fb3da6008789) <small>10:33</small>
