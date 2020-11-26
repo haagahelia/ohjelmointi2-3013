@@ -283,7 +283,7 @@ Voit lisätä lomakkeen samalle JSP-sivulle, jolla näytät myös tuotelistan. L
 
 ```html
 <form method="post">
-    <input name="title" required type="text" placeholder="type item here..." autofocus /> 
+    <input name="title" type="text" required placeholder="type item here..." autofocus /> 
     <input type="submit" value="Add to list" />
 </form>
 ```
@@ -293,14 +293,17 @@ Tällä `form`-tagilla ei ole `action`-attribuuttia, joten sen lähettäminen te
 Pyynnön mukana välitetään käyttäjän kirjoittama tuotenimi, joka on palvelimella käsiteltävissä sillä nimellä, joka on määritetty kyseisen tekstikentän `name`-attribuutin arvoksi:
 
 ```html
+<!-- muut attribuutit on jätetty tässä pois -->
 <input name="title" />
 ```
 
-Tässä tapauksessa attribuutin arvona on `title`, joten se saadaan servletissä luettua esimerkiksi seuraavasti:
+Tässä tapauksessa tekstikentän nimeksi on asetettu on `"title"`, joten kyseiseen tekstikenttään syötetty teksti saadaan servletissä luettua esimerkiksi seuraavasti:
 
 ```java
 String itemTitle = req.getParameter("title");
 ```
+
+Voit lukea lisää HTML-lomakkeiden lähettämisestä artikkelista ["Sending form data" (MDN web docs)](https://developer.mozilla.org/en-US/docs/Learn/Forms/Sending_and_retrieving_form_data).
 
 ### Lomaketietojen käsitteleminen palvelimella
 
