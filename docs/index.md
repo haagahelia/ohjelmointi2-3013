@@ -88,9 +88,9 @@ Verkkosovellusten toisella viikolla liitämme oman ostoslistasovelluksemme tieto
 
 Tämä aihe julkaistaan viikolla 49.
 
-<!--[Siirry oppimateriaaliin ⇨](07_mvc/servlet_dao_jstl)
+[Siirry oppimateriaaliin ⇨](07_mvc/servlet_dao_jstl)
 
-Tehtävät Teamsissa (DL 13.12. klo 23:59)-->
+Tehtävät Teamsissa (DL 13.12. klo 23:59)
 
 &nbsp;
 
@@ -112,11 +112,7 @@ Tehtävät Teamsissa (DL 18.12. klo 23:59)-->
 
 Kurssin jälkimmäisellä puoliskolla vahvistatte kurssilla opittuja taitoja ja toteutatte harjoitustyönä oman tietokantapohjaisen web-sovelluksen. Harjoitustyö arvioidaan asteikolla 0-5.
 
-<!-- 
 [Siirry harjoitustyön tehtävänantoon ⇨](09_harjoitustyo/harjoitustyo)
--->
-
-Harjoitustyön tehtävänanto julkaistaan kurssin puolivälissä.
 
 Palautus Teamsiin (DL 20.12. klo 23:59)
 

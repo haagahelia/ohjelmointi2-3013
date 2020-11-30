@@ -2,30 +2,16 @@
 
 # Harjoitustyö
 
-Kurssin viimeisillä viikoilla vahvistatte aikaisempina viikkoina opittuja taitoja toteuttaessanne yksilötyönä oman tietokantapohjaisen web-sovelluksen. Harjoitustyö arvioidaan asteikolla 0-5 sen painoarvo on 50 % kurssin loppuarvosanasta. 
+Kurssin viimeisillä viikoilla vahvistatte aikaisempina viikkoina opittuja taitoja toteuttaessanne yksilötyönä oman tietokantapohjaisen web-sovelluksen. Harjoitustyö arvostellaan asteikolla 0-5 ja sen painoarvo on 50 % kurssin loppuarvosanasta. 
 
 Vaikka harjoitustyö tehdään itsenäisesti, saatte keskustella siitä esimerkiksi Teamsissa kuten aikaisemmilla tehtäväkierroksilla. Kriteerinä on, että *jokainen kirjoittaa itse oman koodinsa*.
 
 
-## Videot
-
-**Huom!** Näiden videoiden katsomiseksi sinun täytyy kirjautua sisään Microsoft Stream -palveluun Haaga-Helian käyttäjätunnuksellasi.
-
-**[Harjoitustyön tehtävänanto](https://web.microsoftstream.com/video/d2c07537-4300-493a-957b-61b5153b4a16)** <small>22:44</small>
+## Video 1: [Harjoitustyön tehtävänanto](https://web.microsoftstream.com/video/d2c07537-4300-493a-957b-61b5153b4a16) <small>22:44</small>
 
 <iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/d2c07537-4300-493a-957b-61b5153b4a16?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
 
-Tällä videolla käymme läpi harjoitustyön tehtävänannon ja arviontikriteeristön.
-
-&nbsp;
-
-
-
-**[Harjoitustyön pohja ja Chinook-tietokanta](https://web.microsoftstream.com/video/d24cfa32-754d-44da-b74f-52d768f8a4d7)** <small>38:18</small>
-
-<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/d24cfa32-754d-44da-b74f-52d768f8a4d7?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
-
-Tällä videolla teemme pohjatyön harjoitustyöprojektin luomiseksi. Samalla kertaamme kurssin aikana opeteltuja asioita.
+Tällä videolla käymme läpi tällä sivulla esitetyn harjoitustyön tehtävänannon ja arviontikriteeristön.
 
 &nbsp;
 
@@ -75,10 +61,17 @@ Jotta harjoitustyö ei olisi tarpeettoman laaja ja jotta se vastaisi kurssin opp
 
 Voit halutessasi tehdä hienot sivut ja tyylitellä ne, mutta **kurssin oppimistavoitteissa ja tehtävän arvioinnissa tyyleillä ei ole painoarvoa**. Saat palveluusi yksinkertaiset tyylit helposti käyttämällä [jotain näistä valmiista CSS-kirjastoista, jotka eivät edellytä lainkaan attribuuttien lisäämistä HTML-koodiisi](https://github.com/dbohdan/classless-css).
 
+Kurssin esimerkeissä olemme hyödyntäneet Sakura-nimistä CSS-kirjastoa:
+
+```html
+<!-- katso lisätiedot: https://github.com/oxalorg/sakura -->
+<link rel="stylesheet" href="https://unpkg.com/sakura.css/css/sakura.css" type="text/css">
+```
+
 
 ## Valmis musiikkitietokanta
 
-Käytämme harjoitustyössä valmista musiikkitietokantaa nimeltä [Chinook](https://github.com/lerocha/chinook-database):
+Käytämme harjoitustyössä valmista musiikkitietokantaa nimeltä [**Chinook**](https://github.com/lerocha/chinook-database):
 
 > *"Chinook is a sample database available for SQL Server, Oracle, MySQL, etc."*
 > 
@@ -108,19 +101,27 @@ Taulut `Album` ja `Track` tulevat tarpeellisiksi tähdätessäsi korkeampiin arv
 * [SQLite tools -komentorivityökalut](https://sqlite.org/download.html)
 
     Tietokannan käyttäminen komentoriviltä ei ole välttämättä tarpeellista harjoitustyön tekemiseksi, mutta voit halutessasi ladata SQLite tools -ohjelman Windows-, Linux- tai macOS -version yllä olevasta linkistä.
--->
 
+
+## Video 2: [Harjoitustyön pohja ja Chinook-tietokanta](https://web.microsoftstream.com/video/d24cfa32-754d-44da-b74f-52d768f8a4d7) <small>38:18</small>
+
+<iframe width="640" height="360" src="https://web.microsoftstream.com/embed/video/d24cfa32-754d-44da-b74f-52d768f8a4d7?autoplay=false&amp;showinfo=true" allowfullscreen style="border:none;"></iframe>
+
+Tällä videolla teemme pohjatyön harjoitustyöprojektin luomiseksi. Samalla kertaamme kurssin aikana opeteltuja asioita harjoitustyön näkökulmasta.
+
+&nbsp;
 
 
 ## Harjoitustyön toiminnalliset vaatimukset
 
 Harjoitustyön arviointi perustuu sekä toteutettuihin toiminnallisuuksiin että saavutettuun laatuun. Voit toteuttaa palveluun alla esitettyjen ominaisuuksien lisäksi vapaavalintaisia lisäominaisuuksia, jotka huomioidaan tapauskohtaisesti myös arvioinnissa.
 
+
 ### Tavoitearvosana 1
 
 Toteutat verkkosovelluksen, jossa on etusivu, jolla näytetään lista tietokannassa olevien artistien nimistä. Tietokantalogiikka on toteutettu DAO-luokkaan ja HTML-koodi on toteutettuna JSP-sivun avulla. Koodin laatu noudattaa kurssilla käsiteltyjä hyviä käytäntöjä välttävästi.
 
-**Huom!** Hyväksyttyyn arvosanaan riittää siis, että ymmärrät ja saat toistettua harjoitustyötunnilla esitetyt esimerkit.
+**Huom!** Hyväksyttyyn arvosanaan käytännössä riittää, että ymmärrät ja saat toistettua yllä olevilla videoilla esitetyt esimerkit.
 
 
 ### Tavoitearvosana 3
@@ -158,9 +159,10 @@ Toteutuksessa tietokantaoperaatiot suositellaan jaettavaksi kahteen erilliseen D
 
 Lisäksi tietokantayhteyden muodostaminen ja yhteyksien sulkeminen suositellaan tehtävän omassa luokassaan.
 
+
 ### Tavoitearvosana 5
 
-Toteutat edellisten ominaisuuksien lisäksi ominaisuuden, jolla käyttäjä pystyy hakemaan artisteja ja albumeita niiden nimien perusteella. Hakutulokset tulee esittää JSP-sivulla, jolla artistit ja albumit toimivat linkkeinä artistin sivulle.
+Toteutat edellisten ominaisuuksien lisäksi ominaisuuden, jolla käyttäjä pystyy hakemaan artisteja ja/tai albumeita niiden nimien perusteella. Hakutulokset tulee esittää JSP-sivulla, jolla artistit ja albumit toimivat linkkeinä artistin sivulle.
 
 Esimerkkikyselyitä hakujen tekemiseksi:
 
@@ -170,20 +172,19 @@ SELECT ArtistId, Name FROM Artist
     WHERE Name LIKE ? 
     ORDER BY Name ASC;
 
--- albumien ja niiden artistien hakeminen osittaisen title:n perusteella:
-SELECT AlbumId, Album.ArtistId, Album.Title, Artist.Name FROM Album 
-    LEFT JOIN Artist ON Artist.ArtistId = Album.ArtistId 
+-- albumien hakeminen osittaisen title:n perusteella:
+SELECT AlbumId, ArtistId, Title FROM Album 
     WHERE Title LIKE ? ORDER BY Title ASC;
 ```
 
 **Huom!** Muista lisätä `LIKE`-kyselyyn hakusanan alkuun ja loppuun prosenttimerkit, jotta löydät myös osittaiset osumat: 
 
 ```java
-ps.setString(1, "%" + searchTerm + "%");
+preparedStatement.setString(1, "%" + searchTerm + "%");
 ```
 
 
-### Versionhallinta, yksikkötestaus ja Ajax
+## Versionhallinta, yksikkötestaus ja Ajax
 
 Versionhallinnan, yksikkötestauksen ja Ajax-kutsujen soveltaminen katsotaan eduksi, mutta ne eivät ole ehdottomina vaatimuksina millekään tavoitearvosanalle.
 
@@ -258,7 +259,7 @@ Edellä mainittu komento luo projektiisi tiedoston `git-log.txt`, joka sisältä
 Gitin käyttö huomioidaan positiivisesti harjoitustyön arvostelussa, mutta se ei ole vaatimuksena erinomaiseen arvosanaan. **Varmista myös seuraavassa vaiheessa, että myös luotu tiedosto git-log.txt tulee mukaan tekemääsi zip-pakettiin.**
 
 
-### Projektin lähettäminen Teamsiin
+## Projektin lähettäminen Teamsiin
 
 [Tee projektistasi zip-tiedosto](https://stackoverflow.com/a/5386448) valitsemalla Eclipsessä harjoitustyöprojektin nimen päällä *Export – Export.. – General – Archive file*. Tallenna tiedosto .zip-muotossa säilyttäen hakemistorakenne. Varmista, että zip-paketti sisältää kaikki ratkaisusi *.java*- ja *.jsp*-tiedostot. Palauta zip-paketti Teamsin palautuskansioon.
 
