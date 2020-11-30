@@ -84,9 +84,7 @@ Tehtävät Teamsissa (DL 6.12. klo 23:59)
 
 ### Aihe 7: Verkkosovellus kolmikerrosarkkitehtuurilla (Servletit, DAO, JSP) <small>7.12. - 13.12.2020</small>
 
-Verkkosovellusten toisella viikolla liitämme oman ostoslistasovelluksemme tietokannan verkkopalveluun ja luomme HTML-käyttöliittymät ostoslistan näyttämiseksi ja tuotteiden lisäämiseksi.
-
-Tämä aihe julkaistaan viikolla 49.
+Verkkosovellusten toisella viikolla jatkokehitämme oman tietokantapohjaisen ostoslistasovelluksemme verkkopalveluksi. Luomme HTML-käyttöliittymät ostoslistan näyttämiseksi ja tuotteiden lisäämiseksi.
 
 [Siirry oppimateriaaliin ⇨](07_mvc/servlet_dao_jstl)
 
