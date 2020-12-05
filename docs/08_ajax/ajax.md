@@ -106,7 +106,7 @@ Tällä videolla käsittelemme tarkemmin JavaScript-koodin avulla tehtäviä pal
 
 Ajax-aiheen käsittelyä varten tälle kurssille on luotu oma erillinen esimerkkiprojekti. Projektin aihe on ostoslistasovellus, kuten aikaisemmissa harjoituksissamme, mutta tämä esimerkki on toteutettu hyödyntäen Ajax-teknologioita. Lue esimerkkiprojektin dokumentaatio osoitteessa [https://github.com/haagahelia/ShoppingListExample](https://github.com/haagahelia/ShoppingListExample). Samasta osoitteesta löydät myös lähdekoodit, jotka voit kloonata itsellesi ohjelman suorittamista ja muokkaamista varten. 
 
-Voit käyttää palvelua myös ilman asennuksia osoitteessa [https://shoppinglist-example.herokuapp.com/](https://shoppinglist-example.herokuapp.com/).
+Jos et halua asentaa itsellesi omaa kopiota esimerkkisovelluksesta, voit käyttää sitä myös osoitteessa [https://shoppinglist-example.herokuapp.com/](https://shoppinglist-example.herokuapp.com/). Tämä versio on asennettu [Heroku](https://heroku.com/)-pilvipalveluun ilmaisena sovelluksena, joten sen käynnistyminen saattaa kestää hetken. Huomaathan myös, että ostoslistasovelluksessa ei ole tukea useille käyttäjille, eli muiden käyttäjien lisäämät ja poistamat tuotteet vaikuttavat myös omaan ostoslistaasi. Demosovelluksen ostoslistan sisältö palautetaan takaisin alkutilaan satunnaisin väliajoin.
 
 Kun olet tutustunut esimerkkiprojektiin ja sen dokumentaatioon, etene seuraaviin kappaleisiin.
 
