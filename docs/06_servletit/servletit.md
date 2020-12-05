@@ -48,6 +48,8 @@ Projektipohjan asennustapa on todettu kohtuullisen helpoksi ja samat tavat ovat 
 
 Voit halutessasi lukea lisää Mavenista artikkelista ["Maven in 5 Minutes"](https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html) tai keskustelusta ["Is Maven similar to npm?"](https://stackoverflow.com/a/38392716)
 
+🛈 *Projektipohja tarvitsee toimiakseen Java-version 9 tai uudemman. Jos näyttää siltä, että projekti ei yksinkertaisesti toimi tai että siinä näkyy kasapäin virheitä, [tarkista Javan versio](https://www.google.com/search?q=how+to+check+java+version) ja tarvittaessa [päivitä Java-asennuksesi](https://www.google.com/search?q=how+to+update+java).*
+
 
 ### Video 2: [Maven ja Tomcat malliprojektissa](https://web.microsoftstream.com/video/527282e4-961e-453e-a350-af766e50559f) <small>15:31</small>
 
