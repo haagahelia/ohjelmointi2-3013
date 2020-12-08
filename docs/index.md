@@ -97,11 +97,9 @@ Tehtävät Teamsissa (DL 13.12. klo 23:59)
 
 Viimeinen harjoitusviikko käsittelee JavaScript-koodin avulla tehtäviä palvelinkutsuja, eli Ajax-kutsuja. Niiden avulla voimme päivittää ostoslistamme sisältöä tekemättä sivulatauksia. Toteutamme lisäksi verkkopalveluumme uuden ominaisuuden ostoslistan rivien poistamiseksi.
 
-Tämä aihe julkaistaan viikolla 50.
+[Siirry oppimateriaaliin ⇨](08_ajax/ajax)
 
-<!--[Siirry oppimateriaaliin ⇨](08_ajax/ajax)
-
-Tehtävät Teamsissa (DL 18.12. klo 23:59)-->
+Tehtävät Teamsissa (DL 20.12. klo 23:59)
 
 &nbsp;
 
@@ -198,7 +196,7 @@ Yksikkötestaus          | 5                     | 15.11.    | Teams
 Tietokannat ja DAO      | 5                     | 29.11.    | Teams 
 Servletit               | 5                     | 6.12.     | Teams 
 Servlet + jsp + dao     | 5                     | 13.12.    | Teams 
-Ajax ja JavaScript      | 5                     | 18.12.    | Teams 
+Ajax ja JavaScript      | 5                     | 20.12.    | Teams 
 
 
 Tehtävien maksimipistemäärä on 35 (+ 2 bonuspistettä). Tehtävät arvioidaan siten, että 40 % suorituksella saa arvosanan 1 ja 100 % suorituksella arvosanan 5:
