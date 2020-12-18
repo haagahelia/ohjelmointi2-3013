@@ -289,7 +289,9 @@ async function removeProduct(id) {
 
 ### Tehtävän palauttaminen
 
-Palauta tähän tehtävään kuuluvat osat 1-5 Teams-palautuslaatikkoon erillisinä tiedostoina (ei pakettina). Muista lisätä myös tehtävässä 1 ottamasi kuvankaappaus Teamsiin. **Älä palauta koko projektia äläkä pakkaa tiedostoja.**
+Palauta tähän tehtävään kuuluvat osat 1-5 Teams-palautuslaatikkoon erillisinä tiedostoina. Myös osittaiset ratkaisut arvostellaan, joten voit palautta myös vain osan tehtävistä.
+
+Mikäli kirjoitit JavaScript-koodisi erilliseen tiedostoon, lisää tarvittaessa tiedostopäätteeksi `.txt`, jos Teams ei hyväksy `.js`-päätteistä tiedostoa (esim. `app.js.txt`). Muista lisätä palautukseen myös tehtävässä 1 ottamasi kuvankaappaus. **Älä palauta koko projektia äläkä pakkaa tiedostoja.**
 
 
 ## Lisämateriaalit
